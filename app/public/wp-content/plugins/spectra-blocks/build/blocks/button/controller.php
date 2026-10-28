@@ -1,0 +1,304 @@
+<?php
+/**
+ * View for rendering the block.
+ *
+ * @since 3.0.0
+ *
+ * @package Spectra\Blocks\Button
+ */
+
+use SpectraBlocks\Helpers\BlockAttributes;
+use SpectraBlocks\Helpers\Core;
+
+// The main attributes that need to exist.
+$text = $attributes['text'] ?? '';
+// `"0"` is falsy and `false` is not a string; normalise once so the strict
+// compare below is always against a known string.
+$text = is_scalar( $text ) ? (string) $text : '';
+
+// Expand shortcodes in the button label so a dynamic Spectra Button matches the
+// core Button in FSE areas (templates, template parts, header/footer). Dynamic
+// blocks store their text in the block-comment attribute JSON; the FSE template
+// pipeline (`_wp_apply_block_content_filters()`) runs `do_shortcode` BEFORE
+// `do_blocks` and never again, so a shortcode here reached the frontend as raw
+// text while the core Button - static inner HTML - was expanded by that early
+// pass. Running it here restores parity in that context. Done BEFORE the kses
+// passes below (and `wp_kses_post()` in view.php) so the shortcode OUTPUT is
+// sanitised.
+//
+// Skipped while `the_content` is running: there the pipeline is
+// `do_blocks` (9) -> `wptexturize` (10) -> `do_shortcode` (11), so the label is
+// already expanded by that priority-11 pass - exactly like the core Button and a
+// paragraph. Expanding here (at priority 9) instead would let `wptexturize` curl
+// the output (straight quotes/dashes become entities) and would unescape `[[..]]`
+// into a real shortcode that priority 11 then executes - both diverging from core.
+// Post Content blocks inside templates still run through `the_content`, so they
+// keep the priority-11 pass. See issue #852.
+if ( false !== strpos( $text, '[' ) && ! doing_filter( 'the_content' ) ) {
+	$text = do_shortcode( $text );
+}
+
+$icon = $attributes['icon'] ?? '';
+
+// The label must never contain an anchor: view.php always wraps it in an <a>,
+// and nested anchors are invalid HTML that the browser parser tears apart.
+// Strip <a> tags (keeping inner text and all other formatting) via a kses
+// allowlist, which also neutralizes malformed anchors that a regex would miss.
+// Editor-side counterpart: removeAnchorTag() in @spectra-helpers.
+if ( '' !== $text ) {
+	$allowed_label_tags = wp_kses_allowed_html( 'post' );
+	unset( $allowed_label_tags['a'] );
+	$text = wp_kses( $text, $allowed_label_tags );
+}
+
+// Bail out if both text and icon are empty. Strict compare on TEXT: empty('0')
+// is true in PHP, so a button labelled "0" with no icon rendered nothing at
+// all. `empty()` on the ICON is deliberate — an icon is a slug or array, and
+// "0" is not a meaningful icon value.
+if ( '' === $text && empty( $icon ) ) {
+	return;
+}
+
+// Ensure attributes exist.
+$anchor        = $attributes['anchor'] ?? '';
+$show_text     = $attributes['showText'] ?? true;
+$icon_position = $attributes['iconPosition'] ?? 'after'; // block.json enum+default — core resets an unknown value to 'after' before render.
+$flip_for_rtl  = $attributes['flipForRTL'] ?? false;
+$size          = $attributes['size'] ?? null; // Icon size attribute.
+
+// Icon colors.
+$icon_color       = $attributes['iconColor'] ?? '';
+$icon_color_hover = $attributes['iconColorHover'] ?? '';
+$text_color_hover = $attributes['textColorHover'] ?? '';
+
+// Hover icon attributes.
+$show_icon_on_hover      = $attributes['showIconOnHover'] ?? false;
+$hover_icon              = $attributes['hoverIcon'] ?? '';
+$hover_icon_position     = $attributes['hoverIconPosition'] ?? 'right'; // block.json enum+default — core validates.
+$hover_icon_rotation     = $attributes['hoverIconRotation'] ?? 0;
+$hover_icon_flip_for_rtl = $attributes['hoverIconFlipForRTL'] ?? false;
+$hover_icon_aria_label   = $attributes['hoverIconAriaLabel'] ?? '';
+
+
+// Convert shadow hover object to CSS string.
+$shadow_hover = '';
+if ( ! empty( $attributes['shadowHover'] ) ) {
+	$shadow = $attributes['shadowHover'];
+	// If it's already a string, use it directly (but only if it contains a color).
+	if ( is_string( $shadow ) ) {
+		$shadow_hover = $shadow;
+	} elseif ( is_array( $shadow ) ) {
+		$color = $shadow['color'] ?? '';
+
+		// Only set shadow if color is actually provided.
+		if ( ! empty( $color ) && trim( $color ) !== '' ) {
+			$shadow_hover = sprintf(
+				'%dpx %dpx %dpx %dpx %s',
+				isset( $shadow['x'] ) ? intval( $shadow['x'] ) : 0,
+				isset( $shadow['y'] ) ? intval( $shadow['y'] ) : 4,
+				isset( $shadow['blur'] ) ? intval( $shadow['blur'] ) : 8,
+				isset( $shadow['spread'] ) ? intval( $shadow['spread'] ) : 0,
+				$color
+			);
+		}
+	}
+}
+$attributes['shadowHover'] = $shadow_hover;
+
+// Convert border hover object to CSS strings - only set the hover color.
+$border_hover_config = array();
+if ( ! empty( $attributes['borderHover']['color'] ) ) {
+	$border_hover = $attributes['borderHover'];
+	$hover_color  = $border_hover['color'];
+
+	// Only set the hover color as a CSS variable.
+	// Let WordPress core border settings handle the responsive width/style.
+	$border_hover_config[] = array(
+		'key'        => 'borderHoverColor',
+		'css_var'    => '--spectra-border-hover-color',
+		'class_name' => 'spectra-border-hover',
+		'value'      => $hover_color,
+	);
+}
+
+// Define base classes.
+$icon_classes = array(
+	'spectra-button__icon',
+	"spectra-button__icon-position-$icon_position",
+	$icon_color ? 'spectra-icon-color' : '',
+	( $icon_color_hover || $text_color_hover ) ? 'spectra-icon-color-hover' : '',
+);
+
+// Check if the icon is a custom SVG (array format or raw SVG string).
+$is_custom_svg = ( is_array( $icon ) && isset( $icon['library'] ) && 'svg' === $icon['library'] )
+	|| ( is_string( $icon ) && strpos( $icon, '<svg' ) !== false );
+
+// Add the default specific icon props.
+$icon_style = array(
+	'transform' => ! empty( $attributes['rotation'] ) ? 'rotate(' . $attributes['rotation'] . 'deg)' : '',
+);
+
+// For custom SVGs, add fill:currentColor inline so they respect color settings.
+// FontAwesome icons get fill from CSS (style.scss:79 and 84).
+if ( $is_custom_svg ) {
+	$icon_style['fill'] = 'currentColor';
+}
+
+$icon_props = array(
+	'class'     => Core::concatenate_array( $icon_classes ),
+	'focusable' => 'false',
+	'style'     => $icon_style,
+);
+
+// Hover icon classes and props.
+$hover_icon_classes = array(
+	'spectra-button__hover-icon',
+	"spectra-button__hover-icon-position-$hover_icon_position",
+	$icon_color ? 'spectra-icon-color' : '',
+	( $icon_color_hover || $text_color_hover ) ? 'spectra-icon-color-hover' : '',
+);
+
+// Check if the hover icon is a custom SVG.
+$is_hover_custom_svg = ( is_array( $hover_icon ) && isset( $hover_icon['library'] ) && 'svg' === $hover_icon['library'] )
+	|| ( is_string( $hover_icon ) && strpos( $hover_icon, '<svg' ) !== false );
+
+$hover_icon_style = array(
+	'transform' => ! empty( $hover_icon_rotation ) ? 'rotate(' . $hover_icon_rotation . 'deg)' : '',
+);
+
+// For custom SVGs, add fill:currentColor inline.
+if ( $is_hover_custom_svg ) {
+	$hover_icon_style['fill'] = 'currentColor';
+}
+
+$hover_icon_props = array(
+	'class'     => Core::concatenate_array( $hover_icon_classes ),
+	'focusable' => 'false',
+	'style'     => $hover_icon_style,
+);
+
+// Detect whether WP core `supports.color` values are set. Mirrors the
+// content block's pattern (controller.php:52-54): the slug path
+// (`attributes.textColor` / `.backgroundColor`) covers palette selections,
+// and the nested `attributes.style.color.*` path covers custom hex picks.
+// Either form is enough to add the WP core helper class so the global
+// stylesheet rule (`.has-background`, `.has-text-color`) wires up.
+$has_text_color       = ! empty( $attributes['textColor'] ?? '' )
+	|| ! empty( $attributes['style']['color']['text'] ?? '' );
+$has_background_color = ! empty( $attributes['backgroundColor'] ?? '' )
+	|| ! empty( $attributes['style']['color']['background'] ?? '' )
+	|| ! empty( $attributes['gradient'] ?? '' )
+	|| ! empty( $attributes['style']['color']['gradient'] ?? '' );
+
+// Style and class configurations.
+$config = array(
+	array( 'key' => 'textColor' ),
+	array( 'key' => 'textColorHover' ),
+	array( 'key' => 'backgroundColor' ),
+	array( 'key' => 'backgroundColorHover' ),
+	array( 'key' => 'backgroundGradient' ),
+	array( 'key' => 'backgroundGradientHover' ),
+	array(
+		'key'        => 'iconColor',
+		'css_var'    => '--spectra-icon-color',
+		'class_name' => null,
+	),
+	array(
+		'key'        => 'iconColorHover',
+		'css_var'    => '--spectra-icon-color-hover',
+		'class_name' => null,
+	),
+	array(
+		'key'        => 'shadowHover',
+		'css_var'    => '--spectra-shadow-hover',
+		'class_name' => 'spectra-shadow-hover',
+	),
+	array(
+		'key'        => 'gap',
+		'css_var'    => '--spectra-icon-gap',
+		'class_name' => null,
+	),
+);
+
+// Add border hover configurations to main config.
+$config = array_merge( $config, $border_hover_config );
+
+// Base classes.
+$custom_classes = array( 'wp-block-button__link wp-element-button' );
+
+// WP core color helper classes — paired with `has-<slug>-color` (palette)
+// or with the inline `style="color:#..."` (custom hex) that WP core's
+// `get_block_wrapper_attributes()` emits inside BlockAttributes helper.
+if ( $has_text_color ) {
+	$custom_classes[] = 'has-text-color';
+}
+if ( $has_background_color ) {
+	$custom_classes[] = 'has-background';
+}
+
+// Add hover icon class if enabled.
+if ( $show_icon_on_hover && ! empty( $hover_icon ) ) {
+	$custom_classes[] = 'has-hover-icon';
+}
+
+// Add border hover classes if enabled.
+if ( ! empty( $attributes['borderHover']['color'] ) ) {
+	$custom_classes[] = 'has-border-hover';
+	$custom_classes[] = 'spectra-border-hover-override';
+}
+
+// Add shadow hover classes if enabled.
+if ( ! empty( $attributes['shadowHover'] ) ) {
+	$custom_classes[] = 'spectra-shadow-hover-override';
+}
+
+// Default link requirements for the button Block.
+$has_link = ! empty( $attributes['linkURL'] );
+
+// The `<a>` owns href/target/rel whenever the block has a link of its own:
+// `view.php` prints them from the block's settings AND prints the wrapper string
+// on the same tag, so an authored copy emitted a SECOND attribute (the first
+// occurrence wins, so the authored one was already inert — this drops the
+// duplicate rather than changing which value applies). Matched case-insensitively
+// because the htmlAttributes pipe lowercases names, the stored keys are raw.
+// `aria-label` is deliberately NOT in this set: an authored label is more
+// specific than the text-derived default and REPLACES it (see below).
+if ( $has_link && ! empty( $attributes['htmlAttributes'] ) && is_array( $attributes['htmlAttributes'] ) ) {
+	foreach ( array_keys( $attributes['htmlAttributes'] ) as $authored_name ) {
+		if ( in_array( strtolower( trim( (string) $authored_name ) ), array( 'href', 'target', 'rel' ), true ) ) {
+			unset( $attributes['htmlAttributes'][ $authored_name ] );
+		}
+	}
+}
+
+// Get the block wrapper attributes, and extend the styles and classes.
+$wrapper_attributes = BlockAttributes::get_wrapper_attributes( $attributes, $config, array(), $custom_classes );
+
+$target = '';
+$rel    = '';
+$aria   = '';
+
+if ( $has_link ) {
+	// Set the target, and keep a default rel string.
+	$target = $attributes['linkTarget'] ?? '_self';
+
+	// Default aria-label = text, unless the source authored a USABLE one
+	// (`htmlAttributes`). An empty / non-string authored value is not an
+	// accessible name: suppressing the default for it left the link unnamed.
+	$authored_aria = $attributes['htmlAttributes']['aria-label'] ?? null;
+	$aria          = ( is_string( $authored_aria ) && '' !== trim( $authored_aria ) ) ? '' : $text;
+
+	// Strip HTML tags from aria-label for better accessibility.
+	if ( '' !== $aria ) {
+		$aria = wp_strip_all_tags( $aria );
+	}
+
+	// If the Rel attribute array exists, concatenate the attributes into a single string.
+	if ( ! empty( $attributes['linkRel'] ) && is_array( $attributes['linkRel'] ) ) {
+		// Note that the attribute is being formatted here.
+		$rel = esc_attr( Core::concatenate_array( $attributes['linkRel'] ) );
+	}
+}
+
+// return the view.
+return 'file:./view.php';

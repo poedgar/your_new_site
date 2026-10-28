@@ -1,0 +1,5083 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SureContact – Newsletters, Email Marketing, Automation, Revenue Tracking & CRM 1.5.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/surecontact\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-03T12:37:36+00:00\n"
+"PO-Revision-Date: 2026-06-03T12:37:36+00:00\n"
+"Language: id\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: surecontact\n"
+"X-Generator: WP-CLI 2.12.0\n"
+
+#. Plugin Name of the plugin
+#: surecontact.php
+msgid "SureContact – Newsletters, Email Marketing, Automation, Revenue Tracking & CRM"
+msgstr "SureContact – Buletin, Pemasaran Email, Automasi, Pelacakan Pendapatan & CRM"
+
+#. Plugin URI of the plugin
+#: surecontact.php
+msgid "https://surecontact.com"
+msgstr "https://surecontact.com"
+
+#. Description of the plugin
+#: surecontact.php
+msgid "Send newsletters, set up email automations, manage contacts and track ecommerce revenue in a CRM for WordPress."
+msgstr "Kirim buletin, atur automasi email, kelola kontak dan lacak pendapatan ecommerce dalam CRM untuk WordPress."
+
+#. Author of the plugin
+#: surecontact.php
+#: includes/admin/class-admin-menu.php:69
+#: includes/admin/class-admin-menu.php:70
+#: includes/integrations/class-gravity-forms-integration.php:632
+#: includes/integrations/class-gravity-forms-integration.php:686
+#: src/App.jsx:84
+#: src/components/AuthPage.jsx:223
+msgid "SureContact"
+msgstr "SureContact"
+
+#. Author URI of the plugin
+#: surecontact.php
+msgid "https://profiles.wordpress.org/brainstormforce/"
+msgstr "https://profiles.wordpress.org/brainstormforce/"
+
+#: includes/abilities/class-abilities-loader.php:97
+msgid "SureContact CRM"
+msgstr "SureContact CRM"
+
+#: includes/abilities/class-abilities-loader.php:98
+msgid "CRM integration rules, lists, tags, and contact automation tools."
+msgstr "Aturan integrasi CRM, daftar, tag, dan alat automasi kontak."
+
+#: includes/abilities/class-abstract-ability.php:174
+#: includes/abilities/settings/class-get-setting.php:110
+msgid "SureContact is not connected."
+msgstr "SureContact tidak terhubung."
+
+#: includes/abilities/class-abstract-ability.php:175
+msgid "Connect SureContact via Settings > SureContact first."
+msgstr "Hubungkan SureContact melalui Pengaturan > SureContact terlebih dahulu."
+
+#. translators: %s: integration/plugin name
+#: includes/abilities/class-abstract-ability.php:217
+#, php-format
+msgid "The %s plugin is not active."
+msgstr "Plugin %s tidak aktif."
+
+#: includes/abilities/class-abstract-ability.php:220
+msgid "Install and activate the required plugin to use this integration."
+msgstr "Instal dan aktifkan plugin yang diperlukan untuk menggunakan integrasi ini."
+
+#: includes/abilities/class-abstract-ability.php:287
+msgid "An unknown error occurred."
+msgstr "Terjadi kesalahan yang tidak diketahui."
+
+#: includes/abilities/crm/class-create-list.php:41
+#: includes/class-operation-labels.php:115
+msgid "Create List"
+msgstr "Buat Daftar"
+
+#: includes/abilities/crm/class-create-list.php:95
+#: includes/api-wp/class-lists-tags-api.php:476
+#: includes/api/class-lists-tags-api.php:151
+msgid "List name is required."
+msgstr "Nama daftar diperlukan."
+
+#: includes/abilities/crm/class-create-list.php:107
+msgid "List creation request queued for background processing. The CRM API is temporarily unavailable — the list will be created automatically when connectivity is restored."
+msgstr "Permintaan pembuatan daftar telah dibariskan untuk pemrosesan latar belakang. API CRM sementara tidak tersedia — daftar akan dibuat secara otomatis ketika konektivitas dipulihkan."
+
+#: includes/abilities/crm/class-create-list.php:115
+#: includes/abilities/crm/class-create-tag.php:115
+#: includes/api-wp/class-lists-tags-api.php:502
+#: includes/api-wp/class-lists-tags-api.php:569
+msgid "Invalid response from SureContact API."
+msgstr "Respons tidak valid dari API SureContact."
+
+#. translators: %s: list name
+#: includes/abilities/crm/class-create-list.php:128
+#, php-format
+msgid "List \"%s\" created successfully."
+msgstr "Daftar \"%s\" berhasil dibuat."
+
+#: includes/abilities/crm/class-create-tag.php:41
+#: includes/class-operation-labels.php:116
+msgid "Create Tag"
+msgstr "Buat Tag"
+
+#: includes/abilities/crm/class-create-tag.php:95
+#: includes/api-wp/class-lists-tags-api.php:543
+#: includes/api/class-lists-tags-api.php:193
+msgid "Tag name is required."
+msgstr "Nama tag diperlukan."
+
+#: includes/abilities/crm/class-create-tag.php:107
+msgid "Tag creation request queued for background processing. The CRM API is temporarily unavailable — the tag will be created automatically when connectivity is restored."
+msgstr "Permintaan pembuatan tag telah dibariskan untuk pemrosesan latar belakang. API CRM sementara tidak tersedia — tag akan dibuat secara otomatis ketika konektivitas dipulihkan."
+
+#. translators: %s: tag name
+#: includes/abilities/crm/class-create-tag.php:128
+#, php-format
+msgid "Tag \"%s\" created successfully."
+msgstr "Tag \"%s\" berhasil dibuat."
+
+#: includes/abilities/crm/class-get-list.php:40
+msgid "Get All Lists"
+msgstr "Ambil Semua Daftar"
+
+#: includes/abilities/crm/class-get-list.php:100
+msgid "No lists found. Run surecontact/import-metadata to sync from CRM, or create one with surecontact/create-list."
+msgstr "Tidak ada daftar ditemukan. Jalankan surecontact/import-metadata untuk menyinkronkan dari CRM, atau buat satu dengan surecontact/create-list."
+
+#. translators: %d: number of lists found
+#: includes/abilities/crm/class-get-list.php:122
+#, php-format
+msgid "Found %d list."
+msgid_plural "Found %d lists."
+msgstr[0] "Ditemukan %d daftar."
+
+#: includes/abilities/crm/class-get-tag.php:40
+msgid "Get All Tags"
+msgstr "Ambil Semua Tag"
+
+#: includes/abilities/crm/class-get-tag.php:100
+msgid "No tags found. Run surecontact/import-metadata to sync from CRM, or create one with surecontact/create-tag."
+msgstr "Tidak ada tag ditemukan. Jalankan surecontact/import-metadata untuk menyinkronkan dari CRM, atau buat satu dengan surecontact/create-tag."
+
+#. translators: %d: number of tags found
+#: includes/abilities/crm/class-get-tag.php:122
+#, php-format
+msgid "Found %d tag."
+msgid_plural "Found %d tags."
+msgstr[0] "Ditemukan %d tag."
+
+#: includes/abilities/crm/class-import-metadata.php:41
+msgid "Sync Lists & Tags from CRM"
+msgstr "Sinkronkan Daftar & Tag dari CRM"
+
+#: includes/abilities/crm/class-import-metadata.php:133
+#: includes/api-wp/class-lists-tags-api.php:304
+#: src/components/ListSelect.jsx:72
+#: src/components/TagSelect.jsx:72
+#: src/screens/settings/components/SettingsHeader.jsx:24
+msgid "Failed to sync lists and tags from CRM."
+msgstr "Gagal menyinkronkan daftar dan tag dari CRM."
+
+#. translators: %d: number of lists
+#: includes/abilities/crm/class-import-metadata.php:145
+#, php-format
+msgid "%d list"
+msgid_plural "%d lists"
+msgstr[0] "%d daftar"
+
+#. translators: %d: number of tags
+#: includes/abilities/crm/class-import-metadata.php:147
+#, php-format
+msgid "%d tag"
+msgid_plural "%d tags"
+msgstr[0] "%d tag"
+
+#. translators: 1: formatted list count (e.g. "3 lists"), 2: formatted tag count (e.g. "5 tags")
+#: includes/abilities/crm/class-import-metadata.php:152
+#, php-format
+msgid "Synced %1$s and %2$s from CRM."
+msgstr "Disinkronkan %1$s dan %2$s dari CRM."
+
+#: includes/abilities/fields/class-create-contact-field.php:41
+msgid "Create Custom Contact Field"
+msgstr "Buat Bidang Kontak Kustom"
+
+#: includes/abilities/fields/class-create-contact-field.php:118
+msgid "name, label, and field_type are all required."
+msgstr "nama, label, dan field_type semuanya diperlukan."
+
+#. translators: %s: comma-separated list of valid types
+#: includes/abilities/fields/class-create-contact-field.php:127
+#, php-format
+msgid "Invalid field_type. Must be one of: %s"
+msgstr "field_type tidak valid. Harus salah satu dari: %s"
+
+#. translators: %s: field label
+#: includes/abilities/fields/class-create-contact-field.php:161
+#, php-format
+msgid "Custom field \"%s\" created successfully."
+msgstr "Bidang kustom \"%s\" berhasil dibuat."
+
+#: includes/abilities/fields/class-get-contact-field.php:40
+msgid "Get Contact Fields"
+msgstr "Ambil Bidang Kontak"
+
+#. translators: 1: number of primary fields, 2: number of custom fields
+#: includes/abilities/fields/class-get-contact-field.php:111
+#, php-format
+msgid "Found %1$d primary and %2$d custom field."
+msgid_plural "Found %1$d primary and %2$d custom fields."
+msgstr[0] "Ditemukan %1$d bidang utama dan %2$d bidang kustom."
+
+#: includes/abilities/integrations/class-get-integration.php:39
+msgid "Get Integration Details"
+msgstr "Ambil Detail Integrasi"
+
+#. translators: %s: integration slug
+#: includes/abilities/integrations/class-get-integration.php:131
+#: includes/api-wp/class-integration-rules-api.php:1563
+#, php-format
+msgid "Integration not found: %s"
+msgstr "Integrasi tidak ditemukan: %s"
+
+#: includes/abilities/integrations/class-get-integration.php:134
+msgid "Use surecontact/list-integration to see available integrations and their slugs."
+msgstr "Gunakan surecontact/list-integration untuk melihat integrasi yang tersedia dan slug-nya."
+
+#. translators: %s: integration name
+#: includes/abilities/integrations/class-get-integration.php:142
+#, php-format
+msgid "Details retrieved for \"%s\" integration."
+msgstr "Detail diambil untuk integrasi \"%s\"."
+
+#. translators: %s: integration slug
+#: includes/abilities/integrations/class-get-integration.php:148
+#, php-format
+msgid "Integration \"%s\" is registered but its required plugin is not active. Install and activate the plugin first."
+msgstr "Integrasi \"%s\" terdaftar tetapi plugin yang diperlukan tidak aktif. Instal dan aktifkan plugin terlebih dahulu."
+
+#. translators: %s: integration slug
+#: includes/abilities/integrations/class-get-integration.php:154
+#, php-format
+msgid "Integration \"%s\" is available but could not be loaded. Check for plugin conflicts."
+msgstr "Integrasi \"%s\" tersedia tetapi tidak dapat dimuat. Periksa konflik plugin."
+
+#: includes/abilities/integrations/class-get-item-field.php:40
+msgid "Get Item Fields"
+msgstr "Ambil Bidang Item"
+
+#: includes/abilities/integrations/class-get-item-field.php:129
+#: includes/abilities/integrations/class-list-integration-item.php:116
+msgid "The required plugin must be installed and active. Use surecontact/list-integration to check."
+msgstr "Plugin yang diperlukan harus diinstal dan aktif. Gunakan surecontact/list-integration untuk memeriksa."
+
+#. translators: 1: number of fields, 2: item ID, 3: integration slug
+#: includes/abilities/integrations/class-get-item-field.php:139
+#, php-format
+msgid "Found %1$d field for item %2$s in \"%3$s\" integration."
+msgid_plural "Found %1$d fields for item %2$s in \"%3$s\" integration."
+msgstr[0] "Ditemukan %1$d bidang untuk item %2$s dalam integrasi \"%3$s\"."
+
+#: includes/abilities/integrations/class-list-integration-item.php:39
+msgid "List Integration Items"
+msgstr "Daftar Item Integrasi"
+
+#. translators: 1: number of items, 2: integration slug
+#: includes/abilities/integrations/class-list-integration-item.php:135
+#, php-format
+msgid "Found %1$d item for \"%2$s\" integration."
+msgid_plural "Found %1$d items for \"%2$s\" integration."
+msgstr[0] "Ditemukan %1$d item untuk integrasi \"%2$s\"."
+
+#: includes/abilities/integrations/class-list-integration.php:39
+msgid "List All Integrations"
+msgstr "Daftar Semua Integrasi"
+
+#. translators: %d: number of integrations
+#: includes/abilities/integrations/class-list-integration.php:156
+#, php-format
+msgid "Found %d integration."
+msgid_plural "Found %d integrations."
+msgstr[0] "Ditemukan %d integrasi."
+
+#: includes/abilities/integrations/class-update-integration-setting.php:39
+msgid "Update Integration Settings"
+msgstr "Perbarui Pengaturan Integrasi"
+
+#: includes/abilities/integrations/class-update-integration-setting.php:112
+msgid "Settings must be an object."
+msgstr "Pengaturan harus berupa objek."
+
+#: includes/abilities/integrations/class-update-integration-setting.php:120
+msgid "No valid settings keys provided."
+msgstr "Tidak ada kunci pengaturan yang valid diberikan."
+
+#: includes/abilities/integrations/class-update-integration-setting.php:121
+msgid "Use surecontact/get-integration to see available settings_fields. To enable/disable the integration, use surecontact/update-integration-status instead."
+msgstr "Gunakan surecontact/get-integration untuk melihat fields_settings yang tersedia. Untuk mengaktifkan/mematikan integrasi, gunakan surecontact/update-integration-status sebagai gantinya."
+
+#: includes/abilities/integrations/class-update-integration-setting.php:135
+msgid "Use surecontact/get-integration to see available settings fields."
+msgstr "Gunakan surecontact/get-integration untuk melihat bidang pengaturan yang tersedia."
+
+#. translators: %s: integration slug
+#: includes/abilities/integrations/class-update-integration-setting.php:143
+#, php-format
+msgid "Settings saved for \"%s\" integration."
+msgstr "Pengaturan disimpan untuk integrasi \"%s\"."
+
+#: includes/abilities/integrations/class-update-integration-status.php:39
+msgid "Enable/Disable Integration"
+msgstr "Aktifkan/nonaktifkan Integrasi"
+
+#: includes/abilities/integrations/class-update-integration-status.php:126
+msgid "Use surecontact/list-integration to see available integrations."
+msgstr "Gunakan surecontact/list-integration untuk melihat integrasi yang tersedia."
+
+#: includes/abilities/integrations/class-update-integration-status.php:129
+#: includes/abilities/rules/class-update-rule-status.php:146
+#: includes/api-wp/class-integration-rules-api.php:1062
+msgid "enabled"
+msgstr "diaktifkan"
+
+#: includes/abilities/integrations/class-update-integration-status.php:129
+#: includes/abilities/rules/class-update-rule-status.php:146
+#: includes/api-wp/class-integration-rules-api.php:1062
+msgid "disabled"
+msgstr "dinonaktifkan"
+
+#. translators: 1: integration slug, 2: enabled/disabled
+#. translators: %1$s: integration slug, %2$s: enabled/disabled.
+#: includes/abilities/integrations/class-update-integration-status.php:134
+#: includes/api-wp/class-integration-rules-api.php:1069
+#, php-format
+msgid "Integration \"%1$s\" %2$s successfully."
+msgstr "Integrasi \"%1$s\" %2$s berhasil."
+
+#: includes/abilities/rules/class-create-rule.php:39
+msgid "Create Automation Rule"
+msgstr "Buat Aturan Automasi"
+
+#: includes/abilities/rules/class-create-rule.php:147
+#: includes/abilities/rules/class-get-rule.php:116
+msgid "item_id and item_type are required."
+msgstr "item_id dan item_type diperlukan."
+
+#: includes/abilities/rules/class-create-rule.php:148
+msgid "Use surecontact/list-integration-item to find item IDs and types. Use \"all\" as item_id for a global item rule."
+msgstr "Gunakan surecontact/list-integration-item untuk menemukan ID dan jenis item. Gunakan \"all\" sebagai item_id untuk aturan item global."
+
+#: includes/abilities/rules/class-create-rule.php:153
+msgid "Config must be an object."
+msgstr "Config harus berupa objek."
+
+#: includes/abilities/rules/class-create-rule.php:175
+msgid "Use surecontact/get-integration to see valid item types and events, and surecontact/list-integration-item for valid item IDs."
+msgstr "Gunakan surecontact/get-integration untuk melihat jenis item dan acara yang valid, dan surecontact/list-integration-item untuk ID item yang valid."
+
+#: includes/abilities/rules/class-create-rule.php:181
+msgid "Integration rule saved successfully."
+msgstr "Aturan integrasi berhasil disimpan."
+
+#: includes/abilities/rules/class-delete-rule.php:39
+msgid "Delete Automation Rule"
+msgstr "Hapus Aturan Automasi"
+
+#: includes/abilities/rules/class-delete-rule.php:116
+msgid "item_id and item_type are required to delete a rule."
+msgstr "item_id dan item_type diperlukan untuk menghapus aturan."
+
+#: includes/abilities/rules/class-delete-rule.php:117
+msgid "Use surecontact/list-rule to find the rule you want to delete. To manage global integration settings, use surecontact/update-integration-status instead."
+msgstr "Gunakan surecontact/list-rule untuk menemukan aturan yang ingin Anda hapus. Untuk mengelola pengaturan integrasi global, gunakan surecontact/update-integration-status sebagai gantinya."
+
+#: includes/abilities/rules/class-delete-rule.php:139
+#: includes/abilities/rules/class-get-rule.php:138
+#: includes/abilities/rules/class-update-rule-status.php:143
+msgid "Use surecontact/list-rule to see existing rules."
+msgstr "Gunakan surecontact/list-rule untuk melihat aturan yang ada."
+
+#: includes/abilities/rules/class-delete-rule.php:143
+msgid "Integration rule deleted successfully."
+msgstr "Aturan integrasi berhasil dihapus."
+
+#: includes/abilities/rules/class-get-rule.php:39
+msgid "Get Automation Rule"
+msgstr "Dapatkan Aturan Automasi"
+
+#: includes/abilities/rules/class-get-rule.php:117
+msgid "Use surecontact/list-rule to see existing rules, or surecontact/list-integration-item to find item IDs."
+msgstr "Gunakan surecontact/list-rule untuk melihat aturan yang ada, atau surecontact/list-integration-item untuk menemukan ID item."
+
+#: includes/abilities/rules/class-get-rule.php:145
+msgid "No rule configuration found for this combination."
+msgstr "Tidak ada konfigurasi aturan yang ditemukan untuk kombinasi ini."
+
+#: includes/abilities/rules/class-get-rule.php:155
+msgid "Rule configuration retrieved successfully."
+msgstr "Konfigurasi aturan berhasil diambil."
+
+#: includes/abilities/rules/class-list-rule.php:39
+msgid "List All Automation Rules"
+msgstr "Daftar Semua Aturan Automasi"
+
+#. translators: %d: number of rules
+#: includes/abilities/rules/class-list-rule.php:172
+#, php-format
+msgid "Found %d integration rule."
+msgid_plural "Found %d integration rules."
+msgstr[0] "Ditemukan %d aturan integrasi."
+
+#: includes/abilities/rules/class-update-rule-status.php:39
+msgid "Enable/Disable Rule"
+msgstr "Aktifkan/Nonaktifkan Aturan"
+
+#: includes/abilities/rules/class-update-rule-status.php:119
+msgid "item_id and item_type are required to update a rule status."
+msgstr "item_id dan item_type diperlukan untuk memperbarui status aturan."
+
+#: includes/abilities/rules/class-update-rule-status.php:120
+msgid "Use surecontact/list-rule to find the rule. To toggle global integration status, use surecontact/update-integration-status instead."
+msgstr "Gunakan surecontact/list-rule untuk menemukan aturan. Untuk mengganti status integrasi global, gunakan surecontact/update-integration-status sebagai gantinya."
+
+#. translators: %s: enabled/disabled
+#: includes/abilities/rules/class-update-rule-status.php:151
+#, php-format
+msgid "Rule %s successfully."
+msgstr "Aturan %s berhasil."
+
+#: includes/abilities/settings/class-get-setting.php:39
+msgid "Get SureContact Settings"
+msgstr "Dapatkan Pengaturan SureContact"
+
+#: includes/abilities/settings/class-get-setting.php:109
+msgid "SureContact is connected."
+msgstr "SureContact terhubung."
+
+#: includes/admin/class-admin-menu.php:81
+#: includes/admin/class-admin-menu.php:82
+#: src/components/NavMenu.jsx:21
+msgid "Dashboard"
+msgstr "Dasbor"
+
+#: includes/admin/wordpress-fields.php:35
+#: includes/class-field-mapper.php:268
+#: includes/integrations/class-fluentcrm-integration.php:203
+msgid "First Name"
+msgstr "Nama Depan"
+
+#: includes/admin/wordpress-fields.php:40
+#: includes/class-field-mapper.php:272
+#: includes/integrations/class-fluentcrm-integration.php:207
+msgid "Last Name"
+msgstr "Nama Belakang"
+
+#: includes/admin/wordpress-fields.php:45
+#: includes/class-field-mapper.php:264
+msgid "Email Address"
+msgstr "Alamat Email"
+
+#: includes/admin/wordpress-fields.php:51
+msgid "Username"
+msgstr "Nama Pengguna"
+
+#: includes/admin/wordpress-fields.php:57
+msgid "Display Name"
+msgstr "Nama Tampilan"
+
+#: includes/admin/wordpress-fields.php:63
+msgid "Website"
+msgstr "Situs Web"
+
+#: includes/admin/wordpress-fields.php:69
+msgid "User Registered"
+msgstr "Pengguna Terdaftar"
+
+#: includes/admin/wordpress-fields.php:75
+msgid "Role"
+msgstr "Peran"
+
+#: includes/admin/wordpress-fields.php:81
+msgid "Nickname"
+msgstr "Nama Panggilan"
+
+#: includes/admin/wordpress-fields.php:86
+msgid "Biographical Info"
+msgstr "Info Biografi"
+
+#: includes/admin/wordpress-fields.php:91
+msgid "Language/Locale"
+msgstr "Bahasa/Lokasi"
+
+#: includes/api-wp/class-api-base.php:69
+msgid "You do not have permission to perform this action."
+msgstr "Anda tidak memiliki izin untuk melakukan tindakan ini."
+
+#: includes/api-wp/class-api-base.php:93
+msgid "Nonce is missing."
+msgstr "Nonce hilang."
+
+#: includes/api-wp/class-api-base.php:102
+msgid "Nonce is invalid."
+msgstr "Nonce tidak valid."
+
+#: includes/api-wp/class-bulk-sync-api.php:225
+msgid "Invalid sync type"
+msgstr "Tipe sinkronisasi tidak valid"
+
+#: includes/api-wp/class-bulk-sync-api.php:242
+msgid "Email field mapping is required before syncing. Please configure it in Contact Fields settings."
+msgstr "Pemetaan bidang email diperlukan sebelum sinkronisasi. Silakan atur di pengaturan Bidang Kontak."
+
+#: includes/api-wp/class-bulk-sync-api.php:255
+msgid "Failed to start sync"
+msgstr "Gagal memulai sinkronisasi"
+
+#: includes/api-wp/class-bulk-sync-api.php:455
+msgid "Job not found"
+msgstr "Pekerjaan tidak ditemukan"
+
+#: includes/api-wp/class-bulk-sync-api.php:479
+msgid "Job is already in a terminal state and cannot be cancelled"
+msgstr "Pekerjaan sudah dalam keadaan terminal dan tidak dapat dibatalkan"
+
+#. translators: %1$d: total stopped actions, %2$d: pending actions count, %3$d: running actions count
+#: includes/api-wp/class-bulk-sync-api.php:524
+#, php-format
+msgid "Job cancelled successfully. Stopped %1$d action (%2$d pending, %3$d running)."
+msgid_plural "Job cancelled successfully. Stopped %1$d actions (%2$d pending, %3$d running)."
+msgstr[0] "Tugas berhasil dibatalkan. Menghentikan %1$d tindakan (%2$d tertunda, %3$d berjalan)."
+
+#: includes/api-wp/class-field-mapping.php:123
+msgid "Field mappings configuration"
+msgstr "Konfigurasi pemetaan bidang"
+
+#: includes/api-wp/class-field-mapping.php:157
+msgid "Field name (unique identifier)"
+msgstr "Nama bidang (pengenal unik)"
+
+#: includes/api-wp/class-field-mapping.php:163
+msgid "Field label (display name)"
+msgstr "Label bidang (nama tampilan)"
+
+#: includes/api-wp/class-field-mapping.php:169
+msgid "Field type"
+msgstr "Tipe bidang"
+
+#: includes/api-wp/class-field-mapping.php:176
+msgid "Options for select/multi_select fields"
+msgstr "Opsi untuk bidang select/multi_select"
+
+#: includes/api-wp/class-field-mapping.php:191
+msgid "Whether the field is required"
+msgstr "Apakah bidang ini diperlukan"
+
+#: includes/api-wp/class-field-mapping.php:276
+#: src/screens/contact-fields/FieldMappingTable.jsx:57
+msgid "Field mappings saved successfully!"
+msgstr "Pemetaan bidang berhasil disimpan!"
+
+#: includes/api-wp/class-field-mapping.php:284
+#: src/api/fieldMapping.js:113
+#: src/api/fieldMapping.js:118
+msgid "Failed to save field mappings."
+msgstr "Gagal menyimpan pemetaan bidang."
+
+#: includes/api-wp/class-field-mapping.php:331
+#: src/components/CustomFieldSelect.jsx:62
+#: src/screens/contact-fields/FieldMappingTable.jsx:143
+msgid "CRM fields synced successfully!"
+msgstr "Bidang CRM berhasil disinkronkan!"
+
+#: includes/api-wp/class-field-mapping.php:371
+msgid "Options are required for select and multi-select fields."
+msgstr "Opsi diperlukan untuk bidang select dan multi-select."
+
+#: includes/api-wp/class-field-mapping.php:435
+#: src/screens/contact-fields/FieldMappingTable.jsx:113
+#: src/screens/integrations/IntegrationsTableCard.jsx:149
+msgid "Custom field created successfully!"
+msgstr "Bidang kustom berhasil dibuat!"
+
+#: includes/api-wp/class-integration-rules-api.php:477
+msgid "Integration metadata not available."
+msgstr "Metadata integrasi tidak tersedia."
+
+#: includes/api-wp/class-integration-rules-api.php:664
+msgid "Failed to save integration configuration."
+msgstr "Gagal menyimpan konfigurasi integrasi."
+
+#: includes/api-wp/class-integration-rules-api.php:678
+msgid "Configuration saved successfully."
+msgstr "Konfigurasi berhasil disimpan."
+
+#: includes/api-wp/class-integration-rules-api.php:704
+msgid "Failed to update integration status."
+msgstr "Gagal memperbarui status integrasi."
+
+#: includes/api-wp/class-integration-rules-api.php:712
+msgid "Configuration not found."
+msgstr "Konfigurasi tidak ditemukan."
+
+#: includes/api-wp/class-integration-rules-api.php:720
+msgid "Integration status updated successfully."
+msgstr "Status integrasi diperbarui dengan sukses."
+
+#: includes/api-wp/class-integration-rules-api.php:746
+msgid "Failed to delete integration configuration or configuration not found."
+msgstr "Gagal menghapus konfigurasi integrasi atau konfigurasi tidak ditemukan."
+
+#: includes/api-wp/class-integration-rules-api.php:760
+msgid "Configuration deleted successfully."
+msgstr "Konfigurasi dihapus dengan sukses."
+
+#: includes/api-wp/class-integration-rules-api.php:896
+#: includes/api-wp/class-integration-rules-api.php:1105
+#: includes/api-wp/class-integration-rules-api.php:1551
+msgid "Integrations loader not initialized."
+msgstr "Loader integrasi tidak diinisialisasi."
+
+#. translators: %s: integration slug
+#: includes/api-wp/class-integration-rules-api.php:1055
+#, php-format
+msgid "Failed to toggle integration: %s"
+msgstr "Gagal mengganti integrasi: %s"
+
+#: includes/api-wp/class-integration-rules-api.php:1097
+msgid "You do not have permission to activate plugins."
+msgstr "Anda tidak memiliki izin untuk mengaktifkan plugin."
+
+#: includes/api-wp/class-integration-rules-api.php:1138
+msgid "No plugin file registered for this integration."
+msgstr "Tidak ada file plugin yang terdaftar untuk integrasi ini."
+
+#: includes/api-wp/class-integration-rules-api.php:1147
+msgid "This plugin is not installed. Please install it first."
+msgstr "Plugin ini tidak terpasang. Silakan pasang terlebih dahulu."
+
+#. translators: %s: plugin file path
+#: includes/api-wp/class-integration-rules-api.php:1166
+#, php-format
+msgid "Required dependency \"%s\" is not installed."
+msgstr "Ketergantungan yang dibutuhkan \"%s\" belum terpasang."
+
+#. translators: %1$s: plugin file path, %2$s: error message
+#: includes/api-wp/class-integration-rules-api.php:1179
+#, php-format
+msgid "Failed to activate dependency \"%1$s\": %2$s"
+msgstr "Gagal mengaktifkan ketergantungan \"%1$s\": %2$s"
+
+#: includes/api-wp/class-integration-rules-api.php:1194
+msgid "Plugin is already active."
+msgstr "Plugin sudah aktif."
+
+#: includes/api-wp/class-integration-rules-api.php:1213
+msgid "Plugin activated successfully."
+msgstr "Plugin diaktifkan dengan sukses."
+
+#: includes/api-wp/class-integration-rules-api.php:1351
+msgid "Failed to save integration settings."
+msgstr "Gagal menyimpan pengaturan integrasi."
+
+#: includes/api-wp/class-integration-rules-api.php:1359
+msgid "Integration settings saved successfully."
+msgstr "Pengaturan integrasi disimpan dengan sukses."
+
+#. translators: %s: integration slug
+#: includes/api-wp/class-integration-rules-api.php:1576
+#, php-format
+msgid "Integration \"%s\" is not available. The required plugin may not be installed or active."
+msgstr "Integrasi \"%s\" tidak tersedia. Plugin yang dibutuhkan mungkin belum terpasang atau aktif."
+
+#: includes/api-wp/class-lists-tags-api.php:95
+msgid "Optional search term to filter results."
+msgstr "Istilah pencarian opsional untuk memfilter hasil."
+
+#: includes/api-wp/class-lists-tags-api.php:119
+msgid "The name of the list to create."
+msgstr "Nama daftar yang akan dibuat."
+
+#: includes/api-wp/class-lists-tags-api.php:146
+msgid "The name of the tag to create."
+msgstr "Nama tag yang akan dibuat."
+
+#: includes/api-wp/class-lists-tags-api.php:192
+msgid "No cached lists found. Please sync lists and tags."
+msgstr "Tidak ada daftar cached yang ditemukan. Silakan sinkronkan daftar dan tag."
+
+#: includes/api-wp/class-lists-tags-api.php:242
+msgid "No cached tags found. Please sync lists and tags."
+msgstr "Tidak ada tag cached yang ditemukan. Silakan sinkronkan daftar dan tag."
+
+#. translators: %d: number of lists
+#: includes/api-wp/class-lists-tags-api.php:314
+#, php-format
+msgid "%d list synced"
+msgid_plural "%d lists synced"
+msgstr[0] "%d daftar disinkronkan"
+
+#. translators: %d: number of tags
+#: includes/api-wp/class-lists-tags-api.php:323
+#, php-format
+msgid "%d tag synced"
+msgid_plural "%d tags synced"
+msgstr[0] "%d tag disinkronkan"
+
+#: includes/api-wp/class-lists-tags-api.php:522
+msgid "List created successfully."
+msgstr "Daftar dibuat dengan sukses."
+
+#: includes/api-wp/class-lists-tags-api.php:589
+msgid "Tag created successfully."
+msgstr "Tag dibuat dengan sukses."
+
+#: includes/api-wp/class-queue-rest-controller.php:435
+msgid "Log entry not found or could not be deleted."
+msgstr "Entri log tidak ditemukan atau tidak dapat dihapus."
+
+#: includes/api-wp/class-queue-rest-controller.php:443
+msgid "Log entry deleted."
+msgstr "Entri log dihapus."
+
+#. translators: %d: number of deleted entries
+#: includes/api-wp/class-queue-rest-controller.php:465
+#, php-format
+msgid "%d log entries deleted."
+msgstr "%d entri log dihapus."
+
+#. translators: %d: number of cleared entries
+#: includes/api-wp/class-queue-rest-controller.php:489
+#, php-format
+msgid "%d log entries cleared."
+msgstr "%d entri log dibersihkan."
+
+#: includes/api-wp/class-queue-rest-controller.php:578
+msgid "Request queued for immediate retry."
+msgstr "Permintaan dalam antrean untuk percobaan ulang segera."
+
+#. translators: %d: number of items queued for retry
+#: includes/api-wp/class-queue-rest-controller.php:599
+#, php-format
+msgid "%d items queued for retry."
+msgstr "%d item dalam antrean untuk percobaan ulang."
+
+#. translators: %1$d: succeeded count, %2$d: failed count
+#: includes/api-wp/class-queue-rest-controller.php:624
+#, php-format
+msgid "%1$d succeeded, %2$d failed."
+msgstr "%1$d berhasil, %2$d gagal."
+
+#: includes/api-wp/class-queue-rest-controller.php:648
+msgid "Queue item not found or could not be deleted."
+msgstr "Item dalam antrean tidak ditemukan atau tidak dapat dihapus."
+
+#: includes/api-wp/class-queue-rest-controller.php:656
+msgid "Queue item deleted."
+msgstr "Item dalam antrean telah dihapus."
+
+#. translators: %d: number of deleted items
+#: includes/api-wp/class-queue-rest-controller.php:678
+#, php-format
+msgid "%d queue items deleted."
+msgstr "%d item antrean telah dihapus."
+
+#: includes/api-wp/class-rest-controller.php:173
+msgid "Authorization header is required."
+msgstr "Header otorisasi diperlukan."
+
+#: includes/api-wp/class-rest-controller.php:182
+msgid "Invalid authorization header format. Expected: Bearer {token}"
+msgstr "Format header otorisasi tidak valid. Diharapkan: Bearer {token}"
+
+#: includes/api-wp/class-rest-controller.php:196
+msgid "No active connection found."
+msgstr "Tidak ditemukan koneksi aktif."
+
+#: includes/api-wp/class-rest-controller.php:205
+msgid "Invalid bearer token."
+msgstr "Token bearer tidak valid."
+
+#: includes/api-wp/class-rest-controller.php:246
+msgid "Name must be between 1 and 60 characters."
+msgstr "Nama harus antara 1 dan 60 karakter."
+
+#: includes/api-wp/class-rest-controller.php:266
+#: includes/class-auth-manager.php:367
+msgid "A valid email address is required."
+msgstr "Alamat email yang valid diperlukan."
+
+#: includes/api-wp/class-rest-controller.php:293
+msgid "This site is already connected to SureContact."
+msgstr "Situs ini sudah terhubung ke SureContact."
+
+#: includes/api-wp/class-rest-controller.php:311
+msgid "Account created and connected to SureContact."
+msgstr "Akun dibuat dan terhubung ke SureContact."
+
+#: includes/api-wp/class-rest-controller.php:329
+msgid "Successfully disconnected from SureContact."
+msgstr "Berhasil terputus dari SureContact."
+
+#: includes/api-wp/class-rest-controller.php:354
+msgid "Workspace UUID does not match."
+msgstr "UUID ruang kerja tidak cocok."
+
+#: includes/api-wp/class-rest-controller.php:364
+msgid "Connection successfully disconnected by SaaS platform."
+msgstr "Koneksi berhasil terputus oleh platform SaaS."
+
+#: includes/api-wp/class-settings-api.php:173
+msgid "Invalid settings data provided."
+msgstr "Data pengaturan yang diberikan tidak valid."
+
+#: includes/api-wp/class-settings-api.php:194
+msgid "Settings updated successfully."
+msgstr "Pengaturan berhasil diperbarui."
+
+#: includes/api-wp/class-settings-api.php:262
+msgid "Auto-Create Contacts on Registration"
+msgstr "Buat Kontak Otomatis saat Pendaftaran"
+
+#: includes/api-wp/class-settings-api.php:263
+msgid "Automatically create a contact in SureContact when a new user registers on your WordPress site."
+msgstr "Secara otomatis buat kontak di SureContact ketika pengguna baru mendaftar di situs WordPress Anda."
+
+#: includes/api-wp/class-settings-api.php:268
+msgid "Auto-Sync Contact Updates"
+msgstr "Sinkronisasi Pembaruan Kontak Otomatis"
+
+#: includes/api-wp/class-settings-api.php:269
+msgid "Automatically sync all contact changes to SureContact, including profile updates, custom field changes, role changes, and login activity."
+msgstr "Secara otomatis sinkronkan semua perubahan kontak ke SureContact, termasuk pembaruan profil, perubahan field kustom, perubahan peran, dan aktivitas login."
+
+#: includes/api-wp/class-settings-api.php:274
+msgid "Sync User Roles as Lists"
+msgstr "Sinkronkan Peran Pengguna sebagai Daftar"
+
+#: includes/api-wp/class-settings-api.php:275
+msgid "Automatically create lists based on WordPress user roles and assign contacts to them. A list will be created for each role if it doesn't exist."
+msgstr "Secara otomatis buat daftar berdasarkan peran pengguna WordPress dan tetapkan kontak ke dalamnya. Daftar akan dibuat untuk setiap peran jika belum ada."
+
+#: includes/api-wp/class-settings-api.php:280
+msgid "Sync User Roles as Tags"
+msgstr "Sinkronkan Peran Pengguna sebagai Tag"
+
+#: includes/api-wp/class-settings-api.php:281
+msgid "Automatically create tags based on WordPress user roles and apply them to contacts. A tag will be created for each role if it doesn't exist."
+msgstr "Secara otomatis buat tag berdasarkan peran pengguna WordPress dan terapkan ke kontak. Tag akan dibuat untuk setiap peran jika belum ada."
+
+#: includes/api-wp/class-settings-api.php:286
+msgid "Assign Lists"
+msgstr "Tetapkan Daftar"
+
+#: includes/api-wp/class-settings-api.php:287
+msgid "Select lists to automatically apply to new users who register an account in WordPress. These contacts will be added to the selected lists in SureContact."
+msgstr "Pilih daftar untuk secara otomatis diterapkan kepada pengguna baru yang mendaftar akun di WordPress. Kontak ini akan ditambahkan ke daftar yang dipilih di SureContact."
+
+#: includes/api-wp/class-settings-api.php:292
+msgid "Assign Tags"
+msgstr "Tetapkan Tag"
+
+#: includes/api-wp/class-settings-api.php:293
+msgid "Select tags to automatically apply to new users who register an account in WordPress. These contacts will be tagged with the selected tags in SureContact."
+msgstr "Pilih tag untuk secara otomatis diterapkan pada pengguna baru yang mendaftar akun di WordPress. Kontak ini akan diberi tag dengan tag yang dipilih di SureContact."
+
+#: includes/api-wp/class-settings-api.php:300
+msgid "Log Retention Period"
+msgstr "Periode Retensi Log"
+
+#: includes/api-wp/class-settings-api.php:301
+msgid "How long to keep success and error log entries before automatic cleanup. Failed queue items are always kept for 7 days."
+msgstr "Berapa lama menjaga entri log sukses dan kesalahan sebelum pembersihan otomatis. Item antrean yang gagal selalu disimpan selama 7 hari."
+
+#: includes/api-wp/class-settings-api.php:305
+msgid "1 day"
+msgstr "1 hari"
+
+#: includes/api-wp/class-settings-api.php:306
+msgid "2 days"
+msgstr "2 hari"
+
+#: includes/api-wp/class-settings-api.php:307
+msgid "3 days"
+msgstr "3 hari"
+
+#: includes/api-wp/class-settings-api.php:308
+msgid "5 days"
+msgstr "5 hari"
+
+#: includes/api-wp/class-settings-api.php:309
+msgid "7 days"
+msgstr "7 hari"
+
+#: includes/api-wp/class-settings-api.php:310
+msgid "14 days"
+msgstr "14 hari"
+
+#: includes/api-wp/class-settings-api.php:311
+msgid "30 days"
+msgstr "30 hari"
+
+#: includes/api/class-company-api.php:72
+msgid "Company name is required to create a company."
+msgstr "Nama perusahaan diperlukan untuk membuat perusahaan."
+
+#: includes/api/class-company-api.php:104
+msgid "Company UUID is required to update a company."
+msgstr "UUID perusahaan diperlukan untuk memperbarui perusahaan."
+
+#: includes/api/class-company-api.php:137
+msgid "Company UUID is required to delete a company."
+msgstr "UUID perusahaan diperlukan untuk menghapus perusahaan."
+
+#: includes/api/class-company-api.php:172
+#: includes/api/class-company-api.php:330
+msgid "Company and contact UUIDs are required."
+msgstr "UUID perusahaan dan kontak diperlukan."
+
+#: includes/api/class-company-api.php:233
+msgid "Company UUID and contact UUIDs are required."
+msgstr "UUID perusahaan dan UUID kontak diperlukan."
+
+#. translators: %d: maximum count
+#: includes/api/class-company-api.php:241
+#, php-format
+msgid "Bulk attach accepts at most %d contact UUIDs per call."
+msgstr "Lampiran massal menerima paling banyak %d UUID kontak per panggilan."
+
+#: includes/api/class-company-api.php:284
+msgid "Contact UUID and company UUIDs are required."
+msgstr "UUID kontak dan UUID perusahaan diperlukan."
+
+#. translators: %d: maximum count
+#: includes/api/class-company-api.php:292
+#, php-format
+msgid "Bulk attach accepts at most %d company UUIDs per call."
+msgstr "Lampiran massal menerima paling banyak %d UUID perusahaan per panggilan."
+
+#: includes/api/class-company-api.php:368
+msgid "Domain is required."
+msgstr "Domain diperlukan."
+
+#: includes/api/class-company-api.php:395
+msgid "Company name is required."
+msgstr "Nama perusahaan diperlukan."
+
+#: includes/api/class-company-api.php:433
+#: includes/class-company-service.php:402
+msgid "Custom field name is required."
+msgstr "Nama field kustom diperlukan."
+
+#: includes/api/class-company-api.php:465
+msgid "Company UUID is required."
+msgstr "UUID perusahaan diperlukan."
+
+#: includes/api/class-company-api.php:499
+#: includes/api/class-company-api.php:532
+msgid "Note UUID is required."
+msgstr "UUID catatan diperlukan."
+
+#: includes/api/class-contact-api.php:75
+#: includes/api/class-contact-api.php:82
+msgid "Email address is required to create a contact."
+msgstr "Alamat email diperlukan untuk membuat kontak."
+
+#: includes/api/class-contact-api.php:90
+msgid "List UUIDs must be an array."
+msgstr "UUID daftar harus berupa array."
+
+#: includes/api/class-contact-api.php:98
+msgid "Tag UUIDs must be an array."
+msgstr "UUID tag harus berupa array."
+
+#: includes/api/class-contact-api.php:129
+msgid "Valid email address is required."
+msgstr "Alamat email yang valid diperlukan."
+
+#: includes/api/class-contact-api.php:165
+msgid "No contact found with this email address."
+msgstr "Tidak ada kontak yang ditemukan dengan alamat email ini."
+
+#: includes/api/class-contact-api.php:184
+msgid "Contacts must be a non-empty array."
+msgstr "Kontak harus berupa array yang tidak kosong."
+
+#: includes/api/class-contact-api.php:229
+msgid "Batch UUID is required."
+msgstr "UUID batch diperlukan."
+
+#: includes/api/class-contact-api.php:279
+#: includes/api/class-contact-api.php:323
+#: includes/api/class-contact-api.php:367
+#: includes/api/class-contact-api.php:411
+msgid "Contact UUID is required."
+msgstr "UUID Kontak diperlukan."
+
+#: includes/api/class-contact-api.php:286
+#: includes/api/class-contact-api.php:374
+msgid "List UUIDs must be a non-empty array."
+msgstr "Daftar UUID harus berupa array non-kosong."
+
+#: includes/api/class-contact-api.php:330
+#: includes/api/class-contact-api.php:418
+msgid "Tag UUIDs must be a non-empty array."
+msgstr "UUID Tag harus berupa array non-kosong."
+
+#: includes/api/class-contact-api.php:459
+msgid "Valid old email address is required."
+msgstr "Alamat email lama yang valid diperlukan."
+
+#: includes/api/class-contact-api.php:466
+msgid "Valid new email address is required."
+msgstr "Alamat email baru yang valid diperlukan."
+
+#: includes/api/class-contact-api.php:473
+msgid "Old and new email addresses are the same."
+msgstr "Alamat email lama dan baru sama."
+
+#: includes/api/class-ecommerce-api.php:85
+msgid "Contact email is required to track a purchase."
+msgstr "Email kontak diperlukan untuk melacak pembelian."
+
+#: includes/api/class-ecommerce-api.php:92
+#: includes/api/class-ecommerce-api.php:172
+#: includes/api/class-ecommerce-api.php:225
+msgid "Order ID is required."
+msgstr "ID Pesanan diperlukan."
+
+#: includes/api/class-ecommerce-api.php:99
+msgid "Total amount is required."
+msgstr "Jumlah total diperlukan."
+
+#: includes/api/class-ecommerce-api.php:106
+msgid "Currency is required."
+msgstr "Mata uang diperlukan."
+
+#: includes/api/class-ecommerce-api.php:113
+msgid "Purchase must contain at least one product."
+msgstr "Pembelian harus mengandung setidaknya satu produk."
+
+#: includes/api/class-ecommerce-api.php:120
+msgid "Purchase date is required."
+msgstr "Tanggal pembelian diperlukan."
+
+#: includes/api/class-ecommerce-api.php:232
+msgid "Refund amount is required."
+msgstr "Jumlah pengembalian diperlukan."
+
+#: includes/api/class-fields-api.php:101
+msgid "Field name is required."
+msgstr "Nama field diperlukan."
+
+#: includes/api/class-fields-api.php:108
+#: src/components/CreateCustomFieldForm.jsx:140
+msgid "Field label is required."
+msgstr "Label field diperlukan."
+
+#: includes/api/class-fields-api.php:115
+msgid "Field type is required."
+msgstr "Tipe field diperlukan."
+
+#: includes/class-auth-manager.php:359
+msgid "First and last name are required."
+msgstr "Nama depan dan belakang diperlukan."
+
+#: includes/class-auth-manager.php:391
+msgid "Unable to prepare signup request. Please try again."
+msgstr "Tidak dapat menyiapkan permintaan pendaftaran. Silakan coba lagi."
+
+#: includes/class-auth-manager.php:435
+msgid "Unable to create your SureContact account. Please try again."
+msgstr "Tidak dapat membuat akun SureContact Anda. Silakan coba lagi."
+
+#: includes/class-auth-manager.php:455
+#: includes/class-auth-manager.php:468
+msgid "Unexpected response from SureContact. Please try again."
+msgstr "Respon tak terduga dari SureContact. Silakan coba lagi."
+
+#: includes/class-company-service.php:73
+msgid "Company was created but no UUID was returned by the API."
+msgstr "Perusahaan telah dibuat tetapi tidak ada UUID yang dikembalikan oleh API."
+
+#: includes/class-company-service.php:242
+msgid "Note was created but no UUID was returned."
+msgstr "Catatan telah dibuat tetapi tidak ada UUID yang dikembalikan."
+
+#: includes/class-field-mapper.php:276
+#: src/components/CreateCustomFieldForm.jsx:21
+msgid "Phone Number"
+msgstr "Nomor Telepon"
+
+#: includes/class-field-mapper.php:280
+msgid "Company Name"
+msgstr "Nama Perusahaan"
+
+#: includes/class-field-mapper.php:284
+msgid "Job Title"
+msgstr "Jabatan"
+
+#: includes/class-field-mapper.php:288
+msgid "Birthdate"
+msgstr "Tanggal Lahir"
+
+#: includes/class-field-mapper.php:292
+msgid "Gender"
+msgstr "Jenis Kelamin"
+
+#: includes/class-field-mapper.php:296
+msgid "Anniversary"
+msgstr "Tanggal Ulang Tahun"
+
+#: includes/class-field-mapper.php:300
+msgid "Prefix"
+msgstr "Prefix"
+
+#: includes/class-field-mapper.php:304
+msgid "Suffix"
+msgstr "Suffix"
+
+#: includes/class-field-mapper.php:308
+#: includes/integrations/class-fluentcrm-integration.php:243
+msgid "Timezone"
+msgstr "Zona Waktu"
+
+#: includes/class-field-mapper.php:312
+msgid "Language"
+msgstr "Bahasa"
+
+#: includes/class-field-mapper.php:316
+msgid "Created At"
+msgstr "Dibuat Pada"
+
+#: includes/class-field-mapper.php:320
+msgid "Updated At"
+msgstr "Diperbarui Pada"
+
+#: includes/class-field-mapper.php:384
+msgid "Standard WordPress Fields"
+msgstr "Field WordPress Standar"
+
+#: includes/class-field-mapper.php:411
+msgid "Custom Field Keys (Added Manually)"
+msgstr "Kunci Field Kustom (Ditambahkan Secara Manual)"
+
+#: includes/class-field-mapper.php:415
+msgid "Additional wp_usermeta Table Fields"
+msgstr "Field Tambahan Tabel wp_usermeta"
+
+#: includes/class-field-mapper.php:872
+msgid "Never"
+msgstr "Tidak Pernah"
+
+#. translators: %s: human readable time difference
+#: includes/class-field-mapper.php:877
+#, php-format
+msgid "%s ago"
+msgstr "%s yang lalu"
+
+#. translators: %1$s: provided slug, %2$s: comma-separated valid slugs
+#: includes/class-integrations-loader.php:834
+#, php-format
+msgid "Integration not found: \"%1$s\". Available integrations: %2$s"
+msgstr "Integrasi tidak ditemukan: \"%1$s\". Integrasi yang tersedia: %2$s"
+
+#. translators: %1$s: provided item type, %2$s: comma-separated valid types
+#: includes/class-integrations-loader.php:859
+#, php-format
+msgid "Invalid item type \"%1$s\". Valid types: %2$s"
+msgstr "Tipe item tidak valid \"%1$s\". Tipe yang valid: %2$s"
+
+#. translators: %1$s: provided item ID, %2$s: item type
+#: includes/class-integrations-loader.php:879
+#, php-format
+msgid "Item ID \"%1$s\" not found for item type \"%2$s\"."
+msgstr "ID item \"%1$s\" tidak ditemukan untuk tipe item \"%2$s\"."
+
+#. translators: %1$s: provided event, %2$s: item type, %3$s: comma-separated valid events
+#: includes/class-integrations-loader.php:899
+#, php-format
+msgid "Invalid event \"%1$s\" for item type \"%2$s\". Valid events: %3$s"
+msgstr "Acara tidak valid \"%1$s\" untuk tipe item \"%2$s\". Acara yang valid: %3$s"
+
+#. translators: 1: integration source name (e.g. "WooCommerce"), 2: operation label (e.g. "Track Purchase").
+#: includes/class-operation-labels.php:67
+#, php-format
+msgid "%1$s — %2$s"
+msgstr "%1$s — %2$s"
+
+#: includes/class-operation-labels.php:105
+msgid "Create Contact"
+msgstr "Buat Kontak"
+
+#: includes/class-operation-labels.php:106
+msgid "Bulk Sync Contacts"
+msgstr "Sinkronisasi Kontak Massal"
+
+#: includes/class-operation-labels.php:107
+msgid "Attach Lists"
+msgstr "Lampirkan Daftar"
+
+#: includes/class-operation-labels.php:108
+msgid "Detach Lists"
+msgstr "Lepaskan Daftar"
+
+#: includes/class-operation-labels.php:109
+msgid "Attach Tags"
+msgstr "Lampirkan Tag"
+
+#: includes/class-operation-labels.php:110
+msgid "Detach Tags"
+msgstr "Lepaskan Tag"
+
+#: includes/class-operation-labels.php:111
+msgid "Update Email"
+msgstr "Perbarui Email"
+
+#: includes/class-operation-labels.php:112
+msgid "Track Purchase"
+msgstr "Lacak Pembelian"
+
+#: includes/class-operation-labels.php:113
+msgid "Cancel Purchase"
+msgstr "Batalkan Pembelian"
+
+#: includes/class-operation-labels.php:114
+msgid "Refund Purchase"
+msgstr "Kembalikan Pembelian"
+
+#: includes/class-operation-labels.php:117
+msgid "Sync Custom Field"
+msgstr "Sinkronkan Field Kustom"
+
+#: includes/class-queue-manager.php:142
+msgid "This log entry is not an API request and cannot be retried."
+msgstr "Entri log ini bukan permintaan API dan tidak dapat dicoba lagi."
+
+#: includes/class-queue-manager.php:146
+msgid "Retry failed. Check the log entry for details."
+msgstr "Coba lagi gagal. Periksa entri log untuk detail."
+
+#: includes/class-saas-client.php:247
+#: includes/class-saas-client.php:310
+#: includes/class-saas-client.php:374
+#: includes/class-saas-client.php:491
+msgid "Invalid JSON response from API"
+msgstr "Respon JSON tidak valid dari API"
+
+#. translators: %s: exception message
+#: includes/class-saas-client.php:255
+#: includes/class-saas-client.php:318
+#: includes/class-saas-client.php:382
+#: includes/class-saas-client.php:435
+#: includes/class-saas-client.php:499
+#, php-format
+msgid "Exception during API request: %s"
+msgstr "Pengecualian selama permintaan API: %s"
+
+#. translators: %d: HTTP status code
+#: includes/class-saas-client.php:556
+#, php-format
+msgid "Request failed (error %d). Please try again."
+msgstr "Permintaan gagal (kesalahan %d). Harap coba lagi."
+
+#: includes/integrations/class-base-integration.php:1164
+#: includes/integrations/class-fluentcrm-integration.php:338
+msgid "Add to Lists"
+msgstr "Tambahkan ke Daftar"
+
+#: includes/integrations/class-base-integration.php:1165
+msgid "Select lists to add contacts to"
+msgstr "Pilih daftar untuk menambahkan kontak"
+
+#: includes/integrations/class-base-integration.php:1170
+#: includes/integrations/class-fluentcrm-integration.php:344
+msgid "Add Tags"
+msgstr "Tambahkan Tag"
+
+#: includes/integrations/class-base-integration.php:1171
+msgid "Select tags to add to contacts"
+msgstr "Pilih tag untuk ditambahkan ke kontak"
+
+#: includes/integrations/class-base-integration.php:1176
+msgid "Remove from Lists"
+msgstr "Hapus dari Daftar"
+
+#: includes/integrations/class-base-integration.php:1177
+msgid "Select lists to remove contacts from"
+msgstr "Pilih daftar untuk menghapus kontak"
+
+#: includes/integrations/class-base-integration.php:1182
+msgid "Remove Tags"
+msgstr "Hapus Tag"
+
+#: includes/integrations/class-base-integration.php:1183
+msgid "Select tags to remove from contacts"
+msgstr "Pilih tag untuk dihapus dari kontak"
+
+#: includes/integrations/class-cartflows-integration.php:43
+msgid "Sync CartFlows step completions, track upsell/downsell conversions, and order bump additions."
+msgstr "Sinkronkan penyelesaian langkah CartFlows, lacak konversi upsell/downsell, dan penambahan order bump."
+
+#: includes/integrations/class-cartflows-integration.php:60
+msgid "CartFlows"
+msgstr "CartFlows"
+
+#: includes/integrations/class-cartflows-integration.php:78
+msgid "Last Flow ID"
+msgstr "ID Alur Terakhir"
+
+#: includes/integrations/class-cartflows-integration.php:82
+msgid "Last Flow Name"
+msgstr "Nama Alur Terakhir"
+
+#: includes/integrations/class-cartflows-integration.php:86
+msgid "Last Step ID"
+msgstr "ID Langkah Terakhir"
+
+#: includes/integrations/class-cartflows-integration.php:90
+msgid "Last Step Name"
+msgstr "Nama Langkah Terakhir"
+
+#: includes/integrations/class-cartflows-integration.php:94
+msgid "Last Step Type"
+msgstr "Tipe Langkah Terakhir"
+
+#: includes/integrations/class-cartflows-integration.php:98
+msgid "Upsells Accepted Count"
+msgstr "Jumlah Upsell Diterima"
+
+#: includes/integrations/class-cartflows-integration.php:102
+msgid "Downsells Accepted Count"
+msgstr "Jumlah Downsells Diterima"
+
+#: includes/integrations/class-cartflows-integration.php:106
+msgid "Order Bumps Added Count"
+msgstr "Jumlah Order Bump Ditambahkan"
+
+#: includes/integrations/class-cartflows-integration.php:146
+msgid "Step"
+msgstr "Langkah"
+
+#: includes/integrations/class-cartflows-integration.php:154
+msgid "Upsell"
+msgstr "Upsell"
+
+#: includes/integrations/class-cartflows-integration.php:158
+msgid "Downsell"
+msgstr "Downsell"
+
+#: includes/integrations/class-cartflows-integration.php:162
+msgid "Order Bump"
+msgstr "Order Bump"
+
+#: includes/integrations/class-cartflows-integration.php:166
+msgid "Pre-Checkout Offer"
+msgstr "Penawaran Pra-Pembayaran"
+
+#: includes/integrations/class-cartflows-integration.php:186
+msgid "CartFlows Pro"
+msgstr "CartFlows Pro"
+
+#: includes/integrations/class-cartflows-integration.php:221
+msgid "Email will be identified from: 1) URL parameter (billing_email, email), 2) CartFlows Pro session, 3) WooCommerce customer data, 4) Logged-in user. If no email can be identified, this rule will not trigger."
+msgstr "Email akan diidentifikasi dari: 1) parameter URL (billing_email, email), 2) sesi CartFlows Pro, 3) data pelanggan WooCommerce, 4) Pengguna yang sudah masuk. Jika tidak ada email yang dapat diidentifikasi, aturan ini tidak akan dipicu."
+
+#: includes/integrations/class-cartflows-integration.php:228
+msgid "Started"
+msgstr "Dimulai"
+
+#: includes/integrations/class-cartflows-integration.php:233
+#: src/screens/sync-contacts/JobHistory.jsx:15
+msgid "Completed"
+msgstr "Selesai"
+
+#: includes/integrations/class-cartflows-integration.php:241
+#: includes/integrations/class-cartflows-integration.php:253
+#: includes/integrations/class-cartflows-integration.php:273
+msgid "Accepted"
+msgstr "Diterima"
+
+#: includes/integrations/class-cartflows-integration.php:245
+#: includes/integrations/class-cartflows-integration.php:257
+msgid "Rejected"
+msgstr "Ditolak"
+
+#: includes/integrations/class-cartflows-integration.php:265
+msgid "Added"
+msgstr "Ditambahkan"
+
+#: includes/integrations/class-cartflows-integration.php:1690
+#: includes/integrations/class-cartflows-integration.php:1941
+msgid "All Steps"
+msgstr "Semua Langkah"
+
+#: includes/integrations/class-cartflows-integration.php:1696
+#: includes/integrations/class-cartflows-integration.php:1959
+msgid "All Landing Pages"
+msgstr "Semua Halaman Landing"
+
+#: includes/integrations/class-cartflows-integration.php:1702
+#: includes/integrations/class-cartflows-integration.php:1961
+msgid "All Checkouts"
+msgstr "Semua Pembayaran"
+
+#: includes/integrations/class-cartflows-integration.php:1708
+#: includes/integrations/class-cartflows-integration.php:1963
+msgid "All Thank You Pages"
+msgstr "Semua Halaman Terima Kasih"
+
+#: includes/integrations/class-cartflows-integration.php:1714
+#: includes/integrations/class-cartflows-integration.php:1965
+msgid "All Optin Pages"
+msgstr "Semua Halaman Optin"
+
+#: includes/integrations/class-cartflows-integration.php:1752
+msgid "Untitled Step"
+msgstr "Langkah Tanpa Judul"
+
+#: includes/integrations/class-cartflows-integration.php:1780
+#: includes/integrations/class-cartflows-integration.php:1943
+msgid "All Upsells"
+msgstr "Semua Upsell"
+
+#: includes/integrations/class-cartflows-integration.php:1805
+#: includes/integrations/class-cartflows-integration.php:1945
+msgid "All Downsells"
+msgstr "Semua Downsell"
+
+#: includes/integrations/class-cartflows-integration.php:1830
+#: includes/integrations/class-cartflows-integration.php:1947
+msgid "All Order Bumps"
+msgstr "Semua Order Bump"
+
+#: includes/integrations/class-cartflows-integration.php:1850
+#: includes/integrations/class-cartflows-integration.php:2048
+msgid "Untitled Order Bump"
+msgstr "Order Bump Tanpa Judul"
+
+#: includes/integrations/class-cartflows-integration.php:1879
+#: includes/integrations/class-cartflows-integration.php:1949
+msgid "All Pre-Checkout Offers"
+msgstr "Semua Tawaran Pra-Pembayaran"
+
+#: includes/integrations/class-cartflows-integration.php:1910
+#: includes/integrations/class-cartflows-integration.php:2014
+msgid "Untitled Checkout"
+msgstr "Pembayaran Tanpa Judul"
+
+#: includes/integrations/class-cartflows-integration.php:1988
+msgid "Untitled"
+msgstr "Tanpa Judul"
+
+#: includes/integrations/class-contact-form-7-integration.php:57
+msgid "Sync Contact Form 7 submissions with per-form field mapping"
+msgstr "Sinkronisasi pengajuan Formulir Kontak 7 dengan pemetaan bidang per-form"
+
+#: includes/integrations/class-contact-form-7-integration.php:87
+#: includes/integrations/class-elementor-forms-integration.php:277
+#: includes/integrations/class-fluent-forms-integration.php:66
+#: includes/integrations/class-gravity-forms-integration.php:130
+#: includes/integrations/class-jetformbuilder-integration.php:90
+#: includes/integrations/class-sureforms-integration.php:85
+#: includes/integrations/class-wpforms-integration.php:80
+msgid "Form"
+msgstr "Formulir"
+
+#: includes/integrations/class-contact-form-7-integration.php:106
+#: includes/integrations/class-convert-pro-integration.php:138
+#: includes/integrations/class-elementor-forms-integration.php:296
+#: includes/integrations/class-fluent-forms-integration.php:85
+#: includes/integrations/class-gravity-forms-integration.php:149
+#: includes/integrations/class-jetformbuilder-integration.php:109
+#: includes/integrations/class-sureforms-integration.php:104
+#: includes/integrations/class-wpforms-integration.php:99
+msgid "Submission"
+msgstr "Pengajuan"
+
+#: includes/integrations/class-contact-form-7-integration.php:132
+#: includes/integrations/class-convert-pro-integration.php:159
+#: includes/integrations/class-elementor-forms-integration.php:319
+#: includes/integrations/class-fluent-forms-integration.php:109
+#: includes/integrations/class-gravity-forms-integration.php:175
+#: includes/integrations/class-jetformbuilder-integration.php:131
+#: includes/integrations/class-sureforms-integration.php:130
+#: includes/integrations/class-wpforms-integration.php:125
+msgid "Field Mapping"
+msgstr "Pemetaan Bidang"
+
+#: includes/integrations/class-contact-form-7-integration.php:133
+#: includes/integrations/class-elementor-forms-integration.php:320
+#: includes/integrations/class-fluent-forms-integration.php:110
+#: includes/integrations/class-gravity-forms-integration.php:176
+#: includes/integrations/class-jetformbuilder-integration.php:132
+#: includes/integrations/class-sureforms-integration.php:131
+#: includes/integrations/class-wpforms-integration.php:126
+msgid "Map form fields to CRM fields. At minimum, you should map the email field."
+msgstr "Pemetaan bidang formulir ke bidang CRM. Minimal, Anda harus memetakan bidang email."
+
+#: includes/integrations/class-convert-pro-integration.php:86
+msgid "Sync Convert Pro call-to-action submissions with per call-to-action field mapping"
+msgstr "Sinkronisasi pengajuan call-to-action Convert Pro dengan pemetaan bidang per call-to-action"
+
+#: includes/integrations/class-convert-pro-integration.php:119
+msgid "Call-to-action"
+msgstr "Call-to-action"
+
+#: includes/integrations/class-convert-pro-integration.php:160
+msgid "Map call-to-action fields to CRM fields. At minimum, map the email field."
+msgstr "Pemetaan bidang call-to-action ke bidang CRM. Minimal, pemetakan bidang email."
+
+#: includes/integrations/class-edd-integration.php:60
+msgid "Sync Easy Digital Downloads customer contact information and track order purchases"
+msgstr "Sinkronisasi informasi kontak pelanggan Easy Digital Downloads dan lacak pembelian pesanan"
+
+#: includes/integrations/class-edd-integration.php:90
+#: includes/integrations/class-latepoint-integration.php:265
+#: includes/integrations/class-surecart-integration.php:317
+#: includes/integrations/class-woocommerce-integration.php:271
+msgid "Track Order Data"
+msgstr "Lacak Data Pesanan"
+
+#: includes/integrations/class-edd-integration.php:91
+msgid "Send detailed order information (products, amounts, dates) to SureContact for revenue tracking and analytics"
+msgstr "Kirim informasi pesanan terperinci (produk, jumlah, tanggal) ke SureContact untuk pelacakan pendapatan dan analitik"
+
+#: includes/integrations/class-edd-integration.php:97
+#: includes/integrations/class-latepoint-integration.php:286
+#: includes/integrations/class-surecart-integration.php:324
+#: includes/integrations/class-woocommerce-integration.php:278
+msgid "Track Refunds"
+msgstr "Lacak Pengembalian"
+
+#: includes/integrations/class-edd-integration.php:98
+msgid "Send refund information to SureContact when payments are refunded"
+msgstr "Kirim informasi pengembalian ke SureContact ketika pembayaran dikembalikan"
+
+#: includes/integrations/class-edd-integration.php:105
+#: includes/integrations/class-woocommerce-integration.php:263
+msgid "Sync Guest Customers"
+msgstr "Sinkronisasi Pelanggan Tamu"
+
+#: includes/integrations/class-edd-integration.php:106
+msgid "Create contacts in SureContact for guest checkout customers (customers without WordPress accounts)"
+msgstr "Buat kontak di SureContact untuk pelanggan checkout tamu (pelanggan tanpa akun WordPress)"
+
+#: includes/integrations/class-edd-integration.php:116
+#: includes/integrations/class-woocommerce-integration.php:330
+msgid "Enable Abandoned Cart Tracking"
+msgstr "Aktifkan Pelacakan Keranjang yang Ditinggalkan"
+
+#: includes/integrations/class-edd-integration.php:117
+#: includes/integrations/class-woocommerce-integration.php:331
+msgid "Track abandoned carts and apply lists/tags to contacts who abandon their carts"
+msgstr "Lacak keranjang yang ditinggalkan dan terapkan daftar/tag ke kontak yang meninggalkan keranjang mereka"
+
+#: includes/integrations/class-edd-integration.php:123
+#: includes/integrations/class-woocommerce-integration.php:337
+msgid "Abandonment Threshold (minutes)"
+msgstr "Ambang Pembatalan (menit)"
+
+#: includes/integrations/class-edd-integration.php:124
+#: includes/integrations/class-woocommerce-integration.php:338
+msgid "Minutes of inactivity before a cart is considered abandoned (minimum 5, maximum 10080)"
+msgstr "Menit ketidakaktifan sebelum keranjang dianggap ditinggalkan (minimum 5, maksimum 10080)"
+
+#: includes/integrations/class-edd-integration.php:132
+#: includes/integrations/class-woocommerce-integration.php:346
+msgid "Abandoned Cart Lists"
+msgstr "Daftar Keranjang Ditinggalkan"
+
+#: includes/integrations/class-edd-integration.php:133
+#: includes/integrations/class-woocommerce-integration.php:347
+msgid "Add contacts to these lists when their cart is abandoned"
+msgstr "Tambahkan kontak ke daftar ini ketika keranjang mereka ditinggalkan"
+
+#: includes/integrations/class-edd-integration.php:139
+#: includes/integrations/class-woocommerce-integration.php:353
+msgid "Abandoned Cart Tags"
+msgstr "Tag Keranjang Ditinggalkan"
+
+#: includes/integrations/class-edd-integration.php:140
+#: includes/integrations/class-woocommerce-integration.php:354
+msgid "Apply these tags to contacts when their cart is abandoned"
+msgstr "Terapkan tag ini ke kontak ketika keranjang mereka ditinggalkan"
+
+#: includes/integrations/class-edd-integration.php:146
+#: includes/integrations/class-woocommerce-integration.php:360
+msgid "Cart Data Retention (days)"
+msgstr "Retensi Data Keranjang (hari)"
+
+#: includes/integrations/class-edd-integration.php:147
+#: includes/integrations/class-woocommerce-integration.php:361
+msgid "Number of days to keep abandoned and recovered cart records before cleanup"
+msgstr "Jumlah hari untuk menyimpan catatan keranjang yang ditinggalkan dan dipulihkan sebelum dibersihkan"
+
+#. translators: %s is the payment status label.
+#: includes/integrations/class-edd-integration.php:159
+#, php-format
+msgid "Lists for \"%s\" Status"
+msgstr "Daftar untuk Status \"%s\""
+
+#. translators: %s is the payment status label in lowercase.
+#: includes/integrations/class-edd-integration.php:161
+#, php-format
+msgid "Additional lists to add contacts to when payment status is %s (combined with default lists above)"
+msgstr "Daftar tambahan untuk menambahkan kontak ketika status pembayaran adalah %s (digabungkan dengan daftar default di atas)"
+
+#: includes/integrations/class-edd-integration.php:181
+msgid "Download"
+msgstr "Unduh"
+
+#: includes/integrations/class-edd-integration.php:185
+msgid "Discount Code"
+msgstr "Kode Diskon"
+
+#: includes/integrations/class-edd-integration.php:204
+#: includes/integrations/class-surecart-integration.php:375
+#: includes/integrations/class-woocommerce-integration.php:428
+msgid "Purchase"
+msgstr "Pembelian"
+
+#: includes/integrations/class-edd-integration.php:208
+#: includes/integrations/class-surecart-integration.php:383
+#: includes/integrations/class-woocommerce-integration.php:432
+msgid "Refund"
+msgstr "Pengembalian"
+
+#: includes/integrations/class-edd-integration.php:216
+msgid "Discount Applied"
+msgstr "Diskon Diterapkan"
+
+#: includes/integrations/class-edd-integration.php:257
+#: includes/integrations/class-edd-integration.php:379
+msgid "All Downloads"
+msgstr "Semua Unduhan"
+
+#: includes/integrations/class-edd-integration.php:319
+#: includes/integrations/class-edd-integration.php:382
+msgid "All Discount Codes"
+msgstr "Semua Kode Diskon"
+
+#: includes/integrations/class-edd-integration.php:1066
+msgid "Full refund"
+msgstr "Pengembalian penuh"
+
+#: includes/integrations/class-edd-integration.php:1066
+msgid "Partial refund"
+msgstr "Pengembalian sebagian"
+
+#: includes/integrations/class-edd-order-sync.php:88
+#: includes/integrations/class-surecart-order-sync.php:88
+#: includes/integrations/class-woocommerce-order-sync.php:88
+msgid "Orders"
+msgstr "Pesanan"
+
+#: includes/integrations/class-edd-order-sync.php:89
+msgid "Synchronize all Easy Digital Downloads orders and revenue data to SureContact"
+msgstr "Sinkronkan semua pesanan dan data pendapatan Easy Digital Downloads ke SureContact"
+
+#: includes/integrations/class-edd-order-sync.php:108
+#: includes/integrations/class-surecart-order-sync.php:108
+#: includes/integrations/class-woocommerce-order-sync.php:108
+msgid "No orders found to sync"
+msgstr "Tidak ada pesanan yang ditemukan untuk disinkronkan"
+
+#: includes/integrations/class-edd-order-sync.php:156
+#: includes/integrations/class-fluentcrm-contact-sync.php:231
+#: includes/integrations/class-surecart-order-sync.php:156
+#: includes/integrations/class-woocommerce-customer-sync.php:171
+#: includes/integrations/class-woocommerce-order-sync.php:156
+#: includes/integrations/class-wordpress-user-sync.php:171
+msgid "Failed to retrieve job status"
+msgstr "Gagal mengambil status pekerjaan"
+
+#: includes/integrations/class-edd-order-sync.php:487
+#: includes/integrations/class-latepoint-integration.php:704
+#: includes/integrations/class-surecart-integration.php:1479
+#: includes/integrations/class-surecart-order-sync.php:528
+#: includes/integrations/class-woocommerce-order-sync.php:481
+msgid "Order cancelled"
+msgstr "Pesanan dibatalkan"
+
+#: includes/integrations/class-edd-order-sync.php:557
+#: includes/integrations/class-surecart-integration.php:1315
+#: includes/integrations/class-surecart-order-sync.php:598
+#: includes/integrations/class-woocommerce-order-sync.php:539
+msgid "Order refunded"
+msgstr "Pesanan dikembalikan"
+
+#: includes/integrations/class-elementor-forms-integration.php:46
+msgid "Sync Elementor Forms submissions with per-form field mapping"
+msgstr "Sinkronkan pengiriman formulir Elementor dengan pemetaan field per-form"
+
+#: includes/integrations/class-fluent-forms-integration.php:39
+msgid "Sync Fluent Forms submissions with per-form field mapping"
+msgstr "Sinkronkan pengiriman formulir Fluent dengan pemetaan field per-form"
+
+#: includes/integrations/class-fluentcrm-company-sync.php:119
+msgid "Companies"
+msgstr "Perusahaan"
+
+#: includes/integrations/class-fluentcrm-company-sync.php:120
+msgid "Synchronize all FluentCRM companies (and their contact links) to SureContact."
+msgstr "Sinkronkan semua perusahaan FluentCRM (dan tautan kontak mereka) ke SureContact."
+
+#: includes/integrations/class-fluentcrm-company-sync.php:137
+msgid "FluentCRM Company module is not available."
+msgstr "Modul Perusahaan FluentCRM tidak tersedia."
+
+#: includes/integrations/class-fluentcrm-company-sync.php:146
+msgid "No companies to sync."
+msgstr "Tidak ada perusahaan untuk disinkronkan."
+
+#: includes/integrations/class-fluentcrm-company-sync.php:195
+msgid "Action Scheduler is not available."
+msgstr "Action Scheduler tidak tersedia."
+
+#: includes/integrations/class-fluentcrm-company-sync.php:248
+msgid "Failed to retrieve job status."
+msgstr "Gagal mengambil status pekerjaan."
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:88
+msgid "Contacts"
+msgstr "Kontak"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:89
+msgid "Synchronize all subscribed FluentCRM contacts to SureContact"
+msgstr "Sinkronkan semua kontak FluentCRM yang berlangganan ke SureContact"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:133
+msgid "No subscribers to sync"
+msgstr "Tidak ada pelanggan untuk disinkronkan"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:159
+msgid "Action Scheduler is not available"
+msgstr "Action Scheduler tidak tersedia"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:178
+msgid "No subscribers found to sync"
+msgstr "Tidak ada pelanggan ditemukan untuk disinkronkan"
+
+#. translators: %s: error message
+#: includes/integrations/class-fluentcrm-contact-sync.php:189
+#: includes/integrations/class-woocommerce-customer-sync.php:140
+#: includes/integrations/class-wordpress-user-sync.php:140
+#, php-format
+msgid "Failed to start sync: %s"
+msgstr "Gagal memulai sinkronisasi: %s"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:386
+#: includes/integrations/class-fluentcrm-contact-sync.php:419
+msgid "No valid contacts to sync"
+msgstr "Tidak ada kontak yang valid untuk disinkronkan"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:396
+#: includes/integrations/class-woocommerce-customer-sync.php:326
+#: includes/integrations/class-wordpress-user-sync.php:326
+msgid "CRM did not return batch_uuid"
+msgstr "CRM tidak mengembalikan batch_uuid"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:523
+msgid "FluentCRM is not active"
+msgstr "FluentCRM tidak aktif"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:583
+msgid "No subscribers found"
+msgstr "Tidak ada pelanggan ditemukan"
+
+#: includes/integrations/class-fluentcrm-integration.php:79
+msgid "Sync FluentCRM contacts with bulk import support for large datasets"
+msgstr "Sinkronkan kontak FluentCRM dengan dukungan impor massal untuk dataset besar"
+
+#: includes/integrations/class-fluentcrm-integration.php:176
+msgid "FluentCRM"
+msgstr "FluentCRM"
+
+#: includes/integrations/class-fluentcrm-integration.php:199
+msgid "Name Prefix"
+msgstr "Awalan Nama"
+
+#: includes/integrations/class-fluentcrm-integration.php:211
+#: src/components/CreateCustomFieldForm.jsx:19
+msgid "Email"
+msgstr "Email"
+
+#: includes/integrations/class-fluentcrm-integration.php:215
+#: includes/integrations/class-latepoint-integration.php:125
+#: includes/integrations/class-surecart-integration.php:140
+msgid "Phone"
+msgstr "Telepon"
+
+#: includes/integrations/class-fluentcrm-integration.php:219
+#: includes/integrations/class-surecart-integration.php:116
+msgid "Address Line 1"
+msgstr "Alamat Baris 1"
+
+#: includes/integrations/class-fluentcrm-integration.php:223
+#: includes/integrations/class-surecart-integration.php:120
+msgid "Address Line 2"
+msgstr "Alamat Baris 2"
+
+#: includes/integrations/class-fluentcrm-integration.php:227
+#: includes/integrations/class-surecart-integration.php:124
+msgid "City"
+msgstr "Kota"
+
+#: includes/integrations/class-fluentcrm-integration.php:231
+#: includes/integrations/class-surecart-integration.php:128
+msgid "State"
+msgstr "Provinsi"
+
+#: includes/integrations/class-fluentcrm-integration.php:235
+#: includes/integrations/class-surecart-integration.php:136
+msgid "Postal Code"
+msgstr "Kode Pos"
+
+#: includes/integrations/class-fluentcrm-integration.php:239
+#: includes/integrations/class-surecart-integration.php:132
+msgid "Country"
+msgstr "Negara"
+
+#: includes/integrations/class-fluentcrm-integration.php:247
+msgid "Date of Birth"
+msgstr "Tanggal Lahir"
+
+#: includes/integrations/class-fluentcrm-integration.php:251
+msgid "Contact Status"
+msgstr "Status Kontak"
+
+#: includes/integrations/class-fluentcrm-integration.php:255
+msgid "Contact Type"
+msgstr "Tipe Kontak"
+
+#: includes/integrations/class-fluentcrm-integration.php:259
+msgid "Source"
+msgstr "Sumber"
+
+#: includes/integrations/class-fluentcrm-integration.php:263
+msgid "Life Time Value"
+msgstr "Nilai Seumur Hidup"
+
+#: includes/integrations/class-fluentcrm-integration.php:267
+msgid "Total Points"
+msgstr "Total Poin"
+
+#: includes/integrations/class-fluentcrm-integration.php:271
+msgid "Contact Created Date"
+msgstr "Tanggal Kontak Dibuat"
+
+#: includes/integrations/class-fluentcrm-integration.php:275
+msgid "Last Activity Date"
+msgstr "Tanggal Aktivitas Terakhir"
+
+#: includes/integrations/class-fluentcrm-integration.php:279
+msgid "Contact Updated Date"
+msgstr "Tanggal Kontak Diperbarui"
+
+#: includes/integrations/class-fluentcrm-integration.php:308
+msgid "Enable Real-time Sync"
+msgstr "Aktifkan Sinkronisasi Waktu Nyata"
+
+#: includes/integrations/class-fluentcrm-integration.php:309
+msgid "Automatically sync FluentCRM contacts when they are created or updated"
+msgstr "Sinkronisasi otomatis kontak FluentCRM saat mereka dibuat atau diperbarui"
+
+#: includes/integrations/class-fluentcrm-integration.php:314
+msgid "Sync Only Subscribed Contacts"
+msgstr "Sinkronisasi Hanya Kontak Yang Berlangganan"
+
+#: includes/integrations/class-fluentcrm-integration.php:315
+msgid "Only sync contacts with \"subscribed\" status (recommended)"
+msgstr "Hanya sinkronkan kontak dengan status \"berlangganan\" (disarankan)"
+
+#: includes/integrations/class-fluentcrm-integration.php:320
+msgid "Sync Lists"
+msgstr "Sinkronisasi Daftar"
+
+#: includes/integrations/class-fluentcrm-integration.php:321
+msgid "Sync FluentCRM lists assigned to each contact (applies to both real-time and bulk sync)"
+msgstr "Sinkronkan daftar FluentCRM yang ditugaskan ke setiap kontak (berlaku untuk sinkronisasi waktu nyata dan massal)"
+
+#: includes/integrations/class-fluentcrm-integration.php:326
+msgid "Sync Tags"
+msgstr "Sinkronisasi Tag"
+
+#: includes/integrations/class-fluentcrm-integration.php:327
+msgid "Sync FluentCRM tags assigned to each contact (applies to both real-time and bulk sync)"
+msgstr "Sinkronkan tag FluentCRM yang ditugaskan ke setiap kontak (berlaku untuk sinkronisasi waktu nyata dan massal)"
+
+#: includes/integrations/class-fluentcrm-integration.php:332
+msgid "Sync Custom Fields"
+msgstr "Sinkronisasi Bidang Kustom"
+
+#: includes/integrations/class-fluentcrm-integration.php:333
+msgid "Sync FluentCRM custom fields from each contact (applies to both real-time and bulk sync)"
+msgstr "Sinkronkan bidang kustom FluentCRM dari setiap kontak (berlaku untuk sinkronisasi waktu nyata dan massal)"
+
+#: includes/integrations/class-fluentcrm-integration.php:339
+msgid "Select lists to add to ALL FluentCRM contacts when synced (in addition to their individual lists)"
+msgstr "Pilih daftar untuk ditambahkan ke SEMUA kontak FluentCRM saat disinkronkan (selain dari daftar individu mereka)"
+
+#: includes/integrations/class-fluentcrm-integration.php:345
+msgid "Select tags to add to ALL FluentCRM contacts when synced (in addition to their individual tags)"
+msgstr "Pilih tag untuk ditambahkan ke SEMUA kontak FluentCRM saat disinkronkan (selain dari tag individu mereka)"
+
+#: includes/integrations/class-gravity-forms-integration.php:66
+msgid "Sync Gravity Forms submissions with per-form field mapping"
+msgstr "Sinkronkan pengiriman Gravity Forms dengan pemetaan bidang per-form"
+
+#. translators: %s: contact ID returned by SureContact.
+#: includes/integrations/class-gravity-forms-integration.php:661
+#, php-format
+msgid "Synced (ID: %s)"
+msgstr "Disinkronkan (ID: %s)"
+
+#: includes/integrations/class-gravity-forms-integration.php:706
+msgid "Synced to SureContact:"
+msgstr "Disinkronkan ke SureContact:"
+
+#: includes/integrations/class-gravity-forms-integration.php:709
+msgid "Yes"
+msgstr "Ya"
+
+#: includes/integrations/class-gravity-forms-integration.php:712
+msgid "No"
+msgstr "Tidak"
+
+#: includes/integrations/class-gravity-forms-integration.php:721
+msgid "Contact ID:"
+msgstr "ID Kontak:"
+
+#: includes/integrations/class-gravity-forms-integration.php:738
+msgid "Process SureContact actions again"
+msgstr "Proses tindakan SureContact lagi"
+
+#: includes/integrations/class-jetformbuilder-integration.php:60
+msgid "Sync JetFormBuilder form submissions with per-form field mapping"
+msgstr "Sinkronkan pengiriman formulir JetFormBuilder dengan pemetaan bidang per-form"
+
+#: includes/integrations/class-latepoint-integration.php:52
+msgid "Sync LatePoint customer contact information and track bookings, orders, and payments."
+msgstr "Sinkronkan informasi kontak pelanggan LatePoint dan lacak pemesanan, pesanan, dan pembayaran."
+
+#: includes/integrations/class-latepoint-integration.php:75
+msgid "LatePoint Pro"
+msgstr "LatePoint Pro"
+
+#: includes/integrations/class-latepoint-integration.php:106
+msgid "LatePoint"
+msgstr "LatePoint"
+
+#: includes/integrations/class-latepoint-integration.php:129
+msgid "Customer Notes"
+msgstr "Catatan Pelanggan"
+
+#: includes/integrations/class-latepoint-integration.php:133
+msgid "Admin Notes"
+msgstr "Catatan Admin"
+
+#: includes/integrations/class-latepoint-integration.php:141
+msgid "Last Booking Code"
+msgstr "Kode Pemesanan Terakhir"
+
+#: includes/integrations/class-latepoint-integration.php:145
+msgid "Last Service"
+msgstr "Layanan Terakhir"
+
+#: includes/integrations/class-latepoint-integration.php:149
+msgid "Last Agent"
+msgstr "Agen Terakhir"
+
+#: includes/integrations/class-latepoint-integration.php:153
+msgid "Last Location"
+msgstr "Lokasi Terakhir"
+
+#: includes/integrations/class-latepoint-integration.php:157
+msgid "Last Booking Date"
+msgstr "Tanggal Pemesanan Terakhir"
+
+#: includes/integrations/class-latepoint-integration.php:161
+msgid "Total Bookings"
+msgstr "Total Pemesanan"
+
+#: includes/integrations/class-latepoint-integration.php:251
+msgid "Sync Customer Data"
+msgstr "Sinkronkan Data Pelanggan"
+
+#: includes/integrations/class-latepoint-integration.php:252
+msgid "Automatically sync LatePoint customers to SureContact when they are created or updated"
+msgstr "Secara otomatis sinkronkan pelanggan LatePoint ke SureContact saat mereka dibuat atau diperbarui"
+
+#: includes/integrations/class-latepoint-integration.php:258
+msgid "Track Bookings"
+msgstr "Lacak Pemesanan"
+
+#: includes/integrations/class-latepoint-integration.php:259
+msgid "Track booking events (created, status changes) in SureContact"
+msgstr "Lacak peristiwa pemesanan (dibuat, perubahan status) di SureContact"
+
+#: includes/integrations/class-latepoint-integration.php:266
+msgid "Send detailed order information to SureContact for revenue tracking and analytics"
+msgstr "Kirim informasi pesanan rinci ke SureContact untuk pelacakan pendapatan dan analitik"
+
+#: includes/integrations/class-latepoint-integration.php:272
+msgid "Track Transactions"
+msgstr "Lacak Transaksi"
+
+#: includes/integrations/class-latepoint-integration.php:273
+msgid "Send payment transaction information to SureContact"
+msgstr "Kirim informasi transaksi pembayaran ke SureContact"
+
+#: includes/integrations/class-latepoint-integration.php:279
+#: includes/integrations/class-surecart-integration.php:331
+#: includes/integrations/class-woocommerce-integration.php:285
+msgid "Track Cancellations"
+msgstr "Lacak Pembatalan"
+
+#: includes/integrations/class-latepoint-integration.php:280
+msgid "Send cancellation information to SureContact when bookings are cancelled"
+msgstr "Kirim informasi pembatalan ke SureContact saat pemesanan dibatalkan"
+
+#: includes/integrations/class-latepoint-integration.php:287
+msgid "Send refund information to SureContact when transactions are refunded"
+msgstr "Kirim informasi pengembalian dana ke SureContact saat transaksi dikembalikan"
+
+#: includes/integrations/class-latepoint-integration.php:307
+msgid "Service"
+msgstr "Layanan"
+
+#: includes/integrations/class-latepoint-integration.php:311
+msgid "Location"
+msgstr "Lokasi"
+
+#: includes/integrations/class-latepoint-integration.php:315
+#: includes/integrations/class-surecart-integration.php:356
+#: includes/integrations/class-woocommerce-integration.php:408
+msgid "Coupon"
+msgstr "Kupon"
+
+#: includes/integrations/class-latepoint-integration.php:333
+msgid "Booking Created"
+msgstr "Pemesanan Dibuat"
+
+#: includes/integrations/class-latepoint-integration.php:337
+msgid "Booking Approved"
+msgstr "Pemesanan Disetujui"
+
+#: includes/integrations/class-latepoint-integration.php:341
+msgid "Booking Pending"
+msgstr "Pemesanan Tertunda"
+
+#: includes/integrations/class-latepoint-integration.php:345
+msgid "Booking Cancelled"
+msgstr "Pemesanan Dibatalkan"
+
+#: includes/integrations/class-latepoint-integration.php:349
+msgid "Booking Completed"
+msgstr "Pemesanan Selesai"
+
+#: includes/integrations/class-latepoint-integration.php:353
+msgid "Booking No Show"
+msgstr "Pemesanan Tidak Hadir"
+
+#: includes/integrations/class-latepoint-integration.php:366
+#: includes/integrations/class-surecart-integration.php:391
+#: includes/integrations/class-woocommerce-integration.php:444
+msgid "Applied"
+msgstr "Diterapkan"
+
+#. translators: %s: service name or 'Booking'
+#: includes/integrations/class-latepoint-integration.php:668
+#, php-format
+msgid "%s cancelled"
+msgstr "%s dibatalkan"
+
+#: includes/integrations/class-latepoint-integration.php:669
+#: includes/integrations/class-latepoint-integration.php:1452
+msgid "Booking"
+msgstr "Pemesanan"
+
+#: includes/integrations/class-latepoint-integration.php:747
+msgid "Transaction refunded"
+msgstr "Transaksi dikembalikan"
+
+#: includes/integrations/class-latepoint-integration.php:1418
+msgid "Booking Order"
+msgstr "Pesanan Pemesanan"
+
+#: includes/integrations/class-latepoint-integration.php:1522
+#: includes/integrations/class-latepoint-integration.php:1660
+msgid "All Services"
+msgstr "Semua Layanan"
+
+#: includes/integrations/class-latepoint-integration.php:1536
+msgid "Untitled Service"
+msgstr "Layanan Tanpa Judul"
+
+#: includes/integrations/class-latepoint-integration.php:1565
+#: includes/integrations/class-latepoint-integration.php:1662
+msgid "All Locations"
+msgstr "Semua Lokasi"
+
+#: includes/integrations/class-latepoint-integration.php:1579
+msgid "Untitled Location"
+msgstr "Lokasi Tanpa Judul"
+
+#: includes/integrations/class-latepoint-integration.php:1610
+#: includes/integrations/class-latepoint-integration.php:1664
+#: includes/integrations/class-surecart-integration.php:2211
+#: includes/integrations/class-surecart-integration.php:2263
+#: includes/integrations/class-woocommerce-integration.php:2063
+#: includes/integrations/class-woocommerce-integration.php:2109
+msgid "All Coupons"
+msgstr "Semua Kupon"
+
+#: includes/integrations/class-latepoint-integration.php:1632
+msgid "Untitled Coupon"
+msgstr "Kupon Tanpa Judul"
+
+#: includes/integrations/class-presto-player-integration.php:59
+msgid "Track video engagement and apply tags based on watch progress and completion"
+msgstr "Lacak keterlibatan video dan terapkan tag berdasarkan kemajuan menonton dan penyelesaian"
+
+#: includes/integrations/class-presto-player-integration.php:87
+msgid "Video"
+msgstr "Video"
+
+#: includes/integrations/class-presto-player-integration.php:106
+msgid "Email Submission"
+msgstr "Pengiriman Email"
+
+#: includes/integrations/class-presto-player-integration.php:110
+msgid "Video Start"
+msgstr "Video Dimulai"
+
+#: includes/integrations/class-presto-player-integration.php:114
+msgid "Progress Tracking"
+msgstr "Pelacakan Kemajuan"
+
+#: includes/integrations/class-presto-player-integration.php:118
+msgid "Video Complete"
+msgstr "Video Lengkap"
+
+#: includes/integrations/class-presto-player-integration.php:145
+msgid "Percentage"
+msgstr "Persentase"
+
+#: includes/integrations/class-presto-player-integration.php:156
+msgid "Progress Thresholds"
+msgstr "Ambang Kemajuan"
+
+#: includes/integrations/class-presto-player-integration.php:157
+msgid "Add one or more progress percentages to track. For each percentage, you can assign lists and tags to add or remove when the video reaches that point."
+msgstr "Tambahkan satu atau lebih persentase kemajuan untuk dilacak. Untuk setiap persentase, Anda dapat menetapkan daftar dan tag untuk ditambahkan atau dihapus saat video mencapai titik itu."
+
+#: includes/integrations/class-presto-player-integration.php:955
+#: includes/integrations/class-presto-player-integration.php:997
+msgid "All Videos"
+msgstr "Semua Video"
+
+#: includes/integrations/class-presto-player-integration.php:1036
+msgid "Untitled Video"
+msgstr "Video Tanpa Judul"
+
+#: includes/integrations/class-surecart-integration.php:73
+msgid "Sync SureCart customer contact information and track order purchases. Note: SureCart automatically creates WordPress accounts for all customers."
+msgstr "Sinkronkan informasi kontak pelanggan SureCart dan lacak pembelian pesanan. Catatan: SureCart secara otomatis membuat akun WordPress untuk semua pelanggan."
+
+#: includes/integrations/class-surecart-integration.php:97
+msgid "SureCart"
+msgstr "SureCart"
+
+#: includes/integrations/class-surecart-integration.php:318
+msgid "Send detailed order information including subscription renewals to SureContact for revenue tracking and analytics"
+msgstr "Kirim informasi pesanan terperinci termasuk pembaruan langganan ke SureContact untuk pelacakan pendapatan dan analitik"
+
+#: includes/integrations/class-surecart-integration.php:325
+msgid "Send refund information to SureContact when purchases are refunded"
+msgstr "Kirim informasi pengembalian dana ke SureContact ketika pembelian dikembalikan"
+
+#: includes/integrations/class-surecart-integration.php:332
+msgid "Send cancellation information to SureContact when orders or subscriptions are cancelled"
+msgstr "Kirim informasi pembatalan ke SureContact ketika pesanan atau langganan dibatalkan"
+
+#: includes/integrations/class-surecart-integration.php:352
+#: includes/integrations/class-woocommerce-integration.php:400
+msgid "Product"
+msgstr "Produk"
+
+#: includes/integrations/class-surecart-integration.php:379
+#: includes/integrations/class-woocommerce-integration.php:436
+msgid "Cancellation"
+msgstr "Pembatalan"
+
+#: includes/integrations/class-surecart-integration.php:2018
+#: includes/integrations/class-surecart-integration.php:2261
+#: includes/integrations/class-woocommerce-integration.php:1923
+#: includes/integrations/class-woocommerce-integration.php:2105
+msgid "All Products"
+msgstr "Semua Produk"
+
+#: includes/integrations/class-surecart-order-sync.php:89
+msgid "Synchronize all SureCart orders and customer data to SureContact"
+msgstr "Sinkronkan semua pesanan dan data pelanggan SureCart ke SureContact"
+
+#: includes/integrations/class-suredash-integration.php:50
+msgid "Track SureDash community engagement including posts, comments, bookmarks, and reactions"
+msgstr "Lacak keterlibatan komunitas SureDash termasuk pos, komentar, penanda buku, dan reaksi"
+
+#: includes/integrations/class-suredash-integration.php:70
+msgid "SureDash Pro"
+msgstr "SureDash Pro"
+
+#: includes/integrations/class-suredash-integration.php:116
+msgid "Community Space"
+msgstr "Ruang Komunitas"
+
+#: includes/integrations/class-suredash-integration.php:120
+msgid "Course"
+msgstr "Kursus"
+
+#: includes/integrations/class-suredash-integration.php:139
+msgid "Post Created"
+msgstr "Pos Dibuat"
+
+#: includes/integrations/class-suredash-integration.php:143
+msgid "Comment Added"
+msgstr "Komentar Ditambahkan"
+
+#: includes/integrations/class-suredash-integration.php:147
+msgid "Content Bookmarked"
+msgstr "Konten Ditandai"
+
+#: includes/integrations/class-suredash-integration.php:151
+msgid "Content Reacted/Liked"
+msgstr "Konten Direspons/Disukai"
+
+#: includes/integrations/class-suredash-integration.php:159
+msgid "Lesson Completed"
+msgstr "Pelajaran Diselesaikan"
+
+#: includes/integrations/class-suredash-integration.php:163
+msgid "Course Completed"
+msgstr "Kursus Diselesaikan"
+
+#: includes/integrations/class-suredash-integration.php:871
+#: includes/integrations/class-suredash-integration.php:967
+msgid "All Spaces"
+msgstr "Semua Ruang"
+
+#: includes/integrations/class-suredash-integration.php:916
+#: includes/integrations/class-suredash-integration.php:981
+msgid "All Courses"
+msgstr "Semua Kursus"
+
+#: includes/integrations/class-sureforms-integration.php:57
+msgid "Sync SureForms submissions with per-form field mapping"
+msgstr "Sinkronkan pengiriman SureForms dengan pemetaan bidang per formulir"
+
+#: includes/integrations/class-suremembers-integration.php:49
+msgid "Sync SureMembers access group memberships and track member lifecycle events"
+msgstr "Sinkronkan keanggotaan grup akses SureMembers dan lacak peristiwa siklus hidup anggota"
+
+#: includes/integrations/class-suremembers-integration.php:66
+msgid "SureMembers"
+msgstr "SureMembers"
+
+#: includes/integrations/class-suremembers-integration.php:85
+msgid "Membership Status"
+msgstr "Status Keanggotaan"
+
+#: includes/integrations/class-suremembers-integration.php:90
+msgid "Membership Name"
+msgstr "Nama Keanggotaan"
+
+#: includes/integrations/class-suremembers-integration.php:95
+msgid "Access Group ID"
+msgstr "ID Grup Akses"
+
+#: includes/integrations/class-suremembers-integration.php:100
+msgid "Active Groups Count"
+msgstr "Jumlah Grup Aktif"
+
+#: includes/integrations/class-suremembers-integration.php:105
+msgid "Access Status"
+msgstr "Status Akses"
+
+#: includes/integrations/class-suremembers-integration.php:110
+msgid "Access Granted Date"
+msgstr "Tanggal Akses Diberikan"
+
+#: includes/integrations/class-suremembers-integration.php:115
+msgid "Access Modified Date"
+msgstr "Tanggal Akses Dimodifikasi"
+
+#: includes/integrations/class-suremembers-integration.php:120
+msgid "Expiration Date"
+msgstr "Tanggal Kedaluwarsa"
+
+#: includes/integrations/class-suremembers-integration.php:125
+msgid "Days Until Expiration"
+msgstr "Hari Hingga Kedaluwarsa"
+
+#: includes/integrations/class-suremembers-integration.php:130
+msgid "Integration Source"
+msgstr "Sumber Integrasi"
+
+#: includes/integrations/class-suremembers-integration.php:135
+msgid "WooCommerce Order IDs"
+msgstr "ID Pesanan WooCommerce"
+
+#: includes/integrations/class-suremembers-integration.php:140
+msgid "Days as Member"
+msgstr "Hari sebagai Anggota"
+
+#: includes/integrations/class-suremembers-integration.php:145
+msgid "Last Login"
+msgstr "Login Terakhir"
+
+#: includes/integrations/class-suremembers-integration.php:184
+msgid "Membership"
+msgstr "Keanggotaan"
+
+#: includes/integrations/class-suremembers-integration.php:203
+msgid "Access Granted"
+msgstr "Akses Diberikan"
+
+#: includes/integrations/class-suremembers-integration.php:207
+msgid "Access Revoked"
+msgstr "Akses D dicabut"
+
+#: includes/integrations/class-suremembers-integration.php:211
+msgid "Access Expired"
+msgstr "Akses Kedaluwarsa"
+
+#: includes/integrations/class-suremembers-integration.php:215
+msgid "Member Logged In"
+msgstr "Anggota Masuk"
+
+#: includes/integrations/class-suremembers-integration.php:912
+#: includes/integrations/class-suremembers-integration.php:954
+msgid "All Memberships"
+msgstr "Semua Keanggotaan"
+
+#: includes/integrations/class-woocommerce-customer-sync.php:88
+msgid "Customers"
+msgstr "Pelanggan"
+
+#: includes/integrations/class-woocommerce-customer-sync.php:89
+msgid "Synchronize all WooCommerce customers (including guests) to SureContact"
+msgstr "Sinkronkan semua pelanggan WooCommerce (termasuk tamu) ke SureContact"
+
+#: includes/integrations/class-woocommerce-customer-sync.php:108
+msgid "No customers found to sync"
+msgstr "Tidak ada pelanggan yang ditemukan untuk disinkronkan"
+
+#: includes/integrations/class-woocommerce-customer-sync.php:313
+#: includes/integrations/class-wordpress-user-sync.php:313
+msgid "No valid contacts to sync in first batch"
+msgstr "Tidak ada kontak valid untuk disinkronkan di batch pertama"
+
+#: includes/integrations/class-woocommerce-integration.php:70
+msgid "Sync WooCommerce customer contact information"
+msgstr "Sinkronkan informasi kontak pelanggan WooCommerce"
+
+#: includes/integrations/class-woocommerce-integration.php:100
+msgid "WooCommerce Customer"
+msgstr "Pelanggan WooCommerce"
+
+#: includes/integrations/class-woocommerce-integration.php:105
+msgid "WooCommerce Order"
+msgstr "Pesanan WooCommerce"
+
+#: includes/integrations/class-woocommerce-integration.php:123
+msgid "Billing First Name"
+msgstr "Nama Depan Penagihan"
+
+#: includes/integrations/class-woocommerce-integration.php:127
+msgid "Billing Last Name"
+msgstr "Nama Belakang Penagihan"
+
+#: includes/integrations/class-woocommerce-integration.php:131
+msgid "Billing Company"
+msgstr "Perusahaan Penagihan"
+
+#: includes/integrations/class-woocommerce-integration.php:135
+msgid "Billing Address 1"
+msgstr "Alamat Penagihan 1"
+
+#: includes/integrations/class-woocommerce-integration.php:139
+msgid "Billing Address 2"
+msgstr "Alamat Penagihan 2"
+
+#: includes/integrations/class-woocommerce-integration.php:143
+msgid "Billing City"
+msgstr "Kota Penagihan"
+
+#: includes/integrations/class-woocommerce-integration.php:147
+msgid "Billing Postcode"
+msgstr "Kode Pos Penagihan"
+
+#: includes/integrations/class-woocommerce-integration.php:151
+msgid "Billing State"
+msgstr "Negara Bagian Penagihan"
+
+#: includes/integrations/class-woocommerce-integration.php:155
+msgid "Billing Country"
+msgstr "Negara Penagihan"
+
+#: includes/integrations/class-woocommerce-integration.php:159
+msgid "Billing Phone"
+msgstr "Telepon Penagihan"
+
+#: includes/integrations/class-woocommerce-integration.php:163
+msgid "Billing Email"
+msgstr "Email Penagihan"
+
+#: includes/integrations/class-woocommerce-integration.php:167
+msgid "Shipping First Name"
+msgstr "Nama Depan Pengiriman"
+
+#: includes/integrations/class-woocommerce-integration.php:171
+msgid "Shipping Last Name"
+msgstr "Nama Belakang Pengiriman"
+
+#: includes/integrations/class-woocommerce-integration.php:175
+msgid "Shipping Company"
+msgstr "Perusahaan Pengiriman"
+
+#: includes/integrations/class-woocommerce-integration.php:179
+msgid "Shipping Address 1"
+msgstr "Alamat Pengiriman 1"
+
+#: includes/integrations/class-woocommerce-integration.php:183
+msgid "Shipping Address 2"
+msgstr "Alamat Pengiriman 2"
+
+#: includes/integrations/class-woocommerce-integration.php:187
+msgid "Shipping City"
+msgstr "Kota Pengiriman"
+
+#: includes/integrations/class-woocommerce-integration.php:191
+msgid "Shipping Postcode"
+msgstr "Kode Pos Pengiriman"
+
+#: includes/integrations/class-woocommerce-integration.php:195
+msgid "Shipping State"
+msgstr "Negara Bagian Pengiriman"
+
+#: includes/integrations/class-woocommerce-integration.php:199
+msgid "Shipping Country"
+msgstr "Negara Pengiriman"
+
+#: includes/integrations/class-woocommerce-integration.php:214
+msgid "Total Order Count"
+msgstr "Total Jumlah Pesanan"
+
+#: includes/integrations/class-woocommerce-integration.php:218
+msgid "Total Amount Spent"
+msgstr "Total Jumlah yang Dibelanjakan"
+
+#: includes/integrations/class-woocommerce-integration.php:222
+msgid "Last Order Date"
+msgstr "Tanggal Pesanan Terakhir"
+
+#: includes/integrations/class-woocommerce-integration.php:226
+msgid "First Order Date"
+msgstr "Tanggal Pesanan Pertama"
+
+#: includes/integrations/class-woocommerce-integration.php:230
+msgid "Average Order Value"
+msgstr "Rata-rata Nilai Pesanan"
+
+#: includes/integrations/class-woocommerce-integration.php:234
+msgid "Order Notes"
+msgstr "Catatan Pesanan"
+
+#: includes/integrations/class-woocommerce-integration.php:264
+msgid "Sync guest checkout customers to SureContact (customers without WordPress accounts)"
+msgstr "Sinkronkan pelanggan checkout tamu ke SureContact (pelanggan tanpa akun WordPress)"
+
+#: includes/integrations/class-woocommerce-integration.php:272
+msgid "Send order information to SureContact for revenue tracking"
+msgstr "Kirim informasi pesanan ke SureContact untuk pelacakan pendapatan"
+
+#: includes/integrations/class-woocommerce-integration.php:279
+msgid "Send refund information to SureContact"
+msgstr "Kirim informasi pengembalian dana ke SureContact"
+
+#: includes/integrations/class-woocommerce-integration.php:286
+msgid "Send cancellation information to SureContact when orders are cancelled"
+msgstr "Kirim informasi pembatalan ke SureContact saat pesanan dibatalkan"
+
+#: includes/integrations/class-woocommerce-integration.php:294
+msgid "Auto-Tag Product Categories"
+msgstr "Auto-Tag Kategori Produk"
+
+#: includes/integrations/class-woocommerce-integration.php:295
+msgid "Automatically create and apply tags based on product category names when purchased"
+msgstr "Secara otomatis membuat dan menerapkan tag berdasarkan nama kategori produk saat dibeli"
+
+#: includes/integrations/class-woocommerce-integration.php:301
+msgid "Auto-Tag Product Names"
+msgstr "Auto-Tag Nama Produk"
+
+#: includes/integrations/class-woocommerce-integration.php:302
+msgid "Automatically create and apply tags based on product names when purchased"
+msgstr "Secara otomatis membuat dan menerapkan tag berdasarkan nama produk saat dibeli"
+
+#: includes/integrations/class-woocommerce-integration.php:308
+msgid "Auto-Tag Product SKUs"
+msgstr "Auto-Tag SKU Produk"
+
+#: includes/integrations/class-woocommerce-integration.php:309
+msgid "Automatically create and apply tags based on product SKUs when purchased"
+msgstr "Secara otomatis membuat dan menerapkan tag berdasarkan SKU produk saat dibeli"
+
+#: includes/integrations/class-woocommerce-integration.php:315
+msgid "Auto-Tag Prefix"
+msgstr "Prefix Auto-Tag"
+
+#: includes/integrations/class-woocommerce-integration.php:316
+msgid "Prefix to add to automatically generated tags (e.g., \"Purchased -\")"
+msgstr "Prefix yang ditambahkan ke tag yang dihasilkan secara otomatis (misalnya, \"Dibeli -\")"
+
+#: includes/integrations/class-woocommerce-integration.php:322
+msgid "Product Review Tags"
+msgstr "Tag Tinjauan Produk"
+
+#: includes/integrations/class-woocommerce-integration.php:323
+msgid "Apply these tags when a customer leaves a product review"
+msgstr "Terapkan tag ini saat pelanggan meninggalkan tinjauan produk"
+
+#. translators: %s: WooCommerce order status label.
+#: includes/integrations/class-woocommerce-integration.php:370
+#, php-format
+msgid "Order Status: %s"
+msgstr "Status Pesanan: %s"
+
+#. translators: %s: WooCommerce order status label.
+#: includes/integrations/class-woocommerce-integration.php:374
+#, php-format
+msgid "Select lists to add contacts to when order status changes to %s."
+msgstr "Pilih daftar untuk menambahkan kontak saat status pesanan berubah menjadi %s."
+
+#: includes/integrations/class-woocommerce-integration.php:404
+msgid "Product Category"
+msgstr "Kategori Produk"
+
+#: includes/integrations/class-woocommerce-integration.php:567
+msgid "SureContact: Guest customer sync disabled."
+msgstr "SureContact: Sinkronisasi pelanggan tamu dinonaktifkan."
+
+#: includes/integrations/class-woocommerce-integration.php:574
+msgid "SureContact: Order tracked."
+msgstr "SureContact: Pesanan dilacak."
+
+#: includes/integrations/class-woocommerce-integration.php:645
+msgid "SureContact: No actions configured, contact not synced."
+msgstr "SureContact: Tidak ada tindakan yang dikonfigurasi, kontak tidak disinkronkan."
+
+#: includes/integrations/class-woocommerce-integration.php:669
+msgid "SureContact: Contact sync failed."
+msgstr "SureContact: Gagal sinkronisasi kontak."
+
+#: includes/integrations/class-woocommerce-integration.php:682
+msgid "SureContact: Contact synced and lists/tags applied."
+msgstr "SureContact: Kontak disinkronkan dan daftar/tag diterapkan."
+
+#: includes/integrations/class-woocommerce-integration.php:2019
+#: includes/integrations/class-woocommerce-integration.php:2107
+msgid "All Product Categories"
+msgstr "Semua Kategori Produk"
+
+#: includes/integrations/class-woocommerce-order-sync.php:89
+msgid "Synchronize all WooCommerce orders and revenue data to SureContact"
+msgstr "Sinkronkan semua pesanan WooCommerce dan data pendapatan ke SureContact"
+
+#: includes/integrations/class-wordpress-integration.php:63
+msgid "Sync WordPress users, registration, and profile updates"
+msgstr "Sinkronkan pengguna WordPress, pendaftaran, dan pembaruan profil"
+
+#: includes/integrations/class-wordpress-integration.php:786
+msgid "Page"
+msgstr "Halaman"
+
+#: includes/integrations/class-wordpress-integration.php:790
+msgid "Post"
+msgstr "Pos"
+
+#: includes/integrations/class-wordpress-integration.php:808
+msgid "Visited"
+msgstr "Dikunjungi"
+
+#: includes/integrations/class-wordpress-integration.php:840
+msgid "All Pages"
+msgstr "Semua Halaman"
+
+#: includes/integrations/class-wordpress-integration.php:877
+msgid "All Posts"
+msgstr "Semua Pos"
+
+#: includes/integrations/class-wordpress-user-sync.php:88
+msgid "Users"
+msgstr "Pengguna"
+
+#: includes/integrations/class-wordpress-user-sync.php:89
+msgid "Synchronize all WordPress users to SureContact in the background"
+msgstr "Sinkronkan semua pengguna WordPress ke SureContact di latar belakang"
+
+#: includes/integrations/class-wordpress-user-sync.php:108
+msgid "No users found to sync"
+msgstr "Tidak ada pengguna yang ditemukan untuk disinkronkan"
+
+#: includes/integrations/class-wpforms-integration.php:52
+msgid "Sync WPForms submissions with per-form field mapping"
+msgstr "Sinkronkan pengiriman WPForms dengan pemetaan bidang per-form"
+
+#. translators: %s: Error message from the sync process.
+#: includes/integrations/class-wpforms-integration.php:459
+#, php-format
+msgid "Error syncing form entry to SureContact: %s"
+msgstr "Kesalahan sinkronisasi entri formulir ke SureContact: %s"
+
+#. translators: %s: Contact UUID.
+#: includes/integrations/class-wpforms-integration.php:466
+#, php-format
+msgid "Entry synced to SureContact (contact UUID: %s)"
+msgstr "Entri disinkronkan ke SureContact (contact UUID: %s)"
+
+#: includes/traits/class-api-retry.php:179
+msgid "Cannot queue: missing data"
+msgstr "Tidak dapat mengantri: data hilang"
+
+#. translators: %s: field name
+#: includes/traits/class-api-retry.php:194
+#, php-format
+msgid "Cannot queue: missing required field \"%s\""
+msgstr "Tidak dapat mengantri: field yang diperlukan \"%s\" hilang"
+
+#: includes/traits/class-api-retry.php:236
+msgid "Request queued for retry."
+msgstr "Permintaan mengantri untuk percobaan ulang."
+
+#: includes/traits/class-api-retry.php:245
+msgid "Failed to queue request for retry"
+msgstr "Gagal mengantri permintaan untuk percobaan ulang"
+
+#: includes/traits/class-api-retry.php:337
+msgid "Each call must have \"callback\" and \"queue_data\" keys"
+msgstr "Setiap panggilan harus memiliki kunci \"callback\" dan \"queue_data\""
+
+#: includes/traits/class-api-retry.php:379
+msgid "Request queued for processing."
+msgstr "Permintaan mengantri untuk pemrosesan."
+
+#: includes/traits/class-api-retry.php:386
+msgid "Request completed successfully."
+msgstr "Permintaan selesai dengan sukses."
+
+#: surecontact.php:456
+msgid "Access Dashboard"
+msgstr "Akses Dasbor"
+
+#: surecontact.php:457
+msgid "Get Started Now"
+msgstr "Mulai Sekarang"
+
+#: surecontact.php:488
+msgid "Rate our plugin"
+msgstr "Beri nilai pada plugin kami"
+
+#: src/api/auth.js:50
+#: src/api/auth.js:62
+msgid "Unable to create your SureContact account."
+msgstr "Tidak dapat membuat akun SureContact Anda."
+
+#: src/api/bulkSync.js:43
+#: src/api/bulkSync.js:47
+msgid "Failed to start sync job."
+msgstr "Gagal memulai pekerjaan sinkronisasi."
+
+#: src/api/bulkSync.js:76
+#: src/api/bulkSync.js:80
+msgid "Failed to fetch job status."
+msgstr "Gagal mengambil status pekerjaan."
+
+#: src/api/bulkSync.js:143
+#: src/api/bulkSync.js:147
+msgid "Failed to fetch recent jobs."
+msgstr "Gagal mengambil pekerjaan terkini."
+
+#: src/api/bulkSync.js:176
+#: src/api/bulkSync.js:180
+msgid "Failed to cancel job."
+msgstr "Gagal membatalkan pekerjaan."
+
+#: src/api/bulkSync.js:209
+#: src/api/bulkSync.js:215
+msgid "Failed to fetch available sync types."
+msgstr "Gagal mengambil jenis sinkronisasi yang tersedia."
+
+#: src/api/fieldMapping.js:39
+msgid "Invalid data received from server."
+msgstr "Data tidak valid diterima dari server."
+
+#: src/api/fieldMapping.js:44
+msgid "Failed to fetch field mapping data."
+msgstr "Gagal mengambil data pemetaan bidang."
+
+#: src/api/fieldMapping.js:76
+#: src/api/fieldMapping.js:80
+#: src/components/CustomFieldSelect.jsx:68
+msgid "Failed to sync CRM fields."
+msgstr "Gagal menyinkronkan bidang CRM."
+
+#: src/api/fieldMapping.js:157
+#: src/api/fieldMapping.js:162
+msgid "Failed to create custom field."
+msgstr "Gagal membuat bidang kustom."
+
+#: src/api/integrations.js:38
+#: src/api/integrations.js:70
+#: src/api/integrations.js:105
+#: src/api/integrations.js:142
+#: src/api/integrations.js:174
+#: src/api/integrations.js:212
+#: src/api/integrations.js:245
+#: src/api/integrations.js:287
+#: src/api/integrations.js:340
+#: src/api/integrations.js:395
+#: src/api/integrations.js:465
+#: src/api/integrations.js:520
+#: src/api/integrations.js:573
+#: src/api/integrations.js:613
+#: src/api/integrations.js:645
+msgid "Invalid response from server"
+msgstr "Respon tidak valid dari server"
+
+#: src/api/integrations.js:42
+#: src/api/integrations.js:109
+msgid "Failed to fetch integrations"
+msgstr "Gagal mengambil integrasi"
+
+#: src/api/integrations.js:74
+msgid "Failed to fetch global settings integrations"
+msgstr "Gagal mengambil integrasi pengaturan global"
+
+#: src/api/integrations.js:146
+#: src/hooks/useIntegrations.js:150
+msgid "Failed to toggle integration"
+msgstr "Gagal untuk mengubah integrasi"
+
+#: src/api/integrations.js:179
+msgid "Failed to fetch integration settings"
+msgstr "Gagal untuk mengambil pengaturan integrasi"
+
+#: src/api/integrations.js:217
+msgid "Failed to save integration settings"
+msgstr "Gagal untuk menyimpan pengaturan integrasi"
+
+#: src/api/integrations.js:250
+msgid "Failed to fetch integration metadata"
+msgstr "Gagal untuk mengambil metadata integrasi"
+
+#: src/api/integrations.js:292
+msgid "Failed to fetch integration items"
+msgstr "Gagal untuk mengambil item integrasi"
+
+#: src/api/integrations.js:344
+msgid "Failed to fetch item fields"
+msgstr "Gagal untuk mengambil bidang item"
+
+#: src/api/integrations.js:400
+msgid "Failed to fetch integration configuration"
+msgstr "Gagal untuk mengambil konfigurasi integrasi"
+
+#: src/api/integrations.js:470
+msgid "Failed to save integration configuration"
+msgstr "Gagal untuk menyimpan konfigurasi integrasi"
+
+#: src/api/integrations.js:525
+msgid "Failed to update integration status"
+msgstr "Gagal untuk memperbarui status integrasi"
+
+#: src/api/integrations.js:578
+msgid "Failed to delete integration configuration"
+msgstr "Gagal untuk menghapus konfigurasi integrasi"
+
+#: src/api/integrations.js:618
+msgid "Failed to activate plugin"
+msgstr "Gagal untuk mengaktifkan plugin"
+
+#: src/api/integrations.js:650
+msgid "Failed to fetch configured integrations"
+msgstr "Gagal untuk mengambil integrasi yang dikonfigurasi"
+
+#: src/api/listsAndTags.js:56
+#: src/api/listsAndTags.js:60
+msgid "Failed to fetch lists"
+msgstr "Gagal untuk mengambil daftar"
+
+#: src/api/listsAndTags.js:89
+#: src/api/listsAndTags.js:93
+msgid "Failed to fetch list"
+msgstr "Gagal untuk mengambil daftar"
+
+#: src/api/listsAndTags.js:126
+#: src/api/listsAndTags.js:130
+#: src/components/ListSelect.jsx:149
+msgid "Failed to create list"
+msgstr "Gagal untuk membuat daftar"
+
+#: src/api/listsAndTags.js:161
+#: src/api/listsAndTags.js:165
+msgid "Failed to update list"
+msgstr "Gagal untuk memperbarui daftar"
+
+#: src/api/listsAndTags.js:194
+#: src/api/listsAndTags.js:198
+msgid "Failed to delete list"
+msgstr "Gagal untuk menghapus daftar"
+
+#: src/api/listsAndTags.js:229
+#: src/api/listsAndTags.js:233
+msgid "Failed to add contacts to list"
+msgstr "Gagal untuk menambahkan kontak ke daftar"
+
+#: src/api/listsAndTags.js:264
+#: src/api/listsAndTags.js:268
+msgid "Failed to remove contacts from list"
+msgstr "Gagal untuk menghapus kontak dari daftar"
+
+#: src/api/listsAndTags.js:299
+#: src/api/listsAndTags.js:303
+msgid "Failed to bulk attach lists"
+msgstr "Gagal untuk melampirkan daftar secara massal"
+
+#: src/api/listsAndTags.js:334
+#: src/api/listsAndTags.js:338
+msgid "Failed to bulk detach lists"
+msgstr "Gagal untuk melepas daftar secara massal"
+
+#: src/api/listsAndTags.js:384
+#: src/api/listsAndTags.js:388
+msgid "Failed to fetch tags"
+msgstr "Gagal untuk mengambil tag"
+
+#: src/api/listsAndTags.js:417
+#: src/api/listsAndTags.js:421
+msgid "Failed to fetch tag"
+msgstr "Gagal untuk mengambil tag"
+
+#: src/api/listsAndTags.js:454
+#: src/api/listsAndTags.js:458
+#: src/components/TagSelect.jsx:149
+msgid "Failed to create tag"
+msgstr "Gagal untuk membuat tag"
+
+#: src/api/listsAndTags.js:489
+#: src/api/listsAndTags.js:493
+msgid "Failed to update tag"
+msgstr "Gagal untuk memperbarui tag"
+
+#: src/api/listsAndTags.js:522
+#: src/api/listsAndTags.js:526
+msgid "Failed to delete tag"
+msgstr "Gagal untuk menghapus tag"
+
+#: src/api/listsAndTags.js:557
+#: src/api/listsAndTags.js:561
+msgid "Failed to attach tags to contact"
+msgstr "Gagal untuk melampirkan tag ke kontak"
+
+#: src/api/listsAndTags.js:592
+#: src/api/listsAndTags.js:596
+msgid "Failed to detach tags from contact"
+msgstr "Gagal untuk melepas tag dari kontak"
+
+#: src/api/listsAndTags.js:627
+#: src/api/listsAndTags.js:631
+msgid "Failed to attach lists to contact"
+msgstr "Gagal untuk melampirkan daftar ke kontak"
+
+#: src/api/listsAndTags.js:673
+#: src/api/listsAndTags.js:677
+msgid "Failed to bulk attach tags"
+msgstr "Gagal untuk melampirkan tag secara massal"
+
+#: src/api/listsAndTags.js:708
+#: src/api/listsAndTags.js:712
+msgid "Failed to bulk detach tags"
+msgstr "Gagal untuk menghapus tag secara massal"
+
+#: src/api/listsAndTags.js:743
+#: src/api/listsAndTags.js:747
+msgid "Failed to bulk sync tags"
+msgstr "Gagal untuk menyinkronkan tag secara massal"
+
+#: src/api/listsAndTags.js:778
+#: src/api/listsAndTags.js:782
+msgid "Failed to sync lists and tags"
+msgstr "Gagal untuk menyinkronkan daftar dan tag"
+
+#: src/api/queue.js:17
+msgid "Invalid ID provided"
+msgstr "ID tidak valid diberikan"
+
+#: src/api/queue.js:24
+msgid "IDs array is required and must not be empty"
+msgstr "Array ID diperlukan dan tidak boleh kosong"
+
+#: src/api/queue.js:49
+#: src/api/queue.js:54
+msgid "Failed to fetch logs"
+msgstr "Gagal untuk mengambil log"
+
+#: src/api/queue.js:70
+#: src/api/queue.js:75
+msgid "Failed to fetch stats"
+msgstr "Gagal untuk mengambil statistik"
+
+#: src/api/queue.js:92
+#: src/api/queue.js:97
+msgid "Failed to delete log"
+msgstr "Gagal untuk menghapus log"
+
+#: src/api/queue.js:115
+#: src/api/queue.js:120
+#: src/hooks/useLogs.js:113
+msgid "Failed to delete logs"
+msgstr "Gagal untuk menghapus log"
+
+#: src/api/queue.js:136
+#: src/api/queue.js:141
+#: src/hooks/useLogs.js:185
+msgid "Failed to clear logs"
+msgstr "Gagal untuk membersihkan log"
+
+#: src/api/queue.js:159
+#: src/api/queue.js:164
+msgid "Failed to fetch queue logs"
+msgstr "Gagal untuk mengambil log antrean"
+
+#: src/api/queue.js:180
+#: src/api/queue.js:185
+msgid "Failed to fetch queue stats"
+msgstr "Gagal untuk mengambil statistik antrean"
+
+#: src/api/queue.js:202
+#: src/api/queue.js:207
+#: src/hooks/useLogs.js:89
+msgid "Failed to retry item"
+msgstr "Gagal untuk mengulangi item"
+
+#: src/api/queue.js:223
+#: src/api/queue.js:228
+#: src/api/queue.js:246
+#: src/api/queue.js:251
+#: src/hooks/useLogs.js:137
+#: src/hooks/useLogs.js:161
+msgid "Failed to retry items"
+msgstr "Gagal untuk mengulangi item"
+
+#: src/api/queue.js:268
+#: src/api/queue.js:273
+msgid "Failed to delete queue item"
+msgstr "Gagal untuk menghapus item antrean"
+
+#: src/api/queue.js:291
+#: src/api/queue.js:296
+msgid "Failed to delete queue items"
+msgstr "Gagal untuk menghapus item antrean"
+
+#: src/api/settings.js:48
+#: src/api/settings.js:52
+msgid "Failed to fetch settings"
+msgstr "Gagal untuk mengambil pengaturan"
+
+#: src/api/settings.js:82
+#: src/api/settings.js:86
+#: src/hooks/useIntegrations.js:178
+#: src/screens/settings/Settings.jsx:35
+msgid "Failed to save settings"
+msgstr "Gagal untuk menyimpan pengaturan"
+
+#: src/App.jsx:71
+msgid "Authentication"
+msgstr "Otentikasi"
+
+#: src/App.jsx:106
+msgid "Syncing lists, tags, and custom fields…"
+msgstr "Menyesuaikan daftar, tag, dan bidang khusus…"
+
+#: src/App.jsx:113
+#: src/components/ListSelect.jsx:63
+#: src/components/ListSelect.jsx:67
+#: src/components/TagSelect.jsx:63
+#: src/components/TagSelect.jsx:67
+#: src/screens/settings/components/SettingsHeader.jsx:15
+#: src/screens/settings/components/SettingsHeader.jsx:19
+msgid "Lists and tags synced successfully!"
+msgstr "Daftar dan tag berhasil disinkronkan!"
+
+#: src/App.jsx:131
+msgid "Custom fields synced successfully!"
+msgstr "Bidang khusus berhasil disinkronkan!"
+
+#: src/components/AuthPage.jsx:67
+msgid "Capture leads with forms"
+msgstr "Tangkap prospek dengan formulir"
+
+#: src/components/AuthPage.jsx:68
+msgid "Beautiful popups, inline forms, and landing pages that convert WordPress visitors into subscribers."
+msgstr "Popup yang indah, formulir inline, dan halaman arahan yang mengubah pengunjung WordPress menjadi pelanggan."
+
+#: src/components/AuthPage.jsx:72
+msgid "Don’t miss out"
+msgstr "Jangan lewatkan"
+
+#: src/components/AuthPage.jsx:73
+msgid "Subscribe to get our weekly drops & member-only deals."
+msgstr "Berlangganan untuk mendapatkan rilis mingguan kami & penawaran khusus anggota."
+
+#: src/components/AuthPage.jsx:81
+msgid "Send campaigns that land"
+msgstr "Kirim kampanye yang sukses"
+
+#: src/components/AuthPage.jsx:82
+msgid "Drag-and-drop email editor with 60+ templates. Send broadcasts, newsletters, and product updates."
+msgstr "Editor email drag-and-drop dengan 60+ template. Kirim siaran, buletin, dan pembaruan produk."
+
+#: src/components/AuthPage.jsx:87
+msgid "New drop"
+msgstr "Rilis baru"
+
+#: src/components/AuthPage.jsx:93
+msgid "Cart back"
+msgstr "Keranjang kembali"
+
+#: src/components/AuthPage.jsx:99
+#: src/components/AuthPage.jsx:117
+msgid "Welcome"
+msgstr "Selamat datang"
+
+#: src/components/AuthPage.jsx:107
+msgid "Automate your workflow"
+msgstr "Otomatiskan alur kerja Anda"
+
+#: src/components/AuthPage.jsx:108
+msgid "Welcome series, abandoned carts, post-purchase follow-ups — running on autopilot."
+msgstr "Seri sambutan, keranjang yang ditinggalkan, tindak lanjut pasca-pembelian — berjalan otomatis."
+
+#: src/components/AuthPage.jsx:113
+msgid "Signup"
+msgstr "Daftar"
+
+#: src/components/AuthPage.jsx:121
+msgid "Wait 3d"
+msgstr "Tunggu 3d"
+
+#: src/components/AuthPage.jsx:125
+msgid "Offer"
+msgstr "Tawaran"
+
+#: src/components/AuthPage.jsx:131
+msgid "Built-in lightweight CRM"
+msgstr "CRM ringan bawaan"
+
+#: src/components/AuthPage.jsx:132
+msgid "Custom fields, tags, segments and a full activity timeline for every contact you collect."
+msgstr "Bidang kustom, tag, segmen, dan garis waktu aktivitas penuh untuk setiap kontak yang Anda kumpulkan."
+
+#: src/components/AuthPage.jsx:154
+msgid "E-commerce integration"
+msgstr "Integrasi e-commerce"
+
+#: src/components/AuthPage.jsx:155
+msgid "Seamlessly integrate with WooCommerce, SureCart, and Easy Digital Downloads for complete customer insights."
+msgstr "Integrasikan dengan mulus dengan WooCommerce, SureCart, dan Easy Digital Downloads untuk wawasan pelanggan yang lengkap."
+
+#: src/components/AuthPage.jsx:189
+msgid "Secure & GDPR-ready"
+msgstr "Aman & siap GDPR"
+
+#: src/components/AuthPage.jsx:190
+msgid "OAuth-based auth, encrypted connections, double opt-in, and full consent management built in."
+msgstr "Otorisasi berbasis OAuth, koneksi terenkripsi, double opt-in, dan manajemen persetujuan penuh yang sudah termasuk."
+
+#: src/components/AuthPage.jsx:212
+msgid "Authentication failed"
+msgstr "Otentikasi gagal"
+
+#: src/components/AuthPage.jsx:213
+msgid "Please try again. If the problem persists, contact support."
+msgstr "Silakan coba lagi. Jika masalah berlanjut, hubungi dukungan."
+
+#: src/components/AuthPage.jsx:232
+msgid "Email marketing & CRM "
+msgstr "Pemasaran email & CRM "
+
+#: src/components/AuthPage.jsx:233
+msgid "built for WordPress"
+msgstr "dibangun untuk WordPress"
+
+#: src/components/AuthPage.jsx:236
+msgid "Turn your WordPress visitors into customers. Capture leads with forms, sync contacts in real-time, and send beautiful campaigns — all without leaving your dashboard."
+msgstr "Ubah pengunjung WordPress Anda menjadi pelanggan. Tangkap prospek dengan formulir, sinkronkan kontak secara real-time, dan kirim kampanye yang indah — semua tanpa meninggalkan dasbor Anda."
+
+#: src/components/AuthPage.jsx:245
+msgid "Already have an account?"
+msgstr "Sudah memiliki akun?"
+
+#: src/components/AuthPage.jsx:247
+msgid "Sign in"
+msgstr "Masuk"
+
+#: src/components/AuthPage.jsx:258
+#: src/screens/dashboard/Dashboard.jsx:274
+msgid "SureContact overview video"
+msgstr "Video ikhtisar SureContact"
+
+#: src/components/AuthPage.jsx:271
+msgid "Features"
+msgstr "Fitur"
+
+#: src/components/AuthPage.jsx:274
+msgid "What if email marketing was "
+msgstr "Bagaimana jika pemasaran email itu "
+
+#: src/components/AuthPage.jsx:275
+msgid "actually easy"
+msgstr "sebenarnya mudah"
+
+#: src/components/AuthPage.jsx:276
+msgid "?"
+msgstr "?"
+
+#: src/components/AuthPage.jsx:279
+msgid "SureContact gives you everything you need to grow a list, send beautiful emails, and automate your follow-ups — natively inside WordPress."
+msgstr "SureContact memberi Anda semua yang Anda butuhkan untuk menumbuhkan daftar, mengirim email yang indah, dan mengotomatiskan tindak lanjut Anda — secara asli di dalam WordPress."
+
+#: src/components/AuthPage.jsx:311
+msgid "Get started in minutes"
+msgstr "Mulai dalam beberapa menit"
+
+#: src/components/AuthPage.jsx:314
+msgid "How it works"
+msgstr "Cara kerjanya"
+
+#: src/components/AuthPage.jsx:317
+msgid "From plugin activation to your first campaign — three steps, no friction."
+msgstr "Dari aktivasi plugin hingga kampanye pertama Anda — tiga langkah, tanpa gesekan."
+
+#: src/components/AuthPage.jsx:324
+msgid "Confirm your details"
+msgstr "Konfirmasi detail Anda"
+
+#: src/components/AuthPage.jsx:325
+msgid "Your name, email, and site URL are auto-filled from WordPress. Just confirm and continue — no signup form to fight with."
+msgstr "Nama, email, dan URL situs Anda diisi otomatis dari WordPress. Cukup konfirmasi dan lanjutkan — tidak ada formulir pendaftaran untuk diperjuangkan."
+
+#: src/components/AuthPage.jsx:328
+msgid "Sync your contacts"
+msgstr "Sinkronkan kontak Anda"
+
+#: src/components/AuthPage.jsx:329
+msgid "SureContact pulls in existing WP users, WooCommerce customers, and form submissions automatically. Two-way sync keeps everything fresh."
+msgstr "SureContact menarik pengguna WP yang ada, pelanggan WooCommerce, dan pengiriman formulir secara otomatis. Sinkronisasi dua arah menjaga semuanya tetap segar."
+
+#: src/components/AuthPage.jsx:332
+msgid "Send your first campaign"
+msgstr "Kirim kampanye pertama Anda"
+
+#: src/components/AuthPage.jsx:333
+msgid "Pick a template, drag in a few blocks, hit send. Or set up a welcome automation that runs while you sleep."
+msgstr "Pilih template, seret beberapa blok, tekan kirim. Atau siapkan otomasi sambutan yang berjalan saat Anda tidur."
+
+#: src/components/AuthPage.jsx:362
+#: src/components/NavMenu.jsx:23
+#: src/screens/integrations/IntegrationsTableCard.jsx:1513
+msgid "Integrations"
+msgstr "Integrasi"
+
+#: src/components/AuthPage.jsx:365
+msgid "SureContact "
+msgstr "SureContact "
+
+#: src/components/AuthPage.jsx:366
+msgid "already works"
+msgstr "sudah bekerja"
+
+#: src/components/AuthPage.jsx:367
+msgid " with your favorite WordPress plugins"
+msgstr " dengan plugin WordPress favorit Anda"
+
+#: src/components/AuthPage.jsx:370
+msgid "Connect once. Sync everything. Out-of-the-box integrations with every major form, commerce, and theme plugin in the WordPress ecosystem."
+msgstr "Sambungkan sekali. Sinkronkan semuanya. Integrasi siap pakai dengan setiap formulir utama, perdagangan, dan plugin tema di ekosistem WordPress."
+
+#: src/components/AuthPage.jsx:396
+#, js-format
+msgid "+ %d more native integrations"
+msgstr "+ %d integrasi native lagi"
+
+#: src/components/AuthPage.jsx:408
+msgid "Testimonials"
+msgstr "Testimoni"
+
+#: src/components/AuthPage.jsx:411
+msgid "Trusted by WordPress teams worldwide"
+msgstr "Dipercaya oleh tim WordPress di seluruh dunia"
+
+#: src/components/AuthPage.jsx:414
+msgid "Over 12M+ sites use Brainstorm Force plugins to ship faster."
+msgstr "Lebih dari 12M+ situs menggunakan plugin Brainstorm Force untuk pengiriman lebih cepat."
+
+#: src/components/AuthPage.jsx:422
+#: src/components/AuthPage.jsx:440
+msgid "SureContact User"
+msgstr "Pengguna SureContact"
+
+#: src/components/AuthPage.jsx:423
+msgid "SureContact is on another level. I love that the heavy lifting happens outside WordPress, and the connector syncing multiple sites into one dashboard is exactly what I needed. I’ve finally ditched MailerLite."
+msgstr "SureContact berada pada level yang berbeda. Saya suka bahwa pekerjaan berat dilakukan di luar WordPress, dan konektor yang menyinkronkan beberapa situs menjadi satu dasbor adalah tepat apa yang saya butuhkan. Saya akhirnya meninggalkan MailerLite."
+
+#: src/components/AuthPage.jsx:428
+msgid "Founder, Hillman Academy"
+msgstr "Pendiri, Hillman Academy"
+
+#: src/components/AuthPage.jsx:429
+msgid "You guys are the GOAT! The speed of implementation is unchallenged to any other software provider I’ve ever used. Simply Amazing! Thanks, I’ll get started with setting everything up using Mailersend now."
+msgstr "Anda semua adalah yang terbaik! Kecepatan implementasi tidak tertandingi oleh penyedia perangkat lunak lain yang pernah saya gunakan. Sangat mengagumkan! Terima kasih, saya akan mulai mengatur semuanya menggunakan Mailersend sekarang."
+
+#: src/components/AuthPage.jsx:434
+msgid "Founder, EDITO Sarl"
+msgstr "Pendiri, EDITO Sarl"
+
+#: src/components/AuthPage.jsx:435
+msgid "Incredibly fast and responsive support. List-Unsubscribe and List-Unsubscribe-Post headers were implemented immediately, and everything worked perfectly in testing."
+msgstr "Dukungan yang sangat cepat dan responsif. Header List-Unsubscribe dan List-Unsubscribe-Post diterapkan dengan segera, dan semuanya bekerja dengan sempurna dalam pengujian."
+
+#: src/components/AuthPage.jsx:441
+msgid "SureContact’s connector-based implementation is way better than MailerPress. No comparison."
+msgstr "Implementasi berbasis konektor SureContact jauh lebih baik daripada MailerPress. Tidak ada perbandingan."
+
+#: src/components/AuthPage.jsx:446
+msgid "Demo Queen"
+msgstr "Demo Queen"
+
+#: src/components/AuthPage.jsx:447
+msgid "I expected SureContact to be a nice-to-have. 67 minutes later, I loved it. It feels like OttoKit’s answer to email."
+msgstr "Saya mengharapkan SureContact menjadi sesuatu yang tidak perlu. 67 menit kemudian, saya mencintainya. Rasanya seperti jawaban OttoKit untuk email."
+
+#: src/components/AuthPage.jsx:453
+msgid "Does exactly what it promises. The focus is squarely on conversion and user experience. The team behind the plugin consistently proves they understand entrepreneurial needs, and their support is top-tier."
+msgstr "Melakukan persis apa yang dijanjikan. Fokusnya sepenuhnya pada konversi dan pengalaman pengguna. Tim di belakang plugin ini secara konsisten membuktikan bahwa mereka memahami kebutuhan wirausaha, dan dukungan mereka adalah teratas."
+
+#: src/components/AuthPage.jsx:489
+msgid "Trusted by 12M+ businesses"
+msgstr "Dipercaya oleh 12M+ bisnis"
+
+#: src/components/AuthPage.jsx:500
+msgid "Ready to grow your list?"
+msgstr "Siap untuk mengembangkan daftar Anda?"
+
+#: src/components/AuthPage.jsx:503
+msgid "Join 12M+ WordPress sites already using SureContact to capture, nurture, and convert their visitors."
+msgstr "Bergabunglah dengan 12M+ situs WordPress yang sudah menggunakan SureContact untuk menangkap, memelihara, dan mengonversi pengunjung mereka."
+
+#: src/components/AuthPage.jsx:508
+msgid "Get started"
+msgstr "Mulai"
+
+#: src/components/ConfigFields.jsx:127
+#: src/screens/integrations/IntegrationSettings.jsx:231
+msgid "Select an option"
+msgstr "Pilih opsi"
+
+#: src/components/ConfigFields.jsx:205
+#: src/components/ConfigFields.jsx:370
+#: src/components/ListSelect.jsx:41
+#: src/screens/integrations/IntegrationSettings.jsx:341
+msgid "Select lists…"
+msgstr "Pilih daftar…"
+
+#: src/components/ConfigFields.jsx:227
+#: src/components/ConfigFields.jsx:389
+#: src/components/TagSelect.jsx:41
+#: src/screens/integrations/IntegrationSettings.jsx:380
+msgid "Select tags…"
+msgstr "Pilih tag…"
+
+#: src/components/ConfigFields.jsx:293
+msgid "Add"
+msgstr "Tambahkan"
+
+#: src/components/ConfigFields.jsx:299
+msgid "No items added yet. Click \"Add\" to create your first entry."
+msgstr "Belum ada item yang ditambahkan. Klik \"Tambahkan\" untuk membuat entri pertama Anda."
+
+#. translators: %d: item number
+#: src/components/ConfigFields.jsx:310
+#, js-format
+msgid "Item %d"
+msgstr "Item %d"
+
+#: src/components/ConfigFields.jsx:318
+msgid "Remove item"
+msgstr "Hapus item"
+
+#. translators: 1: field label, 2: item number
+#: src/components/ConfigFields.jsx:371
+#: src/components/ConfigFields.jsx:390
+#, js-format
+msgid "%1$s for item %2$d"
+msgstr "%1$s untuk item %2$d"
+
+#: src/components/ConfigFields.jsx:421
+msgid "No form fields available to map"
+msgstr "Tidak ada bidang formulir yang tersedia untuk dipetakan"
+
+#: src/components/ConfigFields.jsx:427
+msgid "Form Field"
+msgstr "Bidang Formulir"
+
+#: src/components/ConfigFields.jsx:430
+msgid "CRM Field"
+msgstr "Bidang CRM"
+
+#. translators: %s: form field label
+#. translators: %s: field label
+#: src/components/ConfigFields.jsx:464
+#: src/screens/integrations/IntegrationSettings.jsx:491
+#, js-format
+msgid "Select CRM field for %s"
+msgstr "Pilih bidang CRM untuk %s"
+
+#: src/components/ConfigFields.jsx:489
+msgid "No configuration required."
+msgstr "Tidak ada konfigurasi yang diperlukan."
+
+#: src/components/CreateCustomFieldForm.jsx:15
+msgid "Text"
+msgstr "Teks"
+
+#: src/components/CreateCustomFieldForm.jsx:16
+msgid "Number"
+msgstr "Angka"
+
+#: src/components/CreateCustomFieldForm.jsx:17
+msgid "Date"
+msgstr "Tanggal"
+
+#: src/components/CreateCustomFieldForm.jsx:18
+msgid "Timestamp"
+msgstr "Cap Waktu"
+
+#: src/components/CreateCustomFieldForm.jsx:20
+msgid "URL"
+msgstr "URL"
+
+#: src/components/CreateCustomFieldForm.jsx:22
+msgid "Dropdown"
+msgstr "Dropdown"
+
+#: src/components/CreateCustomFieldForm.jsx:23
+msgid "Multi-Select"
+msgstr "Multi-Pilih"
+
+#: src/components/CreateCustomFieldForm.jsx:24
+msgid "Checkbox"
+msgstr "Kotak Centang"
+
+#: src/components/CreateCustomFieldForm.jsx:25
+msgid "Text Area"
+msgstr "Area Teks"
+
+#: src/components/CreateCustomFieldForm.jsx:144
+msgid "Field slug is required."
+msgstr "Slug bidang diperlukan."
+
+#: src/components/CreateCustomFieldForm.jsx:146
+msgid "Slug can only contain lowercase letters, numbers, and underscores."
+msgstr "Slug hanya boleh berisi huruf kecil, angka, dan garis bawah."
+
+#: src/components/CreateCustomFieldForm.jsx:155
+msgid "At least one option is required."
+msgstr "Setidaknya satu opsi diperlukan."
+
+#: src/components/CreateCustomFieldForm.jsx:209
+msgid "Field Label"
+msgstr "Label Bidang"
+
+#: src/components/CreateCustomFieldForm.jsx:215
+msgid "e.g., Company Size"
+msgstr "mis., Ukuran Perusahaan"
+
+#: src/components/CreateCustomFieldForm.jsx:227
+msgid "Field Slug"
+msgstr "Slug Bidang"
+
+#: src/components/CreateCustomFieldForm.jsx:233
+msgid "e.g., company_size"
+msgstr "mis., ukuran_perusahaan"
+
+#: src/components/CreateCustomFieldForm.jsx:241
+msgid "Unique identifier for this field. Only lowercase letters, numbers, and underscores."
+msgstr "Pengenal unik untuk bidang ini. Hanya huruf kecil, angka, dan garis bawah."
+
+#: src/components/CreateCustomFieldForm.jsx:251
+msgid "Field Type"
+msgstr "Jenis Bidang"
+
+#: src/components/CreateCustomFieldForm.jsx:269
+msgid "Required Field"
+msgstr "Bidang Wajib"
+
+#: src/components/CreateCustomFieldForm.jsx:272
+msgid "Make this field mandatory when creating contacts."
+msgstr "Jadikan bidang ini wajib saat membuat kontak."
+
+#: src/components/CreateCustomFieldForm.jsx:280
+msgid "Mark field as required"
+msgstr "Tandai field sebagai wajib"
+
+#: src/components/CreateCustomFieldForm.jsx:287
+msgid "Options"
+msgstr "Opsi"
+
+#: src/components/CreateCustomFieldForm.jsx:296
+msgid "Option"
+msgstr "Opsi"
+
+#: src/components/CreateCustomFieldForm.jsx:309
+msgid "Remove option"
+msgstr "Hapus opsi"
+
+#: src/components/CreateCustomFieldForm.jsx:323
+msgid "Add Option"
+msgstr "Tambahkan Opsi"
+
+#: src/components/CreateCustomFieldForm.jsx:342
+#: src/screens/contact-fields/components/CreateCustomFieldDialog.jsx:65
+#: src/screens/dashboard/Dashboard.jsx:306
+#: src/screens/integrations/IntegrationSettings.jsx:553
+#: src/screens/integrations/IntegrationsTableCard.jsx:2094
+#: src/screens/logs/components/LogsHeader.jsx:92
+#: src/screens/logs/components/LogsHeader.jsx:130
+#: src/screens/logs/components/LogsTable.jsx:534
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:48
+msgid "Cancel"
+msgstr "Batal"
+
+#: src/components/CreateCustomFieldForm.jsx:351
+#: src/components/ListSelect.jsx:221
+#: src/components/TagSelect.jsx:221
+#: src/screens/contact-fields/components/CreateCustomFieldDialog.jsx:74
+#: src/screens/integrations/IntegrationsTableCard.jsx:2035
+msgid "Creating…"
+msgstr "Membuat…"
+
+#: src/components/CreateCustomFieldForm.jsx:352
+#: src/screens/contact-fields/components/CreateCustomFieldDialog.jsx:75
+#: src/screens/integrations/IntegrationsTableCard.jsx:2036
+msgid "Create Field"
+msgstr "Buat Field"
+
+#: src/components/CustomFieldSelect.jsx:46
+#: src/components/CustomFieldSelect.jsx:127
+msgid "Select Option"
+msgstr "Pilih Opsi"
+
+#: src/components/CustomFieldSelect.jsx:47
+msgid "Search fields…"
+msgstr "Cari field…"
+
+#: src/components/CustomFieldSelect.jsx:48
+msgid "Select CRM field"
+msgstr "Pilih field CRM"
+
+#. translators: %s: last sync time
+#: src/components/CustomFieldSelect.jsx:63
+#: src/screens/contact-fields/FieldMappingTable.jsx:144
+#, js-format
+msgid "Last sync: %s"
+msgstr "Sinkronisasi terakhir: %s"
+
+#: src/components/CustomFieldSelect.jsx:67
+#: src/screens/contact-fields/FieldMappingTable.jsx:148
+msgid "Error syncing fields"
+msgstr "Kesalahan sinkronisasi field"
+
+#: src/components/CustomFieldSelect.jsx:133
+#: src/components/NavMenu.jsx:22
+msgid "Contact Fields"
+msgstr "Fields Kontak"
+
+#: src/components/CustomFieldSelect.jsx:144
+msgid "Custom Fields"
+msgstr "Fields Kustom"
+
+#: src/components/CustomFieldSelect.jsx:156
+#: src/components/ListSelect.jsx:183
+#: src/components/TagSelect.jsx:183
+#: src/screens/integrations/IntegrationsTableCard.jsx:1288
+msgid "Loading…"
+msgstr "Memuat…"
+
+#: src/components/CustomFieldSelect.jsx:163
+msgid "No fields found for"
+msgstr "Tidak ada field ditemukan untuk"
+
+#: src/components/CustomFieldSelect.jsx:183
+#: src/components/ListSelect.jsx:222
+#: src/components/TagSelect.jsx:222
+msgid "Create"
+msgstr "Buat"
+
+#: src/components/CustomFieldSelect.jsx:184
+#: src/screens/contact-fields/components/CreateCustomFieldDialog.jsx:36
+#: src/screens/integrations/IntegrationsTableCard.jsx:1511
+msgid "Create Custom Field"
+msgstr "Buat Field Kustom"
+
+#: src/components/CustomFieldSelect.jsx:191
+#: src/components/CustomFieldSelect.jsx:196
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:55
+msgid "Pull Custom Fields"
+msgstr "Tarik Field Kustom"
+
+#: src/components/ErrorBoundary.jsx:61
+msgid "Something went wrong"
+msgstr "Ada yang tidak beres"
+
+#: src/components/ErrorBoundary.jsx:64
+msgid "We're sorry, but something unexpected happened. Please try refreshing the page."
+msgstr "Kami mohon maaf, tetapi sesuatu yang tidak terduga terjadi. Silakan coba segarkan halaman."
+
+#: src/components/ErrorBoundary.jsx:72
+#: src/components/ErrorBoundary.jsx:160
+msgid "Try Again"
+msgstr "Coba Lagi"
+
+#: src/components/ErrorBoundary.jsx:78
+msgid "Reload Page"
+msgstr "Muat Ulang Halaman"
+
+#: src/components/ErrorBoundary.jsx:86
+msgid "Error Details (Development Mode)"
+msgstr "Detail Kesalahan (Mode Pengembangan)"
+
+#: src/components/ErrorBoundary.jsx:90
+msgid "Error:"
+msgstr "Kesalahan:"
+
+#: src/components/ErrorBoundary.jsx:97
+msgid "Component Stack:"
+msgstr "Tumpukan Komponen:"
+
+#. translators: %s: page title
+#: src/components/ErrorBoundary.jsx:136
+#, js-format
+msgid "There was an error loading the %s page. Please try refreshing the page."
+msgstr "Ada kesalahan saat memuat halaman %s. Silakan coba segarkan halaman."
+
+#: src/components/ErrorBoundary.jsx:144
+msgid "Oops! Something went wrong"
+msgstr "Ups! Ada yang tidak beres"
+
+#. translators: %s: page title
+#: src/components/ErrorBoundary.jsx:147
+#, js-format
+msgid "We encountered an error while loading the %s page. This might be a temporary issue."
+msgstr "Kami mengalami kesalahan saat memuat halaman %s. Ini mungkin merupakan masalah sementara."
+
+#: src/components/ErrorBoundary.jsx:154
+#: src/components/ErrorBoundary.jsx:246
+msgid "Refresh Page"
+msgstr "Segarkan Halaman"
+
+#. translators: %s: component name
+#: src/components/ErrorBoundary.jsx:185
+#, js-format
+msgid "Error loading %s"
+msgstr "Kesalahan memuat %s"
+
+#. translators: %s: component name
+#. translators: %s: data type
+#: src/components/ErrorBoundary.jsx:194
+#: src/components/ErrorBoundary.jsx:228
+#, js-format
+msgid "Unable to load %s"
+msgstr "Tidak dapat memuat %s"
+
+#. translators: %s: component name
+#: src/components/ErrorBoundary.jsx:207
+#, js-format
+msgid "There was an error loading the %s. Please try again."
+msgstr "Terjadi kesalahan saat memuat %s. Silakan coba lagi."
+
+#. translators: %s: data type
+#: src/components/ErrorBoundary.jsx:222
+#, js-format
+msgid "Failed to load %s. Please check your connection and try again."
+msgstr "Gagal memuat %s. Silakan periksa koneksi Anda dan coba lagi."
+
+#. translators: %s: data type
+#: src/components/ErrorBoundary.jsx:230
+#, js-format
+msgid "We're having trouble loading the %s. This could be due to a network issue or server problem."
+msgstr "Kami mengalami masalah saat memuat %s. Ini bisa disebabkan oleh masalah jaringan atau server."
+
+#: src/components/ErrorBoundary.jsx:240
+#: src/screens/logs/components/LogsTable.jsx:302
+msgid "Retry"
+msgstr "Coba Lagi"
+
+#: src/components/ListSelect.jsx:42
+msgid "Search lists…"
+msgstr "Cari daftar…"
+
+#: src/components/ListSelect.jsx:43
+msgid "Select lists"
+msgstr "Pilih daftar"
+
+#: src/components/ListSelect.jsx:71
+#: src/components/TagSelect.jsx:71
+#: src/screens/settings/components/SettingsHeader.jsx:23
+msgid "Error syncing lists and tags"
+msgstr "Kesalahan menyinkronkan daftar dan tag"
+
+#. translators: %s: list name
+#: src/components/ListSelect.jsx:145
+#, js-format
+msgid "List \"%s\" created successfully!"
+msgstr "Daftar \"%s\" berhasil dibuat!"
+
+#: src/components/ListSelect.jsx:190
+msgid "No lists found for"
+msgstr "Tidak ada daftar yang ditemukan untuk"
+
+#: src/components/ListSelect.jsx:197
+msgid "No lists available"
+msgstr "Tidak ada daftar yang tersedia"
+
+#: src/components/ListSelect.jsx:229
+#: src/components/ListSelect.jsx:234
+#: src/components/TagSelect.jsx:229
+#: src/components/TagSelect.jsx:234
+#: src/screens/settings/components/SettingsHeader.jsx:63
+msgid "Sync Lists & Tags"
+msgstr "Sinkronkan Daftar & Tag"
+
+#: src/components/NavMenu.jsx:24
+#: src/screens/sync-contacts/components/SyncContactsHeader.jsx:17
+msgid "Bulk Sync"
+msgstr "Sinkronisasi Massal"
+
+#: src/components/NavMenu.jsx:25
+msgid "Settings"
+msgstr "Pengaturan"
+
+#: src/components/NavMenu.jsx:26
+#: src/screens/logs/components/LogsHeader.jsx:23
+msgid "Logs"
+msgstr "Log"
+
+#: src/components/NavMenu.jsx:146
+msgid "Open navigation menu"
+msgstr "Buka menu navigasi"
+
+#: src/components/NavMenu.jsx:167
+msgid "Go to dashboard"
+msgstr "Pergi ke dasbor"
+
+#: src/components/NavMenu.jsx:188
+msgid "Main navigation"
+msgstr "Navigasi utama"
+
+#. translators: %s: version number
+#: src/components/NavMenu.jsx:217
+#, js-format
+msgid "V %s"
+msgstr "V %s"
+
+#: src/components/SignupForm.jsx:22
+msgid "Account created!"
+msgstr "Akun berhasil dibuat!"
+
+#: src/components/SignupForm.jsx:23
+msgid "Connecting your site to SureContact…"
+msgstr "Menghubungkan situs Anda ke SureContact…"
+
+#: src/components/SignupForm.jsx:33
+msgid "This email already has an account."
+msgstr "Email ini sudah memiliki akun."
+
+#: src/components/SignupForm.jsx:34
+msgid "Use the “Sign in” link below to connect this site."
+msgstr "Gunakan tautan “Masuk” di bawah untuk menghubungkan situs ini."
+
+#: src/components/SignupForm.jsx:41
+msgid "We couldn’t reach your site to verify the install."
+msgstr "Kami tidak dapat menghubungi situs Anda untuk memverifikasi instalasi."
+
+#: src/components/SignupForm.jsx:42
+msgid "Check that your site is publicly accessible and try again."
+msgstr "Periksa bahwa situs Anda dapat diakses publik dan coba lagi."
+
+#: src/components/SignupForm.jsx:49
+msgid "That email address isn’t valid."
+msgstr "Alamat email itu tidak valid."
+
+#: src/components/SignupForm.jsx:57
+msgid "Too many attempts."
+msgstr "Terlalu banyak percobaan."
+
+#: src/components/SignupForm.jsx:58
+msgid "Please wait a minute and try again."
+msgstr "Silakan tunggu sebentar dan coba lagi."
+
+#: src/components/SignupForm.jsx:64
+msgid "Something went wrong."
+msgstr "Sesuatu telah salah."
+
+#: src/components/SignupForm.jsx:65
+msgid "Please try again."
+msgstr "Silakan coba lagi."
+
+#: src/components/SignupForm.jsx:77
+msgid "First name is required."
+msgstr "Nama depan dibutuhkan."
+
+#: src/components/SignupForm.jsx:79
+#: src/components/SignupForm.jsx:85
+msgid "Must be 60 characters or fewer."
+msgstr "Harus 60 karakter atau lebih sedikit."
+
+#: src/components/SignupForm.jsx:83
+msgid "Last name is required."
+msgstr "Nama belakang dibutuhkan."
+
+#: src/components/SignupForm.jsx:89
+msgid "Email is required."
+msgstr "Email dibutuhkan."
+
+#: src/components/SignupForm.jsx:91
+msgid "Enter a valid email address."
+msgstr "Masukkan alamat email yang valid."
+
+#: src/components/SignupForm.jsx:115
+msgid "First name"
+msgstr "Nama depan"
+
+#: src/components/SignupForm.jsx:122
+msgid "e.g., Jane"
+msgstr "mis., Jane"
+
+#: src/components/SignupForm.jsx:132
+msgid "Last name"
+msgstr "Nama belakang"
+
+#: src/components/SignupForm.jsx:139
+msgid "e.g., Doe"
+msgstr "mis., Doe"
+
+#: src/components/SignupForm.jsx:151
+msgid "Work email"
+msgstr "Email kerja"
+
+#: src/components/SignupForm.jsx:159
+msgid "e.g., you@company.com"
+msgstr "mis., you@company.com"
+
+#: src/components/SignupForm.jsx:177
+msgid "Connecting…"
+msgstr "Menghubungkan…"
+
+#: src/components/SignupForm.jsx:179
+msgid "Creating your account…"
+msgstr "Membuat akun Anda…"
+
+#: src/components/SignupForm.jsx:180
+msgid "Create Account & Connect"
+msgstr "Buat Akun & Hubungkan"
+
+#: src/components/TagSelect.jsx:42
+msgid "Search tags…"
+msgstr "Cari tag…"
+
+#: src/components/TagSelect.jsx:43
+msgid "Select tags"
+msgstr "Pilih tag"
+
+#. translators: %s: tag name
+#: src/components/TagSelect.jsx:145
+#, js-format
+msgid "Tag \"%s\" created successfully!"
+msgstr "Tag \"%s\" berhasil dibuat!"
+
+#: src/components/TagSelect.jsx:190
+msgid "No tags found for"
+msgstr "Tidak ditemukan tag untuk"
+
+#: src/components/TagSelect.jsx:197
+msgid "No tags available"
+msgstr "Tidak ada tag yang tersedia"
+
+#. translators: %s: integration name
+#: src/hooks/useIntegrations.js:124
+#, js-format
+msgid "Enabling %s…"
+msgstr "Mengaktifkan %s…"
+
+#. translators: %s: integration name
+#: src/hooks/useIntegrations.js:125
+#, js-format
+msgid "Disabling %s…"
+msgstr "Menonaktifkan %s…"
+
+#: src/hooks/useIntegrations.js:132
+#: src/screens/integrations/IntegrationsTableCard.jsx:1230
+#: src/screens/integrations/IntegrationsTableCard.jsx:1501
+msgid "Integration"
+msgstr "Integrasi"
+
+#. translators: %s: integration name
+#: src/hooks/useIntegrations.js:140
+#, js-format
+msgid "%s enabled successfully"
+msgstr "%s berhasil diaktifkan"
+
+#. translators: %s: integration name
+#: src/hooks/useIntegrations.js:141
+#, js-format
+msgid "%s disabled successfully"
+msgstr "%s berhasil dinonaktifkan"
+
+#: src/hooks/useIntegrations.js:175
+msgid "Settings saved successfully"
+msgstr "Pengaturan berhasil disimpan"
+
+#: src/hooks/useLogs.js:84
+msgid "Item queued for retry"
+msgstr "Item dijadwalkan untuk dicoba lagi"
+
+#: src/hooks/useLogs.js:108
+msgid "Logs deleted"
+msgstr "Log dihapus"
+
+#: src/hooks/useLogs.js:132
+msgid "Items queued for retry"
+msgstr "Item dijadwalkan untuk dicoba lagi"
+
+#: src/hooks/useLogs.js:156
+msgid "All failed items queued for retry"
+msgstr "Semua item yang gagal antre untuk dicoba kembali"
+
+#: src/hooks/useLogs.js:180
+msgid "Logs cleared"
+msgstr "Log dihapus"
+
+#: src/screens/contact-fields/components/CreateCustomFieldDialog.jsx:41
+#: src/screens/integrations/IntegrationsTableCard.jsx:1518
+msgid "Create a new custom field in your SureContact CRM."
+msgstr "Buat field kustom baru di SureContact CRM Anda."
+
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:19
+msgid "Contact Fields Mapping"
+msgstr "Pemetaan Field Kontak"
+
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:24
+msgid "Configure field mappings between WordPress and SureContact"
+msgstr "Konfigurasi pemetaan field antara WordPress dan SureContact"
+
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:40
+#: src/screens/integrations/components/NotesPopup.jsx:341
+#: src/screens/integrations/IntegrationSettings.jsx:564
+#: src/screens/integrations/IntegrationsTableCard.jsx:2052
+#: src/screens/settings/Settings.jsx:122
+msgid "Saving…"
+msgstr "Menyimpan…"
+
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:40
+#: src/screens/integrations/IntegrationsTableCard.jsx:2053
+#: src/screens/settings/Settings.jsx:122
+msgid "Save Changes"
+msgstr "Simpan Perubahan"
+
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:55
+#: src/screens/settings/components/SettingsHeader.jsx:63
+msgid "Syncing…"
+msgstr "Menyinkronkan…"
+
+#. translators: %s: field label
+#: src/screens/contact-fields/components/FieldRow.jsx:56
+#: src/screens/contact-fields/components/FieldRow.jsx:119
+#, js-format
+msgid "Enable sync for %s"
+msgstr "Aktifkan sinkronisasi untuk %s"
+
+#: src/screens/contact-fields/components/FieldRow.jsx:62
+msgid "Type:"
+msgstr "Tipe:"
+
+#: src/screens/contact-fields/components/FieldRow.jsx:72
+msgid "SureContact Field:"
+msgstr "Field SureContact:"
+
+#. translators: %s: field label
+#: src/screens/contact-fields/components/FieldRow.jsx:78
+#: src/screens/contact-fields/components/FieldRow.jsx:110
+#, js-format
+msgid "Map %s to SureContact field"
+msgstr "Pemetaan %s ke field SureContact"
+
+#: src/screens/contact-fields/components/InfoBanner.jsx:16
+msgid "Field Mapping Guide"
+msgstr "Panduan Pemetaan Field"
+
+#: src/screens/contact-fields/components/InfoBanner.jsx:17
+msgid "Only fields that are marked as \"Active\" (Sync enabled) will be synchronized to your CRM. Map WordPress fields to corresponding CRM fields using the dropdowns below."
+msgstr "Hanya field yang ditandai sebagai \"Aktif\" (sinkronisasi diaktifkan) yang akan disinkronkan ke CRM Anda. Pemetaan field WordPress ke field CRM yang sesuai menggunakan dropdown di bawah ini."
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:62
+msgid "Error saving mappings"
+msgstr "Kesalahan saat menyimpan pemetaan"
+
+#. translators: %s: field label
+#: src/screens/contact-fields/FieldMappingTable.jsx:114
+#: src/screens/integrations/IntegrationsTableCard.jsx:150
+#, js-format
+msgid "Field \"%s\" is now available."
+msgstr "Field \"%s\" sekarang tersedia."
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:134
+#: src/screens/integrations/IntegrationsTableCard.jsx:171
+msgid "Error creating custom field"
+msgstr "Kesalahan saat membuat field kustom"
+
+#. translators: %s: field group title
+#: src/screens/contact-fields/FieldMappingTable.jsx:218
+#, js-format
+msgid "%s field mappings"
+msgstr "%s pemetaan field"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:222
+msgid "WordPress Field"
+msgstr "Field WordPress"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:224
+#: src/screens/integrations/IntegrationsTableCard.jsx:1232
+msgid "Type"
+msgstr "Tipe"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:226
+#: src/screens/integrations/IntegrationSettings.jsx:426
+msgid "SureContact Field"
+msgstr "Field SureContact"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:229
+msgid "Sync"
+msgstr "Sinkronkan"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:301
+msgid "Error Loading Data"
+msgstr "Kesalahan Memuat Data"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:302
+msgid "Failed to load field mapping data. Please refresh the page and try again."
+msgstr "Gagal memuat data pemetaan field. Silakan segarkan halaman dan coba lagi."
+
+#: src/screens/dashboard/Dashboard.jsx:45
+msgid "Disconnect failed"
+msgstr "Pemutusan gagal"
+
+#: src/screens/dashboard/Dashboard.jsx:49
+msgid "Disconnected"
+msgstr "Terputus"
+
+#: src/screens/dashboard/Dashboard.jsx:50
+msgid "You have been disconnected."
+msgstr "Anda telah terputus."
+
+#: src/screens/dashboard/Dashboard.jsx:58
+msgid "Disconnect Failed"
+msgstr "Pemutusan Gagal"
+
+#: src/screens/dashboard/Dashboard.jsx:59
+msgid "Unable to disconnect"
+msgstr "Tidak dapat terputus"
+
+#: src/screens/dashboard/Dashboard.jsx:71
+msgid "VIP Support"
+msgstr "Dukungan VIP"
+
+#: src/screens/dashboard/Dashboard.jsx:76
+msgid "Help Center"
+msgstr "Pusat Bantuan"
+
+#: src/screens/dashboard/Dashboard.jsx:81
+msgid "Join the Community"
+msgstr "Bergabung dengan Komunitas"
+
+#: src/screens/dashboard/Dashboard.jsx:86
+msgid "Rate Us"
+msgstr "Beri Penilaian"
+
+#: src/screens/dashboard/Dashboard.jsx:106
+msgid "Welcome to SureContact"
+msgstr "Selamat datang di SureContact"
+
+#: src/screens/dashboard/Dashboard.jsx:111
+msgid "SureContact is a comprehensive CRM platform that helps you manage customer relationships and data effectively. Connect your WordPress site to centralize customer information, track interactions, and streamline your business operations."
+msgstr "SureContact adalah platform CRM yang komprehensif yang membantu Anda mengelola hubungan dan data pelanggan secara efektif. Hubungkan situs WordPress Anda untuk memusatkan informasi pelanggan, melacak interaksi, dan mengoptimalkan operasi bisnis Anda."
+
+#: src/screens/dashboard/Dashboard.jsx:116
+msgid "By visiting the CRM, you will be able to see all synced contacts and manage tags, lists, and custom fields. You can create beautiful campaigns and automations, along with many other features. Excited to get started? Please click the button below."
+msgstr "Dengan mengunjungi CRM, Anda akan dapat melihat semua kontak yang disinkronkan dan mengelola tag, daftar, dan bidang kustom. Anda dapat membuat kampanye dan automasi yang indah, bersamaan dengan banyak fitur lainnya. Bersemangat untuk memulai? Silakan klik tombol di bawah."
+
+#: src/screens/dashboard/Dashboard.jsx:127
+msgid "Visit CRM"
+msgstr "Kunjungi CRM"
+
+#: src/screens/dashboard/Dashboard.jsx:136
+msgid "Read Full Guide"
+msgstr "Baca Panduan Lengkap"
+
+#: src/screens/dashboard/Dashboard.jsx:148
+msgid "Watch SureContact overview video"
+msgstr "Tonton video ikhtisar SureContact"
+
+#: src/screens/dashboard/Dashboard.jsx:179
+msgid "Connection Status"
+msgstr "Status Koneksi"
+
+#: src/screens/dashboard/Dashboard.jsx:184
+msgid "Your site is connected to SureContact"
+msgstr "Situs Anda terhubung ke SureContact"
+
+#: src/screens/dashboard/Dashboard.jsx:195
+msgid "Connected"
+msgstr "Terhubung"
+
+#: src/screens/dashboard/Dashboard.jsx:196
+#: src/screens/dashboard/Dashboard.jsx:200
+#: src/screens/dashboard/Dashboard.jsx:314
+msgid "Disconnect"
+msgstr "Putuskan Koneksi"
+
+#: src/screens/dashboard/Dashboard.jsx:228
+msgid "Quick Access"
+msgstr "Akses Cepat"
+
+#: src/screens/dashboard/Dashboard.jsx:288
+msgid "Disconnect from SureContact?"
+msgstr "Putuskan koneksi dari SureContact?"
+
+#: src/screens/dashboard/Dashboard.jsx:292
+msgid "This will remove authentication and cached SureContact data from WordPress. You can reconnect anytime."
+msgstr "Ini akan menghapus otentikasi dan data SureContact yang disimpan di WordPress. Anda dapat menyambung kembali kapan saja."
+
+#: src/screens/dashboard/Dashboard.jsx:297
+msgid "Are you sure you want to disconnect your WordPress site from SureContact? This action will remove all cached data and authentication tokens."
+msgstr "Apakah Anda yakin ingin memutuskan koneksi situs WordPress Anda dari SureContact? Tindakan ini akan menghapus semua data yang disimpan dan token otentikasi."
+
+#: src/screens/dashboard/Dashboard.jsx:314
+msgid "Disconnecting…"
+msgstr "Memutuskan…"
+
+#: src/screens/integrations/components/IntegrationNoticeBanner.jsx:33
+msgid "Important Note:"
+msgstr "Catatan Penting:"
+
+#: src/screens/integrations/components/IntegrationNoticeBanner.jsx:33
+msgid "Make sure to go to the Contact Fields tab first, match your plugin fields with the corresponding CRM fields, and mark them as Active. After completing this step, return here and then enable the additional settings below. If you do not complete this step, the settings below will not work as expected, and your contacts will not sync with the SureContact CRM."
+msgstr "Pastikan untuk pergi ke tab Bidang Kontak terlebih dahulu, sesuaikan bidang plugin Anda dengan bidang CRM yang sesuai, dan tandai sebagai Aktif. Setelah menyelesaikan langkah ini, kembali ke sini dan aktifkan pengaturan tambahan di bawah. Jika Anda tidak menyelesaikan langkah ini, pengaturan di bawah tidak akan berfungsi seperti yang diharapkan, dan kontak Anda tidak akan disinkronkan dengan CRM SureContact."
+
+#: src/screens/integrations/components/IntegrationsHeader.jsx:19
+msgid "Plugin Integrations"
+msgstr "Integrasi Plugin"
+
+#: src/screens/integrations/components/IntegrationsHeader.jsx:24
+msgid "Manage integrations with WordPress plugins to sync data to SureContact"
+msgstr "Kelola integrasi dengan plugin WordPress untuk menyinkronkan data ke SureContact"
+
+#: src/screens/integrations/components/IntegrationsHeader.jsx:37
+msgid "Add Integration"
+msgstr "Tambahkan Integrasi"
+
+#. translators: 1: event label, 2: item title
+#: src/screens/integrations/components/NotesPopup.jsx:53
+#: src/screens/integrations/IntegrationsTableCard.jsx:1708
+#: src/screens/integrations/IntegrationsTableCard.jsx:1731
+#, js-format
+msgid "On %1$s of %2$s"
+msgstr "Pada %1$s dari %2$s"
+
+#. translators: %s: color name
+#: src/screens/integrations/components/NotesPopup.jsx:259
+#, js-format
+msgid "Select %s color"
+msgstr "Pilih warna %s"
+
+#. translators: %s: color name
+#: src/screens/integrations/components/NotesPopup.jsx:291
+#, js-format
+msgid "Note color: %s. Click to change"
+msgstr "Warna catatan: %s. Klik untuk mengubah"
+
+#: src/screens/integrations/components/NotesPopup.jsx:306
+msgid "Delete note"
+msgstr "Hapus catatan"
+
+#: src/screens/integrations/components/NotesPopup.jsx:314
+msgid "Close"
+msgstr "Tutup"
+
+#: src/screens/integrations/components/NotesPopup.jsx:325
+msgid "Add note here…"
+msgstr "Tambahkan catatan di sini…"
+
+#: src/screens/integrations/components/NotesPopup.jsx:341
+msgid "Save"
+msgstr "Simpan"
+
+#: src/screens/integrations/IntegrationCard.jsx:63
+msgid "Enabled"
+msgstr "Diaktifkan"
+
+#: src/screens/integrations/IntegrationCard.jsx:65
+#: src/screens/integrations/IntegrationsTableCard.jsx:1291
+msgid "Disabled"
+msgstr "Dinonaktifkan"
+
+#: src/screens/integrations/IntegrationCard.jsx:68
+msgid "Not Installed"
+msgstr "Tidak Terpasang"
+
+#: src/screens/integrations/IntegrationCard.jsx:96
+msgid "Open documentation in new window"
+msgstr "Buka dokumentasi di jendela baru"
+
+#: src/screens/integrations/IntegrationCard.jsx:99
+msgid "Documentation"
+msgstr "Dokumentasi"
+
+#. translators: 1: action label (Enable or Disable), 2: integration name
+#: src/screens/integrations/IntegrationCard.jsx:125
+#, js-format
+msgid "%1$s %2$s integration"
+msgstr "%1$s %2$s integrasi"
+
+#: src/screens/integrations/IntegrationCard.jsx:125
+msgid "Disable"
+msgstr "Nonaktifkan"
+
+#: src/screens/integrations/IntegrationCard.jsx:125
+msgid "Enable"
+msgstr "Aktifkan"
+
+#: src/screens/integrations/IntegrationCard.jsx:134
+#: src/screens/integrations/IntegrationCard.jsx:143
+msgid "Hide settings"
+msgstr "Sembunyikan pengaturan"
+
+#: src/screens/integrations/IntegrationCard.jsx:134
+#: src/screens/integrations/IntegrationCard.jsx:143
+msgid "Show settings"
+msgstr "Tampilkan pengaturan"
+
+#: src/screens/integrations/Integrations.jsx:66
+msgid "Failed to load integrations"
+msgstr "Gagal memuat integrasi"
+
+#: src/screens/integrations/IntegrationSettings.jsx:416
+msgid "Loading field mapping…"
+msgstr "Memuat pemetaan bidang…"
+
+#: src/screens/integrations/IntegrationSettings.jsx:422
+msgid "Plugin Field"
+msgstr "Bidang Plugin"
+
+#: src/screens/integrations/IntegrationSettings.jsx:444
+#: src/screens/integrations/IntegrationSettings.jsx:489
+msgid "---Skip---"
+msgstr "---Lewati---"
+
+#: src/screens/integrations/IntegrationSettings.jsx:488
+msgid "Select CRM field…"
+msgstr "Pilih bidang CRM…"
+
+#: src/screens/integrations/IntegrationSettings.jsx:507
+msgid "No fields available for mapping."
+msgstr "Tidak ada bidang yang tersedia untuk pemetaan."
+
+#: src/screens/integrations/IntegrationSettings.jsx:525
+msgid "No settings available for this integration."
+msgstr "Tidak ada pengaturan yang tersedia untuk integrasi ini."
+
+#: src/screens/integrations/IntegrationSettings.jsx:564
+msgid "Save Settings"
+msgstr "Simpan Pengaturan"
+
+#: src/screens/integrations/IntegrationsList.jsx:19
+#: src/screens/integrations/IntegrationsList.jsx:77
+msgid "Global Settings"
+msgstr "Pengaturan Global"
+
+#: src/screens/integrations/IntegrationsList.jsx:60
+#: src/screens/integrations/IntegrationsTableCard.jsx:1579
+msgid "No integrations found"
+msgstr "Tidak ada integrasi yang ditemukan"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:475
+msgid "Please select a type."
+msgstr "Silakan pilih tipe."
+
+#. translators: %s: item type
+#: src/screens/integrations/IntegrationsTableCard.jsx:481
+#, js-format
+msgid "Please select a %s to configure."
+msgstr "Silakan pilih %s untuk dikonfigurasi."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:481
+msgid "item"
+msgstr "item"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:488
+msgid "Please select an event."
+msgstr "Silakan pilih sebuah acara."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:494
+msgid "Please configure at least one action."
+msgstr "Silakan konfigurasi setidaknya satu tindakan."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:548
+msgid "Integration configured successfully!"
+msgstr "Integrasi berhasil dikonfigurasi!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:557
+msgid "Failed to save integration. Please try again."
+msgstr "Gagal menyimpan integrasi. Silakan coba lagi."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:629
+msgid "Failed to load integration configuration."
+msgstr "Gagal memuat konfigurasi integrasi."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:656
+msgid "Configuration deleted successfully!"
+msgstr "Konfigurasi berhasil dihapus!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:689
+msgid "Failed to delete configuration. Please try again."
+msgstr "Gagal menghapus konfigurasi. Silakan coba lagi."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:772
+msgid "Title saved successfully!"
+msgstr "Judul berhasil disimpan!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:781
+msgid "Failed to save title. Please try again."
+msgstr "Gagal menyimpan judul. Silakan coba lagi."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:846
+msgid "Notes deleted successfully!"
+msgstr "Catatan berhasil dihapus!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:852
+msgid "Failed to delete notes. Please try again."
+msgstr "Gagal menghapus catatan. Silakan coba lagi."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:896
+msgid "Notes saved successfully!"
+msgstr "Catatan berhasil disimpan!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:905
+msgid "Failed to save notes. Please try again."
+msgstr "Gagal menyimpan catatan. Silakan coba lagi."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:942
+#: src/screens/integrations/IntegrationsTableCard.jsx:1006
+msgid "Configuration not found"
+msgstr "Konfigurasi tidak ditemukan"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:987
+msgid "Note saved successfully!"
+msgstr "Catatan berhasil disimpan!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:994
+msgid "Failed to save note. Please try again."
+msgstr "Gagal menyimpan catatan. Silakan coba lagi."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1038
+msgid "Note deleted successfully!"
+msgstr "Catatan berhasil dihapus!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1043
+msgid "Failed to delete note. Please try again."
+msgstr "Gagal menghapus catatan. Silakan coba lagi."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1067
+msgid "Enabling integration…"
+msgstr "Mengaktifkan integrasi…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1067
+msgid "Disabling integration…"
+msgstr "Menonaktifkan integrasi…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1079
+msgid "Integration enabled successfully!"
+msgstr "Integrasi berhasil diaktifkan!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1079
+msgid "Integration disabled successfully!"
+msgstr "Integrasi berhasil dinonaktifkan!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1085
+msgid "Failed to update integration status. Please try again."
+msgstr "Gagal memperbarui status integrasi. Silakan coba lagi."
+
+#. translators: %s: plugin name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1094
+#: src/screens/integrations/IntegrationsTableCard.jsx:1290
+#, js-format
+msgid "Activating %s…"
+msgstr "Mengaktifkan %s…"
+
+#. translators: %s: plugin name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1099
+#, js-format
+msgid "%s activated successfully!"
+msgstr "%s berhasil diaktifkan!"
+
+#. translators: %s: plugin name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1109
+#, js-format
+msgid "Failed to activate %s."
+msgstr "Gagal mengaktifkan %s."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1231
+msgid "Configuration"
+msgstr "Konfigurasi"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1233
+msgid "Event"
+msgstr "Acara"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1234
+msgid "Created On"
+msgstr "Dibuat Pada"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1235
+#: src/screens/logs/components/LogsTable.jsx:241
+msgid "Status"
+msgstr "Status"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1236
+#: src/screens/logs/components/LogsTable.jsx:247
+msgid "Actions"
+msgstr "Aksi"
+
+#. translators: %s: plugin name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1263
+#, js-format
+msgid "Click to activate %s"
+msgstr "Klik untuk mengaktifkan %s"
+
+#. translators: %s: plugin name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1269
+#, js-format
+msgid "Activate %s plugin"
+msgstr "Aktifkan plugin %s"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1321
+msgid "Global Configuration"
+msgstr "Konfigurasi Global"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1327
+msgid "Global"
+msgstr "Global"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1339
+msgid "N/A"
+msgstr "N/A"
+
+#. translators: %s: integration name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1349
+#, js-format
+msgid "Disable %s integration"
+msgstr "Nonaktifkan integrasi %s"
+
+#. translators: %s: integration name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1350
+#, js-format
+msgid "Enable %s integration"
+msgstr "Aktifkan integrasi %s"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1360
+msgid "Edit Note"
+msgstr "Edit Catatan"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1360
+msgid "Add Note"
+msgstr "Tambah Catatan"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1369
+msgid "Edit note"
+msgstr "Edit catatan"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1369
+msgid "Add note"
+msgstr "Tambah catatan"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1382
+#: src/screens/integrations/IntegrationsTableCard.jsx:1391
+msgid "Edit integration"
+msgstr "Edit integrasi"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1399
+#: src/screens/integrations/IntegrationsTableCard.jsx:1408
+msgid "Delete integration"
+msgstr "Hapus integrasi"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1442
+msgid "No integrations yet"
+msgstr "Belum ada integrasi"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1447
+msgid "Get started by adding your first integration to connect with your other plugins"
+msgstr "Mulailah dengan menambahkan integrasi pertama Anda untuk terhubung dengan plugin lainnya"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1489
+msgid "Go back"
+msgstr "Kembali"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1514
+msgid "Configure Integration"
+msgstr "Konfigurasi Integrasi"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1520
+msgid "Select the integration you want to configure"
+msgstr "Pilih integrasi yang ingin Anda konfigurasi"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1521
+msgid "Configure the integration settings"
+msgstr "Konfigurasi pengaturan integrasi"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1548
+msgid "Search integrations…"
+msgstr "Cari integrasi…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1549
+msgid "Search integrations"
+msgstr "Cari integrasi"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1559
+msgid "Clear search"
+msgstr "Hapus pencarian"
+
+#. translators: %s: search query
+#: src/screens/integrations/IntegrationsTableCard.jsx:1578
+#, js-format
+msgid "No integrations found matching \"%s\""
+msgstr "Tidak ada integrasi yang ditemukan yang cocok dengan \"%s\""
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1588
+msgid "Active Plugins"
+msgstr "Plugin Aktif"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1632
+msgid "Inactive Plugins"
+msgstr "Plugin Tidak Aktif"
+
+#. translators: %s: integration name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1643
+#, js-format
+msgid "%s - This plugin is not installed or inactive"
+msgstr "%s - Plugin ini tidak terinstal atau tidak aktif"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1719
+msgid "Save title"
+msgstr "Simpan judul"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1739
+msgid "Edit title"
+msgstr "Edit judul"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1761
+msgid "Add notes here…"
+msgstr "Tambah catatan di sini…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1774
+msgid "Delete notes"
+msgstr "Hapus catatan"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1781
+msgid "Save notes"
+msgstr "Simpan catatan"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1795
+msgid "Edit notes"
+msgstr "Edit catatan"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1810
+msgid "Select Type"
+msgstr "Pilih Tipe"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1823
+msgid "Select a type…"
+msgstr "Pilih jenis…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1828
+msgid "Select type"
+msgstr "Pilih tipe"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1842
+msgid "Select the type of item to configure."
+msgstr "Pilih jenis item untuk dikonfigurasi."
+
+#. translators: %s: item type
+#: src/screens/integrations/IntegrationsTableCard.jsx:1851
+#: src/screens/integrations/IntegrationsTableCard.jsx:1868
+#, js-format
+msgid "Select %s"
+msgstr "Pilih %s"
+
+#. translators: 1: article (a/an), 2: item type
+#: src/screens/integrations/IntegrationsTableCard.jsx:1866
+#, js-format
+msgid "Select %1$s %2$s…"
+msgstr "Pilih %1$s %2$s…"
+
+#. translators: 1: item type (plural), 2: article (a/an), 3: item type, 4: integration name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1880
+#, js-format
+msgid "No %1$ss found. Please create %2$s %3$s in %4$s first."
+msgstr "Tidak ada %1$ss yang ditemukan. Silakan buat %2$s %3$s di %4$s terlebih dahulu."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1885
+msgid "Thank you pages only support the \"Started\" event since they represent the completion destination of a funnel. Email will be identified from: 1) URL parameter (billing_email, email), 2) CartFlows Pro session, 3) WooCommerce customer data, 4) Logged-in user. If no email can be identified, this rule will not trigger."
+msgstr "Halaman terima kasih hanya mendukung acara \"Dimulai\" karena mereka mewakili tujuan penyelesaian dari suatu corong. Email akan diidentifikasi dari: 1) parameter URL (billing_email, email), 2) sesi CartFlows Pro, 3) data pelanggan WooCommerce, 4) pengguna yang masuk. Jika tidak ada email yang dapat diidentifikasi, aturan ini tidak akan terpicu."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1898
+msgid "Select Event"
+msgstr "Pilih Acara"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1909
+msgid "Select an event…"
+msgstr "Pilih sebuah acara…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1911
+msgid "Select event"
+msgstr "Pilih acara"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1936
+msgid "Select the event that will trigger these actions."
+msgstr "Pilih acara yang akan memicu tindakan ini."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1964
+msgid "Title"
+msgstr "Judul"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1964
+#: src/screens/integrations/IntegrationsTableCard.jsx:1982
+msgid "Optional"
+msgstr "Opsional"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1969
+msgid "Enter a title for this rule"
+msgstr "Masukkan judul untuk aturan ini"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1976
+msgid "Give this rule a descriptive title to easily identify it."
+msgstr "Beri judul yang deskriptif pada aturan ini untuk memudahkan identifikasinya."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1982
+msgid "Notes"
+msgstr "Catatan"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1986
+msgid "Add any notes or description for this rule"
+msgstr "Tambahkan catatan atau deskripsi untuk aturan ini"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1993
+msgid "Add notes to remember the purpose or details of this rule."
+msgstr "Tambahkan catatan untuk mengingat tujuan atau detail dari aturan ini."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2013
+msgid "No additional configuration available for this item."
+msgstr "Tidak ada konfigurasi tambahan yang tersedia untuk item ini."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2068
+msgid "Delete Integration Configuration?"
+msgstr "Hapus Konfigurasi Integrasi?"
+
+#. translators: 1: configuration scope, 2: integration name
+#: src/screens/integrations/IntegrationsTableCard.jsx:2072
+#, js-format
+msgid "This will permanently remove the %1$s configuration for %2$s."
+msgstr "Ini akan menghapus konfigurasi %1$s untuk %2$s secara permanen."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2072
+msgid "global"
+msgstr "global"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2078
+msgid "Are you sure you want to delete this configuration? This action cannot be undone and will remove all settings and disable the integration."
+msgstr "Apakah Anda yakin ingin menghapus konfigurasi ini? Tindakan ini tidak dapat dibatalkan dan akan menghapus semua pengaturan serta menonaktifkan integrasi."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2079
+msgid "Are you sure you want to delete this configuration? This action cannot be undone and will remove all settings."
+msgstr "Apakah Anda yakin ingin menghapus konfigurasi ini? Tindakan ini tidak dapat dibatalkan dan akan menghapus semua pengaturan."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2083
+msgid "Configuration:"
+msgstr "Konfigurasi:"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2104
+#: src/screens/logs/components/LogsTable.jsx:549
+msgid "Deleting…"
+msgstr "Menghapus…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2104
+#: src/screens/logs/components/LogsTable.jsx:316
+#: src/screens/logs/components/LogsTable.jsx:549
+msgid "Delete"
+msgstr "Hapus"
+
+#: src/screens/logs/components/LogsFilter.jsx:12
+#: src/screens/logs/components/LogsFilter.jsx:41
+#: src/screens/logs/components/LogsFilter.jsx:44
+msgid "All Statuses"
+msgstr "Semua Status"
+
+#: src/screens/logs/components/LogsFilter.jsx:13
+#: src/screens/logs/components/LogsStats.jsx:39
+msgid "Success"
+msgstr "Sukses"
+
+#: src/screens/logs/components/LogsFilter.jsx:14
+#: src/screens/logs/components/LogsStats.jsx:46
+#: src/screens/logs/components/LogsTable.jsx:358
+msgid "Error"
+msgstr "Kesalahan"
+
+#: src/screens/logs/components/LogsFilter.jsx:15
+#: src/screens/logs/components/LogsStats.jsx:53
+#: src/screens/sync-contacts/JobHistory.jsx:24
+#: src/screens/sync-contacts/JobHistory.jsx:38
+#: src/screens/sync-contacts/JobProgress.jsx:113
+#: src/screens/sync-contacts/JobProgress.jsx:146
+msgid "Failed"
+msgstr "Gagal"
+
+#: src/screens/logs/components/LogsFilter.jsx:16
+#: src/screens/sync-contacts/JobHistory.jsx:14
+#: src/screens/sync-contacts/JobProgress.jsx:43
+msgid "Processing"
+msgstr "Sedang diproses"
+
+#: src/screens/logs/components/LogsFilter.jsx:46
+msgid "Filter by status"
+msgstr "Saring berdasarkan status"
+
+#: src/screens/logs/components/LogsFilter.jsx:64
+msgid "Search endpoint or operation..."
+msgstr "Cari endpoint atau operasi..."
+
+#: src/screens/logs/components/LogsFilter.jsx:67
+msgid "Search logs"
+msgstr "Log pencarian"
+
+#: src/screens/logs/components/LogsHeader.jsx:28
+msgid "Monitor API activity and manage failed requests"
+msgstr "Pantau aktivitas API dan kelola permintaan yang gagal"
+
+#: src/screens/logs/components/LogsHeader.jsx:44
+msgid "Retry All Failed"
+msgstr "Coba Ulang Semua Yang Gagal"
+
+#: src/screens/logs/components/LogsHeader.jsx:55
+#: src/screens/logs/components/LogsHeader.jsx:143
+msgid "Clear Logs"
+msgstr "Hapus Log"
+
+#: src/screens/logs/components/LogsHeader.jsx:65
+msgid "Refresh"
+msgstr "Segarkan"
+
+#: src/screens/logs/components/LogsHeader.jsx:78
+msgid "Retry All Failed?"
+msgstr "Coba Ulang Semua Yang Gagal?"
+
+#: src/screens/logs/components/LogsHeader.jsx:82
+msgid "This will reset all failed and errored entries and queue them for retry via background processing."
+msgstr "Ini akan mengatur ulang semua entri yang gagal dan error serta mengantri mereka untuk dicoba ulang melalui pemrosesan latar belakang."
+
+#: src/screens/logs/components/LogsHeader.jsx:104
+msgid "Retrying…"
+msgstr "Mencoba ulang…"
+
+#: src/screens/logs/components/LogsHeader.jsx:104
+msgid "Retry All"
+msgstr "Coba Ulang Semua"
+
+#: src/screens/logs/components/LogsHeader.jsx:116
+msgid "Clear Logs?"
+msgstr "Hapus Log?"
+
+#: src/screens/logs/components/LogsHeader.jsx:120
+msgid "This will permanently delete all completed log entries (success and error). Failed and processing entries will be preserved."
+msgstr "Ini akan secara permanen menghapus semua entri log yang telah selesai (sukses dan error). Entri yang gagal dan diproses akan dilestarikan."
+
+#: src/screens/logs/components/LogsHeader.jsx:143
+msgid "Clearing…"
+msgstr "Menghapus…"
+
+#: src/screens/logs/components/LogsStats.jsx:60
+#: src/screens/sync-contacts/JobHistory.jsx:20
+msgid "Total"
+msgstr "Total"
+
+#: src/screens/logs/components/LogsTable.jsx:119
+msgid "Failed to load logs. Please try again."
+msgstr "Gagal memuat log. Silakan coba lagi."
+
+#: src/screens/logs/components/LogsTable.jsx:173
+msgid "No log entries"
+msgstr "Tidak ada entri log"
+
+#: src/screens/logs/components/LogsTable.jsx:174
+msgid "API activity will appear here"
+msgstr "Aktivitas API akan muncul di sini"
+
+#. translators: %d: number of selected logs
+#: src/screens/logs/components/LogsTable.jsx:193
+#, js-format
+msgid "%d selected"
+msgstr "%d terpilih"
+
+#. translators: %d: number of selected retryable logs
+#: src/screens/logs/components/LogsTable.jsx:205
+#, js-format
+msgid "Retry Selected (%d)"
+msgstr "Coba Ulang Terpilih (%d)"
+
+#: src/screens/logs/components/LogsTable.jsx:218
+msgid "Delete Selected"
+msgstr "Hapus Terpilih"
+
+#: src/screens/logs/components/LogsTable.jsx:226
+msgid "Clear"
+msgstr "Bersihkan"
+
+#: src/screens/logs/components/LogsTable.jsx:238
+msgid "Select all"
+msgstr "Pilih semua"
+
+#: src/screens/logs/components/LogsTable.jsx:242
+msgid "Operation"
+msgstr "Operasi"
+
+#: src/screens/logs/components/LogsTable.jsx:243
+msgid "Endpoint"
+msgstr "Endpoint"
+
+#: src/screens/logs/components/LogsTable.jsx:244
+msgid "Method"
+msgstr "Metode"
+
+#: src/screens/logs/components/LogsTable.jsx:245
+msgid "Response"
+msgstr "Respons"
+
+#: src/screens/logs/components/LogsTable.jsx:246
+#: src/screens/sync-contacts/JobHistory.jsx:22
+#: src/screens/sync-contacts/JobProgress.jsx:134
+msgid "Created"
+msgstr "Dibuat"
+
+#. translators: %d: log ID
+#: src/screens/logs/components/LogsTable.jsx:264
+#, js-format
+msgid "Select log #%d"
+msgstr "Pilih log #%d"
+
+#. translators: %d: log ID
+#: src/screens/logs/components/LogsTable.jsx:312
+#, js-format
+msgid "Retry request #%d"
+msgstr "Coba ulang permintaan #%d"
+
+#. translators: %d: log ID
+#: src/screens/logs/components/LogsTable.jsx:325
+#, js-format
+msgid "Delete log #%d"
+msgstr "Hapus log #%d"
+
+#: src/screens/logs/components/LogsTable.jsx:339
+msgid "Full Endpoint"
+msgstr "Akhir Penuh"
+
+#: src/screens/logs/components/LogsTable.jsx:348
+msgid "Retries"
+msgstr "Pengulangan"
+
+#: src/screens/logs/components/LogsTable.jsx:358
+msgid "Message"
+msgstr "Pesan"
+
+#: src/screens/logs/components/LogsTable.jsx:368
+msgid "Request Payload"
+msgstr "Beban Permintaan"
+
+#: src/screens/logs/components/LogsTable.jsx:377
+msgid "Response Data"
+msgstr "Data Respon"
+
+#. translators: 1: start entry, 2: end entry, 3: total entries
+#: src/screens/logs/components/LogsTable.jsx:399
+#, js-format
+msgid "Showing %1$d to %2$d of %3$d entries"
+msgstr "Menampilkan %1$d hingga %2$d dari %3$d entri"
+
+#: src/screens/logs/components/LogsTable.jsx:409
+#: src/screens/logs/components/LogsTable.jsx:428
+msgid "Rows per page"
+msgstr "Baris per halaman"
+
+#: src/screens/logs/components/LogsTable.jsx:442
+msgid "Logs pagination"
+msgstr "Halaman log"
+
+#: src/screens/logs/components/LogsTable.jsx:452
+msgid "Go to previous page"
+msgstr "Pergi ke halaman sebelumnya"
+
+#. translators: %d: page number
+#: src/screens/logs/components/LogsTable.jsx:477
+#, js-format
+msgid "Page %d"
+msgstr "Halaman %d"
+
+#: src/screens/logs/components/LogsTable.jsx:492
+msgid "Go to next page"
+msgstr "Pergi ke halaman berikutnya"
+
+#: src/screens/logs/components/LogsTable.jsx:507
+msgid "Delete Log Entry?"
+msgstr "Hapus Entri Log?"
+
+#: src/screens/logs/components/LogsTable.jsx:508
+msgid "Delete Selected Logs?"
+msgstr "Hapus Log Terpilih?"
+
+#: src/screens/logs/components/LogsTable.jsx:515
+msgid "This will permanently delete this log entry. This action cannot be undone."
+msgstr "Ini akan menghapus entri log ini secara permanen. Tindakan ini tidak dapat dibatalkan."
+
+#. translators: %d: number of log entries
+#: src/screens/logs/components/LogsTable.jsx:518
+#, js-format
+msgid "This will permanently delete %d log entries. This action cannot be undone."
+msgstr "Ini akan menghapus %d entri log secara permanen. Tindakan ini tidak dapat dibatalkan."
+
+#: src/screens/logs/Logs.jsx:52
+msgid "Logs refreshed"
+msgstr "Log diperbarui"
+
+#: src/screens/settings/components/SettingsHeader.jsx:42
+msgid "Sync Settings"
+msgstr "Pengaturan Sinkronisasi"
+
+#: src/screens/settings/components/SettingsHeader.jsx:47
+msgid "Configure automatic synchronization between WordPress and SureContact"
+msgstr "Konfigurasi sinkronisasi otomatis antara WordPress dan SureContact"
+
+#: src/screens/settings/Settings.jsx:32
+msgid "Settings saved successfully!"
+msgstr "Pengaturan berhasil disimpan!"
+
+#: src/screens/sync-contacts/components/SyncContactsHeader.jsx:22
+msgid "Synchronize data from your integrations to SureContact in the background"
+msgstr "Sinkronkan data dari integrasi Anda ke SureContact di latar belakang"
+
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:16
+msgid "Start Migration"
+msgstr "Mulai Migrasi"
+
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:16
+msgid "Start Sync"
+msgstr "Mulai Sinkronisasi"
+
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:40
+msgid "Confirm"
+msgstr "Konfirmasi"
+
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:119
+msgid "Email field mapping is required before syncing."
+msgstr "Pemetaan bidang email diperlukan sebelum melakukan sinkronisasi."
+
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:125
+msgid "Configure Contact Fields"
+msgstr "Konfigurasi Bidang Kontak"
+
+#: src/screens/sync-contacts/JobHistory.jsx:13
+#: src/screens/sync-contacts/JobProgress.jsx:41
+msgid "Queued"
+msgstr "Dalam Antrian"
+
+#: src/screens/sync-contacts/JobHistory.jsx:16
+msgid "Cancelled"
+msgstr "Dibatalkan"
+
+#: src/screens/sync-contacts/JobHistory.jsx:21
+#: src/screens/sync-contacts/JobHistory.jsx:36
+#: src/screens/sync-contacts/JobProgress.jsx:99
+#: src/screens/sync-contacts/JobProgress.jsx:128
+msgid "Synced"
+msgstr "Tersinkronisasi"
+
+#: src/screens/sync-contacts/JobHistory.jsx:23
+#: src/screens/sync-contacts/JobProgress.jsx:140
+msgid "Updated"
+msgstr "Diperbarui"
+
+#: src/screens/sync-contacts/JobHistory.jsx:35
+#: src/screens/sync-contacts/JobProgress.jsx:93
+msgid "Total Companies"
+msgstr "Total Perusahaan"
+
+#: src/screens/sync-contacts/JobHistory.jsx:37
+#: src/screens/sync-contacts/JobProgress.jsx:105
+msgid "Linked Contacts"
+msgstr "Kontak Terhubung"
+
+#: src/screens/sync-contacts/JobHistory.jsx:50
+msgid "Recent Jobs"
+msgstr "Pekerjaan Terbaru"
+
+#: src/screens/sync-contacts/JobHistory.jsx:68
+msgid "No sync jobs yet"
+msgstr "Belum ada pekerjaan sinkronisasi"
+
+#. translators: 1: processed batch count, 2: total batch count
+#: src/screens/sync-contacts/JobHistory.jsx:115
+#, js-format
+msgid "%1$d / %2$d batches"
+msgstr "%1$d / %2$d batch"
+
+#. translators: %s: formatted date
+#: src/screens/sync-contacts/JobHistory.jsx:140
+#, js-format
+msgid "Created: %s"
+msgstr "Dibuat: %s"
+
+#. translators: %s: formatted date
+#: src/screens/sync-contacts/JobHistory.jsx:144
+#, js-format
+msgid "Completed: %s"
+msgstr "Selesai: %s"
+
+#. translators: 1: start index, 2: end index, 3: total jobs
+#: src/screens/sync-contacts/JobHistory.jsx:284
+#, js-format
+msgid "Showing %1$d to %2$d of %3$d jobs"
+msgstr "Menampilkan %1$d sampai %2$d dari %3$d pekerjaan"
+
+#: src/screens/sync-contacts/JobProgress.jsx:29
+msgid "Sync job cancelled successfully"
+msgstr "Pekerjaan sinkronisasi dibatalkan dengan sukses"
+
+#: src/screens/sync-contacts/JobProgress.jsx:53
+msgid "Sync Progress"
+msgstr "Kemajuan Sinkronisasi"
+
+#: src/screens/sync-contacts/JobProgress.jsx:65
+msgid "Cancelling…"
+msgstr "Membatalkan…"
+
+#: src/screens/sync-contacts/JobProgress.jsx:65
+msgid "Cancel Sync"
+msgstr "Batalkan Sinkronisasi"
+
+#. translators: 1: processed batch count, 2: total batch count
+#: src/screens/sync-contacts/JobProgress.jsx:74
+#, js-format
+msgid "%1$d of %2$d batches processed"
+msgstr "%1$d dari %2$d batch diproses"
+
+#. translators: %s: progress percentage
+#: src/screens/sync-contacts/JobProgress.jsx:82
+#, js-format
+msgid "Sync progress: %s%% complete"
+msgstr "Kemajuan sinkronisasi: %s%% lengkap"
+
+#: src/screens/sync-contacts/JobProgress.jsx:91
+#: src/screens/sync-contacts/JobProgress.jsx:120
+msgid "Sync statistics"
+msgstr "Statistik sinkronisasi"
+
+#: src/screens/sync-contacts/JobProgress.jsx:122
+msgid "Total Items"
+msgstr "Total Item"
+
+#. translators: %s: formatted date
+#: src/screens/sync-contacts/JobProgress.jsx:159
+#, js-format
+msgid "Started: %s"
+msgstr "Dimulai: %s"
+
+#: src/screens/sync-contacts/SyncActions.jsx:86
+msgid "A sync job is already running. Please wait for it to complete before starting a new one."
+msgstr "Sebuah pekerjaan sinkronisasi sudah berjalan. Harap tunggu sampai selesai sebelum memulai yang baru."
+
+#: src/screens/sync-contacts/SyncContacts.jsx:41
+msgid "Sync in Progress"
+msgstr "Sinkronisasi Sedang Berlangsung"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:41
+msgid "A sync job is currently running in the background"
+msgstr "Sebuah pekerjaan sinkronisasi sedang berjalan di latar belakang"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:69
+msgid "Sync Completed"
+msgstr "Sinkronisasi Selesai"
+
+#. translators: 1: synced count, 2: created count, 3: updated count, 4: failed count
+#: src/screens/sync-contacts/SyncContacts.jsx:70
+#, js-format
+msgid "%1$s records synced (%2$s created, %3$s updated, %4$s failed)"
+msgstr "%1$s catatan disinkronkan (%2$s dibuat, %3$s diperbarui, %4$s gagal)"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:73
+msgid "Sync Cancelled"
+msgstr "Sinkronisasi Dibatalkan"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:73
+msgid "Sync job was cancelled"
+msgstr "Pekerjaan sinkronisasi dibatalkan"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:75
+msgid "Sync Timeout"
+msgstr "Waktu Tunggu Sinkronisasi"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:75
+msgid "Sync job timed out after 30 minutes. Please try again or contact support."
+msgstr "Pekerjaan sinkronisasi telah habis waktu setelah 30 menit. Harap coba lagi atau hubungi dukungan."
+
+#: src/screens/sync-contacts/SyncContacts.jsx:77
+#: src/screens/sync-contacts/SyncContacts.jsx:102
+msgid "Sync Failed"
+msgstr "Gagal Sinkronisasi"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:77
+msgid "Sync job failed. Please try again or contact support."
+msgstr "Pekerjaan sinkronisasi gagal. Harap coba lagi atau hubungi dukungan."
+
+#: src/screens/sync-contacts/SyncContacts.jsx:95
+msgid "Nothing to Sync"
+msgstr "Tidak Ada yang Disinkronkan"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:95
+msgid "No records found to sync"
+msgstr "Tidak ada catatan yang ditemukan untuk disinkronkan"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:100
+msgid "Sync Started"
+msgstr "Sinkronisasi Dimulai"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:100
+msgid "Sync job started successfully!"
+msgstr "Pekerjaan sinkronisasi berhasil dimulai!"

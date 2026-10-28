@@ -1,0 +1,308 @@
+<?php
+/**
+ * @package Polylang
+ *
+ * WordPress backward compatibility functions
+ * and miscellaneous utility functions.
+ */
+
+/**
+ * Determines whether we should load the cache compatibility
+ *
+ * @since 2.3.8
+ *
+ * @return bool True if the cache compatibility must be loaded
+ */
+function pll_is_cache_active() {
+	/**
+	 * Filters whether we should load the cache compatibility
+	 *
+	 * @since 2.3.8
+	 *
+	 * @bool $is_cache True if a known cache plugin is active
+	 *                 incl. WP Fastest Cache which doesn't use WP_CACHE
+	 */
+	return apply_filters( 'pll_is_cache_active', ( defined( 'WP_CACHE' ) && WP_CACHE ) || defined( 'WPFC_MAIN_PATH' ) );
+}
+
+/**
+ * Get the current requested url.
+ *
+ * @since 2.6
+ *
+ * @return string Requested url
+ */
+function pll_get_requested_url() {
+	if ( isset( $_SERVER['HTTP_HOST'], $_SERVER['REQUEST_URI'] ) ) {
+		return set_url_scheme( sanitize_url( wp_unslash( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ) ) );
+	}
+
+	/** @var string */
+	$home_url = get_option( 'home' );
+
+	/*
+	 * In WP CLI context, few developers define superglobals in wp-config.php
+	 * as proposed in https://make.wordpress.org/cli/handbook/common-issues/#php-notice-undefined-index-on-_server-superglobal
+	 * So let's return the unfiltered home url to avoid a bunch of notices.
+	 */
+	if ( defined( 'WP_CLI' ) && WP_CLI ) {
+		return $home_url;
+	}
+
+	/*
+	 * When using system CRON instead of WP_CRON, the superglobals are likely undefined.
+	 */
+	if ( defined( 'DOING_CRON' ) && DOING_CRON ) {
+		return $home_url;
+	}
+
+	if ( WP_DEBUG ) {
+		// phpcs:ignore WordPress.PHP.DevelopmentFunctions
+		trigger_error( '$_SERVER[\'HTTP_HOST\'] or $_SERVER[\'REQUEST_URI\'] are required but not set.' );
+	}
+
+	return '';
+}
+
+/**
+ * Determines whether we should load the block editor plugin or the legacy languages metabox.
+ *
+ * @since 2.6.0
+ *
+ * @return bool True to use the block editor plugin.
+ */
+function pll_use_block_editor_plugin() {
+	/**
+	 * Filters whether we should load the block editor plugin or the legacy languages metabox.
+	 *
+	 * @since 2.6.0
+	 *
+	 * @param bool $use_plugin True when loading the block editor plugin.
+	 */
+	return class_exists( 'WP_Syntex\Polylang_Pro\Editors\Screens\Abstract_Screen' ) && apply_filters( 'pll_use_block_editor_plugin', ! defined( 'PLL_USE_BLOCK_EDITOR_PLUGIN' ) || PLL_USE_BLOCK_EDITOR_PLUGIN );
+}
+
+/**
+ * Determines whether a plugin is active.
+ *
+ * We define our own function because `is_plugin_active()` is available only in the backend.
+ *
+ * @since 3.5
+ *
+ * @param string $plugin_name Plugin basename.
+ * @return bool True if activated, false otherwise.
+ */
+function pll_is_plugin_active( string $plugin_name ) {
+	$sitewide_plugins     = get_site_option( 'active_sitewide_plugins' );
+	$sitewide_plugins     = ! empty( $sitewide_plugins ) && is_array( $sitewide_plugins ) ? array_keys( $sitewide_plugins ) : array();
+	$current_site_plugins = (array) get_option( 'active_plugins', array() );
+	$plugins              = array_merge( $sitewide_plugins, $current_site_plugins );
+
+	return in_array( $plugin_name, $plugins );
+}
+
+/**
+ * Prepares and registers notices.
+ *
+ * Wraps `add_settings_error()` to make its use more consistent.
+ *
+ * @since 3.6
+ *
+ * @param WP_Error $error Error object.
+ * @return void
+ */
+function pll_add_notice( WP_Error $error ) {
+	if ( ! $error->has_errors() ) {
+		return;
+	}
+
+	foreach ( $error->get_error_codes() as $error_code ) {
+		// Extract the "error" type.
+		$data = $error->get_error_data( $error_code );
+		$type = empty( $data ) || ! is_string( $data ) ? 'error' : $data;
+
+		$message = wp_kses(
+			implode( '<br>', $error->get_error_messages( $error_code ) ),
+			array(
+				'a'    => array( 'href' => true ),
+				'br'   => array(),
+				'code' => array(),
+				'em'   => array(),
+			)
+		);
+
+		add_settings_error( 'polylang', (string) $error_code, $message, $type );
+	}
+}
+
+/**
+ * Tells if the given REST request is in the edit context.
+ *
+ * @since 3.5
+ *
+ * @param WP_REST_Request $request A REST request.
+ * @return bool
+ *
+ * @phpstan-param WP_REST_Request<array> $request
+ */
+function pll_is_edit_rest_request( WP_REST_Request $request ): bool {
+	if ( in_array( $request->get_method(), array( 'PATCH', 'POST', 'PUT' ), true ) ) {
+		return true;
+	}
+
+	return 'GET' === $request->get_method() && 'edit' === $request->get_param( 'context' );
+}
+
+/**
+ * Sanitizes an ID as positive integer.
+ * Kind of similar to `absint()`, but rejects negative integers instead of making them positive.
+ *
+ * @since 3.9
+ *
+ * @param mixed $id A supposedly numeric ID.
+ * @return int A positive integer. `0` for non numeric values and negative integers.
+ *
+ * @phpstan-return int<0, max>
+ */
+function pll_sanitize_id( $id ): int {
+	return is_numeric( $id ) && $id >= 1 ? abs( (int) $id ) : 0;
+}
+
+/**
+ * Sanitizes an array of IDs as positive integers.
+ * `0` values are removed.
+ *
+ * @since 3.9
+ *
+ * @param mixed $ids A supposedly array of numeric IDs.
+ * @return int[]
+ *
+ * @phpstan-return array<positive-int>
+ */
+function pll_sanitize_ids( $ids ): array {
+	if ( empty( $ids ) || ! is_array( $ids ) ) {
+		return array();
+	}
+
+	return array_filter( array_map( 'pll_sanitize_id', $ids ) );
+}
+
+/**
+ * Unserializes data only if it was serialized.
+ *
+ * Like `maybe_unserialize()` but passes options to `unserialize()`, including
+ * `allowed_classes` to mitigate PHP object injection.
+ *
+ * @since 3.8.11
+ *
+ * @param mixed $data    Data that might be unserialized.
+ * @param array $options {
+ *     Options for @see unserialize(). Default `array( 'allowed_classes' => false )`.
+ *
+ *     @type bool|class-string[] $allowed_classes Whether to allow PHP objects. Default false.
+ * }
+ * @return mixed Unserialized data, or the original value if not serialized.
+ */
+function pll_maybe_unserialize( $data, array $options = array( 'allowed_classes' => false ) ) {
+	if ( ! is_string( $data ) || ! is_serialized( $data ) ) {
+		return $data;
+	}
+
+	return unserialize( trim( $data ), $options ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_unserialize, PHPCompatibility.FunctionUse.NewFunctionParameters.unserialize_optionsFound
+}
+
+/**
+ * Enqueues a JS script.
+ *
+ * @since 3.9
+ *
+ * @param string   $name         The filename of the script (without the extension).
+ * @param string[] $dependencies Optional. An array of registered script handles this script depends on.
+ * @param array    $args     {
+ *     Optional. An array of additional script loading strategies. Default empty array.
+ *
+ *     @type string    $strategy      Optional. If provided, may be either 'defer' or 'async'.
+ *     @type bool      $in_footer     Optional. Whether to print the script in the footer. Default 'false'.
+ *     @type string    $fetchpriority Optional. The fetch priority for the script. Default 'auto'.
+ * }
+ * @param string   $prefix       Optional. Prefix to use for the script handle. Default 'pll-'.
+ * @return void
+ *
+ * @phpstan-param non-empty-string $name
+ */
+function pll_enqueue_script( string $name, array $dependencies = array(), array $args = array(), string $prefix = 'pll-' ): void {
+	pll_register_script( $name, $dependencies, $args );
+	wp_scripts()->enqueue( $prefix . $name );
+}
+
+/**
+ * Registers a JS script.
+ *
+ * @since 3.9
+ *
+ * @param string   $name         The filename of the script (without the extension).
+ * @param string[] $dependencies Optional. An array of registered script handles this script depends on.
+ * @param array    $args     {
+ *     Optional. An array of additional script loading strategies. Default empty array.
+ *
+ *     @type string    $strategy      Optional. If provided, may be either 'defer' or 'async'.
+ *     @type bool      $in_footer     Optional. Whether to print the script in the footer. Default 'false'.
+ *     @type string    $fetchpriority Optional. The fetch priority for the script. Default 'auto'.
+ * }
+ * @param string   $prefix       Optional. Prefix to use for the script handle. Default 'pll-'.
+ * @return void
+ *
+ * @phpstan-param non-empty-string $name
+ */
+function pll_register_script( string $name, array $dependencies = array(), array $args = array(), string $prefix = 'pll-' ): void {
+	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+	$src    = plugins_url( "/js/build/{$name}{$suffix}.js", POLYLANG_ROOT_FILE );
+
+	if ( '' === $src ) {
+		return;
+	}
+
+	$version = WP_DEBUG ? time() : POLYLANG_VERSION;
+	wp_register_script( $prefix . $name, $src, array_filter( $dependencies ), (string) $version, $args );
+}
+
+/**
+ * Enqueues a CSS stylesheet.
+ *
+ * @since 3.9
+ *
+ * @param string   $name         The filename of the stylesheet (without the extension).
+ * @param string[] $dependencies Optional. An array of registered stylesheet handles this stylesheet depends on.
+ * @param string   $prefix       Optional. Prefix to use for the stylesheet handle. Default 'pll-'.
+ * @return void
+ *
+ * @phpstan-param non-empty-string $name
+ */
+function pll_enqueue_style( string $name, array $dependencies = array(), string $prefix = 'pll-' ): void {
+	pll_register_style( $name, $dependencies );
+	wp_styles()->enqueue( $prefix . $name );
+}
+
+/**
+ * Registers a CSS stylesheet.
+ *
+ * @since 3.9
+ *
+ * @param string   $name         The filename of the stylesheet (without the extension).
+ * @param string[] $dependencies Optional. An array of registered stylesheet handles this stylesheet depends on.
+ * @param string   $prefix       Optional. Prefix to use for the stylesheet handle. Default 'pll-'.
+ * @return void
+ *
+ * @phpstan-param non-empty-string $name
+ */
+function pll_register_style( string $name, array $dependencies = array(), string $prefix = 'pll-' ): void {
+	$suffix  = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+	$src     = plugins_url( "/css/build/{$name}{$suffix}.css", POLYLANG_ROOT_FILE );
+
+	if ( '' === $src ) {
+		return;
+	}
+
+	$version = WP_DEBUG ? time() : POLYLANG_VERSION;
+	wp_register_style( $prefix . $name, $src, $dependencies, (string) $version );
+}

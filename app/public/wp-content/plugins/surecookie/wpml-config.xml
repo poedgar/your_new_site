@@ -1,0 +1,21 @@
+<wpml-config>
+	<admin-texts>
+		<key name="surecookie_settings">
+			<key name="message_heading" />
+			<key name="message_description" />
+			<key name="accept_btn_text" />
+			<key name="accept_all_btn_text" />
+			<key name="decline_btn_text" />
+			<key name="preferences_btn_text" />
+			<key name="reconsent_button_label" />
+			<key name="preferences_modal_heading" />
+			<key name="preferences_modal_description" />
+			<key name="cookie_categories">
+				<key name="*">
+					<key name="name" />
+					<key name="description" />
+				</key>
+			</key>
+		</key>
+	</admin-texts>
+</wpml-config>

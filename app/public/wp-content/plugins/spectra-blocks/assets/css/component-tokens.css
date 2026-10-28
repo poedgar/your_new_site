@@ -1,0 +1,228 @@
+/**
+ * Component Token CSS — Styles patterns using Style Guide tokens.
+ *
+ * Two delivery mechanisms:
+ * 1. CSS classes (sg-button-fit, sg-icon-contained) — added manually
+ * 2. Global overrides (navigation, icons, images) — automatic, no class needed
+ *
+ * Buttons are deliberately NOT styled here. Button shape and colour belong
+ * to the theme (theme.json / WP core defaults), so no button property is
+ * forced by this file.
+ *
+ * @package Spectra\StyleGuide
+ * @since   x.x.x
+ */
+
+/* ================================================================
+   COMPONENT TOKEN DEFAULTS
+   The Style Guide is colours-only — Typography and UI Styling were
+   removed. These --spectra-* component tokens used to be emitted at
+   runtime by TokenRegistry::register_ui_tokens() from the (now gone)
+   UI-styling presets. They are the frozen DEFAULT values, declared
+   here statically so the sg-* utility layer and the global overrides
+   below keep their default look. Colour-derived values still resolve
+   against the runtime colour tokens (--spectra-neutral-*, --spectra-white)
+   and the theme's --wp--preset--color--* vars.
+   ================================================================ */
+
+:root {
+	--spectra-radius-badge: 6px;
+	--spectra-space-xs: 0.5rem;
+	--spectra-space-sm: 1rem;
+	--spectra-space-md: 1.5rem;
+	--spectra-space-lg: 2.5rem;
+	--spectra-space-xl: 4rem;
+	--spectra-space-2xl: 6rem;
+	--spectra-text-xs: 0.75rem;
+	--spectra-text-sm: 0.875rem;
+	--spectra-text-md: 1rem;
+	--spectra-text-lg: 1.125rem;
+	--spectra-text-xl: 1.25rem;
+	--spectra-text-2xl: 1.5rem;
+	--spectra-text-3xl: 1.875rem;
+	--spectra-text-4xl: 2.25rem;
+	--spectra-text-5xl: 3rem;
+	--spectra-text-6xl: 3.75rem;
+	--spectra-text-7xl: 4.5rem;
+	--spectra-text-8xl: 6rem;
+	--spectra-text-9xl: 8rem;
+	--spectra-heading-1: 2.25rem;
+	--spectra-heading-2: 1.875rem;
+	--spectra-heading-3: 1.5rem;
+	--spectra-heading-4: 1.25rem;
+	--spectra-heading-5: 1.125rem;
+	--spectra-heading-6: 1rem;
+	--spectra-section-padding-y: 3.5rem;
+	--spectra-card-padding: 2rem;
+	--spectra-input-border-color: var(--wp--preset--color--outline);
+	--spectra-link-color: var(--wp--preset--color--primary);
+	--spectra-link-hover-color: var(--wp--preset--color--secondary);
+	--spectra-nav-text: var(--spectra-neutral-7);
+	--spectra-nav-link-hover: var(--wp--preset--color--primary);
+	--spectra-icon-size: 24px;
+	--spectra-icon-color: currentcolor;
+	--spectra-icon-container-bg: color-mix(in srgb, var(--wp--preset--color--primary) 10%, transparent);
+	--spectra-icon-container-radius: var(--spectra-radius-badge);
+	--spectra-icon-container-size: 48px;
+	--spectra-transition-normal: 200ms;
+}
+
+/* ================================================================
+   FIT-CONTENT BUTTON WRAPPER (sg-button-fit)
+
+   Opt-in fit-content button wrapper. Adds `align-self: start`
+   so a button inside a `flex flex-col` card aligns to the cross-axis start
+   instead of inheriting `stretch` and (visually) re-stretching despite the
+   width override. Additive primitive; defaults for non-opt-in buttons
+   unchanged.
+
+   Patterns:
+     <div class="wp-block-button sg-button-fit">...</div>
+     <div class="sg-button-fit"><div class="wp-block-button">...</div></div>
+
+   @since x.x.x
+   ================================================================ */
+
+.sg-button-fit.wp-block-button,
+.sg-button-fit > .wp-block-button,
+.sg-button-fit.wp-block-spectra-buttons,
+.sg-button-fit > .wp-block-spectra-buttons {
+	align-self: start;
+	width: fit-content;
+}
+
+.sg-button-fit .wp-block-button__link,
+.sg-button-fit .wp-element-button,
+.sg-button-fit .spectra-button__link,
+.sg-button-fit .wp-block-spectra-button {
+	width: fit-content;
+}
+
+/* Object-fit propagation for core/image figures.
+
+   WP `core/image` save() emits `attrs.className` on the wrapping
+   <figure>, NOT on the inner <img> (same constraint called out
+   above for img-level border-radius). When an author writes
+   `<img class="object-cover">` (or the Block UI applies it via
+   className), Tailwind's `object-cover` utility lands on the
+   figure where it has no effect — replaced-element fitting is
+   only honoured on <img>/<video>.
+
+   Forward the intent to the inner img: when the figure carries
+   `object-cover` / `object-contain`, fill the figure box and
+   crop/letterbox accordingly. Scoped narrowly to the two
+   object-fit utilities so this never silently distorts an image
+   whose author only wanted the figure sized. `display: block`
+   removes the inline-image baseline gap so the image aligns
+   exactly with the figure's bottom edge.
+
+   Selectors paired: `.entry-content` (frontend post body) and
+   `.spectra-is-root-container` (rendered in BOTH frontend and
+   editor canvas by Spectra). The editor wraps content in
+   `.block-editor-block-list__layout`, not `.entry-content`, so
+   without the `.spectra-is-root-container` mirror the inner <img>
+   stays at intrinsic size in the editor while filling its figure
+   on frontend — a visible parity break. The dual-selector form
+   keeps frontend behaviour unchanged (matches via either ancestor)
+   and adds editor coverage. */
+.entry-content .wp-block-image.object-cover > img,
+.entry-content .wp-block-image.object-contain > img,
+.spectra-is-root-container .wp-block-image.object-cover > img,
+.spectra-is-root-container .wp-block-image.object-contain > img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.entry-content .wp-block-image.object-cover > img,
+.spectra-is-root-container .wp-block-image.object-cover > img {
+	object-fit: cover;
+}
+
+.entry-content .wp-block-image.object-contain > img,
+.spectra-is-root-container .wp-block-image.object-contain > img {
+	object-fit: contain;
+}
+
+/* ================================================================
+   GLOBAL NAVIGATION OVERRIDE
+   Targets navigation blocks and header areas.
+   ================================================================ */
+
+.wp-block-navigation {
+	--spectra-nav-link-color: var(--spectra-nav-text);
+}
+
+:where(.wp-block-navigation a) {
+	color: var(--spectra-nav-text);
+	transition: color var(--spectra-transition-normal, 250ms) ease;
+}
+
+:where(.wp-block-navigation a):hover {
+	color: var(--spectra-nav-link-hover);
+}
+
+/* ================================================================
+   GLOBAL ICON OVERRIDE
+   Targets Spectra icon blocks.
+   ================================================================ */
+
+:where(.wp-block-spectra-list .spectra-list-icon svg) {
+	width: var(--spectra-icon-size);
+	height: var(--spectra-icon-size);
+}
+
+/* Icon-container wrapper (sg-icon-contained).
+   Works with both the icon-list child (.spectra-list-icon) and the
+   standalone Spectra icon block (.wp-block-spectra-icon / .spectra-icon).
+   The wrapper is a square flex centerer; the inner icon shrinks to ~50%
+   via --spectra-icon-default-size so there's visible padding around it.
+   Author sizes the wrapper with any height/width utility (e.g. size-14). */
+:where(.sg-icon-contained) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: 1 / 1;
+	border-radius: var(--spectra-icon-container-radius);
+	--spectra-icon-default-size: 50%;
+}
+
+/* Back-compat: tinted background + sizing for the icon-list-child pattern. */
+:where(.sg-icon-contained .spectra-list-icon) {
+	background: var(--spectra-icon-container-bg);
+	border-radius: var(--spectra-icon-container-radius);
+	width: var(--spectra-icon-container-size);
+	height: var(--spectra-icon-container-size);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* ================================================================
+   REDUCED MOTION
+   Respects prefers-reduced-motion — disables all transitions,
+   transforms, and animations when user prefers reduced motion.
+   ================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+	.wp-element-button,
+	.wp-block-button__link,
+	.spectra-button__link,
+	.entry-content a,
+	.entry-content input,
+	.entry-content textarea,
+	.entry-content select,
+	.wp-block-navigation a {
+		transition-duration: 0ms !important;
+		animation-duration: 0ms !important;
+	}
+
+	.wp-element-button:hover,
+	.wp-block-button__link:hover,
+	.spectra-button__link:hover,
+	.wp-element-button:active,
+	.wp-block-button__link:active {
+		transform: none !important;
+	}
+}

@@ -1,0 +1,652 @@
+<?php
+/**
+ * Sanitizers for Global Styles CSS payloads.
+ *
+ * Centralizes CSS property/value, JSON, and keyframe sanitization used by
+ * the REST controller (and any other caller that accepts user-supplied CSS).
+ *
+ * @package Spectra\GlobalStyles
+ * @since   1.0.0
+ */
+
+namespace SpectraBlocks\GlobalStyles;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Class Sanitizer.
+ *
+ * @since 1.0.0
+ */
+class Sanitizer {
+
+	/**
+	 * Nesting cap for {@see sanitize_class_styles()}. A class map is at most
+	 * at-rule → state/pseudo → declaration; anything deeper is malformed.
+	 *
+	 * @since 1.0.6
+	 * @var int
+	 */
+	private const MAX_STYLE_DEPTH = 4;
+
+	/**
+	 * Sanitize a CSS property name.
+	 *
+	 * Allows standard properties and CSS custom properties (--var-name).
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param mixed $property  The CSS property name.
+	 * @param bool  $lowercase Fold the validated name to lower case. Pass `false`
+	 *                         when a downstream normalizer owns the casing:
+	 *                         capitals still carry meaning there, and folding
+	 *                         them here is lossy. `--myVar` is case-SENSITIVE, and
+	 *                         `backgroundColor` has to become `background-color`
+	 *                         — neither is recoverable from `--myvar` /
+	 *                         `backgroundcolor`.
+	 * @return string
+	 */
+	public static function sanitize_css_property( $property, bool $lowercase = true ): string {
+		if ( ! is_string( $property ) ) {
+			return '';
+		}
+
+		$property = trim( $property );
+
+		if ( preg_match( '/^-{0,2}[a-zA-Z][a-zA-Z0-9-]*$/', $property ) ) {
+			return $lowercase ? strtolower( $property ) : $property;
+		}
+
+		return '';
+	}
+
+	/**
+	 * Sanitize a CSS value while preserving valid CSS syntax.
+	 *
+	 * More permissive than sanitize_text_field() to allow CSS functions,
+	 * units, punctuation, and quoted strings — while blocking script/URL
+	 * injection patterns.
+	 *
+	 * When `$strict` is true (used for user-supplied payloads and JIT bracket
+	 * tokens), only well-formed CSS custom-property references are allowed
+	 * ( `var(--name)` / `var(--name, fallback)` ); any other `var()` form
+	 * ( e.g. `var(url(...))` or an empty `var()` ) is rejected. The engine's own
+	 * colour utility emission path — which legitimately emits
+	 * `var(--spectra-chromatic1-7)` et al. from the Style Guide palette — passes
+	 * `$strict = false`.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param mixed $value  The CSS value to sanitize.
+	 * @param bool  $strict When true, only well-formed `var(--...)` references are allowed.
+	 * @return string
+	 */
+	public static function sanitize_css_value( $value, bool $strict = false ): string {
+		if ( ! is_string( $value ) ) {
+			return '';
+		}
+
+		$value = trim( $value );
+		$value = str_replace( chr( 0 ), '', $value );
+
+		// REMOVED: wp_strip_all_tags( $value ) — was destroying SVG data URLs.
+		// CSS values can legitimately contain `<svg>...</svg>` markup inside
+		// `url('data:image/svg+xml;utf8,...')`. wp_strip_all_tags() treats
+		// these as HTML tags and rips them out, leaving a truncated unclosed
+		// `url('data:image/svg+xml;utf8,` that breaks the browser CSS parser
+		// and silently drops every subsequent rule in the inline stylesheet.
+		// XSS surface is covered by the character whitelist and the
+		// dangerous_patterns regex below (blocks <script>, javascript:,
+		// expression(), etc.).
+
+		// The character whitelist keeps the backslash: a CSS escape is part of the
+		// value — `content: "\201C"` is a curly quote, `\2192` an arrow, `\:` an
+		// escaped identifier character — and dropping it ships the hex digits as
+		// text. It keeps every non-ASCII code point (a literal `↔`, `“` or a vowel
+		// sign IS the value, and none can form a blocked token) and `?` (a URL query).
+		// It runs BEFORE the pattern checks: stripping a character can
+		// join the characters around it into a blocked token (`j\<U+0001>61 vascript:`
+		// becomes `j\61 vascript:`), so the checks must see the value as stored.
+		$value = (string) preg_replace( '/[^\w\s\-\.\#\%\(\)\,\'\"\:\;\/\!\@\+\*\=\[\]\{\}\<\>\_\|\&\^\~\`\$\\\\\?\x{80}-\x{10FFFF}]/u', '', $value );
+
+		$max_length = 2000;
+		if ( mb_strlen( $value, 'UTF-8' ) > $max_length ) {
+			$value = mb_substr( $value, 0, $max_length, 'UTF-8' );
+		}
+
+		// A trailing unpaired backslash would escape whatever the stylesheet
+		// prints next — the `;` ending the declaration, or a closing quote — and
+		// merge the following declaration into this one. The length cap above
+		// can leave one by splitting a `\\` pair.
+		if ( 1 === strspn( strrev( $value ), '\\' ) % 2 ) {
+			$value = substr( $value, 0, -1 );
+		}
+
+		$dangerous_patterns = array(
+			'/javascript\s*:/i',
+			'/expression\s*\(/i',
+			'/behavior\s*:/i',
+			'/-moz-binding\s*:/i',
+			'/vbscript\s*:/i',
+			'/<\s*script/i',
+			'/<\s*\/\s*script/i',
+			'/on\w+\s*=/i',
+			'/data\s*:\s*text\/html/i',
+		);
+
+		// A CSS escape can spell a blocked token one character at a time
+		// (`j\61 vascript:`), so every check runs against the value as a browser
+		// reads it as well as against the value as written.
+		$as_read = self::decode_css_escapes( $value );
+		foreach ( $dangerous_patterns as $pattern ) {
+			if ( preg_match( $pattern, $value ) || preg_match( $pattern, $as_read ) ) {
+				return '';
+			}
+		}
+
+		// In strict mode, allow well-formed CSS custom-property references
+		// ( var(--name) or var(--name, fallback) ) — these are legitimate,
+		// common values in user-authored Global Styles classes — but reject any
+		// var() whose first token is not a `--` custom property ( e.g.
+		// var(url(...)) or an empty var() ), which is never valid here. Matching
+		// `var(` not immediately followed by `--` flags the malformed form;
+		// an escaped function name (`v\61r(`) is caught on the value as read.
+		$malformed_var = '/\bvar\s*\((?!\s*--)/i';
+		if ( $strict && ( preg_match( $malformed_var, $value ) || preg_match( $malformed_var, $as_read ) ) ) {
+			return '';
+		}
+
+		// Last, after the checks: they read CSS escapes back, so an escape added
+		// before them would hand the value-as-read check a `</style` it never had.
+		return self::escape_style_end_tag( $value );
+	}
+
+	/**
+	 * Keep a `</style` in CSS from ending the `<style>` element it prints in.
+	 *
+	 * The HTML parser ends a `<style>` at the first `</style`, whatever CSS is
+	 * around it, so a stored `red</style><base href=…>` would print live HTML.
+	 * Neither the character whitelist nor core's wp_add_inline_style() stops it.
+	 * `\3c ` is `<` to the CSS parser and plain text to the HTML parser: a string
+	 * or `url()` still reads `</style` (an SVG data URL keeps its own `<style>`
+	 * element), and the element never closes early. Idempotent.
+	 *
+	 * @since 1.0.10
+	 *
+	 * @param string $css CSS text.
+	 * @return string
+	 */
+	public static function escape_style_end_tag( string $css ): string {
+		return (string) preg_replace( '#<(?=/style)#i', '\\\\3c ', $css );
+	}
+
+	/**
+	 * Read a CSS value the way a browser does.
+	 *
+	 * Follows the CSS Syntax input preprocessing and escape rules: CR, CRLF
+	 * and FF become LF; `\HHHHHH` (one to six hex digits and one optional
+	 * whitespace) becomes that character; a backslash before a newline is a
+	 * line continuation and is removed; any other escaped character becomes
+	 * itself.
+	 *
+	 * Only ASCII code points are spelled out — those are the only ones that
+	 * can form a blocked token; anything higher decodes to a placeholder.
+	 *
+	 * @since 1.0.10
+	 *
+	 * @param string $value The CSS value as written.
+	 * @return string
+	 */
+	public static function decode_css_escapes( string $value ): string {
+		$value = str_replace( array( "\r\n", "\r", "\f" ), "\n", $value );
+
+		return (string) preg_replace_callback(
+			'/\\\\(?:([0-9a-fA-F]{1,6})[ \t\n]?|(\n)|(.))/su',
+			static function ( array $m ): string {
+				if ( '' !== $m[1] ) {
+					$code = (int) hexdec( $m[1] );
+					return $code < 0x80 ? chr( $code ) : '?';
+				}
+				if ( '' !== $m[2] ) {
+					return '';
+				}
+				return $m[3];
+			},
+			$value
+		);
+	}
+
+	/**
+	 * Recursively sanitize decoded JSON using CSS-aware rules at deeper levels.
+	 *
+	 * At depth >= 2, keys are treated as CSS properties and values as CSS values.
+	 * Strict mode (the default) rejects any `var(...)` references — user-supplied
+	 * custom classes and keyframes must not reference CSS variables.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array<int|string, mixed> $json_data Decoded JSON.
+	 * @param int                      $depth     Current recursion depth.
+	 * @param bool                     $strict    Reject `var(...)` in values at depth >= 2.
+	 * @return array<int|string, mixed>
+	 */
+	public static function recursively_sanitize_json( array $json_data, int $depth = 0, bool $strict = true ): array {
+		$sanitized = array();
+
+		foreach ( $json_data as $key => $value ) {
+			if ( is_int( $key ) ) {
+				$clean_key = $key;
+			} elseif ( $depth >= 2 ) {
+				$clean_key = self::sanitize_css_property( $key );
+				if ( '' === $clean_key ) {
+					continue;
+				}
+			} else {
+				$clean_key = sanitize_text_field( $key );
+			}
+
+			if ( is_array( $value ) ) {
+				$sanitized[ $clean_key ] = self::recursively_sanitize_json( $value, $depth + 1, $strict );
+			} elseif ( is_object( $value ) ) {
+				$sanitized[ $clean_key ] = self::recursively_sanitize_json( (array) $value, $depth + 1, $strict );
+			} elseif ( $depth >= 2 ) {
+				$sanitized[ $clean_key ] = self::sanitize_css_value( $value, $strict );
+			} else {
+				$sanitized[ $clean_key ] = sanitize_text_field( (string) $value );
+			}
+		}
+
+		return $sanitized;
+	}
+
+	/**
+	 * Sanitize a JSON string or array payload.
+	 *
+	 * Accepts either a JSON string (to decode) or an already-decoded array.
+	 * Strict mode (default) rejects `var(...)` references.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param mixed $input      JSON string or array.
+	 * @param bool  $strict     Reject `var(...)` in CSS values.
+	 * @param int   $base_depth Depth the top-level payload starts at. Callers
+	 *                          whose payload is already unwrapped one level
+	 *                          (e.g. per-class styles `{bucket:{prop:value}}`,
+	 *                          where the value sits at depth 1) pass `1` so the
+	 *                          CSS-aware value rules (var rejection, char
+	 *                          whitelist, length cap) — which apply at depth >= 2
+	 *                          — still reach the values. Defaults to `0`.
+	 * @return array<int|string, mixed>
+	 */
+	public static function sanitize_json( $input, bool $strict = true, int $base_depth = 0 ): array {
+		if ( is_array( $input ) ) {
+			return self::recursively_sanitize_json( $input, $base_depth, $strict );
+		}
+
+		if ( ! is_string( $input ) ) {
+			return array();
+		}
+
+		$decoded = json_decode( wp_unslash( $input ), true );
+		if ( null === $decoded || ! is_array( $decoded ) ) {
+			return array();
+		}
+
+		return self::recursively_sanitize_json( $decoded, $base_depth, $strict );
+	}
+
+	/**
+	 * Sanitize ONE class's style map — buckets and declarations alike.
+	 *
+	 * The single entry point for per-class styles. It does NOT use
+	 * {@see sanitize_json()}'s depth model: that model infers "is this a CSS
+	 * value?" from nesting depth, which is a proxy for structure and forces
+	 * every caller to know how many levels it has already unwrapped. Get the
+	 * depth wrong and declaration values fall to `sanitize_text_field()`, and
+	 * WordPress core's `sanitize_text_field()` deletes every `%XX` sequence —
+	 * silently destroying percent-encoded inline-SVG data URIs
+	 * (`url("data:image/svg+xml,%3Csvg…%3E")` → `url("data:image/svg+xml,svg…")`),
+	 * so the mask stops resolving and the icon renders as an empty box.
+	 *
+	 * Here the shape decides instead, and it is unambiguous: an ARRAY value is a
+	 * state/pseudo/at-rule bucket, a SCALAR value is a declaration. A class map
+	 * is therefore handled correctly whether it arrives bucketed
+	 * (`{hover:{color:red}}`), flat (`{color:red}`), or mixed — and no caller
+	 * can get it wrong.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param mixed $styles Per-class style map. Every route declares `styles` as
+	 *                      object|array, so REST hands this an array.
+	 * @param int   $depth  Recursion guard; callers never pass this.
+	 * @return array<int|string, mixed>
+	 */
+	public static function sanitize_class_styles( $styles, int $depth = 0 ): array {
+		if ( ! is_array( $styles ) || $depth > self::MAX_STYLE_DEPTH ) {
+			return array();
+		}
+
+		$sanitized = array();
+		foreach ( $styles as $key => $value ) {
+			if ( is_array( $value ) || is_object( $value ) ) {
+				// A bucket: state (`hover`), pseudo (`before`) or at-rule
+				// (`@media …`). Its key is a label, not a CSS property.
+				$bucket = self::sanitize_class_styles( $value, $depth + 1 );
+				if ( ! empty( $bucket ) ) {
+					$sanitized[ sanitize_text_field( (string) $key ) ] = $bucket;
+				}
+				continue;
+			}
+
+			// A declaration: CSS property key, CSS value. Validate the key but
+			// keep its case — the REST controller kebab-cases every property
+			// right after this (`backgroundColor` → `background-color`,
+			// `WebkitBackgroundClip` → `-webkit-background-clip`) and leaves
+			// case-sensitive custom properties alone. Lower-casing here would
+			// erase the capitals that normalizer reads.
+			$property = self::sanitize_css_property( (string) $key, false );
+			if ( '' === $property ) {
+				continue;
+			}
+			$clean = self::sanitize_css_value( (string) $value, true );
+			if ( '' !== $clean ) {
+				$sanitized[ $property ] = $clean;
+			}
+		}
+
+		return $sanitized;
+	}
+
+	/**
+	 * Sanitize keyframe data payload.
+	 *
+	 * Accepts the raw-CSS format ({css, meta}).
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param mixed $input JSON string or array.
+	 * @return array{css:string, meta: array{defaultDuration:string, defaultEasing:string, defaultIterations:string}}
+	 */
+	public static function sanitize_keyframe_data( $input ): array {
+		$data = $input;
+
+		if ( is_string( $data ) ) {
+			$data = json_decode( stripslashes( $data ), true );
+		}
+
+		if ( ! is_array( $data ) ) {
+			return array(
+				'css'  => '',
+				'meta' => self::default_keyframe_meta(),
+			);
+		}
+
+		$sanitized = array();
+
+		if ( isset( $data['css'] ) && is_string( $data['css'] ) ) {
+			$sanitized['css'] = self::sanitize_keyframe_css( $data['css'] );
+		} else {
+			$sanitized['css'] = '';
+		}
+
+		if ( ! empty( $data['meta'] ) && is_array( $data['meta'] ) ) {
+			$sanitized['meta'] = array(
+				'defaultDuration'   => self::sanitize_animation_duration( $data['meta']['defaultDuration'] ?? '0.3s' ),
+				'defaultEasing'     => self::sanitize_animation_easing( $data['meta']['defaultEasing'] ?? 'ease-out' ),
+				'defaultIterations' => self::sanitize_animation_iterations( $data['meta']['defaultIterations'] ?? '1' ),
+			);
+		} else {
+			$sanitized['meta'] = self::default_keyframe_meta();
+		}
+
+		return $sanitized;
+	}
+
+	/**
+	 * Default keyframe meta values.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return array{defaultDuration:string, defaultEasing:string, defaultIterations:string}
+	 */
+	private static function default_keyframe_meta(): array {
+		return array(
+			'defaultDuration'   => '0.3s',
+			'defaultEasing'     => 'ease-out',
+			'defaultIterations' => '1',
+		);
+	}
+
+	/**
+	 * Sanitize animation duration (e.g. "0.3s", "300ms").
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param mixed $duration The duration value.
+	 * @return string
+	 */
+	public static function sanitize_animation_duration( $duration ): string {
+		if ( empty( $duration ) || ! is_string( $duration ) ) {
+			return '0.3s';
+		}
+
+		$duration = trim( $duration );
+
+		if ( preg_match( '/^(\d+(?:\.\d+)?)(s|ms)$/i', $duration, $matches ) ) {
+			$value = floatval( $matches[1] );
+			$unit  = strtolower( $matches[2] );
+
+			if ( 's' === $unit && $value >= 0 && $value <= 30 ) {
+				return $value . 's';
+			}
+			if ( 'ms' === $unit && $value >= 0 && $value <= 30000 ) {
+				return intval( $value ) . 'ms';
+			}
+		}
+
+		return '0.3s';
+	}
+
+	/**
+	 * Sanitize animation easing keyword or function.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param mixed $easing The easing value.
+	 * @return string
+	 */
+	public static function sanitize_animation_easing( $easing ): string {
+		if ( empty( $easing ) || ! is_string( $easing ) ) {
+			return 'ease-out';
+		}
+
+		$easing = trim( $easing );
+
+		$allowed_keywords = array( 'linear', 'ease', 'ease-in', 'ease-out', 'ease-in-out', 'step-start', 'step-end' );
+		if ( in_array( strtolower( $easing ), $allowed_keywords, true ) ) {
+			return strtolower( $easing );
+		}
+
+		if ( preg_match( '/^cubic-bezier\s*\(\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*\)$/i', $easing, $matches ) ) {
+			$p1 = floatval( $matches[1] );
+			$p2 = floatval( $matches[2] );
+			$p3 = floatval( $matches[3] );
+			$p4 = floatval( $matches[4] );
+
+			if ( $p1 >= 0 && $p1 <= 1 && $p3 >= 0 && $p3 <= 1 && abs( $p2 ) <= 10 && abs( $p4 ) <= 10 ) {
+				return sprintf( 'cubic-bezier(%s, %s, %s, %s)', $p1, $p2, $p3, $p4 );
+			}
+		}
+
+		if ( preg_match( '/^steps\s*\(\s*(\d+)\s*(?:,\s*(start|end|jump-start|jump-end|jump-none|jump-both))?\s*\)$/i', $easing, $matches ) ) {
+			$steps    = intval( $matches[1] );
+			$position = isset( $matches[2] ) ? strtolower( $matches[2] ) : 'end';
+
+			if ( $steps >= 1 && $steps <= 100 ) {
+				return sprintf( 'steps(%d, %s)', $steps, $position );
+			}
+		}
+
+		return 'ease-out';
+	}
+
+	/**
+	 * Sanitize animation iteration count.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param mixed $iterations The iteration count value.
+	 * @return string
+	 */
+	public static function sanitize_animation_iterations( $iterations ): string {
+		if ( '' === $iterations || null === $iterations ) {
+			return '1';
+		}
+
+		$iterations = trim( (string) $iterations );
+
+		if ( 'infinite' === strtolower( $iterations ) ) {
+			return 'infinite';
+		}
+
+		if ( preg_match( '/^(\d+(?:\.\d+)?)$/', $iterations, $matches ) ) {
+			$value = floatval( $matches[1] );
+			if ( $value >= 0 && $value <= 1000 ) {
+				return ( floor( $value ) === $value ) ? strval( intval( $value ) ) : strval( $value );
+			}
+		}
+
+		return '1';
+	}
+
+	/**
+	 * Sanitize raw keyframe CSS content (without the @keyframes wrapper).
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param mixed $css The raw CSS content.
+	 * @return string
+	 */
+	public static function sanitize_keyframe_css( $css ): string {
+		if ( empty( $css ) || ! is_string( $css ) ) {
+			return '';
+		}
+
+		$css = (string) preg_replace( '/@keyframes\s+[\w-]+\s*\{/i', '', $css );
+		$css = wp_strip_all_tags( $css );
+
+		$pattern = '/(?:from|to|\d{1,3}%)\s*(?:,\s*(?:from|to|\d{1,3}%))*\s*\{([^}]*)\}/i';
+		if ( ! preg_match_all( $pattern, $css, $matches, PREG_SET_ORDER ) ) {
+			return '';
+		}
+
+		$blocks = array();
+		foreach ( $matches as $match ) {
+			$full_match   = $match[0];
+			$declarations = isset( $match[1] ) ? $match[1] : '';
+
+			if ( preg_match( '/^((?:from|to|\d{1,3}%)(?:\s*,\s*(?:from|to|\d{1,3}%))*)/i', trim( $full_match ), $pos_match ) ) {
+				$position = self::sanitize_keyframe_positions( $pos_match[1] );
+			} else {
+				continue;
+			}
+
+			if ( '' === $position ) {
+				continue;
+			}
+
+			$sanitized_declarations = self::sanitize_keyframe_declarations( $declarations );
+			if ( '' !== $sanitized_declarations ) {
+				$blocks[] = $position . " {\n" . $sanitized_declarations . "\n}";
+			}
+		}
+
+		return implode( "\n", $blocks );
+	}
+
+	/**
+	 * Sanitize a comma-separated list of keyframe positions.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param string $positions The positions string.
+	 * @return string
+	 */
+	private static function sanitize_keyframe_positions( string $positions ): string {
+		$parts     = array_map( 'trim', explode( ',', $positions ) );
+		$sanitized = array();
+
+		foreach ( $parts as $part ) {
+			$clean = self::sanitize_keyframe_position( $part );
+			if ( '' !== $clean ) {
+				$sanitized[] = $clean;
+			}
+		}
+
+		return implode( ', ', array_unique( $sanitized ) );
+	}
+
+	/**
+	 * Sanitize a single keyframe position (from|to|0–100%).
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param string $position The position value.
+	 * @return string
+	 */
+	private static function sanitize_keyframe_position( string $position ): string {
+		if ( in_array( $position, array( 'from', 'to' ), true ) ) {
+			return $position;
+		}
+
+		if ( preg_match( '/^([0-9]{1,3})%$/', $position, $matches ) ) {
+			$percent = intval( $matches[1] );
+			if ( $percent >= 0 && $percent <= 100 ) {
+				return $percent . '%';
+			}
+		}
+
+		return '0%';
+	}
+
+	/**
+	 * Sanitize the declarations inside a single keyframe block.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param string $declarations The declaration string.
+	 * @return string
+	 */
+	private static function sanitize_keyframe_declarations( string $declarations ): string {
+		if ( '' === $declarations ) {
+			return '';
+		}
+
+		$parts     = array_filter( array_map( 'trim', explode( ';', $declarations ) ) );
+		$sanitized = array();
+
+		foreach ( $parts as $declaration ) {
+			if ( false === strpos( $declaration, ':' ) ) {
+				continue;
+			}
+
+			list( $property, $value ) = array_map( 'trim', explode( ':', $declaration, 2 ) );
+
+			$clean_property = self::sanitize_css_property( $property );
+			if ( '' === $clean_property ) {
+				continue;
+			}
+
+			$clean_value = self::sanitize_css_value( $value, true );
+			if ( '' === $clean_value ) {
+				continue;
+			}
+
+			$sanitized[] = "\t" . $clean_property . ': ' . $clean_value . ';';
+		}
+
+		return implode( "\n", $sanitized );
+	}
+}

@@ -1,0 +1,5083 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SureContact – Newsletters, Email Marketing, Automation, Revenue Tracking & CRM 1.5.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/surecontact\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-03T12:37:36+00:00\n"
+"PO-Revision-Date: 2026-06-03T12:37:36+00:00\n"
+"Language: th\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: surecontact\n"
+"X-Generator: WP-CLI 2.12.0\n"
+
+#. Plugin Name of the plugin
+#: surecontact.php
+msgid "SureContact – Newsletters, Email Marketing, Automation, Revenue Tracking & CRM"
+msgstr "SureContact – จดหมายข่าว, การตลาดผ่านอีเมล, การทำงานอัตโนมัติ, การติดตามรายได้ & CRM"
+
+#. Plugin URI of the plugin
+#: surecontact.php
+msgid "https://surecontact.com"
+msgstr "https://surecontact.com"
+
+#. Description of the plugin
+#: surecontact.php
+msgid "Send newsletters, set up email automations, manage contacts and track ecommerce revenue in a CRM for WordPress."
+msgstr "ส่งจดหมายข่าว, ตั้งค่าการทำงานอัตโนมัติทางอีเมล, จัดการผู้ติดต่อและติดตามรายได้จากอีคอมเมิร์ซใน CRM สำหรับ WordPress."
+
+#. Author of the plugin
+#: surecontact.php
+#: includes/admin/class-admin-menu.php:69
+#: includes/admin/class-admin-menu.php:70
+#: includes/integrations/class-gravity-forms-integration.php:632
+#: includes/integrations/class-gravity-forms-integration.php:686
+#: src/App.jsx:84
+#: src/components/AuthPage.jsx:223
+msgid "SureContact"
+msgstr "SureContact"
+
+#. Author URI of the plugin
+#: surecontact.php
+msgid "https://profiles.wordpress.org/brainstormforce/"
+msgstr "https://profiles.wordpress.org/brainstormforce/"
+
+#: includes/abilities/class-abilities-loader.php:97
+msgid "SureContact CRM"
+msgstr "SureContact CRM"
+
+#: includes/abilities/class-abilities-loader.php:98
+msgid "CRM integration rules, lists, tags, and contact automation tools."
+msgstr "กฎการรวม CRM, รายการ, แท็ก, และเครื่องมือการทำงานอัตโนมัติของผู้ติดต่อ."
+
+#: includes/abilities/class-abstract-ability.php:174
+#: includes/abilities/settings/class-get-setting.php:110
+msgid "SureContact is not connected."
+msgstr "SureContact ยังไม่ได้เชื่อมต่อ."
+
+#: includes/abilities/class-abstract-ability.php:175
+msgid "Connect SureContact via Settings > SureContact first."
+msgstr "เชื่อมต่อ SureContact ผ่านการตั้งค่า > SureContact ก่อน."
+
+#. translators: %s: integration/plugin name
+#: includes/abilities/class-abstract-ability.php:217
+#, php-format
+msgid "The %s plugin is not active."
+msgstr "ปลั๊กอิน %s จะไม่ถูกใช้งาน."
+
+#: includes/abilities/class-abstract-ability.php:220
+msgid "Install and activate the required plugin to use this integration."
+msgstr "ติดตั้งและเปิดใช้งานปลั๊กอินที่จำเป็นเพื่อใช้การรวมนี้."
+
+#: includes/abilities/class-abstract-ability.php:287
+msgid "An unknown error occurred."
+msgstr "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ."
+
+#: includes/abilities/crm/class-create-list.php:41
+#: includes/class-operation-labels.php:115
+msgid "Create List"
+msgstr "สร้างรายการ"
+
+#: includes/abilities/crm/class-create-list.php:95
+#: includes/api-wp/class-lists-tags-api.php:476
+#: includes/api/class-lists-tags-api.php:151
+msgid "List name is required."
+msgstr "ชื่อรายการเป็นสิ่งจำเป็น."
+
+#: includes/abilities/crm/class-create-list.php:107
+msgid "List creation request queued for background processing. The CRM API is temporarily unavailable — the list will be created automatically when connectivity is restored."
+msgstr "คำขอการสร้างรายการถูกจัดเตรียมสำหรับการประมวลผลเบื้องหลัง. API ของ CRM ชั่วคราวไม่พร้อมใช้งาน — รายการจะถูกสร้างโดยอัตโนมัติเมื่อการเชื่อมต่อถูกกู้คืน."
+
+#: includes/abilities/crm/class-create-list.php:115
+#: includes/abilities/crm/class-create-tag.php:115
+#: includes/api-wp/class-lists-tags-api.php:502
+#: includes/api-wp/class-lists-tags-api.php:569
+msgid "Invalid response from SureContact API."
+msgstr "การตอบกลับจาก SureContact API ไม่ถูกต้อง."
+
+#. translators: %s: list name
+#: includes/abilities/crm/class-create-list.php:128
+#, php-format
+msgid "List \"%s\" created successfully."
+msgstr "รายการ \"%s\" ถูกสร้างขึ้นสำเร็จ."
+
+#: includes/abilities/crm/class-create-tag.php:41
+#: includes/class-operation-labels.php:116
+msgid "Create Tag"
+msgstr "สร้างแท็ก"
+
+#: includes/abilities/crm/class-create-tag.php:95
+#: includes/api-wp/class-lists-tags-api.php:543
+#: includes/api/class-lists-tags-api.php:193
+msgid "Tag name is required."
+msgstr "ชื่อแท็กเป็นสิ่งจำเป็น."
+
+#: includes/abilities/crm/class-create-tag.php:107
+msgid "Tag creation request queued for background processing. The CRM API is temporarily unavailable — the tag will be created automatically when connectivity is restored."
+msgstr "คำขอการสร้างแท็กถูกจัดเตรียมสำหรับการประมวลผลเบื้องหลัง. API ของ CRM ชั่วคราวไม่พร้อมใช้งาน — แท็กจะถูกสร้างโดยอัตโนมัติเมื่อการเชื่อมต่อถูกกู้คืน."
+
+#. translators: %s: tag name
+#: includes/abilities/crm/class-create-tag.php:128
+#, php-format
+msgid "Tag \"%s\" created successfully."
+msgstr "แท็ก \"%s\" ถูกสร้างขึ้นสำเร็จ."
+
+#: includes/abilities/crm/class-get-list.php:40
+msgid "Get All Lists"
+msgstr "รับรายการทั้งหมด"
+
+#: includes/abilities/crm/class-get-list.php:100
+msgid "No lists found. Run surecontact/import-metadata to sync from CRM, or create one with surecontact/create-list."
+msgstr "ไม่พบรายการ. รัน surecontact/import-metadata เพื่อซิงค์จาก CRM, หรือสร้างรายการใหม่ด้วย surecontact/create-list."
+
+#. translators: %d: number of lists found
+#: includes/abilities/crm/class-get-list.php:122
+#, php-format
+msgid "Found %d list."
+msgid_plural "Found %d lists."
+msgstr[0] "พบ %d รายการ"
+
+#: includes/abilities/crm/class-get-tag.php:40
+msgid "Get All Tags"
+msgstr "รับแท็กทั้งหมด"
+
+#: includes/abilities/crm/class-get-tag.php:100
+msgid "No tags found. Run surecontact/import-metadata to sync from CRM, or create one with surecontact/create-tag."
+msgstr "ไม่พบแท็ก. รัน surecontact/import-metadata เพื่อซิงค์จาก CRM, หรือสร้างแท็กใหม่ด้วย surecontact/create-tag."
+
+#. translators: %d: number of tags found
+#: includes/abilities/crm/class-get-tag.php:122
+#, php-format
+msgid "Found %d tag."
+msgid_plural "Found %d tags."
+msgstr[0] "พบ %d แท็ก"
+
+#: includes/abilities/crm/class-import-metadata.php:41
+msgid "Sync Lists & Tags from CRM"
+msgstr "ซิงค์รายการ & แท็กจาก CRM"
+
+#: includes/abilities/crm/class-import-metadata.php:133
+#: includes/api-wp/class-lists-tags-api.php:304
+#: src/components/ListSelect.jsx:72
+#: src/components/TagSelect.jsx:72
+#: src/screens/settings/components/SettingsHeader.jsx:24
+msgid "Failed to sync lists and tags from CRM."
+msgstr "ไม่สามารถซิงค์รายการและแท็กจาก CRM."
+
+#. translators: %d: number of lists
+#: includes/abilities/crm/class-import-metadata.php:145
+#, php-format
+msgid "%d list"
+msgid_plural "%d lists"
+msgstr[0] "%d รายการ"
+
+#. translators: %d: number of tags
+#: includes/abilities/crm/class-import-metadata.php:147
+#, php-format
+msgid "%d tag"
+msgid_plural "%d tags"
+msgstr[0] "%d แท็ก"
+
+#. translators: 1: formatted list count (e.g. "3 lists"), 2: formatted tag count (e.g. "5 tags")
+#: includes/abilities/crm/class-import-metadata.php:152
+#, php-format
+msgid "Synced %1$s and %2$s from CRM."
+msgstr "ซิงค์ %1$s และ %2$s จาก CRM."
+
+#: includes/abilities/fields/class-create-contact-field.php:41
+msgid "Create Custom Contact Field"
+msgstr "สร้างฟิลด์ผู้ติดต่อแบบกำหนดเอง"
+
+#: includes/abilities/fields/class-create-contact-field.php:118
+msgid "name, label, and field_type are all required."
+msgstr "ชื่อ, ป้าย, และ field_type จำเป็นทั้งหมด."
+
+#. translators: %s: comma-separated list of valid types
+#: includes/abilities/fields/class-create-contact-field.php:127
+#, php-format
+msgid "Invalid field_type. Must be one of: %s"
+msgstr "field_type ไม่ถูกต้อง ต้องเป็นหนึ่งใน: %s"
+
+#. translators: %s: field label
+#: includes/abilities/fields/class-create-contact-field.php:161
+#, php-format
+msgid "Custom field \"%s\" created successfully."
+msgstr "ฟิลด์กำหนดเอง \"%s\" ถูกสร้างเสร็จเรียบร้อย."
+
+#: includes/abilities/fields/class-get-contact-field.php:40
+msgid "Get Contact Fields"
+msgstr "รับฟิลด์ผู้ติดต่อ"
+
+#. translators: 1: number of primary fields, 2: number of custom fields
+#: includes/abilities/fields/class-get-contact-field.php:111
+#, php-format
+msgid "Found %1$d primary and %2$d custom field."
+msgid_plural "Found %1$d primary and %2$d custom fields."
+msgstr[0] "พบฟิลด์หลัก %1$d ฟิลด์ และฟิลด์ที่กำหนดเอง %2$d ฟิลด์"
+
+#: includes/abilities/integrations/class-get-integration.php:39
+msgid "Get Integration Details"
+msgstr "รับรายละเอียดการรวม"
+
+#. translators: %s: integration slug
+#: includes/abilities/integrations/class-get-integration.php:131
+#: includes/api-wp/class-integration-rules-api.php:1563
+#, php-format
+msgid "Integration not found: %s"
+msgstr "ไม่พบการรวม: %s"
+
+#: includes/abilities/integrations/class-get-integration.php:134
+msgid "Use surecontact/list-integration to see available integrations and their slugs."
+msgstr "ใช้ surecontact/list-integration เพื่อดูการรวมที่มีอยู่และ slug ของพวกเขา."
+
+#. translators: %s: integration name
+#: includes/abilities/integrations/class-get-integration.php:142
+#, php-format
+msgid "Details retrieved for \"%s\" integration."
+msgstr "ข้อมูลถูกดึงสำหรับการรวม \"%s\"."
+
+#. translators: %s: integration slug
+#: includes/abilities/integrations/class-get-integration.php:148
+#, php-format
+msgid "Integration \"%s\" is registered but its required plugin is not active. Install and activate the plugin first."
+msgstr "การรวม \"%s\" ลงทะเบียนแล้ว แต่ปลั๊กอินที่จำเป็นไม่ได้เปิดใช้งาน ติดตั้งและเปิดใช้งานปลั๊กอินก่อน."
+
+#. translators: %s: integration slug
+#: includes/abilities/integrations/class-get-integration.php:154
+#, php-format
+msgid "Integration \"%s\" is available but could not be loaded. Check for plugin conflicts."
+msgstr "การรวม \"%s\" มีให้ใช้งาน แต่ไม่สามารถโหลดได้ ตรวจสอบความขัดแย้งของปลั๊กอิน."
+
+#: includes/abilities/integrations/class-get-item-field.php:40
+msgid "Get Item Fields"
+msgstr "รับฟิลด์รายการ"
+
+#: includes/abilities/integrations/class-get-item-field.php:129
+#: includes/abilities/integrations/class-list-integration-item.php:116
+msgid "The required plugin must be installed and active. Use surecontact/list-integration to check."
+msgstr "ปลั๊กอินที่จำเป็นต้องถูกติดตั้งและเปิดใช้งาน ใช้ surecontact/list-integration เพื่อตรวจสอบ."
+
+#. translators: 1: number of fields, 2: item ID, 3: integration slug
+#: includes/abilities/integrations/class-get-item-field.php:139
+#, php-format
+msgid "Found %1$d field for item %2$s in \"%3$s\" integration."
+msgid_plural "Found %1$d fields for item %2$s in \"%3$s\" integration."
+msgstr[0] "พบ %1$d ฟิลด์สำหรับรายการ %2$s ในการเชื่อมต่อ \"%3$s\""
+
+#: includes/abilities/integrations/class-list-integration-item.php:39
+msgid "List Integration Items"
+msgstr "รายการการรวม"
+
+#. translators: 1: number of items, 2: integration slug
+#: includes/abilities/integrations/class-list-integration-item.php:135
+#, php-format
+msgid "Found %1$d item for \"%2$s\" integration."
+msgid_plural "Found %1$d items for \"%2$s\" integration."
+msgstr[0] "พบ %1$d รายการสำหรับการเชื่อมต่อ \"%2$s\""
+
+#: includes/abilities/integrations/class-list-integration.php:39
+msgid "List All Integrations"
+msgstr "รายการการรวมทั้งหมด"
+
+#. translators: %d: number of integrations
+#: includes/abilities/integrations/class-list-integration.php:156
+#, php-format
+msgid "Found %d integration."
+msgid_plural "Found %d integrations."
+msgstr[0] "พบ %d การเชื่อมต่อ"
+
+#: includes/abilities/integrations/class-update-integration-setting.php:39
+msgid "Update Integration Settings"
+msgstr "อัปเดตการตั้งค่าการรวม"
+
+#: includes/abilities/integrations/class-update-integration-setting.php:112
+msgid "Settings must be an object."
+msgstr "การตั้งค่าต้องเป็นวัตถุ."
+
+#: includes/abilities/integrations/class-update-integration-setting.php:120
+msgid "No valid settings keys provided."
+msgstr "ไม่มีคีย์การตั้งค่าที่ถูกต้องให้."
+
+#: includes/abilities/integrations/class-update-integration-setting.php:121
+msgid "Use surecontact/get-integration to see available settings_fields. To enable/disable the integration, use surecontact/update-integration-status instead."
+msgstr "ใช้ surecontact/get-integration เพื่อดูฟิลด์การตั้งค่าที่มีอยู่ หากต้องการเปิด/ปิดการรวม ให้ใช้ surecontact/update-integration-status แทน."
+
+#: includes/abilities/integrations/class-update-integration-setting.php:135
+msgid "Use surecontact/get-integration to see available settings fields."
+msgstr "ใช้ surecontact/get-integration เพื่อดูฟิลด์การตั้งค่าที่มีอยู่."
+
+#. translators: %s: integration slug
+#: includes/abilities/integrations/class-update-integration-setting.php:143
+#, php-format
+msgid "Settings saved for \"%s\" integration."
+msgstr "บันทึกการตั้ง่าสำหรับการรวม \"%s\"."
+
+#: includes/abilities/integrations/class-update-integration-status.php:39
+msgid "Enable/Disable Integration"
+msgstr "เปิด/ปิดการรวม"
+
+#: includes/abilities/integrations/class-update-integration-status.php:126
+msgid "Use surecontact/list-integration to see available integrations."
+msgstr "ใช้ surecontact/list-integration เพื่อดูการรวมที่มีอยู่."
+
+#: includes/abilities/integrations/class-update-integration-status.php:129
+#: includes/abilities/rules/class-update-rule-status.php:146
+#: includes/api-wp/class-integration-rules-api.php:1062
+msgid "enabled"
+msgstr "เปิดใช้งาน"
+
+#: includes/abilities/integrations/class-update-integration-status.php:129
+#: includes/abilities/rules/class-update-rule-status.php:146
+#: includes/api-wp/class-integration-rules-api.php:1062
+msgid "disabled"
+msgstr "ปิดการใช้งาน"
+
+#. translators: 1: integration slug, 2: enabled/disabled
+#. translators: %1$s: integration slug, %2$s: enabled/disabled.
+#: includes/abilities/integrations/class-update-integration-status.php:134
+#: includes/api-wp/class-integration-rules-api.php:1069
+#, php-format
+msgid "Integration \"%1$s\" %2$s successfully."
+msgstr "การรวม \"%1$s\" %2$s สำเร็จแล้ว"
+
+#: includes/abilities/rules/class-create-rule.php:39
+msgid "Create Automation Rule"
+msgstr "สร้างกฎอัตโนมัติ"
+
+#: includes/abilities/rules/class-create-rule.php:147
+#: includes/abilities/rules/class-get-rule.php:116
+msgid "item_id and item_type are required."
+msgstr "item_id และ item_type เป็นสิ่งจำเป็น"
+
+#: includes/abilities/rules/class-create-rule.php:148
+msgid "Use surecontact/list-integration-item to find item IDs and types. Use \"all\" as item_id for a global item rule."
+msgstr "ใช้ surecontact/list-integration-item เพื่อค้นหา item ID และประเภท ใช้ \"all\" เป็น item_id สำหรับกฎไอเท็มทั่วโลก"
+
+#: includes/abilities/rules/class-create-rule.php:153
+msgid "Config must be an object."
+msgstr "การกำหนดค่าต้องเป็นออบเจ็กต์"
+
+#: includes/abilities/rules/class-create-rule.php:175
+msgid "Use surecontact/get-integration to see valid item types and events, and surecontact/list-integration-item for valid item IDs."
+msgstr "ใช้ surecontact/get-integration เพื่อดูประเภทไอเท็มและเหตุการณ์ที่ถูกต้อง และ surecontact/list-integration-item สำหรับ item ID ที่ถูกต้อง"
+
+#: includes/abilities/rules/class-create-rule.php:181
+msgid "Integration rule saved successfully."
+msgstr "บันทึกกฎการรวมสำเร็จแล้ว"
+
+#: includes/abilities/rules/class-delete-rule.php:39
+msgid "Delete Automation Rule"
+msgstr "ลบกฎอัตโนมัติ"
+
+#: includes/abilities/rules/class-delete-rule.php:116
+msgid "item_id and item_type are required to delete a rule."
+msgstr "item_id และ item_type เป็นสิ่งจำเป็นในการลบกฎ"
+
+#: includes/abilities/rules/class-delete-rule.php:117
+msgid "Use surecontact/list-rule to find the rule you want to delete. To manage global integration settings, use surecontact/update-integration-status instead."
+msgstr "ใช้ surecontact/list-rule เพื่อค้นหากฎที่คุณต้องการลบ หากต้องการจัดการการตั้งค่าการรวมทั่วโลก ใช้ surecontact/update-integration-status แทน"
+
+#: includes/abilities/rules/class-delete-rule.php:139
+#: includes/abilities/rules/class-get-rule.php:138
+#: includes/abilities/rules/class-update-rule-status.php:143
+msgid "Use surecontact/list-rule to see existing rules."
+msgstr "ใช้ surecontact/list-rule เพื่อดูรายการกฎที่มีอยู่"
+
+#: includes/abilities/rules/class-delete-rule.php:143
+msgid "Integration rule deleted successfully."
+msgstr "ลบกฎการรวมสำเร็จแล้ว"
+
+#: includes/abilities/rules/class-get-rule.php:39
+msgid "Get Automation Rule"
+msgstr "ดึงกฎอัตโนมัติ"
+
+#: includes/abilities/rules/class-get-rule.php:117
+msgid "Use surecontact/list-rule to see existing rules, or surecontact/list-integration-item to find item IDs."
+msgstr "ใช้ surecontact/list-rule เพื่อดูรายการกฎที่มีอยู่ หรือ surecontact/list-integration-item เพื่อค้นหา item IDs"
+
+#: includes/abilities/rules/class-get-rule.php:145
+msgid "No rule configuration found for this combination."
+msgstr "ไม่พบการกำหนดค่ากฎสำหรับการรวมนี้"
+
+#: includes/abilities/rules/class-get-rule.php:155
+msgid "Rule configuration retrieved successfully."
+msgstr "ดึงการกำหนดค่ากฎสำเร็จแล้ว"
+
+#: includes/abilities/rules/class-list-rule.php:39
+msgid "List All Automation Rules"
+msgstr "รายการกฎอัตโนมัติทั้งหมด"
+
+#. translators: %d: number of rules
+#: includes/abilities/rules/class-list-rule.php:172
+#, php-format
+msgid "Found %d integration rule."
+msgid_plural "Found %d integration rules."
+msgstr[0] "พบ %d กฎการเชื่อมต่อ"
+
+#: includes/abilities/rules/class-update-rule-status.php:39
+msgid "Enable/Disable Rule"
+msgstr "เปิด/ปิดกฎ"
+
+#: includes/abilities/rules/class-update-rule-status.php:119
+msgid "item_id and item_type are required to update a rule status."
+msgstr "item_id และ item_type เป็นสิ่งจำเป็นในการปรับปรุงสถานะของกฎ"
+
+#: includes/abilities/rules/class-update-rule-status.php:120
+msgid "Use surecontact/list-rule to find the rule. To toggle global integration status, use surecontact/update-integration-status instead."
+msgstr "ใช้ surecontact/list-rule เพื่อค้นหากฎ หากต้องการเปลี่ยนสถานะการรวมทั่วโลก ใช้ surecontact/update-integration-status แทน"
+
+#. translators: %s: enabled/disabled
+#: includes/abilities/rules/class-update-rule-status.php:151
+#, php-format
+msgid "Rule %s successfully."
+msgstr "กฎ %s สำเร็จแล้ว"
+
+#: includes/abilities/settings/class-get-setting.php:39
+msgid "Get SureContact Settings"
+msgstr "ดึงการตั้งค่า SureContact"
+
+#: includes/abilities/settings/class-get-setting.php:109
+msgid "SureContact is connected."
+msgstr "SureContact เชื่อมต่อแล้ว"
+
+#: includes/admin/class-admin-menu.php:81
+#: includes/admin/class-admin-menu.php:82
+#: src/components/NavMenu.jsx:21
+msgid "Dashboard"
+msgstr "แดชบอร์ด"
+
+#: includes/admin/wordpress-fields.php:35
+#: includes/class-field-mapper.php:268
+#: includes/integrations/class-fluentcrm-integration.php:203
+msgid "First Name"
+msgstr "ชื่อ"
+
+#: includes/admin/wordpress-fields.php:40
+#: includes/class-field-mapper.php:272
+#: includes/integrations/class-fluentcrm-integration.php:207
+msgid "Last Name"
+msgstr "นามสกุล"
+
+#: includes/admin/wordpress-fields.php:45
+#: includes/class-field-mapper.php:264
+msgid "Email Address"
+msgstr "ที่อยู่อีเมล"
+
+#: includes/admin/wordpress-fields.php:51
+msgid "Username"
+msgstr "ชื่อผู้ใช้"
+
+#: includes/admin/wordpress-fields.php:57
+msgid "Display Name"
+msgstr "ชื่อแสดง"
+
+#: includes/admin/wordpress-fields.php:63
+msgid "Website"
+msgstr "เว็บไซต์"
+
+#: includes/admin/wordpress-fields.php:69
+msgid "User Registered"
+msgstr "ผู้ใช้ที่ลงทะเบียน"
+
+#: includes/admin/wordpress-fields.php:75
+msgid "Role"
+msgstr "บทบาท"
+
+#: includes/admin/wordpress-fields.php:81
+msgid "Nickname"
+msgstr "ชื่อเล่น"
+
+#: includes/admin/wordpress-fields.php:86
+msgid "Biographical Info"
+msgstr "ข้อมูลชีวภาพ"
+
+#: includes/admin/wordpress-fields.php:91
+msgid "Language/Locale"
+msgstr "ภาษา/ภูมิภาค"
+
+#: includes/api-wp/class-api-base.php:69
+msgid "You do not have permission to perform this action."
+msgstr "คุณไม่มีสิทธิ์ดำเนินการนี้"
+
+#: includes/api-wp/class-api-base.php:93
+msgid "Nonce is missing."
+msgstr "Nonce ขาดหายไป"
+
+#: includes/api-wp/class-api-base.php:102
+msgid "Nonce is invalid."
+msgstr "Nonce ไม่ถูกต้อง"
+
+#: includes/api-wp/class-bulk-sync-api.php:225
+msgid "Invalid sync type"
+msgstr "ประเภทซิงค์ไม่ถูกต้อง"
+
+#: includes/api-wp/class-bulk-sync-api.php:242
+msgid "Email field mapping is required before syncing. Please configure it in Contact Fields settings."
+msgstr "ต้องทำการแมพฟิลด์อีเมลก่อนที่จะซิงค์ โปรดกำหนดค่ามันในการตั้งค่าฟิลด์ติดต่อ"
+
+#: includes/api-wp/class-bulk-sync-api.php:255
+msgid "Failed to start sync"
+msgstr "ไม่สามารถเริ่มซิงค์ได้"
+
+#: includes/api-wp/class-bulk-sync-api.php:455
+msgid "Job not found"
+msgstr "ไม่พบงาน"
+
+#: includes/api-wp/class-bulk-sync-api.php:479
+msgid "Job is already in a terminal state and cannot be cancelled"
+msgstr "งานอยู่ในสถานะสุดท้ายและไม่สามารถยกเลิกได้"
+
+#. translators: %1$d: total stopped actions, %2$d: pending actions count, %3$d: running actions count
+#: includes/api-wp/class-bulk-sync-api.php:524
+#, php-format
+msgid "Job cancelled successfully. Stopped %1$d action (%2$d pending, %3$d running)."
+msgid_plural "Job cancelled successfully. Stopped %1$d actions (%2$d pending, %3$d running)."
+msgstr[0] "ยกเลิกงานสำเร็จแล้ว หยุด %1$d การดำเนินการ (%2$d รอดำเนินการ, %3$d กำลังทำงาน)"
+
+#: includes/api-wp/class-field-mapping.php:123
+msgid "Field mappings configuration"
+msgstr "กำหนดค่าการแมพฟิลด์"
+
+#: includes/api-wp/class-field-mapping.php:157
+msgid "Field name (unique identifier)"
+msgstr "ชื่อฟิลด์ (รหัสประจำตัวที่ไม่ซ้ำ)"
+
+#: includes/api-wp/class-field-mapping.php:163
+msgid "Field label (display name)"
+msgstr "ฉลากฟิลด์ (ชื่อแสดง)"
+
+#: includes/api-wp/class-field-mapping.php:169
+msgid "Field type"
+msgstr "ประเภทฟิลด์"
+
+#: includes/api-wp/class-field-mapping.php:176
+msgid "Options for select/multi_select fields"
+msgstr "ตัวเลือกสำหรับฟิลด์แบบเลือก/แบบเลือกหลายรายการ"
+
+#: includes/api-wp/class-field-mapping.php:191
+msgid "Whether the field is required"
+msgstr "ฟิลด์ต้องการหรือไม่"
+
+#: includes/api-wp/class-field-mapping.php:276
+#: src/screens/contact-fields/FieldMappingTable.jsx:57
+msgid "Field mappings saved successfully!"
+msgstr "บันทึกการแมพฟิลด์สำเร็จ!"
+
+#: includes/api-wp/class-field-mapping.php:284
+#: src/api/fieldMapping.js:113
+#: src/api/fieldMapping.js:118
+msgid "Failed to save field mappings."
+msgstr "ไม่สามารถบันทึกการแมพฟิลด์ได้"
+
+#: includes/api-wp/class-field-mapping.php:331
+#: src/components/CustomFieldSelect.jsx:62
+#: src/screens/contact-fields/FieldMappingTable.jsx:143
+msgid "CRM fields synced successfully!"
+msgstr "ซิงค์ฟิลด์ CRM สำเร็จ!"
+
+#: includes/api-wp/class-field-mapping.php:371
+msgid "Options are required for select and multi-select fields."
+msgstr "ต้องมีตัวเลือกสำหรับฟิลด์แบบเลือกและแบบเลือกหลายรายการ"
+
+#: includes/api-wp/class-field-mapping.php:435
+#: src/screens/contact-fields/FieldMappingTable.jsx:113
+#: src/screens/integrations/IntegrationsTableCard.jsx:149
+msgid "Custom field created successfully!"
+msgstr "สร้างฟิลด์กำหนดเองสำเร็จ!"
+
+#: includes/api-wp/class-integration-rules-api.php:477
+msgid "Integration metadata not available."
+msgstr "ข้อมูลเมตาของการรวมไม่พร้อมใช้งาน"
+
+#: includes/api-wp/class-integration-rules-api.php:664
+msgid "Failed to save integration configuration."
+msgstr "ไม่สามารถบันทึกการตั้งค่าการรวมได้"
+
+#: includes/api-wp/class-integration-rules-api.php:678
+msgid "Configuration saved successfully."
+msgstr "บันทึกการตั้งค่าเรียบร้อย."
+
+#: includes/api-wp/class-integration-rules-api.php:704
+msgid "Failed to update integration status."
+msgstr "ไม่สามารถอัปเดตสถานะการรวมได้"
+
+#: includes/api-wp/class-integration-rules-api.php:712
+msgid "Configuration not found."
+msgstr "ไม่พบการกำหนดค่า"
+
+#: includes/api-wp/class-integration-rules-api.php:720
+msgid "Integration status updated successfully."
+msgstr "อัปเดตสถานะการรวมสำเร็จ"
+
+#: includes/api-wp/class-integration-rules-api.php:746
+msgid "Failed to delete integration configuration or configuration not found."
+msgstr "ไม่สามารถลบการกำหนดค่าการรวมได้หรือไม่พบการกำหนดค่า"
+
+#: includes/api-wp/class-integration-rules-api.php:760
+msgid "Configuration deleted successfully."
+msgstr "ลบการกำหนดค่าสำเร็จ"
+
+#: includes/api-wp/class-integration-rules-api.php:896
+#: includes/api-wp/class-integration-rules-api.php:1105
+#: includes/api-wp/class-integration-rules-api.php:1551
+msgid "Integrations loader not initialized."
+msgstr "ไม่เริ่มต้นตัวโหลดการรวม"
+
+#. translators: %s: integration slug
+#: includes/api-wp/class-integration-rules-api.php:1055
+#, php-format
+msgid "Failed to toggle integration: %s"
+msgstr "ไม่สามารถสลับการรวม: %s"
+
+#: includes/api-wp/class-integration-rules-api.php:1097
+msgid "You do not have permission to activate plugins."
+msgstr "คุณไม่มีสิทธิ์เปิดใช้งานปลั๊กอิน"
+
+#: includes/api-wp/class-integration-rules-api.php:1138
+msgid "No plugin file registered for this integration."
+msgstr "ไม่พบไฟล์ปลั๊กอินที่ลงทะเบียนสำหรับการรวมนี้"
+
+#: includes/api-wp/class-integration-rules-api.php:1147
+msgid "This plugin is not installed. Please install it first."
+msgstr "ปลั๊กอินนี้ไม่ได้ติดตั้ง กรุณาติดตั้งก่อน"
+
+#. translators: %s: plugin file path
+#: includes/api-wp/class-integration-rules-api.php:1166
+#, php-format
+msgid "Required dependency \"%s\" is not installed."
+msgstr "การพึ่งพาที่จำเป็น \"%s\" ยังไม่ได้ติดตั้ง"
+
+#. translators: %1$s: plugin file path, %2$s: error message
+#: includes/api-wp/class-integration-rules-api.php:1179
+#, php-format
+msgid "Failed to activate dependency \"%1$s\": %2$s"
+msgstr "ไม่สามารถเปิดใช้งานการพึ่งพา \"%1$s\": %2$s"
+
+#: includes/api-wp/class-integration-rules-api.php:1194
+msgid "Plugin is already active."
+msgstr "ปลั๊กอินนี้เปิดใช้งานแล้ว"
+
+#: includes/api-wp/class-integration-rules-api.php:1213
+msgid "Plugin activated successfully."
+msgstr "เปิดใช้งานปลั๊กอินสำเร็จ"
+
+#: includes/api-wp/class-integration-rules-api.php:1351
+msgid "Failed to save integration settings."
+msgstr "ไม่สามารถบันทึกการตั้งค่าการรวมได้"
+
+#: includes/api-wp/class-integration-rules-api.php:1359
+msgid "Integration settings saved successfully."
+msgstr "บันทึกการตั้งค่าการรวมสำเร็จ"
+
+#. translators: %s: integration slug
+#: includes/api-wp/class-integration-rules-api.php:1576
+#, php-format
+msgid "Integration \"%s\" is not available. The required plugin may not be installed or active."
+msgstr "การรวม \"%s\" ไม่พร้อมใช้งาน ปลั๊กอินที่จำเป็นอาจไม่ได้ติดตั้งหรือเปิดใช้งาน"
+
+#: includes/api-wp/class-lists-tags-api.php:95
+msgid "Optional search term to filter results."
+msgstr "คำค้นหาที่ไม่บังคับเพื่อกรองผลลัพธ์"
+
+#: includes/api-wp/class-lists-tags-api.php:119
+msgid "The name of the list to create."
+msgstr "ชื่อของรายการที่จะสร้าง"
+
+#: includes/api-wp/class-lists-tags-api.php:146
+msgid "The name of the tag to create."
+msgstr "ชื่อของแท็กที่จะสร้าง"
+
+#: includes/api-wp/class-lists-tags-api.php:192
+msgid "No cached lists found. Please sync lists and tags."
+msgstr "ไม่พบรายการแคช กรุณาซิงค์รายการและแท็ก"
+
+#: includes/api-wp/class-lists-tags-api.php:242
+msgid "No cached tags found. Please sync lists and tags."
+msgstr "ไม่พบแท็กแคช กรุณาซิงค์รายการและแท็ก"
+
+#. translators: %d: number of lists
+#: includes/api-wp/class-lists-tags-api.php:314
+#, php-format
+msgid "%d list synced"
+msgid_plural "%d lists synced"
+msgstr[0] "ซิงค์แล้ว %d รายการ"
+
+#. translators: %d: number of tags
+#: includes/api-wp/class-lists-tags-api.php:323
+#, php-format
+msgid "%d tag synced"
+msgid_plural "%d tags synced"
+msgstr[0] "ซิงค์แล้ว %d แท็ก"
+
+#: includes/api-wp/class-lists-tags-api.php:522
+msgid "List created successfully."
+msgstr "สร้างรายการสำเร็จ"
+
+#: includes/api-wp/class-lists-tags-api.php:589
+msgid "Tag created successfully."
+msgstr "สร้างแท็กสำเร็จ"
+
+#: includes/api-wp/class-queue-rest-controller.php:435
+msgid "Log entry not found or could not be deleted."
+msgstr "ไม่พบรายการบันทึกหรือไม่สามารถลบได้"
+
+#: includes/api-wp/class-queue-rest-controller.php:443
+msgid "Log entry deleted."
+msgstr "ลบบันทึกสำเร็จ"
+
+#. translators: %d: number of deleted entries
+#: includes/api-wp/class-queue-rest-controller.php:465
+#, php-format
+msgid "%d log entries deleted."
+msgstr "%d บันทึกถูกลบ"
+
+#. translators: %d: number of cleared entries
+#: includes/api-wp/class-queue-rest-controller.php:489
+#, php-format
+msgid "%d log entries cleared."
+msgstr "%d บันทึกถูกล้าง"
+
+#: includes/api-wp/class-queue-rest-controller.php:578
+msgid "Request queued for immediate retry."
+msgstr "คำขออยู่ในคิวเพื่อพยายามใหม่ทันที。"
+
+#. translators: %d: number of items queued for retry
+#: includes/api-wp/class-queue-rest-controller.php:599
+#, php-format
+msgid "%d items queued for retry."
+msgstr "%d รายการอยู่ในคิวสำหรับการพยายามใหม่。"
+
+#. translators: %1$d: succeeded count, %2$d: failed count
+#: includes/api-wp/class-queue-rest-controller.php:624
+#, php-format
+msgid "%1$d succeeded, %2$d failed."
+msgstr "%1$d เสร็จสมบูรณ์, %2$d ล้มเหลว。"
+
+#: includes/api-wp/class-queue-rest-controller.php:648
+msgid "Queue item not found or could not be deleted."
+msgstr "ไม่พบรายการในคิวหรือลบไม่ได้。"
+
+#: includes/api-wp/class-queue-rest-controller.php:656
+msgid "Queue item deleted."
+msgstr "ลบรายการในคิวแล้ว。"
+
+#. translators: %d: number of deleted items
+#: includes/api-wp/class-queue-rest-controller.php:678
+#, php-format
+msgid "%d queue items deleted."
+msgstr "%d รายการในคิวถูกลบแล้ว。"
+
+#: includes/api-wp/class-rest-controller.php:173
+msgid "Authorization header is required."
+msgstr "ต้องมีหัวเรื่องการรับรองความถูกต้อง。"
+
+#: includes/api-wp/class-rest-controller.php:182
+msgid "Invalid authorization header format. Expected: Bearer {token}"
+msgstr "รูปแบบหัวเรื่องการรับรองความถูกต้องไม่ถูกต้อง คาดว่า: Bearer {token}"
+
+#: includes/api-wp/class-rest-controller.php:196
+msgid "No active connection found."
+msgstr "ไม่พบการเชื่อมต่อที่ใช้งานอยู่。"
+
+#: includes/api-wp/class-rest-controller.php:205
+msgid "Invalid bearer token."
+msgstr "Bearer token ไม่ถูกต้อง。"
+
+#: includes/api-wp/class-rest-controller.php:246
+msgid "Name must be between 1 and 60 characters."
+msgstr "ชื่อจะต้องมีความยาวระหว่าง 1 ถึง 60 ตัวอักษร。"
+
+#: includes/api-wp/class-rest-controller.php:266
+#: includes/class-auth-manager.php:367
+msgid "A valid email address is required."
+msgstr "ต้องมีที่อยู่อีเมลที่ถูกต้อง。"
+
+#: includes/api-wp/class-rest-controller.php:293
+msgid "This site is already connected to SureContact."
+msgstr "ไซต์นี้เชื่อมต่อกับ SureContact อยู่แล้ว。"
+
+#: includes/api-wp/class-rest-controller.php:311
+msgid "Account created and connected to SureContact."
+msgstr "สร้างบัญชีและเชื่อมต่อกับ SureContact แล้ว。"
+
+#: includes/api-wp/class-rest-controller.php:329
+msgid "Successfully disconnected from SureContact."
+msgstr "ตัดการเชื่อมต่อจาก SureContact เรียบร้อยแล้ว。"
+
+#: includes/api-wp/class-rest-controller.php:354
+msgid "Workspace UUID does not match."
+msgstr "UUID ของพื้นที่ทำงานไม่ตรงกัน。"
+
+#: includes/api-wp/class-rest-controller.php:364
+msgid "Connection successfully disconnected by SaaS platform."
+msgstr "ตัดการเชื่อมต่อเรียบร้อยแล้วโดยแพลตฟอร์ม SaaS。"
+
+#: includes/api-wp/class-settings-api.php:173
+msgid "Invalid settings data provided."
+msgstr "ข้อมูลการตั้งค่าที่ให้ไม่ถูกต้อง。"
+
+#: includes/api-wp/class-settings-api.php:194
+msgid "Settings updated successfully."
+msgstr "อัปเดตการตั้งค่าเรียบร้อยแล้ว。"
+
+#: includes/api-wp/class-settings-api.php:262
+msgid "Auto-Create Contacts on Registration"
+msgstr "สร้างผู้ติดต่อโดยอัตโนมัติเมื่อสมัครใช้บริการ"
+
+#: includes/api-wp/class-settings-api.php:263
+msgid "Automatically create a contact in SureContact when a new user registers on your WordPress site."
+msgstr "สร้างผู้ติดต่อใน SureContact โดยอัตโนมัติเมื่อผู้ใช้ใหม่สมัครใช้งานในไซต์ WordPress ของคุณ。"
+
+#: includes/api-wp/class-settings-api.php:268
+msgid "Auto-Sync Contact Updates"
+msgstr "ซิงค์การอัปเดตผู้ติดต่อโดยอัตโนมัติ"
+
+#: includes/api-wp/class-settings-api.php:269
+msgid "Automatically sync all contact changes to SureContact, including profile updates, custom field changes, role changes, and login activity."
+msgstr "ซิงค์การเปลี่ยนแปลงของผู้ติดต่อทั้งหมดไปยัง SureContact โดยอัตโนมัติ รวมถึงการอัปเดตโปรไฟล์ การเปลี่ยนแปลงฟิลด์ที่กำหนดเอง การเปลี่ยนแปลงบทบาท และกิจกรรมการเข้าสู่ระบบ。"
+
+#: includes/api-wp/class-settings-api.php:274
+msgid "Sync User Roles as Lists"
+msgstr "ซิงค์บทบาทผู้ใช้เป็นรายการ"
+
+#: includes/api-wp/class-settings-api.php:275
+msgid "Automatically create lists based on WordPress user roles and assign contacts to them. A list will be created for each role if it doesn't exist."
+msgstr "สร้างรายการโดยอัตโนมัติตามบทบาทผู้ใช้ WordPress และมอบหมายผู้ติดต่อให้กับพวกเขา รายการจะถูกสร้างขึ้นสำหรับแต่ละบทบาทหากยังไม่มีอยู่。"
+
+#: includes/api-wp/class-settings-api.php:280
+msgid "Sync User Roles as Tags"
+msgstr "ซิงค์บทบาทผู้ใช้เป็นแท็ก"
+
+#: includes/api-wp/class-settings-api.php:281
+msgid "Automatically create tags based on WordPress user roles and apply them to contacts. A tag will be created for each role if it doesn't exist."
+msgstr "สร้างแท็กโดยอัตโนมัติตามบทบาทผู้ใช้ WordPress และนำไปใช้กับผู้ติดต่อ แท็กจะถูกสร้างขึ้นสำหรับแต่ละบทบาทหากยังไม่มีอยู่。"
+
+#: includes/api-wp/class-settings-api.php:286
+msgid "Assign Lists"
+msgstr "กำหนดรายการ"
+
+#: includes/api-wp/class-settings-api.php:287
+msgid "Select lists to automatically apply to new users who register an account in WordPress. These contacts will be added to the selected lists in SureContact."
+msgstr "เลือกแบบรายการเพื่อใช้โดยอัตโนมัติสำหรับผู้ใช้ใหม่ที่ลงทะเบียนบัญชีใน WordPress ผู้ติดต่อเหล่านี้จะถูกเพิ่มไปยังรายการที่เลือกใน SureContact。"
+
+#: includes/api-wp/class-settings-api.php:292
+msgid "Assign Tags"
+msgstr "กำหนดแท็ก"
+
+#: includes/api-wp/class-settings-api.php:293
+msgid "Select tags to automatically apply to new users who register an account in WordPress. These contacts will be tagged with the selected tags in SureContact."
+msgstr "เลือกแท็กที่จะใช้กับผู้ใช้ใหม่ที่ลงทะเบียนบัญชีใน WordPress โดยการติดต่อเหล่านี้จะถูกแท็กด้วยแท็กที่เลือกใน SureContact."
+
+#: includes/api-wp/class-settings-api.php:300
+msgid "Log Retention Period"
+msgstr "ระยะเวลาการเก็บบันทึก"
+
+#: includes/api-wp/class-settings-api.php:301
+msgid "How long to keep success and error log entries before automatic cleanup. Failed queue items are always kept for 7 days."
+msgstr "ระยะเวลาที่จะเก็บบันทึกความสำเร็จและความผิดพลาดก่อนการทำความสะอาดอัตโนมัติ รายการคิวที่ล้มเหลวจะถูกเก็บไว้เสมอเป็นเวลา 7 วัน."
+
+#: includes/api-wp/class-settings-api.php:305
+msgid "1 day"
+msgstr "1 วัน"
+
+#: includes/api-wp/class-settings-api.php:306
+msgid "2 days"
+msgstr "2 วัน"
+
+#: includes/api-wp/class-settings-api.php:307
+msgid "3 days"
+msgstr "3 วัน"
+
+#: includes/api-wp/class-settings-api.php:308
+msgid "5 days"
+msgstr "5 วัน"
+
+#: includes/api-wp/class-settings-api.php:309
+msgid "7 days"
+msgstr "7 วัน"
+
+#: includes/api-wp/class-settings-api.php:310
+msgid "14 days"
+msgstr "14 วัน"
+
+#: includes/api-wp/class-settings-api.php:311
+msgid "30 days"
+msgstr "30 วัน"
+
+#: includes/api/class-company-api.php:72
+msgid "Company name is required to create a company."
+msgstr "ต้องระบุชื่อบริษัทเพื่อสร้างบริษัท."
+
+#: includes/api/class-company-api.php:104
+msgid "Company UUID is required to update a company."
+msgstr "ต้องระบุ Company UUID เพื่ออัปเดตบริษัท."
+
+#: includes/api/class-company-api.php:137
+msgid "Company UUID is required to delete a company."
+msgstr "ต้องระบุ Company UUID เพื่อที่จะลบบริษัท."
+
+#: includes/api/class-company-api.php:172
+#: includes/api/class-company-api.php:330
+msgid "Company and contact UUIDs are required."
+msgstr "ต้องการ Company และ contact UUIDs."
+
+#: includes/api/class-company-api.php:233
+msgid "Company UUID and contact UUIDs are required."
+msgstr "ต้องการ Company UUID และ contact UUIDs."
+
+#. translators: %d: maximum count
+#: includes/api/class-company-api.php:241
+#, php-format
+msgid "Bulk attach accepts at most %d contact UUIDs per call."
+msgstr "การแนบแบบกลุ่มรับ UUIDs ติดต่อได้สูงสุด %d รายการต่อการเรียก."
+
+#: includes/api/class-company-api.php:284
+msgid "Contact UUID and company UUIDs are required."
+msgstr "ต้องการ Contact UUID และ Company UUIDs."
+
+#. translators: %d: maximum count
+#: includes/api/class-company-api.php:292
+#, php-format
+msgid "Bulk attach accepts at most %d company UUIDs per call."
+msgstr "การแนบแบบกลุ่มรับ Company UUIDs ได้สูงสุด %d รายการต่อการเรียก."
+
+#: includes/api/class-company-api.php:368
+msgid "Domain is required."
+msgstr "ต้องระบุโดเมน."
+
+#: includes/api/class-company-api.php:395
+msgid "Company name is required."
+msgstr "ต้องระบุชื่อบริษัท."
+
+#: includes/api/class-company-api.php:433
+#: includes/class-company-service.php:402
+msgid "Custom field name is required."
+msgstr "ต้องระบุชื่อฟิลด์ที่กำหนดเอง."
+
+#: includes/api/class-company-api.php:465
+msgid "Company UUID is required."
+msgstr "ต้องระบุ Company UUID."
+
+#: includes/api/class-company-api.php:499
+#: includes/api/class-company-api.php:532
+msgid "Note UUID is required."
+msgstr "ต้องระบุ Note UUID."
+
+#: includes/api/class-contact-api.php:75
+#: includes/api/class-contact-api.php:82
+msgid "Email address is required to create a contact."
+msgstr "ต้องมีที่อยู่อีเมลเพื่อสร้างการติดต่อ."
+
+#: includes/api/class-contact-api.php:90
+msgid "List UUIDs must be an array."
+msgstr "List UUIDs ต้องเป็นอาร์เรย์."
+
+#: includes/api/class-contact-api.php:98
+msgid "Tag UUIDs must be an array."
+msgstr "Tag UUIDs ต้องเป็นอาร์เรย์."
+
+#: includes/api/class-contact-api.php:129
+msgid "Valid email address is required."
+msgstr "ต้องมีที่อยู่อีเมลที่ถูกต้อง."
+
+#: includes/api/class-contact-api.php:165
+msgid "No contact found with this email address."
+msgstr "ไม่มีการติดต่อที่พบกับที่อยู่อีเมลนี้."
+
+#: includes/api/class-contact-api.php:184
+msgid "Contacts must be a non-empty array."
+msgstr "Contacts ต้องเป็นอาร์เรย์ที่ไม่ว่าง."
+
+#: includes/api/class-contact-api.php:229
+msgid "Batch UUID is required."
+msgstr "ต้องมี Batch UUID."
+
+#: includes/api/class-contact-api.php:279
+#: includes/api/class-contact-api.php:323
+#: includes/api/class-contact-api.php:367
+#: includes/api/class-contact-api.php:411
+msgid "Contact UUID is required."
+msgstr "จำเป็นต้องระบุ UUID ของผู้ติดต่อ."
+
+#: includes/api/class-contact-api.php:286
+#: includes/api/class-contact-api.php:374
+msgid "List UUIDs must be a non-empty array."
+msgstr "UUID ของรายการต้องเป็นอาเรย์ที่ไม่ว่างเปล่า."
+
+#: includes/api/class-contact-api.php:330
+#: includes/api/class-contact-api.php:418
+msgid "Tag UUIDs must be a non-empty array."
+msgstr "UUID ของแท็กต้องเป็นอาเรย์ที่ไม่ว่างเปล่า."
+
+#: includes/api/class-contact-api.php:459
+msgid "Valid old email address is required."
+msgstr "ที่อยู่อีเมลเก่าที่ถูกต้องเป็นสิ่งจำเป็น."
+
+#: includes/api/class-contact-api.php:466
+msgid "Valid new email address is required."
+msgstr "ที่อยู่อีเมลใหม่ที่ถูกต้องเป็นสิ่งจำเป็น."
+
+#: includes/api/class-contact-api.php:473
+msgid "Old and new email addresses are the same."
+msgstr "ที่อยู่อีเมลเก่าและใหม่เป็นอันเดียวกัน."
+
+#: includes/api/class-ecommerce-api.php:85
+msgid "Contact email is required to track a purchase."
+msgstr "ต้องใช้ที่อยู่อีเมลของผู้ติดต่อเพื่อติดตามการซื้อ."
+
+#: includes/api/class-ecommerce-api.php:92
+#: includes/api/class-ecommerce-api.php:172
+#: includes/api/class-ecommerce-api.php:225
+msgid "Order ID is required."
+msgstr "จำเป็นต้องระบุ ID ของคำสั่ง."
+
+#: includes/api/class-ecommerce-api.php:99
+msgid "Total amount is required."
+msgstr "จำนวนรวมต้องการ."
+
+#: includes/api/class-ecommerce-api.php:106
+msgid "Currency is required."
+msgstr "ต้องการสกุลเงิน."
+
+#: includes/api/class-ecommerce-api.php:113
+msgid "Purchase must contain at least one product."
+msgstr "การซื้อจะต้องมีผลิตภัณฑ์อย่างน้อยหนึ่งรายการ."
+
+#: includes/api/class-ecommerce-api.php:120
+msgid "Purchase date is required."
+msgstr "วันที่ซื้อเป็นสิ่งจำเป็น."
+
+#: includes/api/class-ecommerce-api.php:232
+msgid "Refund amount is required."
+msgstr "จำนวนเงินคืนเป็นสิ่งจำเป็น."
+
+#: includes/api/class-fields-api.php:101
+msgid "Field name is required."
+msgstr "ต้องระบุชื่อฟิลด์."
+
+#: includes/api/class-fields-api.php:108
+#: src/components/CreateCustomFieldForm.jsx:140
+msgid "Field label is required."
+msgstr "ต้องระบุป้ายชื่อฟิลด์."
+
+#: includes/api/class-fields-api.php:115
+msgid "Field type is required."
+msgstr "ต้องระบุประเภทฟิลด์."
+
+#: includes/class-auth-manager.php:359
+msgid "First and last name are required."
+msgstr "ต้องระบุชื่อและนามสกุล."
+
+#: includes/class-auth-manager.php:391
+msgid "Unable to prepare signup request. Please try again."
+msgstr "ไม่สามารถเตรียมคำขอลงทะเบียนได้ โปรดลองอีกครั้ง."
+
+#: includes/class-auth-manager.php:435
+msgid "Unable to create your SureContact account. Please try again."
+msgstr "ไม่สามารถสร้างบัญชี SureContact ของคุณได้ โปรดลองอีกครั้ง."
+
+#: includes/class-auth-manager.php:455
+#: includes/class-auth-manager.php:468
+msgid "Unexpected response from SureContact. Please try again."
+msgstr "ได้รับการตอบกลับที่ไม่คาดคิดจาก SureContact โปรดลองอีกครั้ง."
+
+#: includes/class-company-service.php:73
+msgid "Company was created but no UUID was returned by the API."
+msgstr "บริษัทถูกสร้างขึ้น แต่ไม่พบ UUID ที่ส่งคืนโดย API."
+
+#: includes/class-company-service.php:242
+msgid "Note was created but no UUID was returned."
+msgstr "หมายเหตุถูกสร้างขึ้น แต่ไม่มี UUID ถูกส่งคืน."
+
+#: includes/class-field-mapper.php:276
+#: src/components/CreateCustomFieldForm.jsx:21
+msgid "Phone Number"
+msgstr "หมายเลขโทรศัพท์"
+
+#: includes/class-field-mapper.php:280
+msgid "Company Name"
+msgstr "ชื่อบริษัท"
+
+#: includes/class-field-mapper.php:284
+msgid "Job Title"
+msgstr "ตำแหน่งงาน"
+
+#: includes/class-field-mapper.php:288
+msgid "Birthdate"
+msgstr "วันเกิด"
+
+#: includes/class-field-mapper.php:292
+msgid "Gender"
+msgstr "เพศ"
+
+#: includes/class-field-mapper.php:296
+msgid "Anniversary"
+msgstr "วันครบรอบ"
+
+#: includes/class-field-mapper.php:300
+msgid "Prefix"
+msgstr "คำนำหน้า"
+
+#: includes/class-field-mapper.php:304
+msgid "Suffix"
+msgstr "คำนำหลัง"
+
+#: includes/class-field-mapper.php:308
+#: includes/integrations/class-fluentcrm-integration.php:243
+msgid "Timezone"
+msgstr "เขตเวลา"
+
+#: includes/class-field-mapper.php:312
+msgid "Language"
+msgstr "ภาษา"
+
+#: includes/class-field-mapper.php:316
+msgid "Created At"
+msgstr "สร้างเมื่อ"
+
+#: includes/class-field-mapper.php:320
+msgid "Updated At"
+msgstr "ปรับปรุงเมื่อ"
+
+#: includes/class-field-mapper.php:384
+msgid "Standard WordPress Fields"
+msgstr "ฟิลด์ WordPress มาตรฐาน"
+
+#: includes/class-field-mapper.php:411
+msgid "Custom Field Keys (Added Manually)"
+msgstr "คีย์ฟิลด์ที่กำหนดเอง (เพิ่มด้วยตนเอง)"
+
+#: includes/class-field-mapper.php:415
+msgid "Additional wp_usermeta Table Fields"
+msgstr "ฟิลด์เพิ่มเติมในตาราง wp_usermeta"
+
+#: includes/class-field-mapper.php:872
+msgid "Never"
+msgstr "ไม่มีเลย"
+
+#. translators: %s: human readable time difference
+#: includes/class-field-mapper.php:877
+#, php-format
+msgid "%s ago"
+msgstr "%s ที่แล้ว"
+
+#. translators: %1$s: provided slug, %2$s: comma-separated valid slugs
+#: includes/class-integrations-loader.php:834
+#, php-format
+msgid "Integration not found: \"%1$s\". Available integrations: %2$s"
+msgstr "ไม่พบการบูรณาการ: \"%1$s\". การบูรณาการที่มีอยู่: %2$s"
+
+#. translators: %1$s: provided item type, %2$s: comma-separated valid types
+#: includes/class-integrations-loader.php:859
+#, php-format
+msgid "Invalid item type \"%1$s\". Valid types: %2$s"
+msgstr "ประเภทไอเท็มไม่ถูกต้อง \"%1$s\". ประเภทที่ถูกต้อง: %2$s"
+
+#. translators: %1$s: provided item ID, %2$s: item type
+#: includes/class-integrations-loader.php:879
+#, php-format
+msgid "Item ID \"%1$s\" not found for item type \"%2$s\"."
+msgstr "ไม่พบ ID ไอเท็ม \"%1$s\" สำหรับประเภทไอเท็ม \"%2$s\"."
+
+#. translators: %1$s: provided event, %2$s: item type, %3$s: comma-separated valid events
+#: includes/class-integrations-loader.php:899
+#, php-format
+msgid "Invalid event \"%1$s\" for item type \"%2$s\". Valid events: %3$s"
+msgstr "เหตุการณ์ที่ไม่ถูกต้อง \"%1$s\" สำหรับประเภทไอเท็ม \"%2$s\". เหตุการณ์ที่ถูกต้อง: %3$s"
+
+#. translators: 1: integration source name (e.g. "WooCommerce"), 2: operation label (e.g. "Track Purchase").
+#: includes/class-operation-labels.php:67
+#, php-format
+msgid "%1$s — %2$s"
+msgstr "%1$s — %2$s"
+
+#: includes/class-operation-labels.php:105
+msgid "Create Contact"
+msgstr "สร้างผู้ติดต่อ"
+
+#: includes/class-operation-labels.php:106
+msgid "Bulk Sync Contacts"
+msgstr "ซิงค์ผู้ติดต่อจำนวนมาก"
+
+#: includes/class-operation-labels.php:107
+msgid "Attach Lists"
+msgstr "แนบรายการ"
+
+#: includes/class-operation-labels.php:108
+msgid "Detach Lists"
+msgstr "ถอดรายการ"
+
+#: includes/class-operation-labels.php:109
+msgid "Attach Tags"
+msgstr "แนบแท็ก"
+
+#: includes/class-operation-labels.php:110
+msgid "Detach Tags"
+msgstr "ถอดแท็ก"
+
+#: includes/class-operation-labels.php:111
+msgid "Update Email"
+msgstr "อัปเดตอีเมล"
+
+#: includes/class-operation-labels.php:112
+msgid "Track Purchase"
+msgstr "ติดตามการซื้อ"
+
+#: includes/class-operation-labels.php:113
+msgid "Cancel Purchase"
+msgstr "ยกเลิกการซื้อ"
+
+#: includes/class-operation-labels.php:114
+msgid "Refund Purchase"
+msgstr "คืนเงินการซื้อ"
+
+#: includes/class-operation-labels.php:117
+msgid "Sync Custom Field"
+msgstr "ซิงค์ฟิลด์ที่กำหนดเอง"
+
+#: includes/class-queue-manager.php:142
+msgid "This log entry is not an API request and cannot be retried."
+msgstr "บันทึกการเข้าสู่ระบบนี้ไม่ใช่คำขอ API และไม่สามารถลองใหม่ได้."
+
+#: includes/class-queue-manager.php:146
+msgid "Retry failed. Check the log entry for details."
+msgstr "ลองใหม่ล้มเหลว ตรวจสอบบันทึกการเข้าสู่ระบบเพื่อดูรายละเอียด."
+
+#: includes/class-saas-client.php:247
+#: includes/class-saas-client.php:310
+#: includes/class-saas-client.php:374
+#: includes/class-saas-client.php:491
+msgid "Invalid JSON response from API"
+msgstr "การตอบสนอง JSON ไม่ถูกต้องจาก API"
+
+#. translators: %s: exception message
+#: includes/class-saas-client.php:255
+#: includes/class-saas-client.php:318
+#: includes/class-saas-client.php:382
+#: includes/class-saas-client.php:435
+#: includes/class-saas-client.php:499
+#, php-format
+msgid "Exception during API request: %s"
+msgstr "ข้อยกเว้นระหว่างคำขอ API: %s"
+
+#. translators: %d: HTTP status code
+#: includes/class-saas-client.php:556
+#, php-format
+msgid "Request failed (error %d). Please try again."
+msgstr "คำขอล้มเหลว (ข้อผิดพลาด %d). กรุณาลองอีกครั้ง."
+
+#: includes/integrations/class-base-integration.php:1164
+#: includes/integrations/class-fluentcrm-integration.php:338
+msgid "Add to Lists"
+msgstr "เพิ่มลงในรายการ"
+
+#: includes/integrations/class-base-integration.php:1165
+msgid "Select lists to add contacts to"
+msgstr "เลือกบัญชีรายการเพื่อเพิ่มผู้ติดต่อ"
+
+#: includes/integrations/class-base-integration.php:1170
+#: includes/integrations/class-fluentcrm-integration.php:344
+msgid "Add Tags"
+msgstr "เพิ่มแท็ก"
+
+#: includes/integrations/class-base-integration.php:1171
+msgid "Select tags to add to contacts"
+msgstr "เลือกแท็กเพื่อเพิ่มในผู้ติดต่อ"
+
+#: includes/integrations/class-base-integration.php:1176
+msgid "Remove from Lists"
+msgstr "ลบออกจากรายการ"
+
+#: includes/integrations/class-base-integration.php:1177
+msgid "Select lists to remove contacts from"
+msgstr "เลือกบัญชีรายการเพื่อถอนผู้ติดต่อ"
+
+#: includes/integrations/class-base-integration.php:1182
+msgid "Remove Tags"
+msgstr "ลบแท็ก"
+
+#: includes/integrations/class-base-integration.php:1183
+msgid "Select tags to remove from contacts"
+msgstr "เลือกแท็กเพื่อลบออกจากผู้ติดต่อ"
+
+#: includes/integrations/class-cartflows-integration.php:43
+msgid "Sync CartFlows step completions, track upsell/downsell conversions, and order bump additions."
+msgstr "ซิงค์ขั้นตอนการทำ CartFlows, ติดตามการขายข้าม/การขายลด และการเพิ่มคำสั่งด่วน"
+
+#: includes/integrations/class-cartflows-integration.php:60
+msgid "CartFlows"
+msgstr "CartFlows"
+
+#: includes/integrations/class-cartflows-integration.php:78
+msgid "Last Flow ID"
+msgstr "รหัสกระบวนการล่าสุด"
+
+#: includes/integrations/class-cartflows-integration.php:82
+msgid "Last Flow Name"
+msgstr "ชื่อกระบวนการล่าสุด"
+
+#: includes/integrations/class-cartflows-integration.php:86
+msgid "Last Step ID"
+msgstr "รหัสขั้นตอนล่าสุด"
+
+#: includes/integrations/class-cartflows-integration.php:90
+msgid "Last Step Name"
+msgstr "ชื่อขั้นตอนล่าสุด"
+
+#: includes/integrations/class-cartflows-integration.php:94
+msgid "Last Step Type"
+msgstr "ประเภทขั้นตอนล่าสุด"
+
+#: includes/integrations/class-cartflows-integration.php:98
+msgid "Upsells Accepted Count"
+msgstr "จำนวนการขายข้ามที่ยอมรับ"
+
+#: includes/integrations/class-cartflows-integration.php:102
+msgid "Downsells Accepted Count"
+msgstr "จำนวนการขายลดที่ยอมรับ"
+
+#: includes/integrations/class-cartflows-integration.php:106
+msgid "Order Bumps Added Count"
+msgstr "จำนวนการเพิ่มคำสั่งด่วน"
+
+#: includes/integrations/class-cartflows-integration.php:146
+msgid "Step"
+msgstr "ขั้นตอน"
+
+#: includes/integrations/class-cartflows-integration.php:154
+msgid "Upsell"
+msgstr "การขายข้าม"
+
+#: includes/integrations/class-cartflows-integration.php:158
+msgid "Downsell"
+msgstr "การขายลด"
+
+#: includes/integrations/class-cartflows-integration.php:162
+msgid "Order Bump"
+msgstr "คำสั่งด่วน"
+
+#: includes/integrations/class-cartflows-integration.php:166
+msgid "Pre-Checkout Offer"
+msgstr "ข้อเสนอระหว่างการเช็คเอาต์"
+
+#: includes/integrations/class-cartflows-integration.php:186
+msgid "CartFlows Pro"
+msgstr "CartFlows Pro"
+
+#: includes/integrations/class-cartflows-integration.php:221
+msgid "Email will be identified from: 1) URL parameter (billing_email, email), 2) CartFlows Pro session, 3) WooCommerce customer data, 4) Logged-in user. If no email can be identified, this rule will not trigger."
+msgstr "อีเมลจะถูกระบุจาก: 1) พารามิเตอร์ URL (billing_email, email), 2) เซสชัน CartFlows Pro, 3) ข้อมูลลูกค้า WooCommerce, 4) ผู้ใช้ที่ล็อกอิน หากไม่สามารถระบุอีเมลได้ กฎนี้จะไม่ทำงาน"
+
+#: includes/integrations/class-cartflows-integration.php:228
+msgid "Started"
+msgstr "เริ่มต้น"
+
+#: includes/integrations/class-cartflows-integration.php:233
+#: src/screens/sync-contacts/JobHistory.jsx:15
+msgid "Completed"
+msgstr "เสร็จสมบูรณ์"
+
+#: includes/integrations/class-cartflows-integration.php:241
+#: includes/integrations/class-cartflows-integration.php:253
+#: includes/integrations/class-cartflows-integration.php:273
+msgid "Accepted"
+msgstr "ยอมรับ"
+
+#: includes/integrations/class-cartflows-integration.php:245
+#: includes/integrations/class-cartflows-integration.php:257
+msgid "Rejected"
+msgstr "ปฏิเสธ"
+
+#: includes/integrations/class-cartflows-integration.php:265
+msgid "Added"
+msgstr "เพิ่มแล้ว"
+
+#: includes/integrations/class-cartflows-integration.php:1690
+#: includes/integrations/class-cartflows-integration.php:1941
+msgid "All Steps"
+msgstr "ทุกขั้นตอน"
+
+#: includes/integrations/class-cartflows-integration.php:1696
+#: includes/integrations/class-cartflows-integration.php:1959
+msgid "All Landing Pages"
+msgstr "ทุกหน้าแลนด์ดิ้ง"
+
+#: includes/integrations/class-cartflows-integration.php:1702
+#: includes/integrations/class-cartflows-integration.php:1961
+msgid "All Checkouts"
+msgstr "ทุกหน้าชำระเงิน"
+
+#: includes/integrations/class-cartflows-integration.php:1708
+#: includes/integrations/class-cartflows-integration.php:1963
+msgid "All Thank You Pages"
+msgstr "ทุกหน้าขอบคุณ"
+
+#: includes/integrations/class-cartflows-integration.php:1714
+#: includes/integrations/class-cartflows-integration.php:1965
+msgid "All Optin Pages"
+msgstr "ทุกหน้าออปติน"
+
+#: includes/integrations/class-cartflows-integration.php:1752
+msgid "Untitled Step"
+msgstr "ขั้นตอนที่ไม่มีชื่อ"
+
+#: includes/integrations/class-cartflows-integration.php:1780
+#: includes/integrations/class-cartflows-integration.php:1943
+msgid "All Upsells"
+msgstr "ทุกการขายเพิ่มเติม"
+
+#: includes/integrations/class-cartflows-integration.php:1805
+#: includes/integrations/class-cartflows-integration.php:1945
+msgid "All Downsells"
+msgstr "ทุกการขายลดราคา"
+
+#: includes/integrations/class-cartflows-integration.php:1830
+#: includes/integrations/class-cartflows-integration.php:1947
+msgid "All Order Bumps"
+msgstr "ทุกออร์เดอร์บัมพ์"
+
+#: includes/integrations/class-cartflows-integration.php:1850
+#: includes/integrations/class-cartflows-integration.php:2048
+msgid "Untitled Order Bump"
+msgstr "ออร์เดอร์บัมพ์ที่ไม่มีชื่อ"
+
+#: includes/integrations/class-cartflows-integration.php:1879
+#: includes/integrations/class-cartflows-integration.php:1949
+msgid "All Pre-Checkout Offers"
+msgstr "ทุกข้อเสนอระหว่างการชำระเงิน"
+
+#: includes/integrations/class-cartflows-integration.php:1910
+#: includes/integrations/class-cartflows-integration.php:2014
+msgid "Untitled Checkout"
+msgstr "เช็คเอาต์ที่ไม่มีชื่อ"
+
+#: includes/integrations/class-cartflows-integration.php:1988
+msgid "Untitled"
+msgstr "ไม่มีชื่อ"
+
+#: includes/integrations/class-contact-form-7-integration.php:57
+msgid "Sync Contact Form 7 submissions with per-form field mapping"
+msgstr "ซิงค์การส่งแบบฟอร์ม Contact Form 7 กับการแมพฟิลด์ตามแบบฟอร์ม"
+
+#: includes/integrations/class-contact-form-7-integration.php:87
+#: includes/integrations/class-elementor-forms-integration.php:277
+#: includes/integrations/class-fluent-forms-integration.php:66
+#: includes/integrations/class-gravity-forms-integration.php:130
+#: includes/integrations/class-jetformbuilder-integration.php:90
+#: includes/integrations/class-sureforms-integration.php:85
+#: includes/integrations/class-wpforms-integration.php:80
+msgid "Form"
+msgstr "แบบฟอร์ม"
+
+#: includes/integrations/class-contact-form-7-integration.php:106
+#: includes/integrations/class-convert-pro-integration.php:138
+#: includes/integrations/class-elementor-forms-integration.php:296
+#: includes/integrations/class-fluent-forms-integration.php:85
+#: includes/integrations/class-gravity-forms-integration.php:149
+#: includes/integrations/class-jetformbuilder-integration.php:109
+#: includes/integrations/class-sureforms-integration.php:104
+#: includes/integrations/class-wpforms-integration.php:99
+msgid "Submission"
+msgstr "การส่ง"
+
+#: includes/integrations/class-contact-form-7-integration.php:132
+#: includes/integrations/class-convert-pro-integration.php:159
+#: includes/integrations/class-elementor-forms-integration.php:319
+#: includes/integrations/class-fluent-forms-integration.php:109
+#: includes/integrations/class-gravity-forms-integration.php:175
+#: includes/integrations/class-jetformbuilder-integration.php:131
+#: includes/integrations/class-sureforms-integration.php:130
+#: includes/integrations/class-wpforms-integration.php:125
+msgid "Field Mapping"
+msgstr "การแมพฟิลด์"
+
+#: includes/integrations/class-contact-form-7-integration.php:133
+#: includes/integrations/class-elementor-forms-integration.php:320
+#: includes/integrations/class-fluent-forms-integration.php:110
+#: includes/integrations/class-gravity-forms-integration.php:176
+#: includes/integrations/class-jetformbuilder-integration.php:132
+#: includes/integrations/class-sureforms-integration.php:131
+#: includes/integrations/class-wpforms-integration.php:126
+msgid "Map form fields to CRM fields. At minimum, you should map the email field."
+msgstr "แมพฟิลด์ของแบบฟอร์มกับฟิลด์ CRM อย่างน้อยคุณควรแมพฟิลด์อีเมล"
+
+#: includes/integrations/class-convert-pro-integration.php:86
+msgid "Sync Convert Pro call-to-action submissions with per call-to-action field mapping"
+msgstr "ซิงค์การส่งคำกระตุ้นการตัดสินใจกับการแมพฟิลด์ตามคำกระตุ้นการตัดสินใจ"
+
+#: includes/integrations/class-convert-pro-integration.php:119
+msgid "Call-to-action"
+msgstr "คำกระตุ้นการตัดสินใจ"
+
+#: includes/integrations/class-convert-pro-integration.php:160
+msgid "Map call-to-action fields to CRM fields. At minimum, map the email field."
+msgstr "แมพฟิลด์คำกระตุ้นการตัดสินใจกับฟิลด์ CRM อย่างน้อยแมพฟิลด์อีเมล"
+
+#: includes/integrations/class-edd-integration.php:60
+msgid "Sync Easy Digital Downloads customer contact information and track order purchases"
+msgstr "ซิงค์ข้อมูลติดต่อของลูกค้า Easy Digital Downloads และติดตามการซื้อออร์เดอร์"
+
+#: includes/integrations/class-edd-integration.php:90
+#: includes/integrations/class-latepoint-integration.php:265
+#: includes/integrations/class-surecart-integration.php:317
+#: includes/integrations/class-woocommerce-integration.php:271
+msgid "Track Order Data"
+msgstr "ติดตามข้อมูลออร์เดอร์"
+
+#: includes/integrations/class-edd-integration.php:91
+msgid "Send detailed order information (products, amounts, dates) to SureContact for revenue tracking and analytics"
+msgstr "ส่งข้อมูลออร์เดอร์ที่ละเอียด (ผลิตภัณฑ์, จำนวน, วันที่) ไปยัง SureContact เพื่อการติดตามรายได้และการวิเคราะห์"
+
+#: includes/integrations/class-edd-integration.php:97
+#: includes/integrations/class-latepoint-integration.php:286
+#: includes/integrations/class-surecart-integration.php:324
+#: includes/integrations/class-woocommerce-integration.php:278
+msgid "Track Refunds"
+msgstr "ติดตามการคืนเงิน"
+
+#: includes/integrations/class-edd-integration.php:98
+msgid "Send refund information to SureContact when payments are refunded"
+msgstr "ส่งข้อมูลการคืนเงินไปยัง SureContact เมื่อชำระเงินถูกคืน"
+
+#: includes/integrations/class-edd-integration.php:105
+#: includes/integrations/class-woocommerce-integration.php:263
+msgid "Sync Guest Customers"
+msgstr "ซิงค์ลูกค้าผู้เยี่ยมชม"
+
+#: includes/integrations/class-edd-integration.php:106
+msgid "Create contacts in SureContact for guest checkout customers (customers without WordPress accounts)"
+msgstr "สร้างรายชื่อใน SureContact สำหรับลูกค้าซื้อของแบบแขก (ลูกค้าที่ไม่มีบัญชี WordPress)"
+
+#: includes/integrations/class-edd-integration.php:116
+#: includes/integrations/class-woocommerce-integration.php:330
+msgid "Enable Abandoned Cart Tracking"
+msgstr "เปิดใช้งานการติดตามรถเข็นที่ถูกทิ้ง"
+
+#: includes/integrations/class-edd-integration.php:117
+#: includes/integrations/class-woocommerce-integration.php:331
+msgid "Track abandoned carts and apply lists/tags to contacts who abandon their carts"
+msgstr "ติดตามรถเข็นที่ถูกทิ้งและนำรายการ/แท็กไปใช้กับติดต่อที่ละทิ้งรถเข็น"
+
+#: includes/integrations/class-edd-integration.php:123
+#: includes/integrations/class-woocommerce-integration.php:337
+msgid "Abandonment Threshold (minutes)"
+msgstr "เกณฑ์การละทิ้ง (นาที)"
+
+#: includes/integrations/class-edd-integration.php:124
+#: includes/integrations/class-woocommerce-integration.php:338
+msgid "Minutes of inactivity before a cart is considered abandoned (minimum 5, maximum 10080)"
+msgstr "จำนวนเวลาที่ไม่มีการทำกิจกรรมก่อนที่จะถือว่ารถเข็นถูกละทิ้ง (ขั้นต่ำ 5, สูงสุด 10080)"
+
+#: includes/integrations/class-edd-integration.php:132
+#: includes/integrations/class-woocommerce-integration.php:346
+msgid "Abandoned Cart Lists"
+msgstr "รายการรถเข็นที่ถูกละทิ้ง"
+
+#: includes/integrations/class-edd-integration.php:133
+#: includes/integrations/class-woocommerce-integration.php:347
+msgid "Add contacts to these lists when their cart is abandoned"
+msgstr "เพิ่มผู้ติดต่อไปยังรายการเหล่านี้เมื่อรถเข็นของพวกเขาถูกละทิ้ง"
+
+#: includes/integrations/class-edd-integration.php:139
+#: includes/integrations/class-woocommerce-integration.php:353
+msgid "Abandoned Cart Tags"
+msgstr "แท็กรถเข็นที่ถูกละทิ้ง"
+
+#: includes/integrations/class-edd-integration.php:140
+#: includes/integrations/class-woocommerce-integration.php:354
+msgid "Apply these tags to contacts when their cart is abandoned"
+msgstr "ใช้แท็กเหล่านี้กับผู้ติดต่อเมื่อรถเข็นของพวกเขาถูกละทิ้ง"
+
+#: includes/integrations/class-edd-integration.php:146
+#: includes/integrations/class-woocommerce-integration.php:360
+msgid "Cart Data Retention (days)"
+msgstr "การเก็บรักษาข้อมูลรถเข็น (วัน)"
+
+#: includes/integrations/class-edd-integration.php:147
+#: includes/integrations/class-woocommerce-integration.php:361
+msgid "Number of days to keep abandoned and recovered cart records before cleanup"
+msgstr "จำนวนวันที่จะเก็บบันทึกรถเข็นที่ถูกละทิ้งและที่ฟื้นคืนก่อนการทำความสะอาด"
+
+#. translators: %s is the payment status label.
+#: includes/integrations/class-edd-integration.php:159
+#, php-format
+msgid "Lists for \"%s\" Status"
+msgstr "รายการสำหรับสถานะ \"%s\""
+
+#. translators: %s is the payment status label in lowercase.
+#: includes/integrations/class-edd-integration.php:161
+#, php-format
+msgid "Additional lists to add contacts to when payment status is %s (combined with default lists above)"
+msgstr "รายการเพิ่มเติมในการเพิ่มผู้ติดต่อเมื่อสถานะการชำระเงินเป็น %s (รวมกับรายการเริ่มต้นด้านบน)"
+
+#: includes/integrations/class-edd-integration.php:181
+msgid "Download"
+msgstr "ดาวน์โหลด"
+
+#: includes/integrations/class-edd-integration.php:185
+msgid "Discount Code"
+msgstr "รหัสส่วนลด"
+
+#: includes/integrations/class-edd-integration.php:204
+#: includes/integrations/class-surecart-integration.php:375
+#: includes/integrations/class-woocommerce-integration.php:428
+msgid "Purchase"
+msgstr "การซื้อ"
+
+#: includes/integrations/class-edd-integration.php:208
+#: includes/integrations/class-surecart-integration.php:383
+#: includes/integrations/class-woocommerce-integration.php:432
+msgid "Refund"
+msgstr "การคืนเงิน"
+
+#: includes/integrations/class-edd-integration.php:216
+msgid "Discount Applied"
+msgstr "ส่วนลดที่ใช้"
+
+#: includes/integrations/class-edd-integration.php:257
+#: includes/integrations/class-edd-integration.php:379
+msgid "All Downloads"
+msgstr "ดาวน์โหลดทั้งหมด"
+
+#: includes/integrations/class-edd-integration.php:319
+#: includes/integrations/class-edd-integration.php:382
+msgid "All Discount Codes"
+msgstr "รหัสส่วนลดทั้งหมด"
+
+#: includes/integrations/class-edd-integration.php:1066
+msgid "Full refund"
+msgstr "คืนเงินเต็มจำนวน"
+
+#: includes/integrations/class-edd-integration.php:1066
+msgid "Partial refund"
+msgstr "คืนเงินบางส่วน"
+
+#: includes/integrations/class-edd-order-sync.php:88
+#: includes/integrations/class-surecart-order-sync.php:88
+#: includes/integrations/class-woocommerce-order-sync.php:88
+msgid "Orders"
+msgstr "คำสั่งซื้อ"
+
+#: includes/integrations/class-edd-order-sync.php:89
+msgid "Synchronize all Easy Digital Downloads orders and revenue data to SureContact"
+msgstr "ซิงโครไนซ์คำสั่งซื้อและข้อมูลรายได้ทั้งหมดจาก Easy Digital Downloads ไปยัง SureContact"
+
+#: includes/integrations/class-edd-order-sync.php:108
+#: includes/integrations/class-surecart-order-sync.php:108
+#: includes/integrations/class-woocommerce-order-sync.php:108
+msgid "No orders found to sync"
+msgstr "ไม่พบคำสั่งซื้อที่ต้องซิงโครไนซ์"
+
+#: includes/integrations/class-edd-order-sync.php:156
+#: includes/integrations/class-fluentcrm-contact-sync.php:231
+#: includes/integrations/class-surecart-order-sync.php:156
+#: includes/integrations/class-woocommerce-customer-sync.php:171
+#: includes/integrations/class-woocommerce-order-sync.php:156
+#: includes/integrations/class-wordpress-user-sync.php:171
+msgid "Failed to retrieve job status"
+msgstr "ไม่สามารถดึงสถานะงานได้"
+
+#: includes/integrations/class-edd-order-sync.php:487
+#: includes/integrations/class-latepoint-integration.php:704
+#: includes/integrations/class-surecart-integration.php:1479
+#: includes/integrations/class-surecart-order-sync.php:528
+#: includes/integrations/class-woocommerce-order-sync.php:481
+msgid "Order cancelled"
+msgstr "คำสั่งซื้อถูกยกเลิก"
+
+#: includes/integrations/class-edd-order-sync.php:557
+#: includes/integrations/class-surecart-integration.php:1315
+#: includes/integrations/class-surecart-order-sync.php:598
+#: includes/integrations/class-woocommerce-order-sync.php:539
+msgid "Order refunded"
+msgstr "คืนเงินคำสั่งซื้อ"
+
+#: includes/integrations/class-elementor-forms-integration.php:46
+msgid "Sync Elementor Forms submissions with per-form field mapping"
+msgstr "ซิงโครไนซ์การส่งฟอร์ม Elementor กับการแมปฟิลด์ต่อฟอร์ม"
+
+#: includes/integrations/class-fluent-forms-integration.php:39
+msgid "Sync Fluent Forms submissions with per-form field mapping"
+msgstr "ซิงโครไนซ์การส่งฟอร์ม Fluent กับการแมปฟิลด์ต่อฟอร์ม"
+
+#: includes/integrations/class-fluentcrm-company-sync.php:119
+msgid "Companies"
+msgstr "บริษัท"
+
+#: includes/integrations/class-fluentcrm-company-sync.php:120
+msgid "Synchronize all FluentCRM companies (and their contact links) to SureContact."
+msgstr "ซิงโครไนซ์บริษัท FluentCRM ทั้งหมด (และลิงก์ติดต่อของพวกเขา) ไปยัง SureContact."
+
+#: includes/integrations/class-fluentcrm-company-sync.php:137
+msgid "FluentCRM Company module is not available."
+msgstr "โมดูลบริษัท FluentCRM ไม่พร้อมใช้งาน."
+
+#: includes/integrations/class-fluentcrm-company-sync.php:146
+msgid "No companies to sync."
+msgstr "ไม่มีบริษัทให้ซิงค์."
+
+#: includes/integrations/class-fluentcrm-company-sync.php:195
+msgid "Action Scheduler is not available."
+msgstr "Action Scheduler ใช้งานไม่ได้."
+
+#: includes/integrations/class-fluentcrm-company-sync.php:248
+msgid "Failed to retrieve job status."
+msgstr "ไม่สามารถดึงสถานะงานได้."
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:88
+msgid "Contacts"
+msgstr "ผู้ติดต่อ"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:89
+msgid "Synchronize all subscribed FluentCRM contacts to SureContact"
+msgstr "ซิงค์ผู้ติดต่อ FluentCRM ที่สมัครรับทั้งหมดไปยัง SureContact"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:133
+msgid "No subscribers to sync"
+msgstr "ไม่มีผู้สมัครให้ซิงค์"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:159
+msgid "Action Scheduler is not available"
+msgstr "Action Scheduler ไม่สามารถใช้งานได้"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:178
+msgid "No subscribers found to sync"
+msgstr "ไม่พบผู้สมัครให้ซิงค์"
+
+#. translators: %s: error message
+#: includes/integrations/class-fluentcrm-contact-sync.php:189
+#: includes/integrations/class-woocommerce-customer-sync.php:140
+#: includes/integrations/class-wordpress-user-sync.php:140
+#, php-format
+msgid "Failed to start sync: %s"
+msgstr "ไม่สามารถเริ่มซิงค์: %s"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:386
+#: includes/integrations/class-fluentcrm-contact-sync.php:419
+msgid "No valid contacts to sync"
+msgstr "ไม่มีผู้ติดต่อที่ถูกต้องให้ซิงค์"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:396
+#: includes/integrations/class-woocommerce-customer-sync.php:326
+#: includes/integrations/class-wordpress-user-sync.php:326
+msgid "CRM did not return batch_uuid"
+msgstr "CRM ไม่คืนค่า batch_uuid"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:523
+msgid "FluentCRM is not active"
+msgstr "FluentCRM ไม่ทำงาน"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:583
+msgid "No subscribers found"
+msgstr "ไม่พบผู้สมัคร"
+
+#: includes/integrations/class-fluentcrm-integration.php:79
+msgid "Sync FluentCRM contacts with bulk import support for large datasets"
+msgstr "ซิงค์ผู้ติดต่อ FluentCRM พร้อมการนำเข้าข้อมูลแบบกลุ่มสำหรับชุดข้อมูลขนาดใหญ่"
+
+#: includes/integrations/class-fluentcrm-integration.php:176
+msgid "FluentCRM"
+msgstr "FluentCRM"
+
+#: includes/integrations/class-fluentcrm-integration.php:199
+msgid "Name Prefix"
+msgstr "คำนำหน้า"
+
+#: includes/integrations/class-fluentcrm-integration.php:211
+#: src/components/CreateCustomFieldForm.jsx:19
+msgid "Email"
+msgstr "อีเมล"
+
+#: includes/integrations/class-fluentcrm-integration.php:215
+#: includes/integrations/class-latepoint-integration.php:125
+#: includes/integrations/class-surecart-integration.php:140
+msgid "Phone"
+msgstr "โทรศัพท์"
+
+#: includes/integrations/class-fluentcrm-integration.php:219
+#: includes/integrations/class-surecart-integration.php:116
+msgid "Address Line 1"
+msgstr "ที่อยู่บรรทัด 1"
+
+#: includes/integrations/class-fluentcrm-integration.php:223
+#: includes/integrations/class-surecart-integration.php:120
+msgid "Address Line 2"
+msgstr "ที่อยู่บรรทัด 2"
+
+#: includes/integrations/class-fluentcrm-integration.php:227
+#: includes/integrations/class-surecart-integration.php:124
+msgid "City"
+msgstr "เมือง"
+
+#: includes/integrations/class-fluentcrm-integration.php:231
+#: includes/integrations/class-surecart-integration.php:128
+msgid "State"
+msgstr "รัฐ"
+
+#: includes/integrations/class-fluentcrm-integration.php:235
+#: includes/integrations/class-surecart-integration.php:136
+msgid "Postal Code"
+msgstr "รหัสไปรษณีย์"
+
+#: includes/integrations/class-fluentcrm-integration.php:239
+#: includes/integrations/class-surecart-integration.php:132
+msgid "Country"
+msgstr "ประเทศ"
+
+#: includes/integrations/class-fluentcrm-integration.php:247
+msgid "Date of Birth"
+msgstr "วันเกิด"
+
+#: includes/integrations/class-fluentcrm-integration.php:251
+msgid "Contact Status"
+msgstr "สถานะผู้ติดต่อ"
+
+#: includes/integrations/class-fluentcrm-integration.php:255
+msgid "Contact Type"
+msgstr "ประเภทผู้ติดต่อ"
+
+#: includes/integrations/class-fluentcrm-integration.php:259
+msgid "Source"
+msgstr "แหล่งที่มา"
+
+#: includes/integrations/class-fluentcrm-integration.php:263
+msgid "Life Time Value"
+msgstr "มูลค่าชีวิต"
+
+#: includes/integrations/class-fluentcrm-integration.php:267
+msgid "Total Points"
+msgstr "คะแนนรวม"
+
+#: includes/integrations/class-fluentcrm-integration.php:271
+msgid "Contact Created Date"
+msgstr "วันที่สร้างการติดต่อ"
+
+#: includes/integrations/class-fluentcrm-integration.php:275
+msgid "Last Activity Date"
+msgstr "วันที่ทำกิจกรรมล่าสุด"
+
+#: includes/integrations/class-fluentcrm-integration.php:279
+msgid "Contact Updated Date"
+msgstr "วันที่ปรับปรุงการติดต่อ"
+
+#: includes/integrations/class-fluentcrm-integration.php:308
+msgid "Enable Real-time Sync"
+msgstr "เปิดใช้งานการซิงค์แบบเรียลไทม์"
+
+#: includes/integrations/class-fluentcrm-integration.php:309
+msgid "Automatically sync FluentCRM contacts when they are created or updated"
+msgstr "ซิงค์ฝ่ายซ้ายของ FluentCRM อัตโนมัติเมื่อถูกสร้างหรือปรับปรุง"
+
+#: includes/integrations/class-fluentcrm-integration.php:314
+msgid "Sync Only Subscribed Contacts"
+msgstr "ซิงค์เฉพาะผู้ติดต่อที่สมัครสมาชิก"
+
+#: includes/integrations/class-fluentcrm-integration.php:315
+msgid "Only sync contacts with \"subscribed\" status (recommended)"
+msgstr "ซิงค์เฉพาะผู้ติดต่อที่มีสถานะ \"สมัครสมาชิก\" (แนะนำ)"
+
+#: includes/integrations/class-fluentcrm-integration.php:320
+msgid "Sync Lists"
+msgstr "ซิงค์รายการ"
+
+#: includes/integrations/class-fluentcrm-integration.php:321
+msgid "Sync FluentCRM lists assigned to each contact (applies to both real-time and bulk sync)"
+msgstr "ซิงค์รายการของ FluentCRM ที่กำหนดให้กับแต่ละผู้ติดต่อ (ใช้ได้กับการซิงค์แบบเรียลไทม์และแบบกลุ่ม)"
+
+#: includes/integrations/class-fluentcrm-integration.php:326
+msgid "Sync Tags"
+msgstr "ซิงค์แท็ก"
+
+#: includes/integrations/class-fluentcrm-integration.php:327
+msgid "Sync FluentCRM tags assigned to each contact (applies to both real-time and bulk sync)"
+msgstr "ซิงค์แท็กของ FluentCRM ที่กำหนดให้กับแต่ละผู้ติดต่อ (ใช้ได้กับการซิงค์แบบเรียลไทม์และแบบกลุ่ม)"
+
+#: includes/integrations/class-fluentcrm-integration.php:332
+msgid "Sync Custom Fields"
+msgstr "ซิงค์ฟิลด์กำหนดเอง"
+
+#: includes/integrations/class-fluentcrm-integration.php:333
+msgid "Sync FluentCRM custom fields from each contact (applies to both real-time and bulk sync)"
+msgstr "ซิงค์ฟิลด์กำหนดเองของ FluentCRM จากแต่ละผู้ติดต่อ (ใช้ได้กับการซิงค์แบบเรียลไทม์และแบบกลุ่ม)"
+
+#: includes/integrations/class-fluentcrm-integration.php:339
+msgid "Select lists to add to ALL FluentCRM contacts when synced (in addition to their individual lists)"
+msgstr "เลือกบัญชีเพื่อเพิ่มไปยังผู้ติดต่อของ FluentCRM ทั้งหมดเมื่อซิงค์ (นอกเหนือจากรายการแต่ละรายการ)"
+
+#: includes/integrations/class-fluentcrm-integration.php:345
+msgid "Select tags to add to ALL FluentCRM contacts when synced (in addition to their individual tags)"
+msgstr "เลือกแท็กเพื่อเพิ่มไปยังผู้ติดต่อของ FluentCRM ทั้งหมดเมื่อซิงค์ (นอกเหนือจากแท็กแต่ละรายการ)"
+
+#: includes/integrations/class-gravity-forms-integration.php:66
+msgid "Sync Gravity Forms submissions with per-form field mapping"
+msgstr "ซิงค์การส่ง Gravity Forms ด้วยการแมพฟิลด์แบบต่อฟอร์ม"
+
+#. translators: %s: contact ID returned by SureContact.
+#: includes/integrations/class-gravity-forms-integration.php:661
+#, php-format
+msgid "Synced (ID: %s)"
+msgstr "ซิงค์แล้ว (ID: %s)"
+
+#: includes/integrations/class-gravity-forms-integration.php:706
+msgid "Synced to SureContact:"
+msgstr "ซิงค์ไปยัง SureContact:"
+
+#: includes/integrations/class-gravity-forms-integration.php:709
+msgid "Yes"
+msgstr "ใช่"
+
+#: includes/integrations/class-gravity-forms-integration.php:712
+msgid "No"
+msgstr "ไม่"
+
+#: includes/integrations/class-gravity-forms-integration.php:721
+msgid "Contact ID:"
+msgstr "หมายเลขประจำตัวผู้ติดต่อ:"
+
+#: includes/integrations/class-gravity-forms-integration.php:738
+msgid "Process SureContact actions again"
+msgstr "ประมวลผลการกระทำ SureContact อีกครั้ง"
+
+#: includes/integrations/class-jetformbuilder-integration.php:60
+msgid "Sync JetFormBuilder form submissions with per-form field mapping"
+msgstr "ซิงค์การส่งฟอร์ม JetFormBuilder ด้วยการแมพฟิลด์แบบต่อฟอร์ม"
+
+#: includes/integrations/class-latepoint-integration.php:52
+msgid "Sync LatePoint customer contact information and track bookings, orders, and payments."
+msgstr "ซิงค์ข้อมูลการติดต่อของลูกค้า LatePoint และติดตามการจอง, สั่งซื้อ, และการชำระเงิน."
+
+#: includes/integrations/class-latepoint-integration.php:75
+msgid "LatePoint Pro"
+msgstr "LatePoint Pro"
+
+#: includes/integrations/class-latepoint-integration.php:106
+msgid "LatePoint"
+msgstr "LatePoint"
+
+#: includes/integrations/class-latepoint-integration.php:129
+msgid "Customer Notes"
+msgstr "บันทึกของลูกค้า"
+
+#: includes/integrations/class-latepoint-integration.php:133
+msgid "Admin Notes"
+msgstr "บันทึกของแอดมิน"
+
+#: includes/integrations/class-latepoint-integration.php:141
+msgid "Last Booking Code"
+msgstr "รหัสการจองล่าสุด"
+
+#: includes/integrations/class-latepoint-integration.php:145
+msgid "Last Service"
+msgstr "บริการล่าสุด"
+
+#: includes/integrations/class-latepoint-integration.php:149
+msgid "Last Agent"
+msgstr "ตัวแทนล่าสุด"
+
+#: includes/integrations/class-latepoint-integration.php:153
+msgid "Last Location"
+msgstr "ตำแหน่งล่าสุด"
+
+#: includes/integrations/class-latepoint-integration.php:157
+msgid "Last Booking Date"
+msgstr "วันที่จองล่าสุด"
+
+#: includes/integrations/class-latepoint-integration.php:161
+msgid "Total Bookings"
+msgstr "การจองทั้งหมด"
+
+#: includes/integrations/class-latepoint-integration.php:251
+msgid "Sync Customer Data"
+msgstr "ซิงค์ข้อมูลลูกค้า"
+
+#: includes/integrations/class-latepoint-integration.php:252
+msgid "Automatically sync LatePoint customers to SureContact when they are created or updated"
+msgstr "ซิงค์ลูกค้า LatePoint ไปยัง SureContact โดยอัตโนมัติเมื่อสร้างหรืออัปเดต"
+
+#: includes/integrations/class-latepoint-integration.php:258
+msgid "Track Bookings"
+msgstr "ติดตามการจอง"
+
+#: includes/integrations/class-latepoint-integration.php:259
+msgid "Track booking events (created, status changes) in SureContact"
+msgstr "ติดตามเหตุการณ์การจอง (สร้าง, เปลี่ยนสถานะ) ใน SureContact"
+
+#: includes/integrations/class-latepoint-integration.php:266
+msgid "Send detailed order information to SureContact for revenue tracking and analytics"
+msgstr "ส่งข้อมูลคำสั่งซื้อรายละเอียดไปยัง SureContact สำหรับการติดตามรายได้และการวิเคราะห์"
+
+#: includes/integrations/class-latepoint-integration.php:272
+msgid "Track Transactions"
+msgstr "ติดตามธุรกรรม"
+
+#: includes/integrations/class-latepoint-integration.php:273
+msgid "Send payment transaction information to SureContact"
+msgstr "ส่งข้อมูลธุรกรรมการชำระเงินไปยัง SureContact"
+
+#: includes/integrations/class-latepoint-integration.php:279
+#: includes/integrations/class-surecart-integration.php:331
+#: includes/integrations/class-woocommerce-integration.php:285
+msgid "Track Cancellations"
+msgstr "ติดตามการยกเลิก"
+
+#: includes/integrations/class-latepoint-integration.php:280
+msgid "Send cancellation information to SureContact when bookings are cancelled"
+msgstr "ส่งข้อมูลการยกเลิกไปยัง SureContact เมื่อการจองถูกยกเลิก"
+
+#: includes/integrations/class-latepoint-integration.php:287
+msgid "Send refund information to SureContact when transactions are refunded"
+msgstr "ส่งข้อมูลการคืนเงินไปยัง SureContact เมื่อมีการคืนเงินธุรกรรม"
+
+#: includes/integrations/class-latepoint-integration.php:307
+msgid "Service"
+msgstr "บริการ"
+
+#: includes/integrations/class-latepoint-integration.php:311
+msgid "Location"
+msgstr "ตำแหน่ง"
+
+#: includes/integrations/class-latepoint-integration.php:315
+#: includes/integrations/class-surecart-integration.php:356
+#: includes/integrations/class-woocommerce-integration.php:408
+msgid "Coupon"
+msgstr "คูปอง"
+
+#: includes/integrations/class-latepoint-integration.php:333
+msgid "Booking Created"
+msgstr "การจองที่สร้างขึ้น"
+
+#: includes/integrations/class-latepoint-integration.php:337
+msgid "Booking Approved"
+msgstr "การจองที่อนุมัติ"
+
+#: includes/integrations/class-latepoint-integration.php:341
+msgid "Booking Pending"
+msgstr "การจองที่รอดำเนินการ"
+
+#: includes/integrations/class-latepoint-integration.php:345
+msgid "Booking Cancelled"
+msgstr "การจองที่ถูกยกเลิก"
+
+#: includes/integrations/class-latepoint-integration.php:349
+msgid "Booking Completed"
+msgstr "การจองที่เสร็จสิ้น"
+
+#: includes/integrations/class-latepoint-integration.php:353
+msgid "Booking No Show"
+msgstr "การจองที่ไม่มาที่นัด"
+
+#: includes/integrations/class-latepoint-integration.php:366
+#: includes/integrations/class-surecart-integration.php:391
+#: includes/integrations/class-woocommerce-integration.php:444
+msgid "Applied"
+msgstr "ที่ถูกนำไปใช้"
+
+#. translators: %s: service name or 'Booking'
+#: includes/integrations/class-latepoint-integration.php:668
+#, php-format
+msgid "%s cancelled"
+msgstr "%s ถูกยกเลิก"
+
+#: includes/integrations/class-latepoint-integration.php:669
+#: includes/integrations/class-latepoint-integration.php:1452
+msgid "Booking"
+msgstr "การจอง"
+
+#: includes/integrations/class-latepoint-integration.php:747
+msgid "Transaction refunded"
+msgstr "ธุรกรรมคืนเงิน"
+
+#: includes/integrations/class-latepoint-integration.php:1418
+msgid "Booking Order"
+msgstr "คำสั่งจอง"
+
+#: includes/integrations/class-latepoint-integration.php:1522
+#: includes/integrations/class-latepoint-integration.php:1660
+msgid "All Services"
+msgstr "บริการทั้งหมด"
+
+#: includes/integrations/class-latepoint-integration.php:1536
+msgid "Untitled Service"
+msgstr "บริการที่ไม่ได้ตั้งชื่อ"
+
+#: includes/integrations/class-latepoint-integration.php:1565
+#: includes/integrations/class-latepoint-integration.php:1662
+msgid "All Locations"
+msgstr "ทั้งหมดของสถานที่"
+
+#: includes/integrations/class-latepoint-integration.php:1579
+msgid "Untitled Location"
+msgstr "สถานที่ที่ไม่มีชื่อ"
+
+#: includes/integrations/class-latepoint-integration.php:1610
+#: includes/integrations/class-latepoint-integration.php:1664
+#: includes/integrations/class-surecart-integration.php:2211
+#: includes/integrations/class-surecart-integration.php:2263
+#: includes/integrations/class-woocommerce-integration.php:2063
+#: includes/integrations/class-woocommerce-integration.php:2109
+msgid "All Coupons"
+msgstr "ทั้งหมดของคูปอง"
+
+#: includes/integrations/class-latepoint-integration.php:1632
+msgid "Untitled Coupon"
+msgstr "คูปองที่ไม่มีชื่อ"
+
+#: includes/integrations/class-presto-player-integration.php:59
+msgid "Track video engagement and apply tags based on watch progress and completion"
+msgstr "ติดตามการมีส่วนร่วมของวิดีโอและใช้แท็กตามความก้าวหน้าและการดูจบ"
+
+#: includes/integrations/class-presto-player-integration.php:87
+msgid "Video"
+msgstr "วิดีโอ"
+
+#: includes/integrations/class-presto-player-integration.php:106
+msgid "Email Submission"
+msgstr "การส่งอีเมล"
+
+#: includes/integrations/class-presto-player-integration.php:110
+msgid "Video Start"
+msgstr "เริ่มวิดีโอ"
+
+#: includes/integrations/class-presto-player-integration.php:114
+msgid "Progress Tracking"
+msgstr "ติดตามความก้าวหน้า"
+
+#: includes/integrations/class-presto-player-integration.php:118
+msgid "Video Complete"
+msgstr "วิดีโอเสร็จสมบูรณ์"
+
+#: includes/integrations/class-presto-player-integration.php:145
+msgid "Percentage"
+msgstr "เปอร์เซ็นต์"
+
+#: includes/integrations/class-presto-player-integration.php:156
+msgid "Progress Thresholds"
+msgstr "เกณฑ์ความก้าวหน้า"
+
+#: includes/integrations/class-presto-player-integration.php:157
+msgid "Add one or more progress percentages to track. For each percentage, you can assign lists and tags to add or remove when the video reaches that point."
+msgstr "เพิ่มเปอร์เซ็นต์ความก้าวหน้าหนึ่งหรือมากกว่าเพื่อติดตาม สำหรับแต่ละเปอร์เซ็นต์ คุณสามารถกำหนดรายการและแท็กเพื่อเพิ่มหรือลบเมื่อวิดีโอถึงจุดนั้น"
+
+#: includes/integrations/class-presto-player-integration.php:955
+#: includes/integrations/class-presto-player-integration.php:997
+msgid "All Videos"
+msgstr "ทั้งหมดของวิดีโอ"
+
+#: includes/integrations/class-presto-player-integration.php:1036
+msgid "Untitled Video"
+msgstr "วิดีโอที่ไม่มีชื่อ"
+
+#: includes/integrations/class-surecart-integration.php:73
+msgid "Sync SureCart customer contact information and track order purchases. Note: SureCart automatically creates WordPress accounts for all customers."
+msgstr "ซิงค์ข้อมูลลูกค้าของ SureCart และติดตามการสั่งซื้อสินค้า หมายเหตุ: SureCart จะสร้างบัญชี WordPress ให้อัตโนมัติสำหรับลูกค้าทุกคน"
+
+#: includes/integrations/class-surecart-integration.php:97
+msgid "SureCart"
+msgstr "SureCart"
+
+#: includes/integrations/class-surecart-integration.php:318
+msgid "Send detailed order information including subscription renewals to SureContact for revenue tracking and analytics"
+msgstr "ส่งข้อมูลคำสั่งซื้อละเอียดรวมถึงการต่ออายุสมาชิกไปยัง SureContact สำหรับการติดตามรายได้และการวิเคราะห์"
+
+#: includes/integrations/class-surecart-integration.php:325
+msgid "Send refund information to SureContact when purchases are refunded"
+msgstr "ส่งข้อมูลการคืนเงินไปยัง SureContact เมื่อมีการคืนเงินการซื้อ"
+
+#: includes/integrations/class-surecart-integration.php:332
+msgid "Send cancellation information to SureContact when orders or subscriptions are cancelled"
+msgstr "ส่งข้อมูลการยกเลิกไปยัง SureContact เมื่อการสั่งซื้อหรือสมาชิกถูกยกเลิก"
+
+#: includes/integrations/class-surecart-integration.php:352
+#: includes/integrations/class-woocommerce-integration.php:400
+msgid "Product"
+msgstr "สินค้า"
+
+#: includes/integrations/class-surecart-integration.php:379
+#: includes/integrations/class-woocommerce-integration.php:436
+msgid "Cancellation"
+msgstr "การยกเลิก"
+
+#: includes/integrations/class-surecart-integration.php:2018
+#: includes/integrations/class-surecart-integration.php:2261
+#: includes/integrations/class-woocommerce-integration.php:1923
+#: includes/integrations/class-woocommerce-integration.php:2105
+msgid "All Products"
+msgstr "ทั้งหมดของสินค้า"
+
+#: includes/integrations/class-surecart-order-sync.php:89
+msgid "Synchronize all SureCart orders and customer data to SureContact"
+msgstr "ซิงค์คำสั่งซื้อและข้อมูลลูกค้าของ SureCart ทั้งหมดไปยัง SureContact"
+
+#: includes/integrations/class-suredash-integration.php:50
+msgid "Track SureDash community engagement including posts, comments, bookmarks, and reactions"
+msgstr "ติดตามการมีส่วนร่วมของชุมชน SureDash รวมถึงโพสต์ ความคิดเห็น บุ๊คมาร์ก และการแสดงออก"
+
+#: includes/integrations/class-suredash-integration.php:70
+msgid "SureDash Pro"
+msgstr "SureDash Pro"
+
+#: includes/integrations/class-suredash-integration.php:116
+msgid "Community Space"
+msgstr "พื้นที่ชุมชน"
+
+#: includes/integrations/class-suredash-integration.php:120
+msgid "Course"
+msgstr "หลักสูตร"
+
+#: includes/integrations/class-suredash-integration.php:139
+msgid "Post Created"
+msgstr "โพสต์ที่สร้างขึ้น"
+
+#: includes/integrations/class-suredash-integration.php:143
+msgid "Comment Added"
+msgstr "ความคิดเห็นที่เพิ่มเข้าม"
+
+#: includes/integrations/class-suredash-integration.php:147
+msgid "Content Bookmarked"
+msgstr "เนื้อหาที่ถูกบุ๊คมาร์ค"
+
+#: includes/integrations/class-suredash-integration.php:151
+msgid "Content Reacted/Liked"
+msgstr "เนื้อหาที่ถูกตอบสนอง/ชอบ"
+
+#: includes/integrations/class-suredash-integration.php:159
+msgid "Lesson Completed"
+msgstr "บทเรียนเสร็จสิ้น"
+
+#: includes/integrations/class-suredash-integration.php:163
+msgid "Course Completed"
+msgstr "หลักสูตรเสร็จสิ้น"
+
+#: includes/integrations/class-suredash-integration.php:871
+#: includes/integrations/class-suredash-integration.php:967
+msgid "All Spaces"
+msgstr "ทุกพื้นที่"
+
+#: includes/integrations/class-suredash-integration.php:916
+#: includes/integrations/class-suredash-integration.php:981
+msgid "All Courses"
+msgstr "ทุกหลักสูตร"
+
+#: includes/integrations/class-sureforms-integration.php:57
+msgid "Sync SureForms submissions with per-form field mapping"
+msgstr "ซิงค์การส่ง SureForms กับการแมพฟิลด์ต่อแบบฟอร์ม"
+
+#: includes/integrations/class-suremembers-integration.php:49
+msgid "Sync SureMembers access group memberships and track member lifecycle events"
+msgstr "ซิงค์การเข้าถึงกลุ่มสมาชิกของ SureMembers และติดตามเหตุการณ์ชีวิตสมาชิก"
+
+#: includes/integrations/class-suremembers-integration.php:66
+msgid "SureMembers"
+msgstr "SureMembers"
+
+#: includes/integrations/class-suremembers-integration.php:85
+msgid "Membership Status"
+msgstr "สถานะสมาชิก"
+
+#: includes/integrations/class-suremembers-integration.php:90
+msgid "Membership Name"
+msgstr "ชื่อสมาชิก"
+
+#: includes/integrations/class-suremembers-integration.php:95
+msgid "Access Group ID"
+msgstr "รหัสกลุ่มเข้าถึง"
+
+#: includes/integrations/class-suremembers-integration.php:100
+msgid "Active Groups Count"
+msgstr "จำนวนกลุ่มที่ใช้งาน"
+
+#: includes/integrations/class-suremembers-integration.php:105
+msgid "Access Status"
+msgstr "สถานะการเข้าถึง"
+
+#: includes/integrations/class-suremembers-integration.php:110
+msgid "Access Granted Date"
+msgstr "วันที่เข้าถึงที่อนุญาต"
+
+#: includes/integrations/class-suremembers-integration.php:115
+msgid "Access Modified Date"
+msgstr "วันที่เข้าถึงที่แก้ไข"
+
+#: includes/integrations/class-suremembers-integration.php:120
+msgid "Expiration Date"
+msgstr "วันที่หมดอายุ"
+
+#: includes/integrations/class-suremembers-integration.php:125
+msgid "Days Until Expiration"
+msgstr "วันจนกว่าจะหมดอายุ"
+
+#: includes/integrations/class-suremembers-integration.php:130
+msgid "Integration Source"
+msgstr "แหล่งข้อมูลการรวม"
+
+#: includes/integrations/class-suremembers-integration.php:135
+msgid "WooCommerce Order IDs"
+msgstr "รหัสคำสั่งซื้อ WooCommerce"
+
+#: includes/integrations/class-suremembers-integration.php:140
+msgid "Days as Member"
+msgstr "วันเป็นสมาชิก"
+
+#: includes/integrations/class-suremembers-integration.php:145
+msgid "Last Login"
+msgstr "การเข้าสู่ระบบล่าสุด"
+
+#: includes/integrations/class-suremembers-integration.php:184
+msgid "Membership"
+msgstr "สมาชิกภาพ"
+
+#: includes/integrations/class-suremembers-integration.php:203
+msgid "Access Granted"
+msgstr "การเข้าถึงที่อนุญาต"
+
+#: includes/integrations/class-suremembers-integration.php:207
+msgid "Access Revoked"
+msgstr "การเข้าถึงที่ถูกเพิกถอนไปแล้ว"
+
+#: includes/integrations/class-suremembers-integration.php:211
+msgid "Access Expired"
+msgstr "การเข้าถึงหมดอายุ"
+
+#: includes/integrations/class-suremembers-integration.php:215
+msgid "Member Logged In"
+msgstr "สมาชิกล็อกอินแล้ว"
+
+#: includes/integrations/class-suremembers-integration.php:912
+#: includes/integrations/class-suremembers-integration.php:954
+msgid "All Memberships"
+msgstr "สมาชิกทั้งหมด"
+
+#: includes/integrations/class-woocommerce-customer-sync.php:88
+msgid "Customers"
+msgstr "ลูกค้า"
+
+#: includes/integrations/class-woocommerce-customer-sync.php:89
+msgid "Synchronize all WooCommerce customers (including guests) to SureContact"
+msgstr "ซิงโครไนซ์ลูกค้า WooCommerce ทั้งหมด (รวมถึงแขก) ไปยัง SureContact"
+
+#: includes/integrations/class-woocommerce-customer-sync.php:108
+msgid "No customers found to sync"
+msgstr "ไม่พบลูกค้าที่จะซิงค์"
+
+#: includes/integrations/class-woocommerce-customer-sync.php:313
+#: includes/integrations/class-wordpress-user-sync.php:313
+msgid "No valid contacts to sync in first batch"
+msgstr "ไม่พบผู้ติดต่อที่ถูกต้องสำหรับการซิงค์ในชุดแรก"
+
+#: includes/integrations/class-woocommerce-integration.php:70
+msgid "Sync WooCommerce customer contact information"
+msgstr "ซิงค์ข้อมูลการติดต่อของลูกค้า WooCommerce"
+
+#: includes/integrations/class-woocommerce-integration.php:100
+msgid "WooCommerce Customer"
+msgstr "ลูกค้า WooCommerce"
+
+#: includes/integrations/class-woocommerce-integration.php:105
+msgid "WooCommerce Order"
+msgstr "คำสั่งซื้อ WooCommerce"
+
+#: includes/integrations/class-woocommerce-integration.php:123
+msgid "Billing First Name"
+msgstr "ชื่อจริงสำหรับการเรียกเก็บเงิน"
+
+#: includes/integrations/class-woocommerce-integration.php:127
+msgid "Billing Last Name"
+msgstr "นามสกุลสำหรับการเรียกเก็บเงิน"
+
+#: includes/integrations/class-woocommerce-integration.php:131
+msgid "Billing Company"
+msgstr "บริษัทสำหรับการเรียกเก็บเงิน"
+
+#: includes/integrations/class-woocommerce-integration.php:135
+msgid "Billing Address 1"
+msgstr "ที่อยู่สำหรับการเรียกเก็บเงิน 1"
+
+#: includes/integrations/class-woocommerce-integration.php:139
+msgid "Billing Address 2"
+msgstr "ที่อยู่สำหรับการเรียกเก็บเงิน 2"
+
+#: includes/integrations/class-woocommerce-integration.php:143
+msgid "Billing City"
+msgstr "เมืองสำหรับการเรียกเก็บเงิน"
+
+#: includes/integrations/class-woocommerce-integration.php:147
+msgid "Billing Postcode"
+msgstr "รหัสไปรษณีย์สำหรับการเรียกเก็บเงิน"
+
+#: includes/integrations/class-woocommerce-integration.php:151
+msgid "Billing State"
+msgstr "รัฐสำหรับการเรียกเก็บเงิน"
+
+#: includes/integrations/class-woocommerce-integration.php:155
+msgid "Billing Country"
+msgstr "ประเทศสำหรับการเรียกเก็บเงิน"
+
+#: includes/integrations/class-woocommerce-integration.php:159
+msgid "Billing Phone"
+msgstr "โทรศัพท์สำหรับการเรียกเก็บเงิน"
+
+#: includes/integrations/class-woocommerce-integration.php:163
+msgid "Billing Email"
+msgstr "อีเมลสำหรับการเรียกเก็บเงิน"
+
+#: includes/integrations/class-woocommerce-integration.php:167
+msgid "Shipping First Name"
+msgstr "ชื่อจริงสำหรับการจัดส่ง"
+
+#: includes/integrations/class-woocommerce-integration.php:171
+msgid "Shipping Last Name"
+msgstr "นามสกุลสำหรับการจัดส่ง"
+
+#: includes/integrations/class-woocommerce-integration.php:175
+msgid "Shipping Company"
+msgstr "บริษัทสำหรับการจัดส่ง"
+
+#: includes/integrations/class-woocommerce-integration.php:179
+msgid "Shipping Address 1"
+msgstr "ที่อยู่สำหรับการจัดส่ง 1"
+
+#: includes/integrations/class-woocommerce-integration.php:183
+msgid "Shipping Address 2"
+msgstr "ที่อยู่สำหรับการจัดส่ง 2"
+
+#: includes/integrations/class-woocommerce-integration.php:187
+msgid "Shipping City"
+msgstr "เมืองสำหรับการจัดส่ง"
+
+#: includes/integrations/class-woocommerce-integration.php:191
+msgid "Shipping Postcode"
+msgstr "รหัสไปรษณีย์สำหรับการจัดส่ง"
+
+#: includes/integrations/class-woocommerce-integration.php:195
+msgid "Shipping State"
+msgstr "รัฐสำหรับการจัดส่ง"
+
+#: includes/integrations/class-woocommerce-integration.php:199
+msgid "Shipping Country"
+msgstr "ประเทศสำหรับการจัดส่ง"
+
+#: includes/integrations/class-woocommerce-integration.php:214
+msgid "Total Order Count"
+msgstr "จำนวนคำสั่งซื้อทั้งหมด"
+
+#: includes/integrations/class-woocommerce-integration.php:218
+msgid "Total Amount Spent"
+msgstr "จำนวนเงินที่ใช้ทั้งหมด"
+
+#: includes/integrations/class-woocommerce-integration.php:222
+msgid "Last Order Date"
+msgstr "วันที่คำสั่งซื้อครั้งล่าสุด"
+
+#: includes/integrations/class-woocommerce-integration.php:226
+msgid "First Order Date"
+msgstr "วันที่คำสั่งซื้อครั้งแรก"
+
+#: includes/integrations/class-woocommerce-integration.php:230
+msgid "Average Order Value"
+msgstr "มูลค่าคำสั่งซื้อเฉลี่ย"
+
+#: includes/integrations/class-woocommerce-integration.php:234
+msgid "Order Notes"
+msgstr "หมายเหตุการสั่งซื้อ"
+
+#: includes/integrations/class-woocommerce-integration.php:264
+msgid "Sync guest checkout customers to SureContact (customers without WordPress accounts)"
+msgstr "ซิงค์ลูกค้าชำระเงินที่ไม่มีบัญชี WordPress ไปยัง SureContact"
+
+#: includes/integrations/class-woocommerce-integration.php:272
+msgid "Send order information to SureContact for revenue tracking"
+msgstr "ส่งข้อมูลการสั่งซื้อไปยัง SureContact เพื่อการติดตามรายได้"
+
+#: includes/integrations/class-woocommerce-integration.php:279
+msgid "Send refund information to SureContact"
+msgstr "ส่งข้อมูลการคืนเงินไปยัง SureContact"
+
+#: includes/integrations/class-woocommerce-integration.php:286
+msgid "Send cancellation information to SureContact when orders are cancelled"
+msgstr "ส่งข้อมูลการยกเลิกไปยัง SureContact เมื่อมีการยกเลิกคำสั่งซื้อ"
+
+#: includes/integrations/class-woocommerce-integration.php:294
+msgid "Auto-Tag Product Categories"
+msgstr "แท็กหมวดหมู่สินค้าอัตโนมัติ"
+
+#: includes/integrations/class-woocommerce-integration.php:295
+msgid "Automatically create and apply tags based on product category names when purchased"
+msgstr "สร้างและใช้แท็กโดยอัตโนมัติตามชื่อหมวดหมู่สินค้าขณะทำการซื้อ"
+
+#: includes/integrations/class-woocommerce-integration.php:301
+msgid "Auto-Tag Product Names"
+msgstr "แท็กชื่อสินค้าอัตโนมัติ"
+
+#: includes/integrations/class-woocommerce-integration.php:302
+msgid "Automatically create and apply tags based on product names when purchased"
+msgstr "สร้างและใช้แท็กโดยอัตโนมัติตามชื่อสินค้าขณะทำการซื้อ"
+
+#: includes/integrations/class-woocommerce-integration.php:308
+msgid "Auto-Tag Product SKUs"
+msgstr "แท็ก SKU สินค้าอัตโนมัติ"
+
+#: includes/integrations/class-woocommerce-integration.php:309
+msgid "Automatically create and apply tags based on product SKUs when purchased"
+msgstr "สร้างและใช้แท็กโดยอัตโนมัติตาม SKU สินค้าขณะทำการซื้อ"
+
+#: includes/integrations/class-woocommerce-integration.php:315
+msgid "Auto-Tag Prefix"
+msgstr "แท็กส่วนหน้าอัตโนมัติ"
+
+#: includes/integrations/class-woocommerce-integration.php:316
+msgid "Prefix to add to automatically generated tags (e.g., \"Purchased -\")"
+msgstr "ส่วนหน้าที่จะเพิ่มไปยังแท็กที่สร้างโดยอัตโนมัติ (เช่น \"ซื้อแล้ว -\")"
+
+#: includes/integrations/class-woocommerce-integration.php:322
+msgid "Product Review Tags"
+msgstr "แท็กรีวิวสินค้า"
+
+#: includes/integrations/class-woocommerce-integration.php:323
+msgid "Apply these tags when a customer leaves a product review"
+msgstr "ใช้แท็กเหล่านี้เมื่อมีลูกค้าแสดงความคิดเห็นรีวิวสินค้า"
+
+#. translators: %s: WooCommerce order status label.
+#: includes/integrations/class-woocommerce-integration.php:370
+#, php-format
+msgid "Order Status: %s"
+msgstr "สถานะการสั่งซื้อ: %s"
+
+#. translators: %s: WooCommerce order status label.
+#: includes/integrations/class-woocommerce-integration.php:374
+#, php-format
+msgid "Select lists to add contacts to when order status changes to %s."
+msgstr "เลือกห้องรายชื่อเพื่อลงชื่อเมื่อสถานะการสั่งซื้อเปลี่ยนเป็น %s."
+
+#: includes/integrations/class-woocommerce-integration.php:404
+msgid "Product Category"
+msgstr "หมวดหมู่สินค้า"
+
+#: includes/integrations/class-woocommerce-integration.php:567
+msgid "SureContact: Guest customer sync disabled."
+msgstr "SureContact: ปิดการซิงค์ลูกค้าผู้เข้าชม."
+
+#: includes/integrations/class-woocommerce-integration.php:574
+msgid "SureContact: Order tracked."
+msgstr "SureContact: ติดตามคำสั่งซื้อเรียบร้อย."
+
+#: includes/integrations/class-woocommerce-integration.php:645
+msgid "SureContact: No actions configured, contact not synced."
+msgstr "SureContact: ไม่มีการกำหนดการกระทำ ติดต่อไม่ซิงค์."
+
+#: includes/integrations/class-woocommerce-integration.php:669
+msgid "SureContact: Contact sync failed."
+msgstr "SureContact: การซิงค์ข้อมูลติดต่อล้มเหลว."
+
+#: includes/integrations/class-woocommerce-integration.php:682
+msgid "SureContact: Contact synced and lists/tags applied."
+msgstr "SureContact: ติดต่อถูกซิงค์และได้มีการใช้รายการ/แท็ก."
+
+#: includes/integrations/class-woocommerce-integration.php:2019
+#: includes/integrations/class-woocommerce-integration.php:2107
+msgid "All Product Categories"
+msgstr "หมวดหมู่สินค้าทั้งหมด"
+
+#: includes/integrations/class-woocommerce-order-sync.php:89
+msgid "Synchronize all WooCommerce orders and revenue data to SureContact"
+msgstr "ซิงโครไนซ์คำสั่งซื้อและข้อมูลรายได้ทั้งหมดของ WooCommerce ไปยัง SureContact"
+
+#: includes/integrations/class-wordpress-integration.php:63
+msgid "Sync WordPress users, registration, and profile updates"
+msgstr "ซิงค์ผู้ใช้ WordPress การลงทะเบียน และการอัปเดตโปรไฟล์"
+
+#: includes/integrations/class-wordpress-integration.php:786
+msgid "Page"
+msgstr "หน้า"
+
+#: includes/integrations/class-wordpress-integration.php:790
+msgid "Post"
+msgstr "โพสต์"
+
+#: includes/integrations/class-wordpress-integration.php:808
+msgid "Visited"
+msgstr "เยี่ยมชมแล้ว"
+
+#: includes/integrations/class-wordpress-integration.php:840
+msgid "All Pages"
+msgstr "หน้าทั้งหมด"
+
+#: includes/integrations/class-wordpress-integration.php:877
+msgid "All Posts"
+msgstr "โพสต์ทั้งหมด"
+
+#: includes/integrations/class-wordpress-user-sync.php:88
+msgid "Users"
+msgstr "ผู้ใช้"
+
+#: includes/integrations/class-wordpress-user-sync.php:89
+msgid "Synchronize all WordPress users to SureContact in the background"
+msgstr "ซิงโครไนซ์ผู้ใช้ WordPress ทั้งหมดไปยัง SureContact ในพื้นหลัง"
+
+#: includes/integrations/class-wordpress-user-sync.php:108
+msgid "No users found to sync"
+msgstr "ไม่พบผู้ใช้สำหรับซิงค์"
+
+#: includes/integrations/class-wpforms-integration.php:52
+msgid "Sync WPForms submissions with per-form field mapping"
+msgstr "ซิงค์การส่ง WPForms โดยการแมพฟิลด์ตามฟอร์ม"
+
+#. translators: %s: Error message from the sync process.
+#: includes/integrations/class-wpforms-integration.php:459
+#, php-format
+msgid "Error syncing form entry to SureContact: %s"
+msgstr "เกิดข้อผิดพลาดในการซิงค์ข้อมูลฟอร์มไปยัง SureContact: %s"
+
+#. translators: %s: Contact UUID.
+#: includes/integrations/class-wpforms-integration.php:466
+#, php-format
+msgid "Entry synced to SureContact (contact UUID: %s)"
+msgstr "ข้อมูลถูกซิงค์ไปยัง SureContact (UUID ติดต่อ: %s)"
+
+#: includes/traits/class-api-retry.php:179
+msgid "Cannot queue: missing data"
+msgstr "ไม่สามารถจัดคิวได้: ข้อมูลขาดหายไป"
+
+#. translators: %s: field name
+#: includes/traits/class-api-retry.php:194
+#, php-format
+msgid "Cannot queue: missing required field \"%s\""
+msgstr "ไม่สามารถจัดคิวได้: ฟิลด์ที่จำเป็นขาดหายไป \"%s\""
+
+#: includes/traits/class-api-retry.php:236
+msgid "Request queued for retry."
+msgstr "คำขอถูกจัดคิวสำหรับการลองใหม่."
+
+#: includes/traits/class-api-retry.php:245
+msgid "Failed to queue request for retry"
+msgstr "การจัดคิวคำขอล้มเหลวในการลองใหม่"
+
+#: includes/traits/class-api-retry.php:337
+msgid "Each call must have \"callback\" and \"queue_data\" keys"
+msgstr "แต่ละการเรียกต้องมีคีย์ \"callback\" และ \"queue_data\""
+
+#: includes/traits/class-api-retry.php:379
+msgid "Request queued for processing."
+msgstr "คำขอถูกจัดคิวสำหรับการประมวลผล."
+
+#: includes/traits/class-api-retry.php:386
+msgid "Request completed successfully."
+msgstr "คำขอเสร็จสมบูรณ์สำเร็จ."
+
+#: surecontact.php:456
+msgid "Access Dashboard"
+msgstr "เข้าถึงแดชบอร์ด"
+
+#: surecontact.php:457
+msgid "Get Started Now"
+msgstr "เริ่มต้นทันที"
+
+#: surecontact.php:488
+msgid "Rate our plugin"
+msgstr "ให้คะแนนปลั๊กอินของเรา"
+
+#: src/api/auth.js:50
+#: src/api/auth.js:62
+msgid "Unable to create your SureContact account."
+msgstr "ไม่สามารถสร้างบัญชี SureContact ของคุณได้."
+
+#: src/api/bulkSync.js:43
+#: src/api/bulkSync.js:47
+msgid "Failed to start sync job."
+msgstr "ล้มเหลวในการเริ่มต้นงานซิงค์."
+
+#: src/api/bulkSync.js:76
+#: src/api/bulkSync.js:80
+msgid "Failed to fetch job status."
+msgstr "ล้มเหลวในการดึงสถานะงาน."
+
+#: src/api/bulkSync.js:143
+#: src/api/bulkSync.js:147
+msgid "Failed to fetch recent jobs."
+msgstr "ล้มเหลวในการดึงงานล่าสุด."
+
+#: src/api/bulkSync.js:176
+#: src/api/bulkSync.js:180
+msgid "Failed to cancel job."
+msgstr "ล้มเหลวในการยกเลิกงาน."
+
+#: src/api/bulkSync.js:209
+#: src/api/bulkSync.js:215
+msgid "Failed to fetch available sync types."
+msgstr "ล้มเหลวในการดึงประเภทการซิงค์ที่มีอยู่."
+
+#: src/api/fieldMapping.js:39
+msgid "Invalid data received from server."
+msgstr "ข้อมูลไม่ถูกต้องจากเซิร์ฟเวอร์."
+
+#: src/api/fieldMapping.js:44
+msgid "Failed to fetch field mapping data."
+msgstr "ล้มเหลวในการดึงข้อมูลการแมพฟิลด์."
+
+#: src/api/fieldMapping.js:76
+#: src/api/fieldMapping.js:80
+#: src/components/CustomFieldSelect.jsx:68
+msgid "Failed to sync CRM fields."
+msgstr "ล้มเหลวในการซิงค์ฟิลด์ CRM."
+
+#: src/api/fieldMapping.js:157
+#: src/api/fieldMapping.js:162
+msgid "Failed to create custom field."
+msgstr "ล้มเหลวในการสร้างฟิลด์กำหนดเอง."
+
+#: src/api/integrations.js:38
+#: src/api/integrations.js:70
+#: src/api/integrations.js:105
+#: src/api/integrations.js:142
+#: src/api/integrations.js:174
+#: src/api/integrations.js:212
+#: src/api/integrations.js:245
+#: src/api/integrations.js:287
+#: src/api/integrations.js:340
+#: src/api/integrations.js:395
+#: src/api/integrations.js:465
+#: src/api/integrations.js:520
+#: src/api/integrations.js:573
+#: src/api/integrations.js:613
+#: src/api/integrations.js:645
+msgid "Invalid response from server"
+msgstr "การตอบสนองไม่ถูกต้องจากเซิร์ฟเวอร์"
+
+#: src/api/integrations.js:42
+#: src/api/integrations.js:109
+msgid "Failed to fetch integrations"
+msgstr "ล้มเหลวในการดึงการรวม"
+
+#: src/api/integrations.js:74
+msgid "Failed to fetch global settings integrations"
+msgstr "ล้มเหลวในการดึงการตั้งค่าการรวมระดับโลก"
+
+#: src/api/integrations.js:146
+#: src/hooks/useIntegrations.js:150
+msgid "Failed to toggle integration"
+msgstr "ไม่สามารถสลับการเชื่อมต่อได้"
+
+#: src/api/integrations.js:179
+msgid "Failed to fetch integration settings"
+msgstr "ไม่สามารถดึงการตั้งค่าการเชื่อมต่อได้"
+
+#: src/api/integrations.js:217
+msgid "Failed to save integration settings"
+msgstr "ไม่สามารถบันทึกการตั้งค่าการเชื่อมต่อได้"
+
+#: src/api/integrations.js:250
+msgid "Failed to fetch integration metadata"
+msgstr "ไม่สามารถดึงข้อมูลเมตาของการเชื่อมต่อได้"
+
+#: src/api/integrations.js:292
+msgid "Failed to fetch integration items"
+msgstr "ไม่สามารถดึงรายการการเชื่อมต่อได้"
+
+#: src/api/integrations.js:344
+msgid "Failed to fetch item fields"
+msgstr "ไม่สามารถดึงฟิลด์ของรายการได้"
+
+#: src/api/integrations.js:400
+msgid "Failed to fetch integration configuration"
+msgstr "ไม่สามารถดึงการกำหนดค่าการเชื่อมต่อได้"
+
+#: src/api/integrations.js:470
+msgid "Failed to save integration configuration"
+msgstr "ไม่สามารถบันทึกการกำหนดค่าการเชื่อมต่อได้"
+
+#: src/api/integrations.js:525
+msgid "Failed to update integration status"
+msgstr "ไม่สามารถอัปเดตสถานะการเชื่อมต่อได้"
+
+#: src/api/integrations.js:578
+msgid "Failed to delete integration configuration"
+msgstr "ไม่สามารถลบการกำหนดค่าการเชื่อมต่อได้"
+
+#: src/api/integrations.js:618
+msgid "Failed to activate plugin"
+msgstr "ไม่สามารถเปิดใช้งานปลั๊กอินได้"
+
+#: src/api/integrations.js:650
+msgid "Failed to fetch configured integrations"
+msgstr "ไม่สามารถดึงการเชื่อมต่อที่ตั้งค่าไว้ได้"
+
+#: src/api/listsAndTags.js:56
+#: src/api/listsAndTags.js:60
+msgid "Failed to fetch lists"
+msgstr "ไม่สามารถดึงรายการได้"
+
+#: src/api/listsAndTags.js:89
+#: src/api/listsAndTags.js:93
+msgid "Failed to fetch list"
+msgstr "ไม่สามารถดึงรายการได้"
+
+#: src/api/listsAndTags.js:126
+#: src/api/listsAndTags.js:130
+#: src/components/ListSelect.jsx:149
+msgid "Failed to create list"
+msgstr "ไม่สามารถสร้างรายการได้"
+
+#: src/api/listsAndTags.js:161
+#: src/api/listsAndTags.js:165
+msgid "Failed to update list"
+msgstr "ไม่สามารถอัปเดตรายการได้"
+
+#: src/api/listsAndTags.js:194
+#: src/api/listsAndTags.js:198
+msgid "Failed to delete list"
+msgstr "ไม่สามารถลบรายการได้"
+
+#: src/api/listsAndTags.js:229
+#: src/api/listsAndTags.js:233
+msgid "Failed to add contacts to list"
+msgstr "ไม่สามารถเพิ่มข้อมูลติดต่อในรายการได้"
+
+#: src/api/listsAndTags.js:264
+#: src/api/listsAndTags.js:268
+msgid "Failed to remove contacts from list"
+msgstr "ไม่สามารถลบข้อมูลติดต่อจากรายการได้"
+
+#: src/api/listsAndTags.js:299
+#: src/api/listsAndTags.js:303
+msgid "Failed to bulk attach lists"
+msgstr "ไม่สามารถแนบรายการจำนวนมากได้"
+
+#: src/api/listsAndTags.js:334
+#: src/api/listsAndTags.js:338
+msgid "Failed to bulk detach lists"
+msgstr "ไม่สามารถแยกรายการจำนวนมากได้"
+
+#: src/api/listsAndTags.js:384
+#: src/api/listsAndTags.js:388
+msgid "Failed to fetch tags"
+msgstr "ไม่สามารถดึงแท็กได้"
+
+#: src/api/listsAndTags.js:417
+#: src/api/listsAndTags.js:421
+msgid "Failed to fetch tag"
+msgstr "ไม่สามารถดึงแท็กได้"
+
+#: src/api/listsAndTags.js:454
+#: src/api/listsAndTags.js:458
+#: src/components/TagSelect.jsx:149
+msgid "Failed to create tag"
+msgstr "ไม่สามารถสร้างแท็กได้"
+
+#: src/api/listsAndTags.js:489
+#: src/api/listsAndTags.js:493
+msgid "Failed to update tag"
+msgstr "ไม่สามารถอัปเดตแท็กได้"
+
+#: src/api/listsAndTags.js:522
+#: src/api/listsAndTags.js:526
+msgid "Failed to delete tag"
+msgstr "ไม่สามารถลบแท็กได้"
+
+#: src/api/listsAndTags.js:557
+#: src/api/listsAndTags.js:561
+msgid "Failed to attach tags to contact"
+msgstr "ไม่สามารถแนบแท็กกับข้อมูลติดต่อได้"
+
+#: src/api/listsAndTags.js:592
+#: src/api/listsAndTags.js:596
+msgid "Failed to detach tags from contact"
+msgstr "ไม่สามารถแยกแท็กออกจากข้อมูลติดต่อได้"
+
+#: src/api/listsAndTags.js:627
+#: src/api/listsAndTags.js:631
+msgid "Failed to attach lists to contact"
+msgstr "ไม่สามารถแนบรายการกับข้อมูลติดต่อได้"
+
+#: src/api/listsAndTags.js:673
+#: src/api/listsAndTags.js:677
+msgid "Failed to bulk attach tags"
+msgstr "ไม่สามารถแนบแท็กจำนวนมากได้"
+
+#: src/api/listsAndTags.js:708
+#: src/api/listsAndTags.js:712
+msgid "Failed to bulk detach tags"
+msgstr "ล้มเหลวในการถอดแท็กแบบกลุ่ม"
+
+#: src/api/listsAndTags.js:743
+#: src/api/listsAndTags.js:747
+msgid "Failed to bulk sync tags"
+msgstr "ล้มเหลวในการซิงค์แท็กแบบกลุ่ม"
+
+#: src/api/listsAndTags.js:778
+#: src/api/listsAndTags.js:782
+msgid "Failed to sync lists and tags"
+msgstr "ล้มเหลวในการซิงค์รายชื่อและแท็ก"
+
+#: src/api/queue.js:17
+msgid "Invalid ID provided"
+msgstr "ID ที่ให้มาไม่ถูกต้อง"
+
+#: src/api/queue.js:24
+msgid "IDs array is required and must not be empty"
+msgstr "ต้องมีอาร์เรย์ของ ID และไม่ควรเป็นค่าว่าง"
+
+#: src/api/queue.js:49
+#: src/api/queue.js:54
+msgid "Failed to fetch logs"
+msgstr "ล้มเหลวในการดึงบันทึก"
+
+#: src/api/queue.js:70
+#: src/api/queue.js:75
+msgid "Failed to fetch stats"
+msgstr "ล้มเหลวในการดึงสถิติ"
+
+#: src/api/queue.js:92
+#: src/api/queue.js:97
+msgid "Failed to delete log"
+msgstr "ล้มเหลวในการลบบันทึก"
+
+#: src/api/queue.js:115
+#: src/api/queue.js:120
+#: src/hooks/useLogs.js:113
+msgid "Failed to delete logs"
+msgstr "ล้มเหลวในการลบบันทึก"
+
+#: src/api/queue.js:136
+#: src/api/queue.js:141
+#: src/hooks/useLogs.js:185
+msgid "Failed to clear logs"
+msgstr "ล้มเหลวในการล้างบันทึก"
+
+#: src/api/queue.js:159
+#: src/api/queue.js:164
+msgid "Failed to fetch queue logs"
+msgstr "ล้มเหลวในการดึงบันทึกคิว"
+
+#: src/api/queue.js:180
+#: src/api/queue.js:185
+msgid "Failed to fetch queue stats"
+msgstr "ล้มเหลวในการดึงสถิติของคิว"
+
+#: src/api/queue.js:202
+#: src/api/queue.js:207
+#: src/hooks/useLogs.js:89
+msgid "Failed to retry item"
+msgstr "ล้มเหลวในการลองอีกครั้งสำหรับรายการ"
+
+#: src/api/queue.js:223
+#: src/api/queue.js:228
+#: src/api/queue.js:246
+#: src/api/queue.js:251
+#: src/hooks/useLogs.js:137
+#: src/hooks/useLogs.js:161
+msgid "Failed to retry items"
+msgstr "ล้มเหลวในการลองอีกครั้งสำหรับรายการ"
+
+#: src/api/queue.js:268
+#: src/api/queue.js:273
+msgid "Failed to delete queue item"
+msgstr "ล้มเหลวในการลบรายการคิว"
+
+#: src/api/queue.js:291
+#: src/api/queue.js:296
+msgid "Failed to delete queue items"
+msgstr "ล้มเหลวในการลบรายการคิว"
+
+#: src/api/settings.js:48
+#: src/api/settings.js:52
+msgid "Failed to fetch settings"
+msgstr "ล้มเหลวในการดึงการตั้งค่า"
+
+#: src/api/settings.js:82
+#: src/api/settings.js:86
+#: src/hooks/useIntegrations.js:178
+#: src/screens/settings/Settings.jsx:35
+msgid "Failed to save settings"
+msgstr "ล้มเหลวในการบันทึกการตั้งค่า"
+
+#: src/App.jsx:71
+msgid "Authentication"
+msgstr "การพิสูจน์ตัวตน"
+
+#: src/App.jsx:106
+msgid "Syncing lists, tags, and custom fields…"
+msgstr "กำลังซิงค์รายชื่อ, แท็ก, และฟิลด์ที่กำหนดเอง…"
+
+#: src/App.jsx:113
+#: src/components/ListSelect.jsx:63
+#: src/components/ListSelect.jsx:67
+#: src/components/TagSelect.jsx:63
+#: src/components/TagSelect.jsx:67
+#: src/screens/settings/components/SettingsHeader.jsx:15
+#: src/screens/settings/components/SettingsHeader.jsx:19
+msgid "Lists and tags synced successfully!"
+msgstr "รายชื่อและแท็กซิงค์เสร็จสมบูรณ์!"
+
+#: src/App.jsx:131
+msgid "Custom fields synced successfully!"
+msgstr "ฟิลด์ที่กำหนดเองซิงค์เสร็จสมบูรณ์!"
+
+#: src/components/AuthPage.jsx:67
+msgid "Capture leads with forms"
+msgstr "ดึงลูกค้าด้วยฟอร์ม"
+
+#: src/components/AuthPage.jsx:68
+msgid "Beautiful popups, inline forms, and landing pages that convert WordPress visitors into subscribers."
+msgstr "แบบป๊อปอัปสวย ๆ, ฟอร์มในบรรทัด, และหน้าแลนดิ้งที่เปลี่ยนผู้เข้าชม WordPress ให้เป็นสมาชิก."
+
+#: src/components/AuthPage.jsx:72
+msgid "Don’t miss out"
+msgstr "อย่าพลาด"
+
+#: src/components/AuthPage.jsx:73
+msgid "Subscribe to get our weekly drops & member-only deals."
+msgstr "สมัครสมาชิกเพื่อรับข่าวสารรายสัปดาห์ & ข้อเสนอเฉพาะสมาชิก."
+
+#: src/components/AuthPage.jsx:81
+msgid "Send campaigns that land"
+msgstr "ส่งแคมเปญที่ส่งผล"
+
+#: src/components/AuthPage.jsx:82
+msgid "Drag-and-drop email editor with 60+ templates. Send broadcasts, newsletters, and product updates."
+msgstr "โปรแกรมแก้ไขอีเมลแบบลากแล้วปล่อยพร้อมเทมเพลตมากกว่า 60 แบบ. ส่งการออกอากาศ, จดหมายข่าว, และการปรับปรุงผลิตภัณฑ์."
+
+#: src/components/AuthPage.jsx:87
+msgid "New drop"
+msgstr "ดรอปใหม่"
+
+#: src/components/AuthPage.jsx:93
+msgid "Cart back"
+msgstr "กลับไปที่รถเข็น"
+
+#: src/components/AuthPage.jsx:99
+#: src/components/AuthPage.jsx:117
+msgid "Welcome"
+msgstr "ยินดีต้อนรับ"
+
+#: src/components/AuthPage.jsx:107
+msgid "Automate your workflow"
+msgstr "อัตโนมัติการทำงานของคุณ"
+
+#: src/components/AuthPage.jsx:108
+msgid "Welcome series, abandoned carts, post-purchase follow-ups — running on autopilot."
+msgstr "ชุดการต้อนรับ, รถเข็นที่ถูกทิ้ง, การติดตามหลังการซื้อ — ทำงานในโหมดอัตโนมัติ."
+
+#: src/components/AuthPage.jsx:113
+msgid "Signup"
+msgstr "ลงทะเบียน"
+
+#: src/components/AuthPage.jsx:121
+msgid "Wait 3d"
+msgstr "รอ 3 วัน"
+
+#: src/components/AuthPage.jsx:125
+msgid "Offer"
+msgstr "ข้อเสนอ"
+
+#: src/components/AuthPage.jsx:131
+msgid "Built-in lightweight CRM"
+msgstr "CRM น้ำหนักเบาในตัว"
+
+#: src/components/AuthPage.jsx:132
+msgid "Custom fields, tags, segments and a full activity timeline for every contact you collect."
+msgstr "ฟิลด์ที่กำหนดเอง, แท็ก, เซ็กเมนต์ และไทม์ไลน์กิจกรรมเต็มรูปแบบสำหรับผู้ติดต่อแต่ละคนที่คุณรวบรวม."
+
+#: src/components/AuthPage.jsx:154
+msgid "E-commerce integration"
+msgstr "การรวม E-commerce"
+
+#: src/components/AuthPage.jsx:155
+msgid "Seamlessly integrate with WooCommerce, SureCart, and Easy Digital Downloads for complete customer insights."
+msgstr "รวมเข้าอย่างไร้รอยต่อกับ WooCommerce, SureCart, และ Easy Digital Downloads เพื่อข้อมูลลูกค้าอย่างครบถ้วน."
+
+#: src/components/AuthPage.jsx:189
+msgid "Secure & GDPR-ready"
+msgstr "ปลอดภัย & พร้อม GDPR"
+
+#: src/components/AuthPage.jsx:190
+msgid "OAuth-based auth, encrypted connections, double opt-in, and full consent management built in."
+msgstr "การรับรองตัวตนที่ใช้ OAuth, การเชื่อมต่อที่เข้ารหัส, การยืนยันสองขั้นตอน, และการจัดการความยินยอมเต็มรูปแบบในตัว."
+
+#: src/components/AuthPage.jsx:212
+msgid "Authentication failed"
+msgstr "การยืนยันตัวตนล้มเหลว"
+
+#: src/components/AuthPage.jsx:213
+msgid "Please try again. If the problem persists, contact support."
+msgstr "โปรดลองอีกครั้ง หากปัญหายังมีอยู่ กรุณาติดต่อฝ่ายสนับสนุน."
+
+#: src/components/AuthPage.jsx:232
+msgid "Email marketing & CRM "
+msgstr "การตลาดทางอีเมล & CRM "
+
+#: src/components/AuthPage.jsx:233
+msgid "built for WordPress"
+msgstr "สร้างขึ้นสำหรับ WordPress"
+
+#: src/components/AuthPage.jsx:236
+msgid "Turn your WordPress visitors into customers. Capture leads with forms, sync contacts in real-time, and send beautiful campaigns — all without leaving your dashboard."
+msgstr "เปลี่ยนผู้เข้าชม WordPress ของคุณให้เป็นลูกค้า จับข้อมูลเมลด้วยฟอร์ม, ซิงค์ผู้ติดต่อแบบเรียลไทม์ และส่งแคมเปญที่สวยงาม — ทั้งหมดนี้โดยไม่ต้องออกจากแดชบอร์ดของคุณ."
+
+#: src/components/AuthPage.jsx:245
+msgid "Already have an account?"
+msgstr "คุณมีบัญชีอยู่แล้วหรือไม่?"
+
+#: src/components/AuthPage.jsx:247
+msgid "Sign in"
+msgstr "เข้าสู่ระบบ"
+
+#: src/components/AuthPage.jsx:258
+#: src/screens/dashboard/Dashboard.jsx:274
+msgid "SureContact overview video"
+msgstr "วิดีโอภาพรวม SureContact"
+
+#: src/components/AuthPage.jsx:271
+msgid "Features"
+msgstr "ฟีเจอร์"
+
+#: src/components/AuthPage.jsx:274
+msgid "What if email marketing was "
+msgstr "ถ้าการตลาดทางอีเมลคือ "
+
+#: src/components/AuthPage.jsx:275
+msgid "actually easy"
+msgstr "ง่ายจริงๆ"
+
+#: src/components/AuthPage.jsx:276
+msgid "?"
+msgstr "?"
+
+#: src/components/AuthPage.jsx:279
+msgid "SureContact gives you everything you need to grow a list, send beautiful emails, and automate your follow-ups — natively inside WordPress."
+msgstr "SureContact ให้คุณทุกสิ่งที่คุณต้องการในการเติบโตของรายชื่อ ส่งอีเมลที่สวยงาม และทำให้การติดตามอัตโนมัติ — ภายใน WordPress."
+
+#: src/components/AuthPage.jsx:311
+msgid "Get started in minutes"
+msgstr "เริ่มต้นในไม่กี่นาที"
+
+#: src/components/AuthPage.jsx:314
+msgid "How it works"
+msgstr "วิธีการทำงาน"
+
+#: src/components/AuthPage.jsx:317
+msgid "From plugin activation to your first campaign — three steps, no friction."
+msgstr "จากการเปิดใช้งานปลั๊กอินจนถึงแคมเปญแรกของคุณ — สามขั้นตอน ไม่มีความยุ่งยาก."
+
+#: src/components/AuthPage.jsx:324
+msgid "Confirm your details"
+msgstr "ยืนยันรายละเอียดของคุณ"
+
+#: src/components/AuthPage.jsx:325
+msgid "Your name, email, and site URL are auto-filled from WordPress. Just confirm and continue — no signup form to fight with."
+msgstr "ชื่อ, อีเมล, และ URL ของไซต์ของคุณจะถูกกรอกอัตโนมัติจาก WordPress เพียงแค่ยืนยันและดำเนินการต่อ — ไม่มีฟอร์มลงทะเบียนให้ต่อสู้."
+
+#: src/components/AuthPage.jsx:328
+msgid "Sync your contacts"
+msgstr "ซิงค์ผู้ติดต่อของคุณ"
+
+#: src/components/AuthPage.jsx:329
+msgid "SureContact pulls in existing WP users, WooCommerce customers, and form submissions automatically. Two-way sync keeps everything fresh."
+msgstr "SureContact ดึงข้อมูลผู้ใช้ WP ที่มีอยู่ ลูกค้า WooCommerce และการส่งแบบฟอร์มโดยอัตโนมัติ การซิงค์สองทางช่วยให้ทุกอย่างสดใหม่"
+
+#: src/components/AuthPage.jsx:332
+msgid "Send your first campaign"
+msgstr "ส่งแคมเปญแรกของคุณ"
+
+#: src/components/AuthPage.jsx:333
+msgid "Pick a template, drag in a few blocks, hit send. Or set up a welcome automation that runs while you sleep."
+msgstr "เลือกเทมเพลต ลากบล็อกบางส่วน แล้วกดส่ง หรือ ตั้งค่าอัตโนมัติในการต้อนรับที่ทำงานขณะคุณนอนหลับ"
+
+#: src/components/AuthPage.jsx:362
+#: src/components/NavMenu.jsx:23
+#: src/screens/integrations/IntegrationsTableCard.jsx:1513
+msgid "Integrations"
+msgstr "การรวมระบบ"
+
+#: src/components/AuthPage.jsx:365
+msgid "SureContact "
+msgstr "SureContact "
+
+#: src/components/AuthPage.jsx:366
+msgid "already works"
+msgstr "ทำงานอยู่แล้ว"
+
+#: src/components/AuthPage.jsx:367
+msgid " with your favorite WordPress plugins"
+msgstr " กับปลั๊กอิน WordPress ที่คุณชื่นชอบ"
+
+#: src/components/AuthPage.jsx:370
+msgid "Connect once. Sync everything. Out-of-the-box integrations with every major form, commerce, and theme plugin in the WordPress ecosystem."
+msgstr "เชื่อมต่อครั้งเดียว ซิงค์ทุกอย่าง การรวมระบบพร้อมใช้งานกับฟอร์มหลัก คอมเมิร์ซ และปลั๊กอินธีมทุกตัวในระบบนิเวศของ WordPress"
+
+#: src/components/AuthPage.jsx:396
+#, js-format
+msgid "+ %d more native integrations"
+msgstr "+ %d การรวมระบบพื้นเมืองเพิ่มเติม"
+
+#: src/components/AuthPage.jsx:408
+msgid "Testimonials"
+msgstr "คำรับรอง"
+
+#: src/components/AuthPage.jsx:411
+msgid "Trusted by WordPress teams worldwide"
+msgstr "ได้รับความไว้วางใจจากทีม WordPress ทั่วโลก"
+
+#: src/components/AuthPage.jsx:414
+msgid "Over 12M+ sites use Brainstorm Force plugins to ship faster."
+msgstr "มากกว่า 12 ล้านเว็บไซต์ใช้ปลั๊กอิน Brainstorm Force เพื่อส่งมอบเร็วขึ้น"
+
+#: src/components/AuthPage.jsx:422
+#: src/components/AuthPage.jsx:440
+msgid "SureContact User"
+msgstr "ผู้ใช้ SureContact"
+
+#: src/components/AuthPage.jsx:423
+msgid "SureContact is on another level. I love that the heavy lifting happens outside WordPress, and the connector syncing multiple sites into one dashboard is exactly what I needed. I’ve finally ditched MailerLite."
+msgstr "SureContact อยู่ในระดับที่แตกต่างออกไป ฉันรักที่งานที่ต้องการแรงงานหนักเกิดขึ้นนอก WordPress และการเชื่อมต่อซิงค์หลายไซต์เข้าสู่แดชบอร์ดเดียวคือสิ่งที่ฉันต้องการจริงๆ ฉันในที่สุดก็เลิกใช้ MailerLite"
+
+#: src/components/AuthPage.jsx:428
+msgid "Founder, Hillman Academy"
+msgstr "ผู้ก่อตั้ง Hillman Academy"
+
+#: src/components/AuthPage.jsx:429
+msgid "You guys are the GOAT! The speed of implementation is unchallenged to any other software provider I’ve ever used. Simply Amazing! Thanks, I’ll get started with setting everything up using Mailersend now."
+msgstr "พวกคุณคือ GOAT! ความเร็วในการดำเนินการไม่มีใครเทียบได้กับผู้ให้บริการซอฟต์แวร์อื่น ๆ ที่ฉันเคยใช้ ช่างเหลือเชื่อ! ขอบคุณ ฉันจะเริ่มตั้งค่าทุกอย่างโดยใช้ Mailersend เดี๋ยวนี้"
+
+#: src/components/AuthPage.jsx:434
+msgid "Founder, EDITO Sarl"
+msgstr "ผู้ก่อตั้ง EDITO Sarl"
+
+#: src/components/AuthPage.jsx:435
+msgid "Incredibly fast and responsive support. List-Unsubscribe and List-Unsubscribe-Post headers were implemented immediately, and everything worked perfectly in testing."
+msgstr "การสนับสนุนที่รวดเร็วและตอบสนองอย่างไม่น่าเชื่อ Header List-Unsubscribe และ List-Unsubscribe-Post ถูกนำไปใช้ทันที และทุกอย่างทำงานได้อย่างสมบูรณ์แบบในการทดสอบ"
+
+#: src/components/AuthPage.jsx:441
+msgid "SureContact’s connector-based implementation is way better than MailerPress. No comparison."
+msgstr "การนำไปใช้งานที่อิงจากการเชื่อมต่อของ SureContact ดีกว่า MailerPress มาก ไม่มีการเปรียบเทียบ"
+
+#: src/components/AuthPage.jsx:446
+msgid "Demo Queen"
+msgstr "Demo Queen"
+
+#: src/components/AuthPage.jsx:447
+msgid "I expected SureContact to be a nice-to-have. 67 minutes later, I loved it. It feels like OttoKit’s answer to email."
+msgstr "ฉันคาดว่า SureContact จะเป็นสิ่งที่น่ามีใช้ 67 นาทีต่อมา ฉันชอบมัน มันรู้สึกเหมือนคำตอบของ OttoKit ต่ออีเมล"
+
+#: src/components/AuthPage.jsx:453
+msgid "Does exactly what it promises. The focus is squarely on conversion and user experience. The team behind the plugin consistently proves they understand entrepreneurial needs, and their support is top-tier."
+msgstr "ทำสิ่งที่สัญญาอย่างแม่นยำ จุดสนใจอยู่ที่การเปลี่ยนแปลงและประสบการณ์ผู้ใช้ ทีมงานเบื้องหลังปลั๊กอินนี้พิสูจน์อยู่เสมอว่าพวกเขาเข้าใจความต้องการของผู้ประกอบการ และการสนับสนุนของพวกเขาอยู่ในระดับสูงสุด"
+
+#: src/components/AuthPage.jsx:489
+msgid "Trusted by 12M+ businesses"
+msgstr "ได้รับความไว้วางใจจากธุรกิจมากกว่า 12 ล้านแห่ง"
+
+#: src/components/AuthPage.jsx:500
+msgid "Ready to grow your list?"
+msgstr "พร้อมที่จะเติบโตในรายการของคุณหรือยัง?"
+
+#: src/components/AuthPage.jsx:503
+msgid "Join 12M+ WordPress sites already using SureContact to capture, nurture, and convert their visitors."
+msgstr "เข้าร่วมเว็บไซต์ WordPress กว่า 12 ล้านแห่งที่กำลังใช้ SureContact เพื่อดึงดูด ให้การดูแล และเปลี่ยนผู้เข้าชมของพวกเขา"
+
+#: src/components/AuthPage.jsx:508
+msgid "Get started"
+msgstr "เริ่มต้น"
+
+#: src/components/ConfigFields.jsx:127
+#: src/screens/integrations/IntegrationSettings.jsx:231
+msgid "Select an option"
+msgstr "เลือกตัวเลือก"
+
+#: src/components/ConfigFields.jsx:205
+#: src/components/ConfigFields.jsx:370
+#: src/components/ListSelect.jsx:41
+#: src/screens/integrations/IntegrationSettings.jsx:341
+msgid "Select lists…"
+msgstr "เลือกรายการ…"
+
+#: src/components/ConfigFields.jsx:227
+#: src/components/ConfigFields.jsx:389
+#: src/components/TagSelect.jsx:41
+#: src/screens/integrations/IntegrationSettings.jsx:380
+msgid "Select tags…"
+msgstr "เลือกแท็ก…"
+
+#: src/components/ConfigFields.jsx:293
+msgid "Add"
+msgstr "เพิ่ม"
+
+#: src/components/ConfigFields.jsx:299
+msgid "No items added yet. Click \"Add\" to create your first entry."
+msgstr "ไม่มีรายการที่เพิ่มเข้ามา คลิก \"เพิ่ม\" เพื่อสร้างรายการแรกของคุณ."
+
+#. translators: %d: item number
+#: src/components/ConfigFields.jsx:310
+#, js-format
+msgid "Item %d"
+msgstr "รายการ %d"
+
+#: src/components/ConfigFields.jsx:318
+msgid "Remove item"
+msgstr "ลบรายการ"
+
+#. translators: 1: field label, 2: item number
+#: src/components/ConfigFields.jsx:371
+#: src/components/ConfigFields.jsx:390
+#, js-format
+msgid "%1$s for item %2$d"
+msgstr "%1$s สำหรับรายการ %2$d"
+
+#: src/components/ConfigFields.jsx:421
+msgid "No form fields available to map"
+msgstr "ไม่มีฟิลด์แบบฟอร์มให้แมป"
+
+#: src/components/ConfigFields.jsx:427
+msgid "Form Field"
+msgstr "ฟิลด์แบบฟอร์ม"
+
+#: src/components/ConfigFields.jsx:430
+msgid "CRM Field"
+msgstr "ฟิลด์ CRM"
+
+#. translators: %s: form field label
+#. translators: %s: field label
+#: src/components/ConfigFields.jsx:464
+#: src/screens/integrations/IntegrationSettings.jsx:491
+#, js-format
+msgid "Select CRM field for %s"
+msgstr "เลือกฟิลด์ CRM สำหรับ %s"
+
+#: src/components/ConfigFields.jsx:489
+msgid "No configuration required."
+msgstr "ไม่ต้องการการกำหนดค่า."
+
+#: src/components/CreateCustomFieldForm.jsx:15
+msgid "Text"
+msgstr "ข้อความ"
+
+#: src/components/CreateCustomFieldForm.jsx:16
+msgid "Number"
+msgstr "หมายเลข"
+
+#: src/components/CreateCustomFieldForm.jsx:17
+msgid "Date"
+msgstr "วันที่"
+
+#: src/components/CreateCustomFieldForm.jsx:18
+msgid "Timestamp"
+msgstr "เวลาที่ระบุ"
+
+#: src/components/CreateCustomFieldForm.jsx:20
+msgid "URL"
+msgstr "URL"
+
+#: src/components/CreateCustomFieldForm.jsx:22
+msgid "Dropdown"
+msgstr "ดรอปดาวน์"
+
+#: src/components/CreateCustomFieldForm.jsx:23
+msgid "Multi-Select"
+msgstr "มัลติ-เซลект"
+
+#: src/components/CreateCustomFieldForm.jsx:24
+msgid "Checkbox"
+msgstr "เช็คบ็อกซ์"
+
+#: src/components/CreateCustomFieldForm.jsx:25
+msgid "Text Area"
+msgstr "พื้นที่ข้อความ"
+
+#: src/components/CreateCustomFieldForm.jsx:144
+msgid "Field slug is required."
+msgstr "ต้องการ slug ฟิลด์."
+
+#: src/components/CreateCustomFieldForm.jsx:146
+msgid "Slug can only contain lowercase letters, numbers, and underscores."
+msgstr "Slug สามารถประกอบด้วยแค่ตัวอักษรตัวเล็ก, ตัวเลข, และตัวเชื่อมใต้."
+
+#: src/components/CreateCustomFieldForm.jsx:155
+msgid "At least one option is required."
+msgstr "ต้องมีอย่างน้อยหนึ่งตัวเลือก."
+
+#: src/components/CreateCustomFieldForm.jsx:209
+msgid "Field Label"
+msgstr "ป้ายฟิลด์"
+
+#: src/components/CreateCustomFieldForm.jsx:215
+msgid "e.g., Company Size"
+msgstr "เช่น ขนาดบริษัท"
+
+#: src/components/CreateCustomFieldForm.jsx:227
+msgid "Field Slug"
+msgstr "Slug ฟิลด์"
+
+#: src/components/CreateCustomFieldForm.jsx:233
+msgid "e.g., company_size"
+msgstr "เช่น ขนาดบริษัท"
+
+#: src/components/CreateCustomFieldForm.jsx:241
+msgid "Unique identifier for this field. Only lowercase letters, numbers, and underscores."
+msgstr "ตัวระบุที่เป็นเอกลักษณ์สำหรับฟิลด์นี้ มีเพียงตัวอักษรตัวเล็ก, ตัวเลข, และตัวเชื่อมใต้เท่านั้น."
+
+#: src/components/CreateCustomFieldForm.jsx:251
+msgid "Field Type"
+msgstr "ประเภทฟิลด์"
+
+#: src/components/CreateCustomFieldForm.jsx:269
+msgid "Required Field"
+msgstr "ฟิลด์ที่จำเป็น"
+
+#: src/components/CreateCustomFieldForm.jsx:272
+msgid "Make this field mandatory when creating contacts."
+msgstr "ทำให้ฟิลด์นี้เป็นฟิลด์บังคับเมื่อสร้างผู้ติดต่อ."
+
+#: src/components/CreateCustomFieldForm.jsx:280
+msgid "Mark field as required"
+msgstr "ทำให้ฟิลด์เป็นที่ต้องการ"
+
+#: src/components/CreateCustomFieldForm.jsx:287
+msgid "Options"
+msgstr "ตัวเลือก"
+
+#: src/components/CreateCustomFieldForm.jsx:296
+msgid "Option"
+msgstr "ตัวเลือก"
+
+#: src/components/CreateCustomFieldForm.jsx:309
+msgid "Remove option"
+msgstr "ลบตัวเลือก"
+
+#: src/components/CreateCustomFieldForm.jsx:323
+msgid "Add Option"
+msgstr "เพิ่มตัวเลือก"
+
+#: src/components/CreateCustomFieldForm.jsx:342
+#: src/screens/contact-fields/components/CreateCustomFieldDialog.jsx:65
+#: src/screens/dashboard/Dashboard.jsx:306
+#: src/screens/integrations/IntegrationSettings.jsx:553
+#: src/screens/integrations/IntegrationsTableCard.jsx:2094
+#: src/screens/logs/components/LogsHeader.jsx:92
+#: src/screens/logs/components/LogsHeader.jsx:130
+#: src/screens/logs/components/LogsTable.jsx:534
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:48
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#: src/components/CreateCustomFieldForm.jsx:351
+#: src/components/ListSelect.jsx:221
+#: src/components/TagSelect.jsx:221
+#: src/screens/contact-fields/components/CreateCustomFieldDialog.jsx:74
+#: src/screens/integrations/IntegrationsTableCard.jsx:2035
+msgid "Creating…"
+msgstr "กำลังสร้าง…"
+
+#: src/components/CreateCustomFieldForm.jsx:352
+#: src/screens/contact-fields/components/CreateCustomFieldDialog.jsx:75
+#: src/screens/integrations/IntegrationsTableCard.jsx:2036
+msgid "Create Field"
+msgstr "สร้างฟิลด์"
+
+#: src/components/CustomFieldSelect.jsx:46
+#: src/components/CustomFieldSelect.jsx:127
+msgid "Select Option"
+msgstr "เลือกตัวเลือก"
+
+#: src/components/CustomFieldSelect.jsx:47
+msgid "Search fields…"
+msgstr "ค้นหาฟิลด์…"
+
+#: src/components/CustomFieldSelect.jsx:48
+msgid "Select CRM field"
+msgstr "เลือกฟิลด์ CRM"
+
+#. translators: %s: last sync time
+#: src/components/CustomFieldSelect.jsx:63
+#: src/screens/contact-fields/FieldMappingTable.jsx:144
+#, js-format
+msgid "Last sync: %s"
+msgstr "ซิงค์ล่าสุด: %s"
+
+#: src/components/CustomFieldSelect.jsx:67
+#: src/screens/contact-fields/FieldMappingTable.jsx:148
+msgid "Error syncing fields"
+msgstr "ข้อผิดพลาดในการซิงค์ฟิลด์"
+
+#: src/components/CustomFieldSelect.jsx:133
+#: src/components/NavMenu.jsx:22
+msgid "Contact Fields"
+msgstr "ฟิลด์ติดต่อ"
+
+#: src/components/CustomFieldSelect.jsx:144
+msgid "Custom Fields"
+msgstr "ฟิลด์ที่กำหนดเอง"
+
+#: src/components/CustomFieldSelect.jsx:156
+#: src/components/ListSelect.jsx:183
+#: src/components/TagSelect.jsx:183
+#: src/screens/integrations/IntegrationsTableCard.jsx:1288
+msgid "Loading…"
+msgstr "กำลังโหลด…"
+
+#: src/components/CustomFieldSelect.jsx:163
+msgid "No fields found for"
+msgstr "ไม่พบฟิลด์สำหรับ"
+
+#: src/components/CustomFieldSelect.jsx:183
+#: src/components/ListSelect.jsx:222
+#: src/components/TagSelect.jsx:222
+msgid "Create"
+msgstr "สร้าง"
+
+#: src/components/CustomFieldSelect.jsx:184
+#: src/screens/contact-fields/components/CreateCustomFieldDialog.jsx:36
+#: src/screens/integrations/IntegrationsTableCard.jsx:1511
+msgid "Create Custom Field"
+msgstr "สร้างฟิลด์ที่กำหนดเอง"
+
+#: src/components/CustomFieldSelect.jsx:191
+#: src/components/CustomFieldSelect.jsx:196
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:55
+msgid "Pull Custom Fields"
+msgstr "ดึงฟิลด์ที่กำหนดเอง"
+
+#: src/components/ErrorBoundary.jsx:61
+msgid "Something went wrong"
+msgstr "เกิดข้อผิดพลาดบางอย่าง"
+
+#: src/components/ErrorBoundary.jsx:64
+msgid "We're sorry, but something unexpected happened. Please try refreshing the page."
+msgstr "เราขอโทษ แต่เกิดข้อผิดพลาดที่ไม่ได้คาดคิดขึ้น กรุณาลองรีเฟรชหน้า."
+
+#: src/components/ErrorBoundary.jsx:72
+#: src/components/ErrorBoundary.jsx:160
+msgid "Try Again"
+msgstr "ลองอีกครั้ง"
+
+#: src/components/ErrorBoundary.jsx:78
+msgid "Reload Page"
+msgstr "รีโหลดหน้า"
+
+#: src/components/ErrorBoundary.jsx:86
+msgid "Error Details (Development Mode)"
+msgstr "รายละเอียดข้อผิดพลาด (โหมดพัฒนา)"
+
+#: src/components/ErrorBoundary.jsx:90
+msgid "Error:"
+msgstr "ข้อผิดพลาด:"
+
+#: src/components/ErrorBoundary.jsx:97
+msgid "Component Stack:"
+msgstr "สแต็กส่วนประกอบ:"
+
+#. translators: %s: page title
+#: src/components/ErrorBoundary.jsx:136
+#, js-format
+msgid "There was an error loading the %s page. Please try refreshing the page."
+msgstr "เกิดข้อผิดพลาดในการโหลดหน้า %s กรุณาลองรีเฟรชหน้า."
+
+#: src/components/ErrorBoundary.jsx:144
+msgid "Oops! Something went wrong"
+msgstr "อุ๊บส์! เกิดข้อผิดพลาดบางอย่าง"
+
+#. translators: %s: page title
+#: src/components/ErrorBoundary.jsx:147
+#, js-format
+msgid "We encountered an error while loading the %s page. This might be a temporary issue."
+msgstr "เราพบข้อผิดพลาดขณะโหลดหน้า %s อาจเป็นปัญหาชั่วคราว."
+
+#: src/components/ErrorBoundary.jsx:154
+#: src/components/ErrorBoundary.jsx:246
+msgid "Refresh Page"
+msgstr "รีเฟรชหน้า"
+
+#. translators: %s: component name
+#: src/components/ErrorBoundary.jsx:185
+#, js-format
+msgid "Error loading %s"
+msgstr "เกิดข้อผิดพลาดในการโหลด %s"
+
+#. translators: %s: component name
+#. translators: %s: data type
+#: src/components/ErrorBoundary.jsx:194
+#: src/components/ErrorBoundary.jsx:228
+#, js-format
+msgid "Unable to load %s"
+msgstr "ไม่สามารถโหลด %s"
+
+#. translators: %s: component name
+#: src/components/ErrorBoundary.jsx:207
+#, js-format
+msgid "There was an error loading the %s. Please try again."
+msgstr "เกิดข้อผิดพลาดในการโหลด %s กรุณาลองอีกครั้ง."
+
+#. translators: %s: data type
+#: src/components/ErrorBoundary.jsx:222
+#, js-format
+msgid "Failed to load %s. Please check your connection and try again."
+msgstr "ไม่สามารถโหลด %s ได้ ตรวจสอบการเชื่อมต่อของคุณและลองอีกครั้ง."
+
+#. translators: %s: data type
+#: src/components/ErrorBoundary.jsx:230
+#, js-format
+msgid "We're having trouble loading the %s. This could be due to a network issue or server problem."
+msgstr "เรามีปัญหาในการโหลด %s อาจเกิดจากปัญหาเครือข่ายหรือเซิร์ฟเวอร์."
+
+#: src/components/ErrorBoundary.jsx:240
+#: src/screens/logs/components/LogsTable.jsx:302
+msgid "Retry"
+msgstr "ลองอีกครั้ง"
+
+#: src/components/ListSelect.jsx:42
+msgid "Search lists…"
+msgstr "ค้นหารายการ…"
+
+#: src/components/ListSelect.jsx:43
+msgid "Select lists"
+msgstr "เลือกแบบรายการ"
+
+#: src/components/ListSelect.jsx:71
+#: src/components/TagSelect.jsx:71
+#: src/screens/settings/components/SettingsHeader.jsx:23
+msgid "Error syncing lists and tags"
+msgstr "เกิดข้อผิดพลาดในการซิงค์รายการและแท็ก"
+
+#. translators: %s: list name
+#: src/components/ListSelect.jsx:145
+#, js-format
+msgid "List \"%s\" created successfully!"
+msgstr "รายการ \"%s\" ถูกสร้างสำเร็จแล้ว!"
+
+#: src/components/ListSelect.jsx:190
+msgid "No lists found for"
+msgstr "ไม่พบรายการสำหรับ"
+
+#: src/components/ListSelect.jsx:197
+msgid "No lists available"
+msgstr "ไม่มีรายการให้บริการ"
+
+#: src/components/ListSelect.jsx:229
+#: src/components/ListSelect.jsx:234
+#: src/components/TagSelect.jsx:229
+#: src/components/TagSelect.jsx:234
+#: src/screens/settings/components/SettingsHeader.jsx:63
+msgid "Sync Lists & Tags"
+msgstr "ซิงค์รายการ & แท็ก"
+
+#: src/components/NavMenu.jsx:24
+#: src/screens/sync-contacts/components/SyncContactsHeader.jsx:17
+msgid "Bulk Sync"
+msgstr "ซิงค์กลุ่ม"
+
+#: src/components/NavMenu.jsx:25
+msgid "Settings"
+msgstr "การตั้งค่า"
+
+#: src/components/NavMenu.jsx:26
+#: src/screens/logs/components/LogsHeader.jsx:23
+msgid "Logs"
+msgstr "บันทึก"
+
+#: src/components/NavMenu.jsx:146
+msgid "Open navigation menu"
+msgstr "เปิดเมนูนำทาง"
+
+#: src/components/NavMenu.jsx:167
+msgid "Go to dashboard"
+msgstr "ไปที่แดชบอร์ด"
+
+#: src/components/NavMenu.jsx:188
+msgid "Main navigation"
+msgstr "การนำทางหลัก"
+
+#. translators: %s: version number
+#: src/components/NavMenu.jsx:217
+#, js-format
+msgid "V %s"
+msgstr "V %s"
+
+#: src/components/SignupForm.jsx:22
+msgid "Account created!"
+msgstr "บัญชีถูกสร้างแล้ว!"
+
+#: src/components/SignupForm.jsx:23
+msgid "Connecting your site to SureContact…"
+msgstr "กำลังเชื่อมต่อเว็บไซต์ของคุณกับ SureContact…"
+
+#: src/components/SignupForm.jsx:33
+msgid "This email already has an account."
+msgstr "อีเมลนี้มีบัญชีอยู่แล้ว."
+
+#: src/components/SignupForm.jsx:34
+msgid "Use the “Sign in” link below to connect this site."
+msgstr "ใช้ลิงก์ “เข้าสู่ระบบ” ด้านล่างเพื่อเชื่อมต่อเว็บไซต์นี้."
+
+#: src/components/SignupForm.jsx:41
+msgid "We couldn’t reach your site to verify the install."
+msgstr "เราไม่สามารถเข้าถึงเว็บไซต์ของคุณเพื่อตรวจสอบการติดตั้ง."
+
+#: src/components/SignupForm.jsx:42
+msgid "Check that your site is publicly accessible and try again."
+msgstr "ตรวจสอบว่าเว็บไซต์ของคุณเข้าถึงได้สาธารณะและลองอีกครั้ง."
+
+#: src/components/SignupForm.jsx:49
+msgid "That email address isn’t valid."
+msgstr "ที่อยู่อีเมลนั้นไม่ถูกต้อง."
+
+#: src/components/SignupForm.jsx:57
+msgid "Too many attempts."
+msgstr "พยายามเกินไปหลายครั้ง."
+
+#: src/components/SignupForm.jsx:58
+msgid "Please wait a minute and try again."
+msgstr "โปรดรอสักครู่แล้วลองอีกครั้ง."
+
+#: src/components/SignupForm.jsx:64
+msgid "Something went wrong."
+msgstr "มีบางอย่างผิดพลาด"
+
+#: src/components/SignupForm.jsx:65
+msgid "Please try again."
+msgstr "โปรดลองอีกครั้ง"
+
+#: src/components/SignupForm.jsx:77
+msgid "First name is required."
+msgstr "จำเป็นต้องกรอกชื่อ"
+
+#: src/components/SignupForm.jsx:79
+#: src/components/SignupForm.jsx:85
+msgid "Must be 60 characters or fewer."
+msgstr "ต้องมีความยาวไม่เกิน 60 ตัวอักษร"
+
+#: src/components/SignupForm.jsx:83
+msgid "Last name is required."
+msgstr "จำเป็นต้องกรอกนามสกุล"
+
+#: src/components/SignupForm.jsx:89
+msgid "Email is required."
+msgstr "จำเป็นต้องกรอกอีเมล"
+
+#: src/components/SignupForm.jsx:91
+msgid "Enter a valid email address."
+msgstr "กรอกที่อยู่อีเมลที่ถูกต้อง"
+
+#: src/components/SignupForm.jsx:115
+msgid "First name"
+msgstr "ชื่อ"
+
+#: src/components/SignupForm.jsx:122
+msgid "e.g., Jane"
+msgstr "เช่น, เจน"
+
+#: src/components/SignupForm.jsx:132
+msgid "Last name"
+msgstr "นามสกุล"
+
+#: src/components/SignupForm.jsx:139
+msgid "e.g., Doe"
+msgstr "เช่น, โด"
+
+#: src/components/SignupForm.jsx:151
+msgid "Work email"
+msgstr "อีเมลทำงาน"
+
+#: src/components/SignupForm.jsx:159
+msgid "e.g., you@company.com"
+msgstr "เช่น, you@company.com"
+
+#: src/components/SignupForm.jsx:177
+msgid "Connecting…"
+msgstr "กำลังเชื่อมต่อ…"
+
+#: src/components/SignupForm.jsx:179
+msgid "Creating your account…"
+msgstr "กำลังสร้างบัญชีของคุณ…"
+
+#: src/components/SignupForm.jsx:180
+msgid "Create Account & Connect"
+msgstr "สร้างบัญชีและเชื่อมต่อ"
+
+#: src/components/TagSelect.jsx:42
+msgid "Search tags…"
+msgstr "กำลังค้นหาแท็ก…"
+
+#: src/components/TagSelect.jsx:43
+msgid "Select tags"
+msgstr "เลือกแท็ก"
+
+#. translators: %s: tag name
+#: src/components/TagSelect.jsx:145
+#, js-format
+msgid "Tag \"%s\" created successfully!"
+msgstr "แท็ก \"%s\" ถูกสร้างสำเร็จ!"
+
+#: src/components/TagSelect.jsx:190
+msgid "No tags found for"
+msgstr "ไม่พบแท็กสำหรับ"
+
+#: src/components/TagSelect.jsx:197
+msgid "No tags available"
+msgstr "ไม่มีแท็กที่ว่าง"
+
+#. translators: %s: integration name
+#: src/hooks/useIntegrations.js:124
+#, js-format
+msgid "Enabling %s…"
+msgstr "กำลังเปิดใช้งาน %s…"
+
+#. translators: %s: integration name
+#: src/hooks/useIntegrations.js:125
+#, js-format
+msgid "Disabling %s…"
+msgstr "กำลังปิดใช้งาน %s…"
+
+#: src/hooks/useIntegrations.js:132
+#: src/screens/integrations/IntegrationsTableCard.jsx:1230
+#: src/screens/integrations/IntegrationsTableCard.jsx:1501
+msgid "Integration"
+msgstr "การรวม"
+
+#. translators: %s: integration name
+#: src/hooks/useIntegrations.js:140
+#, js-format
+msgid "%s enabled successfully"
+msgstr "%s เปิดใช้งานสำเร็จ"
+
+#. translators: %s: integration name
+#: src/hooks/useIntegrations.js:141
+#, js-format
+msgid "%s disabled successfully"
+msgstr "%s ปิดใช้งานสำเร็จ"
+
+#: src/hooks/useIntegrations.js:175
+msgid "Settings saved successfully"
+msgstr "บันทึกการตั้งค่าเรียบร้อย"
+
+#: src/hooks/useLogs.js:84
+msgid "Item queued for retry"
+msgstr "รายการที่รอการลองใหม่"
+
+#: src/hooks/useLogs.js:108
+msgid "Logs deleted"
+msgstr "ลบบันทึก"
+
+#: src/hooks/useLogs.js:132
+msgid "Items queued for retry"
+msgstr "รายการที่รอการลองใหม่"
+
+#: src/hooks/useLogs.js:156
+msgid "All failed items queued for retry"
+msgstr "รายการที่ล้มเหลวทั้งหมดอยู่ในคิวสำหรับการลองใหม่"
+
+#: src/hooks/useLogs.js:180
+msgid "Logs cleared"
+msgstr "ล้างบันทึก"
+
+#: src/screens/contact-fields/components/CreateCustomFieldDialog.jsx:41
+#: src/screens/integrations/IntegrationsTableCard.jsx:1518
+msgid "Create a new custom field in your SureContact CRM."
+msgstr "สร้างฟิลด์กำหนดเองใหม่ใน SureContact CRM ของคุณ"
+
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:19
+msgid "Contact Fields Mapping"
+msgstr "การทำแผนที่ฟิลด์ติดต่อ"
+
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:24
+msgid "Configure field mappings between WordPress and SureContact"
+msgstr "กำหนดค่าการทำแผนที่ฟิลด์ระหว่าง WordPress และ SureContact"
+
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:40
+#: src/screens/integrations/components/NotesPopup.jsx:341
+#: src/screens/integrations/IntegrationSettings.jsx:564
+#: src/screens/integrations/IntegrationsTableCard.jsx:2052
+#: src/screens/settings/Settings.jsx:122
+msgid "Saving…"
+msgstr "กำลังบันทึก…"
+
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:40
+#: src/screens/integrations/IntegrationsTableCard.jsx:2053
+#: src/screens/settings/Settings.jsx:122
+msgid "Save Changes"
+msgstr "บันทึกการเปลี่ยนแปลง"
+
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:55
+#: src/screens/settings/components/SettingsHeader.jsx:63
+msgid "Syncing…"
+msgstr "กำลังซิงค์…"
+
+#. translators: %s: field label
+#: src/screens/contact-fields/components/FieldRow.jsx:56
+#: src/screens/contact-fields/components/FieldRow.jsx:119
+#, js-format
+msgid "Enable sync for %s"
+msgstr "เปิดใช้งานการซิงค์สำหรับ %s"
+
+#: src/screens/contact-fields/components/FieldRow.jsx:62
+msgid "Type:"
+msgstr "ประเภท:"
+
+#: src/screens/contact-fields/components/FieldRow.jsx:72
+msgid "SureContact Field:"
+msgstr "ฟิลด์ SureContact:"
+
+#. translators: %s: field label
+#: src/screens/contact-fields/components/FieldRow.jsx:78
+#: src/screens/contact-fields/components/FieldRow.jsx:110
+#, js-format
+msgid "Map %s to SureContact field"
+msgstr "ทำแผนที่ %s ไปยังฟิลด์ SureContact"
+
+#: src/screens/contact-fields/components/InfoBanner.jsx:16
+msgid "Field Mapping Guide"
+msgstr "คู่มือการทำแผนที่ฟิลด์"
+
+#: src/screens/contact-fields/components/InfoBanner.jsx:17
+msgid "Only fields that are marked as \"Active\" (Sync enabled) will be synchronized to your CRM. Map WordPress fields to corresponding CRM fields using the dropdowns below."
+msgstr "เฉพาะฟิลด์ที่ถูกทำเครื่องหมายว่า \"เปิดใช้งาน\" (เปิดใช้งานการซิงค์) จะถูกซิงค์ไปยัง CRM ของคุณ ทำแผนที่ฟิลด์ WordPress ไปยังฟิลด์ CRM ที่ตรงกันโดยใช้รายการแบบเลื่อนที่ด้านล่าง"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:62
+msgid "Error saving mappings"
+msgstr "เกิดข้อผิดพลาดในการบันทึกการทำแผนที่"
+
+#. translators: %s: field label
+#: src/screens/contact-fields/FieldMappingTable.jsx:114
+#: src/screens/integrations/IntegrationsTableCard.jsx:150
+#, js-format
+msgid "Field \"%s\" is now available."
+msgstr "ฟิลด์ \"%s\" ใช้งานได้แล้ว"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:134
+#: src/screens/integrations/IntegrationsTableCard.jsx:171
+msgid "Error creating custom field"
+msgstr "เกิดข้อผิดพลาดในการสร้างฟิลด์กำหนดเอง"
+
+#. translators: %s: field group title
+#: src/screens/contact-fields/FieldMappingTable.jsx:218
+#, js-format
+msgid "%s field mappings"
+msgstr "%s การทำแผนที่ฟิลด์"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:222
+msgid "WordPress Field"
+msgstr "ฟิลด์ WordPress"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:224
+#: src/screens/integrations/IntegrationsTableCard.jsx:1232
+msgid "Type"
+msgstr "ประเภท"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:226
+#: src/screens/integrations/IntegrationSettings.jsx:426
+msgid "SureContact Field"
+msgstr "ฟิลด์ SureContact"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:229
+msgid "Sync"
+msgstr "ซิงค์"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:301
+msgid "Error Loading Data"
+msgstr "เกิดข้อผิดพลาดในการโหลดข้อมูล"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:302
+msgid "Failed to load field mapping data. Please refresh the page and try again."
+msgstr "ไม่สามารถโหลดข้อมูลการทำแผนที่ฟิลด์ กรุณารีเฟรชหน้าและลองอีกครั้ง"
+
+#: src/screens/dashboard/Dashboard.jsx:45
+msgid "Disconnect failed"
+msgstr "การตัดการเชื่อมต่อล้มเหลว"
+
+#: src/screens/dashboard/Dashboard.jsx:49
+msgid "Disconnected"
+msgstr "ตัดการเชื่อมต่อ"
+
+#: src/screens/dashboard/Dashboard.jsx:50
+msgid "You have been disconnected."
+msgstr "คุณได้ถูกตัดการเชื่อมต่อ"
+
+#: src/screens/dashboard/Dashboard.jsx:58
+msgid "Disconnect Failed"
+msgstr "การตัดการเชื่อมต่อล้มเหลว"
+
+#: src/screens/dashboard/Dashboard.jsx:59
+msgid "Unable to disconnect"
+msgstr "ไม่สามารถตัดการเชื่อมต่อได้"
+
+#: src/screens/dashboard/Dashboard.jsx:71
+msgid "VIP Support"
+msgstr "การสนับสนุน VIP"
+
+#: src/screens/dashboard/Dashboard.jsx:76
+msgid "Help Center"
+msgstr "ศูนย์ช่วยเหลือ"
+
+#: src/screens/dashboard/Dashboard.jsx:81
+msgid "Join the Community"
+msgstr "เข้าร่วมชุมชน"
+
+#: src/screens/dashboard/Dashboard.jsx:86
+msgid "Rate Us"
+msgstr "ให้คะแนนเรา"
+
+#: src/screens/dashboard/Dashboard.jsx:106
+msgid "Welcome to SureContact"
+msgstr "ยินดีต้อนรับสู่ SureContact"
+
+#: src/screens/dashboard/Dashboard.jsx:111
+msgid "SureContact is a comprehensive CRM platform that helps you manage customer relationships and data effectively. Connect your WordPress site to centralize customer information, track interactions, and streamline your business operations."
+msgstr "SureContact เป็นแพลตฟอร์ม CRM ที่ครอบคลุมซึ่งช่วยให้คุณจัดการความสัมพันธ์และข้อมูลลูกค้าได้อย่างมีประสิทธิภาพ เชื่อมต่อเว็บไซต์ WordPress ของคุณเพื่อรวมศูนย์ข้อมูลลูกค้า ติดตามการติดต่อ และทำให้การดำเนินธุรกิจของคุณเป็นไปได้อย่างราบรื่น"
+
+#: src/screens/dashboard/Dashboard.jsx:116
+msgid "By visiting the CRM, you will be able to see all synced contacts and manage tags, lists, and custom fields. You can create beautiful campaigns and automations, along with many other features. Excited to get started? Please click the button below."
+msgstr "โดยการเยี่ยมชม CRM คุณจะสามารถดูรายชื่อผู้ติดต่อทั้งหมดที่ซิงค์และจัดการแท็ก รายการ และฟิลด์ที่กำหนดเอง คุณสามารถสร้างแคมเปญและการทำงานอัตโนมัติที่สวยงาม พร้อมกับคุณสมบัติอื่น ๆ อีกมากมาย ตื่นเต้นที่จะเริ่มใช้งาน? กรุณาคลิกปุ่มด้านล่าง"
+
+#: src/screens/dashboard/Dashboard.jsx:127
+msgid "Visit CRM"
+msgstr "ไปที่ CRM"
+
+#: src/screens/dashboard/Dashboard.jsx:136
+msgid "Read Full Guide"
+msgstr "อ่านคู่มือฉบับสมบูรณ์"
+
+#: src/screens/dashboard/Dashboard.jsx:148
+msgid "Watch SureContact overview video"
+msgstr "ดูวิดีโอแนะนำ SureContact"
+
+#: src/screens/dashboard/Dashboard.jsx:179
+msgid "Connection Status"
+msgstr "สถานะการเชื่อมต่อ"
+
+#: src/screens/dashboard/Dashboard.jsx:184
+msgid "Your site is connected to SureContact"
+msgstr "เว็บไซต์ของคุณเชื่อมต่อกับ SureContact"
+
+#: src/screens/dashboard/Dashboard.jsx:195
+msgid "Connected"
+msgstr "เชื่อมต่อแล้ว"
+
+#: src/screens/dashboard/Dashboard.jsx:196
+#: src/screens/dashboard/Dashboard.jsx:200
+#: src/screens/dashboard/Dashboard.jsx:314
+msgid "Disconnect"
+msgstr "ตัดการเชื่อมต่อ"
+
+#: src/screens/dashboard/Dashboard.jsx:228
+msgid "Quick Access"
+msgstr "การเข้าถึงด่วน"
+
+#: src/screens/dashboard/Dashboard.jsx:288
+msgid "Disconnect from SureContact?"
+msgstr "ต้องการตัดการเชื่อมต่อจาก SureContact หรือไม่?"
+
+#: src/screens/dashboard/Dashboard.jsx:292
+msgid "This will remove authentication and cached SureContact data from WordPress. You can reconnect anytime."
+msgstr "การทำเช่นนี้จะลบข้อมูลการตรวจสอบสิทธิ์และข้อมูล SureContact ที่เก็บไว้ในแคชจาก WordPress คุณสามารถเชื่อมต่อใหม่ได้ตลอดเวลา"
+
+#: src/screens/dashboard/Dashboard.jsx:297
+msgid "Are you sure you want to disconnect your WordPress site from SureContact? This action will remove all cached data and authentication tokens."
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการตัดการเชื่อมต่อเว็บไซต์ WordPress ของคุณจาก SureContact? การกระทำนี้จะลบข้อมูลที่เก็บไว้ในแคชทั้งหมดและโทเค็นการตรวจสอบสิทธิ์"
+
+#: src/screens/dashboard/Dashboard.jsx:314
+msgid "Disconnecting…"
+msgstr "กำลังตัดการเชื่อมต่อ…"
+
+#: src/screens/integrations/components/IntegrationNoticeBanner.jsx:33
+msgid "Important Note:"
+msgstr "หมายเหตุที่สำคัญ:"
+
+#: src/screens/integrations/components/IntegrationNoticeBanner.jsx:33
+msgid "Make sure to go to the Contact Fields tab first, match your plugin fields with the corresponding CRM fields, and mark them as Active. After completing this step, return here and then enable the additional settings below. If you do not complete this step, the settings below will not work as expected, and your contacts will not sync with the SureContact CRM."
+msgstr "โปรดแน่ใจว่าได้ไปที่แท็บฟิลด์ผู้ติดต่อก่อน ตรงกับฟิลด์ปลั๊กอินของคุณกับฟิลด์ CRM ที่สอดคล้องกันและทำเครื่องหมายเป็นเปิดใช้งาน หลังจากเสร็จสิ้นขั้นตอนนี้แล้ว ให้นกลับมาที่นี่แล้วเปิดใช้งานการตั้งค่าเพิ่มเติมด้านล่าง หากคุณไม่ทำตามขั้นตอนนี้ การตั้งค่าด้านล่างจะไม่ทำงานตามที่คาดหวัง และผู้ติดต่อของคุณจะไม่ซิงค์กับ CRM ของ SureContact"
+
+#: src/screens/integrations/components/IntegrationsHeader.jsx:19
+msgid "Plugin Integrations"
+msgstr "การรวมปลั๊กอิน"
+
+#: src/screens/integrations/components/IntegrationsHeader.jsx:24
+msgid "Manage integrations with WordPress plugins to sync data to SureContact"
+msgstr "จัดการการรวมเข้ากับปลั๊กอิน WordPress เพื่อซิงค์ข้อมูลกับ SureContact"
+
+#: src/screens/integrations/components/IntegrationsHeader.jsx:37
+msgid "Add Integration"
+msgstr "เพิ่มการรวม"
+
+#. translators: 1: event label, 2: item title
+#: src/screens/integrations/components/NotesPopup.jsx:53
+#: src/screens/integrations/IntegrationsTableCard.jsx:1708
+#: src/screens/integrations/IntegrationsTableCard.jsx:1731
+#, js-format
+msgid "On %1$s of %2$s"
+msgstr "บน %1$s จาก %2$s"
+
+#. translators: %s: color name
+#: src/screens/integrations/components/NotesPopup.jsx:259
+#, js-format
+msgid "Select %s color"
+msgstr "เลือกสี %s"
+
+#. translators: %s: color name
+#: src/screens/integrations/components/NotesPopup.jsx:291
+#, js-format
+msgid "Note color: %s. Click to change"
+msgstr "หมายเหตุสี: %s คลิกเพื่อเปลี่ยน"
+
+#: src/screens/integrations/components/NotesPopup.jsx:306
+msgid "Delete note"
+msgstr "ลบหมายเหตุ"
+
+#: src/screens/integrations/components/NotesPopup.jsx:314
+msgid "Close"
+msgstr "ปิด"
+
+#: src/screens/integrations/components/NotesPopup.jsx:325
+msgid "Add note here…"
+msgstr "เพิ่มหมายเหตุที่นี่…"
+
+#: src/screens/integrations/components/NotesPopup.jsx:341
+msgid "Save"
+msgstr "บันทึก"
+
+#: src/screens/integrations/IntegrationCard.jsx:63
+msgid "Enabled"
+msgstr "เปิดใช้งาน"
+
+#: src/screens/integrations/IntegrationCard.jsx:65
+#: src/screens/integrations/IntegrationsTableCard.jsx:1291
+msgid "Disabled"
+msgstr "ปิดใช้งาน"
+
+#: src/screens/integrations/IntegrationCard.jsx:68
+msgid "Not Installed"
+msgstr "ไม่ได้ติดตั้ง"
+
+#: src/screens/integrations/IntegrationCard.jsx:96
+msgid "Open documentation in new window"
+msgstr "เปิดเอกสารในหน้าต่างใหม่"
+
+#: src/screens/integrations/IntegrationCard.jsx:99
+msgid "Documentation"
+msgstr "เอกสาร"
+
+#. translators: 1: action label (Enable or Disable), 2: integration name
+#: src/screens/integrations/IntegrationCard.jsx:125
+#, js-format
+msgid "%1$s %2$s integration"
+msgstr "%1$s %2$s การรวม"
+
+#: src/screens/integrations/IntegrationCard.jsx:125
+msgid "Disable"
+msgstr "ปิดใช้งาน"
+
+#: src/screens/integrations/IntegrationCard.jsx:125
+msgid "Enable"
+msgstr "เปิดใช้งาน"
+
+#: src/screens/integrations/IntegrationCard.jsx:134
+#: src/screens/integrations/IntegrationCard.jsx:143
+msgid "Hide settings"
+msgstr "ซ่อนการตั้งค่า"
+
+#: src/screens/integrations/IntegrationCard.jsx:134
+#: src/screens/integrations/IntegrationCard.jsx:143
+msgid "Show settings"
+msgstr "แสดงการตั้งค่า"
+
+#: src/screens/integrations/Integrations.jsx:66
+msgid "Failed to load integrations"
+msgstr "ไม่สามารถโหลดการรวมได้"
+
+#: src/screens/integrations/IntegrationSettings.jsx:416
+msgid "Loading field mapping…"
+msgstr "กำลังโหลดการแมพฟิลด์…"
+
+#: src/screens/integrations/IntegrationSettings.jsx:422
+msgid "Plugin Field"
+msgstr "ฟิลด์ปลั๊กอิน"
+
+#: src/screens/integrations/IntegrationSettings.jsx:444
+#: src/screens/integrations/IntegrationSettings.jsx:489
+msgid "---Skip---"
+msgstr "---ข้าม---"
+
+#: src/screens/integrations/IntegrationSettings.jsx:488
+msgid "Select CRM field…"
+msgstr "เลือกฟิลด์ CRM…"
+
+#: src/screens/integrations/IntegrationSettings.jsx:507
+msgid "No fields available for mapping."
+msgstr "ไม่มีฟิลด์ให้แมพ."
+
+#: src/screens/integrations/IntegrationSettings.jsx:525
+msgid "No settings available for this integration."
+msgstr "ไม่มีการตั้งค่าให้สำหรับการรวมนี้."
+
+#: src/screens/integrations/IntegrationSettings.jsx:564
+msgid "Save Settings"
+msgstr "บันทึกการตั้งค่า"
+
+#: src/screens/integrations/IntegrationsList.jsx:19
+#: src/screens/integrations/IntegrationsList.jsx:77
+msgid "Global Settings"
+msgstr "การตั้งค่าทั่วไป"
+
+#: src/screens/integrations/IntegrationsList.jsx:60
+#: src/screens/integrations/IntegrationsTableCard.jsx:1579
+msgid "No integrations found"
+msgstr "ไม่พบการรวม"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:475
+msgid "Please select a type."
+msgstr "โปรดเลือกประเภท."
+
+#. translators: %s: item type
+#: src/screens/integrations/IntegrationsTableCard.jsx:481
+#, js-format
+msgid "Please select a %s to configure."
+msgstr "โปรดเลือก %s เพื่อตั้งค่า."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:481
+msgid "item"
+msgstr "รายการ"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:488
+msgid "Please select an event."
+msgstr "โปรดเลือกเหตุการณ์."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:494
+msgid "Please configure at least one action."
+msgstr "โปรดตั้งค่าการดำเนินการอย่างน้อยหนึ่งรายการ."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:548
+msgid "Integration configured successfully!"
+msgstr "การรวมตั้งค่าเรียบร้อยแล้ว!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:557
+msgid "Failed to save integration. Please try again."
+msgstr "ไม่สามารถบันทึกการรวมได้ โปรดลองอีกครั้ง."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:629
+msgid "Failed to load integration configuration."
+msgstr "ไม่สามารถโหลดการกำหนดค่าการรวมได้."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:656
+msgid "Configuration deleted successfully!"
+msgstr "ลบการกำหนดค่าเรียบร้อยแล้ว!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:689
+msgid "Failed to delete configuration. Please try again."
+msgstr "ไม่สามารถลบการกำหนดค่าได้ โปรดลองอีกครั้ง."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:772
+msgid "Title saved successfully!"
+msgstr "บันทึกชื่อตั้งเรียบร้อยแล้ว!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:781
+msgid "Failed to save title. Please try again."
+msgstr "บันทึกชื่อไม่สำเร็จ กรุณาลองใหม่อีกครั้ง."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:846
+msgid "Notes deleted successfully!"
+msgstr "ลบบันทึกเรียบร้อยแล้ว!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:852
+msgid "Failed to delete notes. Please try again."
+msgstr "ลบบันทึกไม่สำเร็จ กรุณาลองใหม่อีกครั้ง."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:896
+msgid "Notes saved successfully!"
+msgstr "บันทึกบันทึกเรียบร้อยแล้ว!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:905
+msgid "Failed to save notes. Please try again."
+msgstr "บันทึกบันทึกไม่สำเร็จ กรุณาลองใหม่อีกครั้ง."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:942
+#: src/screens/integrations/IntegrationsTableCard.jsx:1006
+msgid "Configuration not found"
+msgstr "ไม่พบการตั้งค่า"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:987
+msgid "Note saved successfully!"
+msgstr "บันทึกหมายเหตุเรียบร้อยแล้ว!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:994
+msgid "Failed to save note. Please try again."
+msgstr "บันทึกหมายเหตุไม่สำเร็จ กรุณาลองใหม่อีกครั้ง."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1038
+msgid "Note deleted successfully!"
+msgstr "ลบหมายเหตุเรียบร้อยแล้ว!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1043
+msgid "Failed to delete note. Please try again."
+msgstr "ลบหมายเหตุไม่สำเร็จ กรุณาลองใหม่อีกครั้ง."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1067
+msgid "Enabling integration…"
+msgstr "กำลังเปิดการใช้งานการเชื่อมต่อ…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1067
+msgid "Disabling integration…"
+msgstr "กำลังปิดการใช้งานการเชื่อมต่อ…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1079
+msgid "Integration enabled successfully!"
+msgstr "เปิดการใช้งานการเชื่อมต่อเรียบร้อยแล้ว!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1079
+msgid "Integration disabled successfully!"
+msgstr "ปิดการใช้งานการเชื่อมต่อเรียบร้อยแล้ว!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1085
+msgid "Failed to update integration status. Please try again."
+msgstr "อัปเดตสถานะการเชื่อมต่อไม่สำเร็จ กรุณาลองใหม่อีกครั้ง."
+
+#. translators: %s: plugin name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1094
+#: src/screens/integrations/IntegrationsTableCard.jsx:1290
+#, js-format
+msgid "Activating %s…"
+msgstr "กำลังเปิดใช้งาน %s…"
+
+#. translators: %s: plugin name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1099
+#, js-format
+msgid "%s activated successfully!"
+msgstr "%s เปิดใช้งานเรียบร้อยแล้ว!"
+
+#. translators: %s: plugin name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1109
+#, js-format
+msgid "Failed to activate %s."
+msgstr "เปิดใช้งาน %s ไม่สำเร็จ."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1231
+msgid "Configuration"
+msgstr "การตั้งค่า"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1233
+msgid "Event"
+msgstr "กิจกรรม"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1234
+msgid "Created On"
+msgstr "สร้างเมื่อ"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1235
+#: src/screens/logs/components/LogsTable.jsx:241
+msgid "Status"
+msgstr "สถานะ"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1236
+#: src/screens/logs/components/LogsTable.jsx:247
+msgid "Actions"
+msgstr "กิจกรรม"
+
+#. translators: %s: plugin name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1263
+#, js-format
+msgid "Click to activate %s"
+msgstr "คลิกเพื่อเปิดใช้งาน %s"
+
+#. translators: %s: plugin name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1269
+#, js-format
+msgid "Activate %s plugin"
+msgstr "เปิดใช้งานปลั๊กอิน %s"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1321
+msgid "Global Configuration"
+msgstr "การตั้งค่าแบบกลุ่ม"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1327
+msgid "Global"
+msgstr "ทั่วโลก"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1339
+msgid "N/A"
+msgstr "ไม่มีข้อมูล"
+
+#. translators: %s: integration name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1349
+#, js-format
+msgid "Disable %s integration"
+msgstr "ปิดการใช้งานการเชื่อมต่อ %s"
+
+#. translators: %s: integration name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1350
+#, js-format
+msgid "Enable %s integration"
+msgstr "เปิดใช้งานการรวม %s"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1360
+msgid "Edit Note"
+msgstr "แก้ไขหมายเหตุ"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1360
+msgid "Add Note"
+msgstr "เพิ่มหมายเหตุ"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1369
+msgid "Edit note"
+msgstr "แก้ไขหมายเหตุ"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1369
+msgid "Add note"
+msgstr "เพิ่มหมายเหตุ"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1382
+#: src/screens/integrations/IntegrationsTableCard.jsx:1391
+msgid "Edit integration"
+msgstr "แก้ไขการรวม"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1399
+#: src/screens/integrations/IntegrationsTableCard.jsx:1408
+msgid "Delete integration"
+msgstr "ลบการรวม"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1442
+msgid "No integrations yet"
+msgstr "ยังไม่มีการรวม"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1447
+msgid "Get started by adding your first integration to connect with your other plugins"
+msgstr "เริ่มต้นโดยการเพิ่มการรวมแรกของคุณเพื่อเชื่อมต่อกับปลั๊กอินอื่นของคุณ"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1489
+msgid "Go back"
+msgstr "กลับไป"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1514
+msgid "Configure Integration"
+msgstr "กำหนดค่า การรวม"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1520
+msgid "Select the integration you want to configure"
+msgstr "เลือกการรวมที่คุณต้องการกำหนดค่า"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1521
+msgid "Configure the integration settings"
+msgstr "กำหนดค่าการตั้งค่าการรวม"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1548
+msgid "Search integrations…"
+msgstr "ค้นหาการรวม…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1549
+msgid "Search integrations"
+msgstr "ค้นหาการรวม"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1559
+msgid "Clear search"
+msgstr "ลบการค้นหา"
+
+#. translators: %s: search query
+#: src/screens/integrations/IntegrationsTableCard.jsx:1578
+#, js-format
+msgid "No integrations found matching \"%s\""
+msgstr "ไม่พบการรวมที่ตรงกับ \"%s\""
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1588
+msgid "Active Plugins"
+msgstr "ปลั๊กอินที่ใช้งาน"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1632
+msgid "Inactive Plugins"
+msgstr "ปลั๊กอินที่ไม่ใช้งาน"
+
+#. translators: %s: integration name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1643
+#, js-format
+msgid "%s - This plugin is not installed or inactive"
+msgstr "%s - ปลั๊กอินนี้ไม่ได้ติดตั้งหรือไม่ใช้งาน"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1719
+msgid "Save title"
+msgstr "บันทึกชื่อ"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1739
+msgid "Edit title"
+msgstr "แก้ไขชื่อ"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1761
+msgid "Add notes here…"
+msgstr "เพิ่มหมายตรงนี้…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1774
+msgid "Delete notes"
+msgstr "ลบหมายเหตุ"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1781
+msgid "Save notes"
+msgstr "บันทึกหมายเหตุ"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1795
+msgid "Edit notes"
+msgstr "แก้ไขหมายเหตุ"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1810
+msgid "Select Type"
+msgstr "เลือกประเภท"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1823
+msgid "Select a type…"
+msgstr "เลือกประเภท…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1828
+msgid "Select type"
+msgstr "เลือกประเภท"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1842
+msgid "Select the type of item to configure."
+msgstr "เลือกประเภทของรายการที่จะกำหนดค่า."
+
+#. translators: %s: item type
+#: src/screens/integrations/IntegrationsTableCard.jsx:1851
+#: src/screens/integrations/IntegrationsTableCard.jsx:1868
+#, js-format
+msgid "Select %s"
+msgstr "เลือก %s"
+
+#. translators: 1: article (a/an), 2: item type
+#: src/screens/integrations/IntegrationsTableCard.jsx:1866
+#, js-format
+msgid "Select %1$s %2$s…"
+msgstr "เลือก %1$s %2$s…"
+
+#. translators: 1: item type (plural), 2: article (a/an), 3: item type, 4: integration name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1880
+#, js-format
+msgid "No %1$ss found. Please create %2$s %3$s in %4$s first."
+msgstr "ไม่พบ %1$ss กรุณาสร้าง %2$s %3$s ใน %4$s ก่อน"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1885
+msgid "Thank you pages only support the \"Started\" event since they represent the completion destination of a funnel. Email will be identified from: 1) URL parameter (billing_email, email), 2) CartFlows Pro session, 3) WooCommerce customer data, 4) Logged-in user. If no email can be identified, this rule will not trigger."
+msgstr "หน้าขอบคุณรองรับเฉพาะเหตุการณ์ \"เริ่ม\" เนื่องจากเป็นจุดหมายปลายทางสำหรับการเสร็จสิ้นของช่องทาง อีเมลจะถูกระบุจาก: 1) พารามิเตอร์ URL (billing_email, email) 2) เซสชัน CartFlows Pro 3) ข้อมูลลูกค้า WooCommerce 4) ผู้ใช้ที่เข้าสู่ระบบ หากไม่สามารถระบุอีเมลได้ กฎนี้จะไม่ทำงาน"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1898
+msgid "Select Event"
+msgstr "เลือกเหตุการณ์"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1909
+msgid "Select an event…"
+msgstr "เลือกเหตุการณ์…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1911
+msgid "Select event"
+msgstr "เลือกเหตุการณ์"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1936
+msgid "Select the event that will trigger these actions."
+msgstr "เลือกเหตุการณ์ที่จะกระตุ้นการดำเนินการเหล่านี้"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1964
+msgid "Title"
+msgstr "ชื่อ"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1964
+#: src/screens/integrations/IntegrationsTableCard.jsx:1982
+msgid "Optional"
+msgstr "สะดวก"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1969
+msgid "Enter a title for this rule"
+msgstr "ป้อนชื่อสำหรับกฎนี้"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1976
+msgid "Give this rule a descriptive title to easily identify it."
+msgstr "ให้ชื่อกฎนี้มีคำบรรยายเพื่อให้ง่ายต่อการระบุ"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1982
+msgid "Notes"
+msgstr "หมายเหตุ"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1986
+msgid "Add any notes or description for this rule"
+msgstr "เพิ่มหมายเหตุหรือคำอธิบายสำหรับกฎนี้"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1993
+msgid "Add notes to remember the purpose or details of this rule."
+msgstr "เพิ่มหมายเหตุเพื่อจดจำวัตถุประสงค์หรือรายละเอียดของกฎนี้"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2013
+msgid "No additional configuration available for this item."
+msgstr "ไม่มีการกำหนดค่าที่เพิ่มเติมสำหรับรายการนี้"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2068
+msgid "Delete Integration Configuration?"
+msgstr "ลบการกำหนดค่าการรวม?"
+
+#. translators: 1: configuration scope, 2: integration name
+#: src/screens/integrations/IntegrationsTableCard.jsx:2072
+#, js-format
+msgid "This will permanently remove the %1$s configuration for %2$s."
+msgstr "สิ่งนี้จะลบการกำหนดค่า %1$s สำหรับ %2$s อย่างถาวร"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2072
+msgid "global"
+msgstr "ทั่วโลก"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2078
+msgid "Are you sure you want to delete this configuration? This action cannot be undone and will remove all settings and disable the integration."
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบการกำหนดค่านี้? การดำเนินการนี้ไม่สามารถย้อนกลับได้และจะลบการตั้งค่าทั้งหมดและปิดการใช้งานการรวม"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2079
+msgid "Are you sure you want to delete this configuration? This action cannot be undone and will remove all settings."
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบการกำหนดค่านี้? การดำเนินการนี้ไม่สามารถย้อนกลับได้และจะลบการตั้งค่าทั้งหมด"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2083
+msgid "Configuration:"
+msgstr "การกำหนดค่า:"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2104
+#: src/screens/logs/components/LogsTable.jsx:549
+msgid "Deleting…"
+msgstr "กำลังลบ…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2104
+#: src/screens/logs/components/LogsTable.jsx:316
+#: src/screens/logs/components/LogsTable.jsx:549
+msgid "Delete"
+msgstr "ลบ"
+
+#: src/screens/logs/components/LogsFilter.jsx:12
+#: src/screens/logs/components/LogsFilter.jsx:41
+#: src/screens/logs/components/LogsFilter.jsx:44
+msgid "All Statuses"
+msgstr "สถานะทั้งหมด"
+
+#: src/screens/logs/components/LogsFilter.jsx:13
+#: src/screens/logs/components/LogsStats.jsx:39
+msgid "Success"
+msgstr "สำเร็จ"
+
+#: src/screens/logs/components/LogsFilter.jsx:14
+#: src/screens/logs/components/LogsStats.jsx:46
+#: src/screens/logs/components/LogsTable.jsx:358
+msgid "Error"
+msgstr "ข้อผิดพลาด"
+
+#: src/screens/logs/components/LogsFilter.jsx:15
+#: src/screens/logs/components/LogsStats.jsx:53
+#: src/screens/sync-contacts/JobHistory.jsx:24
+#: src/screens/sync-contacts/JobHistory.jsx:38
+#: src/screens/sync-contacts/JobProgress.jsx:113
+#: src/screens/sync-contacts/JobProgress.jsx:146
+msgid "Failed"
+msgstr "ล ges"
+
+#: src/screens/logs/components/LogsFilter.jsx:16
+#: src/screens/sync-contacts/JobHistory.jsx:14
+#: src/screens/sync-contacts/JobProgress.jsx:43
+msgid "Processing"
+msgstr "กำลังประมวลผล"
+
+#: src/screens/logs/components/LogsFilter.jsx:46
+msgid "Filter by status"
+msgstr "กรองตามสถานะ"
+
+#: src/screens/logs/components/LogsFilter.jsx:64
+msgid "Search endpoint or operation..."
+msgstr "ค้นหา endpoint หรือการดำเนินการ..."
+
+#: src/screens/logs/components/LogsFilter.jsx:67
+msgid "Search logs"
+msgstr "ประวัติการค้นหา"
+
+#: src/screens/logs/components/LogsHeader.jsx:28
+msgid "Monitor API activity and manage failed requests"
+msgstr "ติดตามกิจกรรม API และจัดการคำขอที่ล้มเหลว"
+
+#: src/screens/logs/components/LogsHeader.jsx:44
+msgid "Retry All Failed"
+msgstr "ลองใหม่ทั้งหมดที่ล้มเหลว"
+
+#: src/screens/logs/components/LogsHeader.jsx:55
+#: src/screens/logs/components/LogsHeader.jsx:143
+msgid "Clear Logs"
+msgstr "ล้างประวัติ"
+
+#: src/screens/logs/components/LogsHeader.jsx:65
+msgid "Refresh"
+msgstr "รีเฟรช"
+
+#: src/screens/logs/components/LogsHeader.jsx:78
+msgid "Retry All Failed?"
+msgstr "ลองใหม่ทั้งหมดที่ล้มเหลว?"
+
+#: src/screens/logs/components/LogsHeader.jsx:82
+msgid "This will reset all failed and errored entries and queue them for retry via background processing."
+msgstr "สิ่งนี้จะรีเซ็ตทุกบทสนทนาที่ล้มเหลวและเกิดข้อผิดพลาดและรอให้ลองใหม่ผ่านการประมวลผลในพื้นหลัง."
+
+#: src/screens/logs/components/LogsHeader.jsx:104
+msgid "Retrying…"
+msgstr "กำลังลองใหม่…"
+
+#: src/screens/logs/components/LogsHeader.jsx:104
+msgid "Retry All"
+msgstr "ลองใหม่ทั้งหมด"
+
+#: src/screens/logs/components/LogsHeader.jsx:116
+msgid "Clear Logs?"
+msgstr "ล้างประวัติ?"
+
+#: src/screens/logs/components/LogsHeader.jsx:120
+msgid "This will permanently delete all completed log entries (success and error). Failed and processing entries will be preserved."
+msgstr "สิ่งนี้จะลบรายการประวัติที่เสร็จสมบูรณ์ (ทั้งสำเร็จและผิดพลาด) อย่างถาวร. รายการที่ล้มเหลวและกำลังประมวลผลจะถูกเก็บรักษาไว้."
+
+#: src/screens/logs/components/LogsHeader.jsx:143
+msgid "Clearing…"
+msgstr "กำลังล้าง…"
+
+#: src/screens/logs/components/LogsStats.jsx:60
+#: src/screens/sync-contacts/JobHistory.jsx:20
+msgid "Total"
+msgstr "ทั้งหมด"
+
+#: src/screens/logs/components/LogsTable.jsx:119
+msgid "Failed to load logs. Please try again."
+msgstr "ล้มเหลวในการโหลดประวัติ. กรุณาลองอีกครั้ง."
+
+#: src/screens/logs/components/LogsTable.jsx:173
+msgid "No log entries"
+msgstr "ไม่มีรายการบันทึก"
+
+#: src/screens/logs/components/LogsTable.jsx:174
+msgid "API activity will appear here"
+msgstr "กิจกรรม API จะปรากฏที่นี่"
+
+#. translators: %d: number of selected logs
+#: src/screens/logs/components/LogsTable.jsx:193
+#, js-format
+msgid "%d selected"
+msgstr "%d ที่เลือก"
+
+#. translators: %d: number of selected retryable logs
+#: src/screens/logs/components/LogsTable.jsx:205
+#, js-format
+msgid "Retry Selected (%d)"
+msgstr "ลองใหม่ที่เลือก (%d)"
+
+#: src/screens/logs/components/LogsTable.jsx:218
+msgid "Delete Selected"
+msgstr "ลบที่เลือก"
+
+#: src/screens/logs/components/LogsTable.jsx:226
+msgid "Clear"
+msgstr "ล้าง"
+
+#: src/screens/logs/components/LogsTable.jsx:238
+msgid "Select all"
+msgstr "เลือกทั้งหมด"
+
+#: src/screens/logs/components/LogsTable.jsx:242
+msgid "Operation"
+msgstr "การดำเนินการ"
+
+#: src/screens/logs/components/LogsTable.jsx:243
+msgid "Endpoint"
+msgstr "ปลายทาง"
+
+#: src/screens/logs/components/LogsTable.jsx:244
+msgid "Method"
+msgstr "เมธอด"
+
+#: src/screens/logs/components/LogsTable.jsx:245
+msgid "Response"
+msgstr "การตอบกลับ"
+
+#: src/screens/logs/components/LogsTable.jsx:246
+#: src/screens/sync-contacts/JobHistory.jsx:22
+#: src/screens/sync-contacts/JobProgress.jsx:134
+msgid "Created"
+msgstr "สร้าง"
+
+#. translators: %d: log ID
+#: src/screens/logs/components/LogsTable.jsx:264
+#, js-format
+msgid "Select log #%d"
+msgstr "เลือกบันทึก #%d"
+
+#. translators: %d: log ID
+#: src/screens/logs/components/LogsTable.jsx:312
+#, js-format
+msgid "Retry request #%d"
+msgstr "ลองส่งคำขอใหม่ #%d"
+
+#. translators: %d: log ID
+#: src/screens/logs/components/LogsTable.jsx:325
+#, js-format
+msgid "Delete log #%d"
+msgstr "ลบบันทึก #%d"
+
+#: src/screens/logs/components/LogsTable.jsx:339
+msgid "Full Endpoint"
+msgstr "จุดสิ้นสุดทั้งหมด"
+
+#: src/screens/logs/components/LogsTable.jsx:348
+msgid "Retries"
+msgstr "การลองใหม่"
+
+#: src/screens/logs/components/LogsTable.jsx:358
+msgid "Message"
+msgstr "ข้อความ"
+
+#: src/screens/logs/components/LogsTable.jsx:368
+msgid "Request Payload"
+msgstr "ข้อมูลขอส่ง"
+
+#: src/screens/logs/components/LogsTable.jsx:377
+msgid "Response Data"
+msgstr "ข้อมูลตอบกลับ"
+
+#. translators: 1: start entry, 2: end entry, 3: total entries
+#: src/screens/logs/components/LogsTable.jsx:399
+#, js-format
+msgid "Showing %1$d to %2$d of %3$d entries"
+msgstr "แสดง %1$d ถึง %2$d จาก %3$d รายการ"
+
+#: src/screens/logs/components/LogsTable.jsx:409
+#: src/screens/logs/components/LogsTable.jsx:428
+msgid "Rows per page"
+msgstr "แถวต่อหน้า"
+
+#: src/screens/logs/components/LogsTable.jsx:442
+msgid "Logs pagination"
+msgstr "การแบ่งหน้า Logs"
+
+#: src/screens/logs/components/LogsTable.jsx:452
+msgid "Go to previous page"
+msgstr "ไปยังหน้าก่อนหน้า"
+
+#. translators: %d: page number
+#: src/screens/logs/components/LogsTable.jsx:477
+#, js-format
+msgid "Page %d"
+msgstr "หน้า %d"
+
+#: src/screens/logs/components/LogsTable.jsx:492
+msgid "Go to next page"
+msgstr "ไปยังหน้าถัดไป"
+
+#: src/screens/logs/components/LogsTable.jsx:507
+msgid "Delete Log Entry?"
+msgstr "ลบรายการ Log?"
+
+#: src/screens/logs/components/LogsTable.jsx:508
+msgid "Delete Selected Logs?"
+msgstr "ลบ Logs ที่เลือก?"
+
+#: src/screens/logs/components/LogsTable.jsx:515
+msgid "This will permanently delete this log entry. This action cannot be undone."
+msgstr "นี่จะลบรายการ log นี้อย่างถาวร การกระทำนี้ไม่สามารถยกเลิกได้."
+
+#. translators: %d: number of log entries
+#: src/screens/logs/components/LogsTable.jsx:518
+#, js-format
+msgid "This will permanently delete %d log entries. This action cannot be undone."
+msgstr "นี่จะลบ %d รายการ log อย่างถาวร การกระทำนี้ไม่สามารถยกเลิกได้."
+
+#: src/screens/logs/Logs.jsx:52
+msgid "Logs refreshed"
+msgstr "Logs ได้รับการรีเฟรช"
+
+#: src/screens/settings/components/SettingsHeader.jsx:42
+msgid "Sync Settings"
+msgstr "การตั้งค่าซิงค์"
+
+#: src/screens/settings/components/SettingsHeader.jsx:47
+msgid "Configure automatic synchronization between WordPress and SureContact"
+msgstr "กำหนดการซิงค์อัตโนมัติระหว่าง WordPress และ SureContact"
+
+#: src/screens/settings/Settings.jsx:32
+msgid "Settings saved successfully!"
+msgstr "บันทึกการตั้งค่าเรียบร้อยแล้ว!"
+
+#: src/screens/sync-contacts/components/SyncContactsHeader.jsx:22
+msgid "Synchronize data from your integrations to SureContact in the background"
+msgstr "ซิงค์ข้อมูลจากการเชื่อมต่อของคุณไปยัง SureContact ในพื้นหลัง"
+
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:16
+msgid "Start Migration"
+msgstr "เริ่มการย้ายข้อมูล"
+
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:16
+msgid "Start Sync"
+msgstr "เริ่มการซิงค์"
+
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:40
+msgid "Confirm"
+msgstr "ยืนยัน"
+
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:119
+msgid "Email field mapping is required before syncing."
+msgstr "ต้องมีการแมพฟิลด์อีเมลก่อนการซิงค์."
+
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:125
+msgid "Configure Contact Fields"
+msgstr "กำหนดฟิลด์ข้อมูลติดต่อ"
+
+#: src/screens/sync-contacts/JobHistory.jsx:13
+#: src/screens/sync-contacts/JobProgress.jsx:41
+msgid "Queued"
+msgstr "รอการดำเนินการ"
+
+#: src/screens/sync-contacts/JobHistory.jsx:16
+msgid "Cancelled"
+msgstr "ยกเลิก"
+
+#: src/screens/sync-contacts/JobHistory.jsx:21
+#: src/screens/sync-contacts/JobHistory.jsx:36
+#: src/screens/sync-contacts/JobProgress.jsx:99
+#: src/screens/sync-contacts/JobProgress.jsx:128
+msgid "Synced"
+msgstr "ซิงค์แล้ว"
+
+#: src/screens/sync-contacts/JobHistory.jsx:23
+#: src/screens/sync-contacts/JobProgress.jsx:140
+msgid "Updated"
+msgstr "อัปเดต"
+
+#: src/screens/sync-contacts/JobHistory.jsx:35
+#: src/screens/sync-contacts/JobProgress.jsx:93
+msgid "Total Companies"
+msgstr "จำนวนบริษัททั้งหมด"
+
+#: src/screens/sync-contacts/JobHistory.jsx:37
+#: src/screens/sync-contacts/JobProgress.jsx:105
+msgid "Linked Contacts"
+msgstr "ติดต่อที่เชื่อมโยง"
+
+#: src/screens/sync-contacts/JobHistory.jsx:50
+msgid "Recent Jobs"
+msgstr "งานล่าสุด"
+
+#: src/screens/sync-contacts/JobHistory.jsx:68
+msgid "No sync jobs yet"
+msgstr "ยังไม่มีงานซิงค์"
+
+#. translators: 1: processed batch count, 2: total batch count
+#: src/screens/sync-contacts/JobHistory.jsx:115
+#, js-format
+msgid "%1$d / %2$d batches"
+msgstr "%1$d / %2$d แพตช์"
+
+#. translators: %s: formatted date
+#: src/screens/sync-contacts/JobHistory.jsx:140
+#, js-format
+msgid "Created: %s"
+msgstr "สร้างเมื่อ: %s"
+
+#. translators: %s: formatted date
+#: src/screens/sync-contacts/JobHistory.jsx:144
+#, js-format
+msgid "Completed: %s"
+msgstr "เสร็จสิ้น: %s"
+
+#. translators: 1: start index, 2: end index, 3: total jobs
+#: src/screens/sync-contacts/JobHistory.jsx:284
+#, js-format
+msgid "Showing %1$d to %2$d of %3$d jobs"
+msgstr "แสดง %1$d ถึง %2$d จาก %3$d งาน"
+
+#: src/screens/sync-contacts/JobProgress.jsx:29
+msgid "Sync job cancelled successfully"
+msgstr "ยกเลิกงานซิงค์เรียบร้อยแล้ว"
+
+#: src/screens/sync-contacts/JobProgress.jsx:53
+msgid "Sync Progress"
+msgstr "ความก้าวหน้าของซิงค์"
+
+#: src/screens/sync-contacts/JobProgress.jsx:65
+msgid "Cancelling…"
+msgstr "กำลังยกเลิก…"
+
+#: src/screens/sync-contacts/JobProgress.jsx:65
+msgid "Cancel Sync"
+msgstr "ยกเลิกการซิงค์"
+
+#. translators: 1: processed batch count, 2: total batch count
+#: src/screens/sync-contacts/JobProgress.jsx:74
+#, js-format
+msgid "%1$d of %2$d batches processed"
+msgstr "%1$d จาก %2$d แพตช์ที่ประมวลผล"
+
+#. translators: %s: progress percentage
+#: src/screens/sync-contacts/JobProgress.jsx:82
+#, js-format
+msgid "Sync progress: %s%% complete"
+msgstr "ความก้าวหน้าของซิงค์: %s%% เสร็จสิ้น"
+
+#: src/screens/sync-contacts/JobProgress.jsx:91
+#: src/screens/sync-contacts/JobProgress.jsx:120
+msgid "Sync statistics"
+msgstr "สถิติการซิงค์"
+
+#: src/screens/sync-contacts/JobProgress.jsx:122
+msgid "Total Items"
+msgstr "รายการทั้งหมด"
+
+#. translators: %s: formatted date
+#: src/screens/sync-contacts/JobProgress.jsx:159
+#, js-format
+msgid "Started: %s"
+msgstr "เริ่มต้นเมื่อ: %s"
+
+#: src/screens/sync-contacts/SyncActions.jsx:86
+msgid "A sync job is already running. Please wait for it to complete before starting a new one."
+msgstr "มีงานซิงค์กำลังทำงานอยู่แล้ว กรุณารอให้เสร็จสิ้นก่อนเริ่มงานใหม่."
+
+#: src/screens/sync-contacts/SyncContacts.jsx:41
+msgid "Sync in Progress"
+msgstr "การซิงค์กำลังดำเนินการ"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:41
+msgid "A sync job is currently running in the background"
+msgstr "มีงานซิงค์กำลังทำงานในพื้นหลัง"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:69
+msgid "Sync Completed"
+msgstr "การซิงค์เสร็จสิ้น"
+
+#. translators: 1: synced count, 2: created count, 3: updated count, 4: failed count
+#: src/screens/sync-contacts/SyncContacts.jsx:70
+#, js-format
+msgid "%1$s records synced (%2$s created, %3$s updated, %4$s failed)"
+msgstr "%1$s ระเบียนที่ซิงค์ (%2$s ที่สร้างขึ้น, %3$s ที่อัปเดต, %4$s ที่ล้มเหลว)"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:73
+msgid "Sync Cancelled"
+msgstr "การซิงค์ถูกยกเลิก"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:73
+msgid "Sync job was cancelled"
+msgstr "งานซิงค์ถูกยกเลิก"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:75
+msgid "Sync Timeout"
+msgstr "หมดเวลาในการซิงค์"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:75
+msgid "Sync job timed out after 30 minutes. Please try again or contact support."
+msgstr "งานซิงค์หมดเวลาหลังจาก 30 นาที กรุณาลองใหม่หรือ ติดต่อฝ่ายสนับสนุน."
+
+#: src/screens/sync-contacts/SyncContacts.jsx:77
+#: src/screens/sync-contacts/SyncContacts.jsx:102
+msgid "Sync Failed"
+msgstr "งานซิงค์ล้มเหลว"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:77
+msgid "Sync job failed. Please try again or contact support."
+msgstr "งานซิงค์ล้มเหลว กรุณาลองใหม่หรือ ติดต่อฝ่ายสนับสนุน."
+
+#: src/screens/sync-contacts/SyncContacts.jsx:95
+msgid "Nothing to Sync"
+msgstr "ไม่มีสิ่งที่จะซิงค์"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:95
+msgid "No records found to sync"
+msgstr "ไม่พบระเบียนสำหรับซิงค์"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:100
+msgid "Sync Started"
+msgstr "เริ่มการซิงค์"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:100
+msgid "Sync job started successfully!"
+msgstr "เริ่มงานซิงค์เรียบร้อยแล้ว!"

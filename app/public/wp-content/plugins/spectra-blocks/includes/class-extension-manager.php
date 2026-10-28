@@ -1,0 +1,331 @@
+<?php
+/**
+ * Class to manage Spectra Extensions.
+ *
+ * @package Spectra
+ */
+
+namespace SpectraBlocks;
+
+use SpectraBlocks\Extensions\Animations;
+use SpectraBlocks\Extensions\BlockJsCompiler;
+use SpectraBlocks\Extensions\DisplayConditions;
+use SpectraBlocks\Extensions\FontAwesomeIcons;
+use SpectraBlocks\Extensions\ImageMask;
+use SpectraBlocks\Extensions\ResponsiveConditions;
+use SpectraBlocks\Extensions\ResponsiveControls;
+use SpectraBlocks\Extensions\StickyContainer;
+use SpectraBlocks\Extensions\ZIndex;
+use SpectraBlocks\GlobalStyles\Engine as GlobalStylesEngine;
+use SpectraBlocks\StyleGuide\Engine as StyleGuideEngine;
+use SpectraBlocks\Traits\Singleton;
+
+defined( 'ABSPATH' ) || exit;
+
+/**
+ * Class to manage Spectra Extensions.
+ *
+ * @since 3.0.0
+ */
+class ExtensionManager {
+
+	use Singleton;
+
+	/**
+	 * Initializes the extension manager by registering all extensions.
+	 *
+	 * @since 3.0.0
+	 * @return void
+	 */
+	public function init() {
+		$this->init_extensions();
+
+		add_action( 'enqueue_block_editor_assets', array( $this, 'register_extensions' ) );
+		add_action( 'init', array( $this, 'register_notice_dismissal' ) );
+	}
+
+	/**
+	 * Registers the site-wide option the Zip AI editor notice writes when
+	 * dismissed.
+	 *
+	 * Dismissal is per-SITE, not per-page: once anyone closes the notice it is
+	 * gone everywhere, permanently. A single boolean option, exposed on the core
+	 * settings REST endpoint (`/wp/v2/settings`) so the editor can persist it in
+	 * one call. The settings endpoint gates writes to `manage_options`, which
+	 * fits a site-wide preference.
+	 *
+	 * @since 1.0.9
+	 *
+	 * @return void
+	 */
+	public function register_notice_dismissal() {
+		register_setting(
+			'spectra_blocks',
+			'spectra_blocks_zipai_notice_dismissed',
+			array(
+				'type'         => 'boolean',
+				'description'  => __( 'Set when a user dismisses the Zip AI page notice; hides it site-wide.', 'spectra-blocks' ),
+				'default'      => false,
+				'show_in_rest' => true,
+			)
+		);
+	}
+
+	/**
+	 * Initializes all extensions by calling their init() method.
+	 *
+	 * This method is used to trigger the initialization of all extensions.
+	 * when the extension manager is initialized.
+	 *
+	 * @since 3.0.0
+	 *
+	 * @return void
+	 */
+	public function init_extensions() {
+		$animations_enabled         = 'disabled' !== \Spectra_Blocks_Admin_Helper::get_admin_settings_option( 'spectra_blocks_enable_animations_extension', 'enabled' );
+		$responsive_enabled         = 'disabled' !== \Spectra_Blocks_Admin_Helper::get_admin_settings_option( 'spectra_blocks_enable_block_responsive', 'enabled' );
+		$display_conditions_enabled = 'disabled' !== \Spectra_Blocks_Admin_Helper::get_admin_settings_option( 'spectra_blocks_enable_display_conditions', 'enabled' );
+
+		if ( $animations_enabled ) {
+			( Animations::instance() )->init();
+		}
+
+		if ( $display_conditions_enabled ) {
+			( DisplayConditions::instance() )->init();
+		}
+
+		( ImageMask::instance() )->init();
+
+		FontAwesomeIcons::init();
+
+		// Render per-block `spectraCustomJS` in wp_footer. Lives in free so
+		// imported/authored block JS runs without Spectra Pro.
+		( BlockJsCompiler::instance() )->init();
+
+		if ( $responsive_enabled ) {
+			( ResponsiveControls::instance() )->init();
+			( ResponsiveConditions::instance() )->init();
+		}
+
+		( StickyContainer::instance() )->init();
+		( ZIndex::instance() )->init();
+		StyleGuideEngine::init();
+		GlobalStylesEngine::init();
+	}
+
+	/**
+	 * Enqueues all extensions editor assets.
+	 *
+	 * This method scans the 'build/extensions/' directory for subdirectories containing
+	 * an 'index.asset.php' file, and calls the enqueue_editor_extension_assets() method
+	 * for each of them.
+	 *
+	 * @since 3.0.0
+	 *
+	 * @return void
+	 */
+	public function register_extensions() {
+		$extensions_dir = SPECTRA_BLOCKS_DIR . 'build/extensions/';
+
+		if ( ! is_dir( $extensions_dir ) || ! is_readable( $extensions_dir ) ) {
+			return;
+		}
+
+		$extension_files = glob( $extensions_dir . '*/index.asset.php' );
+
+		if ( empty( $extension_files ) ) {
+			return;
+		}
+
+		// Process all extensions.
+		foreach ( $extension_files as $extension_file ) {
+			$this->enqueue_editor_extension_assets( $extension_file );
+		}
+	}
+
+	/**
+	 * Enqueues editor assets for a given extension.
+	 *
+	 * @since 3.0.0
+	 *
+	 * @param string $extension_file Path to the extension's asset file.
+	 * @return void
+	 */
+	private function enqueue_editor_extension_assets( $extension_file ) {
+		if ( ! file_exists( $extension_file ) ) {
+			return;
+		}
+
+		$extension_dir = dirname( $extension_file );
+		$folder_name   = basename( $extension_dir ); // Get extension folder name.
+		$handle        = "spectra-blocks-extension-{$folder_name}-editor";
+		$script_url    = SPECTRA_BLOCKS_URL . "build/extensions/{$folder_name}/index.js";
+		$script_path   = SPECTRA_BLOCKS_DIR . "build/extensions/{$folder_name}/index.js";
+
+		if ( ! file_exists( $script_path ) ) {
+			return;
+		}
+
+		// Load the asset file generated by Webpack.
+		$asset_file = include_once $extension_file;
+
+		// Handle case where include_once returns true (already included).
+		if ( true === $asset_file ) {
+			$asset_file = array(
+				'dependencies' => array(),
+				'version'      => '1.0.0',
+			);
+		}
+
+		// Ensure we have a valid asset file array.
+		if ( ! is_array( $asset_file ) ) {
+			return;
+		}
+
+		wp_enqueue_script(
+			$handle,
+			$script_url,
+			isset( $asset_file['dependencies'] ) ? $asset_file['dependencies'] : array(),
+			isset( $asset_file['version'] ) ? $asset_file['version'] : '1.0.0',
+			true
+		);
+		wp_set_script_translations( $handle, 'spectra-blocks', SPECTRA_BLOCKS_DIR . 'languages' );
+
+		// Enqueue extracted CSS stylesheets (if any) produced by webpack for this extension.
+		$is_rtl      = is_rtl();
+		$css_pattern = $is_rtl ? 'style-*-rtl.css' : 'style-*.css';
+		$css_files   = glob( $extension_dir . '/' . $css_pattern );
+
+		if ( ! empty( $css_files ) ) {
+			// Filter out RTL files when not RTL (glob may match both).
+			if ( ! $is_rtl ) {
+				$css_files = array_filter(
+					$css_files,
+					function ( $file ) {
+						return ! str_ends_with( $file, '-rtl.css' );
+					}
+				);
+			}
+
+			foreach ( $css_files as $css_file ) {
+				$css_basename = basename( $css_file, '.css' );
+				$css_handle   = "spectra-3-extension-{$folder_name}-{$css_basename}";
+				$css_url      = SPECTRA_BLOCKS_URL . "build/extensions/{$folder_name}/" . basename( $css_file );
+				// Version by the stylesheet's own mtime, not the JS asset hash —
+				// otherwise CSS-only rebuilds (e.g. SCSS changes) reuse the old
+				// ?ver= and browsers keep serving the stale stylesheet.
+				$version = file_exists( $css_file )
+					? filemtime( $css_file )
+					: ( isset( $asset_file['version'] ) ? $asset_file['version'] : '1.0.0' );
+
+				wp_enqueue_style( $css_handle, $css_url, array(), $version );
+			}
+		}
+		// Localize script data for the image mask extension.
+		if ( 'image-mask' === $folder_name ) {
+			wp_localize_script(
+				$handle,
+				'spectraBlocksExtensions',
+				array(
+					'pluginUrl' => trailingslashit( SPECTRA_BLOCKS_URL ),
+					'assetsUrl' => trailingslashit( SPECTRA_BLOCKS_URL ) . 'assets/',
+				)
+			);
+		}
+
+		// Localize the Spectra Pro install/activation state for the upgrade nudge.
+		if ( 'gbs-pro-nudge' === $folder_name ) {
+			wp_localize_script( $handle, 'spectra_blocks_pro_nudge', $this->get_pro_nudge_data() );
+		}
+
+		// Localize the Zip AI / Pro state driving the editor page notice.
+		if ( 'zip-ai-notice' === $folder_name ) {
+			wp_localize_script( $handle, 'spectra_blocks_zipai_notice', $this->get_zipai_notice_data() );
+		}
+
+		/**
+		 * Fires after enqueuing the editor assets for the given extension.
+		 *
+		 * The dynamic portion of the filter name is the extension folder name.
+		 *
+		 * @since 3.0.0
+		 */
+		do_action( 'spectra_blocks_extensions_editor_assets', $folder_name, $asset_file );
+	}
+
+	/**
+	 * Builds the Spectra Pro state passed to the block-editor upgrade nudge.
+	 *
+	 * Mirrors the dashboard white-label logic: `active` (Pro running — the nudge
+	 * stands down), `installed` (present but inactive — offer "Activate"), or
+	 * `not_installed` (offer "Upgrade").
+	 *
+	 * @since 1.0.9
+	 *
+	 * @return array<string,string> State plus the activate/upgrade destinations.
+	 */
+	private function get_pro_nudge_data() {
+		if ( ! function_exists( 'is_plugin_active' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/plugin.php';
+		}
+
+		$plugin_file = 'spectra-blocks-pro/spectra-blocks-pro.php';
+		$installed   = file_exists( SPECTRA_BLOCKS_DIR . '../' . $plugin_file );
+		$active      = is_plugin_active( $plugin_file );
+		$state       = $active ? 'active' : ( $installed ? 'installed' : 'not_installed' );
+
+		return array(
+			'state'          => $state,
+			'upgradeUrl'     => 'https://wpspectra.com/pricing/?utm_source=free-plugin&utm_medium=block-editor&utm_campaign=gbs-css-js-nudge',
+			'activatePlugin' => 'spectra-blocks-pro/spectra-blocks-pro',
+		);
+	}
+
+	/**
+	 * Builds the state passed to the Zip AI editor page notice.
+	 *
+	 * Identification is decided here, server-side: the notice renders only when
+	 * Zip AI is active, the edited page is Zip AI-built (the canonical
+	 * {@see AssetLoader::is_zip_built_page()} check), and it hasn't already been
+	 * dismissed for this page. The client just honours `shouldRender`.
+	 *
+	 * The copy is the same for everyone; only the "Global Styles" CTA differs by
+	 * the Spectra Pro `state` — `not_installed` links to pricing, `installed`
+	 * opens the upgrade popup, `active` opens the Global Styles editor.
+	 *
+	 * @since 1.0.9
+	 *
+	 * @return array<string,mixed> Render decision, Pro state, and the data the
+	 *                             client needs for the CTA + to persist a dismissal.
+	 */
+	private function get_zipai_notice_data() {
+		if ( ! function_exists( 'is_plugin_active' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/plugin.php';
+		}
+
+		$post_id = isset( $GLOBALS['post']->ID ) ? (int) $GLOBALS['post']->ID : 0;
+		if ( ! $post_id ) {
+			// Read-only screen detection — no state change, so no nonce needed.
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$post_id = isset( $_GET['post'] ) ? absint( wp_unslash( $_GET['post'] ) ) : 0;
+		}
+
+		$zip_ai_active = is_plugin_active( 'zip-ai/zip-ai.php' );
+		$is_zip_built  = $post_id > 0 && AssetLoader::is_zip_built_page( $post_id );
+		// Dismissal is site-wide: once closed, the notice is gone everywhere.
+		$is_dismissed = (bool) get_option( 'spectra_blocks_zipai_notice_dismissed', false );
+
+		// Spectra Pro install/activation state — mirrors the gbs-pro-nudge logic
+		// so the CTA lines up with the nudge the same install would show.
+		$pro_file      = 'spectra-blocks-pro/spectra-blocks-pro.php';
+		$pro_installed = file_exists( SPECTRA_BLOCKS_DIR . '../' . $pro_file );
+		$pro_active    = is_plugin_active( $pro_file );
+		$pro_state     = $pro_active ? 'active' : ( $pro_installed ? 'installed' : 'not_installed' );
+
+		return array(
+			'shouldRender'  => $zip_ai_active && $is_zip_built && ! $is_dismissed,
+			'state'         => $pro_state,
+			'gbsUpgradeUrl' => 'https://wpspectra.com/pricing/?utm_source=free-plugin&utm_medium=block-editor&utm_campaign=zipai-page-notice',
+		);
+	}
+}

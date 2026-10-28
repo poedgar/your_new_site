@@ -1,0 +1,143 @@
+/* Main wrapper */
+.pll-selectmenu-button,
+.pll-selectmenu-menu .ui-menu {
+	font-size: 14px;
+	font-family: inherit;
+	color: #1e1e1e;
+	background: #fff;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.pll-selectmenu-button {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	box-sizing: border-box;
+	max-width: 95%;
+	min-height: 40px;
+	padding: 0;
+	border: 1px solid #949494;
+	box-shadow: none;
+	text-decoration: none;
+	white-space: nowrap;
+	line-height: 2.71428571; /* 38px for 40px min-height */
+	vertical-align: top;
+}
+.pll-selectmenu-button:hover {
+	color: #1e1e1e;
+	background: #fff;
+	border-color: #1e1e1e;
+}
+.pll-selectmenu-button:active {
+	background: #fff;
+	border-color: #949494;
+	box-shadow: none;
+}
+.pll-selectmenu-button:focus {
+	background: #fff;
+	border-color: var(--wp-admin-theme-color, #2271b1);
+	box-shadow: 0 0 0 var(--wp-admin-border-width-focus, 1.5px) var(--wp-admin-theme-color, #2271b1);
+	outline: 2px solid transparent;
+}
+.pll-selectmenu-button[aria-disabled="true"] {
+	cursor: default;
+}
+/* Arrow */
+.pll-selectmenu-button span.ui-icon {
+	position: absolute;
+	right: 8px;
+	left: auto;
+	top: 50%;
+	width: 16px;
+	height: 16px;
+	margin: -8px 0 0 0;
+	text-indent: 0;
+	background: none;
+}
+.rtl .pll-selectmenu-button span.ui-icon {
+	left: 8px;
+	right: auto;
+}
+.ui-icon-triangle-1-s:before {
+	content: "";
+	background: #fff url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%206l5%205%205-5%202%201-7%207-7-7%202-1z%22%20fill%3D%22%231e1e1e%22%2F%3E%3C%2Fsvg%3E") no-repeat right 0 top 55%;
+	background-size: 16px 16px;
+	box-sizing: border-box;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+}
+.pll-selectmenu-button.ui-selectmenu-button-open .ui-icon-triangle-1-s:before {
+	transform: rotate(180deg);
+}
+/* Flags */
+.pll-selectmenu-button img.ui-icon,
+.pll-selectmenu-menu img.ui-icon {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: auto;
+	margin: auto 0;
+}
+.pll-selectmenu-button img.ui-icon {
+	left: 12px;
+}
+.rtl .pll-selectmenu-button img.ui-icon {
+	left: auto;
+	right: 12px;
+}
+.pll-selectmenu-menu img.ui-icon {
+	left: .3em;
+}
+.rtl .pll-selectmenu-menu img.ui-icon {
+	right: .3em;
+	left: auto;
+}
+/* Text box */
+.pll-selectmenu-button span.ui-selectmenu-text {
+	display: block;
+	padding: 0 24px 0 42px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0;
+}
+.rtl .pll-selectmenu-button span.ui-selectmenu-text {
+	padding: 0 42px 0 24px;
+}
+/* Menu */
+.pll-selectmenu-menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	padding: 0;
+	margin: 0;
+}
+.pll-selectmenu-menu.ui-selectmenu-open {
+	display: block;
+}
+.pll-selectmenu-menu .ui-menu {
+	list-style: none;
+	max-height: 231px;
+	border: 1px solid #ddd;
+	margin: 0;
+	box-shadow: 0 2px 6px rgba(100, 100, 100, .3);
+	overflow: auto;
+	outline: none;
+}
+.pll-selectmenu-menu .ui-menu-item {
+	margin: 0;
+}
+.pll-selectmenu-menu .ui-menu-item-wrapper {
+	position: relative;
+	padding: 3px 1em 3px 2em;
+}
+.rtl .pll-selectmenu-menu .ui-menu-item-wrapper {
+	padding: 3px 2em 3px 1em;
+}
+.pll-selectmenu-menu .ui-menu-item .ui-state-hover,
+.pll-selectmenu-menu .ui-menu-item .ui-state-focus,
+.pll-selectmenu-menu .ui-menu-item .ui-state-active {
+	background: #d5d5d5;
+}
+

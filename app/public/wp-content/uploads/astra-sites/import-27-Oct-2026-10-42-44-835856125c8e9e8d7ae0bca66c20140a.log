@@ -1,0 +1,33 @@
+
+[10:42:44 UTC] [INFO] Starting CE image metadata processing | Context: {"total_attachments":36,"offset":"30","chunk_size":10}
+[10:42:44 UTC] [INFO] Processing CE image batch | Context: {"batch_size":6,"offset":"30"}
+[10:42:44 UTC] [INFO] Generating attachment metadata | Context: {"attachment_id":1139,"file":"portfolio-115.jpg"}
+[10:42:45 UTC] [INFO] Generating attachment metadata | Context: {"attachment_id":1164,"file":"portfolio-15.jpg"}
+[10:42:46 UTC] [INFO] Generating attachment metadata | Context: {"attachment_id":1197,"file":"portoflio-151.jpg"}
+[10:42:48 UTC] [INFO] Generating attachment metadata | Context: {"attachment_id":1217,"file":"h1_hero-bg.png"}
+[10:42:49 UTC] [INFO] Generating attachment metadata | Context: {"attachment_id":1597,"file":"demo-screenshot.jpg"}
+[10:42:50 UTC] [INFO] Generating attachment metadata | Context: {"attachment_id":2597,"file":"default.png"}
+[10:42:50 UTC] [SUCCESS] CE image batch processing completed | Context: {"successful":6,"errors":0,"new_offset":40}
+[10:42:50 UTC] [INFO] Starting CE image metadata processing | Context: {"total_attachments":36,"offset":40,"chunk_size":10}
+[10:42:50 UTC] [INFO] Processing CE image batch | Context: {"batch_size":0,"offset":40}
+[10:42:50 UTC] [SUCCESS] CE image batch processing completed | Context: {"successful":0,"errors":0,"new_offset":50}
+[10:42:50 UTC] [INFO] ---- Processing Images from Widgets -----
+[10:42:50 UTC] [INFO] ---- Processing Contact Form Mapping from Text Widgets -----
+[10:42:50 UTC] [INFO] ---- Processing batch process for Customizer start ----
+[10:42:50 UTC] [INFO] Starting image import for URL: http://your-new-site.local/wp-content/uploads/2021/02/logo-1.png
+[10:42:50 UTC] [WARNING] Invalid image URL provided: http://your-new-site.local/wp-content/uploads/2021/02/logo-1.png
+[10:42:50 UTC] [INFO] ---- Processing batch process for Customizer done ----
+[10:44:50 UTC] [INFO] Checking if plugin directory clearing is needed
+[10:45:46 UTC] [INFO] Checking if plugin directory clearing is needed
+[10:45:48 UTC] [INFO] Checking if plugin directory clearing is needed
+[08:34:01 UTC] [INFO] Checking if plugin directory clearing is needed
+[08:34:02 UTC] [INFO] Checking if plugin directory clearing is needed
+[08:34:02 UTC] [INFO] Checking if plugin directory clearing is needed
+[08:34:03 UTC] [INFO] Checking if plugin directory clearing is needed
+[08:34:04 UTC] [INFO] Checking if plugin directory clearing is needed
+[08:34:05 UTC] [INFO] Checking if plugin directory clearing is needed
+[08:34:06 UTC] [INFO] Checking if plugin directory clearing is needed
+[08:34:06 UTC] [INFO] Checking if plugin directory clearing is needed
+[08:34:07 UTC] [INFO] Checking if plugin directory clearing is needed
+[08:34:07 UTC] [INFO] Checking if plugin directory clearing is needed
+[08:34:08 UTC] [INFO] Checking if plugin directory clearing is needed

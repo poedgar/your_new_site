@@ -1,0 +1,760 @@
+/* Tailwind v4 @source lines (one per pattern) */
+@source "../src/**/*.{js,jsx}";
+@source "./js/**/*.js";
+@source "../includes/**/*.php";
+@source "../surecontact.php";
+
+/* Import ForceUI components for scanning */
+@source "../node_modules/@bsf/force-ui/dist/**/*.{js,jsx}";
+
+/* Import individually: preflight + theme + utilities */
+@import "tailwindcss/preflight";
+@import "tailwindcss/theme";
+@import "tailwindcss/utilities";
+
+/* Figtree font (ForceUI default font) - Self-hosted */
+/* latin-ext */
+@font-face {
+  font-family: "Figtree";
+  font-style: italic;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url("../fonts/figtree-italic-latin-ext.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Figtree";
+  font-style: italic;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url("../fonts/figtree-italic-latin.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url("../fonts/figtree-normal-latin-ext.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url("../fonts/figtree-normal-latin.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+  --primary: #005f5a;
+  --primary-foreground: #ffffff;
+  --secondary: #ff5b04;
+  --secondary-foreground: #ffffff;
+  --muted: #fafafa;
+  --muted-foreground: #737373;
+  --accent: #f5f5f5;
+  --accent-foreground: #171717;
+  --destructive: #e7000b;
+  --destructive-foreground: #ffffff;
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #a1a1a1;
+  --chart-1: #91c5ff;
+  --chart-2: #3a81f6;
+  --chart-3: #2563ef;
+  --chart-4: #1a4eda;
+  --chart-5: #1f3fad;
+  --sidebar: #f5f5f5;
+  --sidebar-foreground: #525252;
+  --sidebar-primary: #171717;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #ffffff;
+  --sidebar-accent-foreground: #171717;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: #a1a1a1;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --radius: 0.4rem;
+  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.01);
+  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.01);
+  --shadow-sm:
+    0 1px 3px 0px hsl(0 0% 0% / 0.03), 0 1px 2px -1px hsl(0 0% 0% / 0.03);
+  --shadow:
+    0 1px 3px 0px hsl(0 0% 0% / 0.03), 0 1px 2px -1px hsl(0 0% 0% / 0.03);
+  --shadow-md:
+    0 1px 3px 0px hsl(0 0% 0% / 0.03), 0 2px 4px -1px hsl(0 0% 0% / 0.03);
+  --shadow-lg:
+    0 1px 3px 0px hsl(0 0% 0% / 0.03), 0 4px 6px -1px hsl(0 0% 0% / 0.03);
+  --shadow-xl:
+    0 1px 3px 0px hsl(0 0% 0% / 0.03), 0 8px 10px -1px hsl(0 0% 0% / 0.03);
+  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.07);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --card: #171717;
+  --card-foreground: #fafafa;
+  --popover: #262626;
+  --popover-foreground: #fafafa;
+  --primary: #e5e5e5;
+  --primary-foreground: #171717;
+  --secondary: #262626;
+  --secondary-foreground: #fafafa;
+  --muted: #262626;
+  --muted-foreground: #a1a1a1;
+  --accent: #404040;
+  --accent-foreground: #fafafa;
+  --destructive: #ff6467;
+  --destructive-foreground: #fafafa;
+  --border: #282828;
+  --input: #343434;
+  --ring: #737373;
+  --chart-1: #91c5ff;
+  --chart-2: #3a81f6;
+  --chart-3: #2563ef;
+  --chart-4: #1a4eda;
+  --chart-5: #1f3fad;
+  --sidebar: #171717;
+  --sidebar-foreground: #fafafa;
+  --sidebar-primary: #1447e6;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #262626;
+  --sidebar-accent-foreground: #fafafa;
+  --sidebar-border: #282828;
+  --sidebar-ring: #525252;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --radius: 0.4rem;
+  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.01);
+  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.01);
+  --shadow-sm:
+    0 1px 3px 0px hsl(0 0% 0% / 0.03), 0 1px 2px -1px hsl(0 0% 0% / 0.03);
+  --shadow:
+    0 1px 3px 0px hsl(0 0% 0% / 0.03), 0 1px 2px -1px hsl(0 0% 0% / 0.03);
+  --shadow-md:
+    0 1px 3px 0px hsl(0 0% 0% / 0.03), 0 2px 4px -1px hsl(0 0% 0% / 0.03);
+  --shadow-lg:
+    0 1px 3px 0px hsl(0 0% 0% / 0.03), 0 4px 6px -1px hsl(0 0% 0% / 0.03);
+  --shadow-xl:
+    0 1px 3px 0px hsl(0 0% 0% / 0.03), 0 8px 10px -1px hsl(0 0% 0% / 0.03);
+  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.07);
+}
+
+@theme inline {
+  /* Core shadcn colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  /* Custom semantic colors */
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-error: var(--error);
+  --color-error-foreground: var(--error-foreground);
+
+  /* Custom palette colors */
+  --color-primary-50: #f3f0ff;
+  --color-primary-100: #f3e8ff;
+  --color-primary-200: #d6cdff;
+  --color-primary-500: #a855f7;
+  --color-primary-600: #9333ea;
+  --color-primary-700: #6005ff;
+  --color-primary-900: #4a1d85;
+
+  --color-success-50: #f0fdf4;
+  --color-success-100: #dcfce7;
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+  --color-success-700: #15803d;
+
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+
+  --color-error-50: #fef2f2;
+  --color-error-100: #fee2e2;
+  --color-error-500: #ef4444;
+  --color-error-600: #dc2626;
+  --color-error-700: #b91c1c;
+
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+
+  /* ForceUI Brand Colors */
+  --color-brand-background-50: #eff6ff;
+  --color-brand-background-hover-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-border-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-primary-600: #8345dd;
+  --color-brand-hover-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
+  --color-brand-text-950: #172554;
+
+  /* ForceUI Background Colors */
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f9fafb;
+  --color-background-inverse: #111827;
+  --color-background-brand: #8345dd;
+  --color-background-important: #dc2626;
+
+  /* ForceUI Field Colors */
+  --color-field-primary-background: #f9fafb;
+  --color-field-secondary-background: #ffffff;
+  --color-field-primary-hover: #f3f4f6;
+  --color-field-secondary-hover: #f3f4f6;
+  --color-field-dropzone-background: #ffffff;
+  --color-field-border: #e5e7eb;
+  --color-field-dropzone-background-hover: #f9fafb;
+  --color-field-dropzone-color: #8345dd;
+  --color-field-label: #111827;
+  --color-field-input: #111827;
+  --color-field-helper: #6b7280;
+  --color-field-background-disabled: #f9fafb;
+  --color-field-color-disabled: #d1d5db;
+  --color-field-placeholder: #6b7280;
+  --color-field-border-disabled: #f3f4f6;
+  --color-field-color-error: #dc2626;
+  --color-field-border-error: #fecaca;
+  --color-field-background-error: #fef2f2;
+  --color-field-required: #dc2626;
+
+  /* ForceUI Border Colors */
+  --color-border-interactive: #8345dd;
+  --color-border-subtle: #e5e7eb;
+  --color-border-brand-200: #d6cdff;
+  --color-border-strong: #6b7280;
+  --color-border-inverse: #374151;
+  --color-border-disabled: #e5e7eb;
+  --color-border-muted: #e5e7eb;
+  --color-border-error: #dc2626;
+  --color-border-transparent-subtle: #37415114;
+  --color-border-white: #ffffff;
+
+  /* ForceUI Text Colors */
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-tertiary: #9ca3af;
+  --color-text-on-color: #ffffff;
+  --color-text-error: #dc2626;
+  --color-text-error-inverse: #f87171;
+  --color-text-inverse: #ffffff;
+  --color-text-disabled: #d1d5db;
+  --color-text-on-button-disabled: #9ca3af;
+
+  /* ForceUI Link Colors */
+  --color-link-primary: #1d4ed8;
+  --color-link-primary-hover: #8345dd;
+  --color-link-inverse: #38bdf8;
+  --color-link-visited: #7c3aed;
+  --color-link-visited-inverse: #a78bfa;
+  --color-link-inverse-hover: #7dd3fc;
+
+  /* ForceUI Icon Colors */
+  --color-icon-primary: #111827;
+  --color-icon-secondary: #4b5563;
+  --color-icon-on-color: #ffffff;
+  --color-icon-inverse: #ffffff;
+  --color-icon-interactive: #8345dd;
+  --color-icon-on-color-disabled: #9ca3af;
+  --color-icon-disabled: #d1d5db;
+
+  /* ForceUI Support Colors */
+  --color-support-error: #dc2626;
+  --color-support-success: #16a34a;
+  --color-support-warning: #eab308;
+  --color-support-info: #0284c7;
+  --color-support-error-inverse: #f87171;
+  --color-support-success-inverse: #4ade80;
+  --color-support-warning-inverse: #fde047;
+  --color-support-info-inverse: #38bdf8;
+
+  /* ForceUI Button Colors */
+  --color-button-primary: #8345dd;
+  --color-button-primary-hover: #6937b1;
+  --color-button-secondary: #1f2937;
+  --color-button-secondary-hover: #374151;
+  --color-button-tertiary: #ffffff;
+  --color-button-tertiary-hover: #f9fafb;
+  --color-button-danger: #dc2626;
+  --color-button-danger-secondary: #dc2626;
+  --color-button-danger-hover: #b91c1c;
+  --color-button-disabled: #f3f4f6;
+  --color-button-tertiary-border: #e5e7eb;
+  --color-button-tertiary-color: #111827;
+
+  /* ForceUI Focus Colors */
+  --color-focus: #8345dd;
+  --color-focus-inset: #ffffff;
+  --color-focus-inverse: #38bdf8;
+  --color-focus-inverse-inset: #111827;
+  --color-focus-error: #dc2626;
+  --color-focus-border: #bfdbfe;
+  --color-focus-error-border: #fecaca;
+
+  /* ForceUI Misc Colors */
+  --color-misc-highlight: #bfdbfe;
+  --color-misc-overlay: #11182780;
+  --color-misc-skeleton-background: #f3f4f6;
+  --color-misc-skeleton-element: #d1d5db;
+  --color-misc-popup-button-hover: #1118270d;
+  --color-misc-tab-item-hover: #e5e7eb;
+  --color-misc-dropdown-hover: #f3f4f6;
+  --color-misc-loader-base: #1118270d;
+  --color-misc-loader-color: #8345dd;
+  --color-misc-progress-background: #e5e7eb;
+
+  /* ForceUI Badge Colors */
+  --color-badge-background-gray: #f9fafb;
+  --color-badge-color-gray: #1f2937;
+  --color-badge-hover-gray: #f3f4f6;
+  --color-badge-border-gray: #e5e7eb;
+  --color-badge-background-red: #fef2f2;
+  --color-badge-color-red: #b91c1c;
+  --color-badge-hover-red: #fee2e2;
+  --color-badge-border-red: #fecaca;
+  --color-badge-background-yellow: #fefce8;
+  --color-badge-color-yellow: #a16207;
+  --color-badge-hover-yellow: #fef9c3;
+  --color-badge-border-yellow: #fef08a;
+  --color-badge-hover-green: #dcfce7;
+  --color-badge-border-green: #bbf7d0;
+  --color-badge-background-green: #f0fdf4;
+  --color-badge-color-green: #15803d;
+  --color-badge-background-sky: #f0f9ff;
+  --color-badge-color-sky: #0369a1;
+  --color-badge-hover-sky: #e0f2fe;
+  --color-badge-border-sky: #bae6fd;
+  --color-badge-background-disabled: #f3f4f6;
+  --color-badge-color-disabled: #d1d5db;
+  --color-badge-hover-disabled: #f3f4f6;
+  --color-badge-border-disabled: #e5e7eb;
+  --color-badge-background-important: #dc2626;
+
+  /* ForceUI Alert Colors */
+  --color-alert-background-neutral: #ffffff;
+  --color-alert-border-neutral: #e5e7eb;
+  --color-alert-background-danger: #fef2f2;
+  --color-alert-border-danger: #fecaca;
+  --color-alert-background-warning: #fefce8;
+  --color-alert-border-warning: #fef08a;
+  --color-alert-background-green: #f0fdf4;
+  --color-alert-border-green: #bbf7d0;
+  --color-alert-background-info: #f0f9ff;
+  --color-alert-border-info: #bae6fd;
+
+  /* ForceUI Tab Colors */
+  --color-tab-background: #f3f4f6;
+  --color-tab-border: #e5e7eb;
+
+  /* ForceUI Tooltip Colors */
+  --color-tooltip-background-light: #ffffff;
+  --color-tooltip-background-dark: #111827;
+
+  /* ForceUI Toggle Colors */
+  --color-toggle-off: #e5e7eb;
+  --color-toggle-on: #8345dd;
+  --color-toggle-dial-background: #ffffff;
+  --color-toggle-off-hover: #d1d5db;
+  --color-toggle-off-border: #bdc1c7;
+  --color-toggle-on-hover: #1d4ed8;
+  --color-toggle-on-border: #3b82f6;
+  --color-toggle-on-disabled: #f3f4f6;
+  --color-toggle-off-disabled: #f3f4f6;
+
+  /* Fonts */
+  --font-sans: Figtree, ui-sans-serif, system-ui, sans-serif;
+  --font-figtree: Figtree, sans-serif;
+
+  /* ForceUI Shadows */
+  --shadow-soft-shadow-sm: 0px 6px 32px -12px rgba(149, 160, 178, 0.12);
+  --shadow-soft-shadow: 0px 8px 32px -12px rgba(149, 160, 178, 0.16);
+  --shadow-soft-shadow-md: 0px 10px 32px -12px rgba(149, 160, 178, 0.2);
+  --shadow-soft-shadow-lg: 0px 12px 32px -12px rgba(149, 160, 178, 0.24);
+  --shadow-soft-shadow-xl: 0px 16px 32px -12px rgba(149, 160, 178, 0.32);
+  --shadow-soft-shadow-2xl: 0px 24px 64px -12px rgba(149, 160, 178, 0.32);
+  --shadow-soft-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.06);
+
+  /* ForceUI Spacing */
+  --spacing-1\.25: 0.3125rem;
+  --spacing-2\.25: 0.5625rem;
+  --spacing-4\.5: 1.125rem;
+  --spacing-5\.5: 1.375rem;
+  --spacing-120: 30rem;
+  --spacing-95: 23.75rem;
+  --spacing-141\.5: 35.375rem;
+  --spacing-188: 47rem;
+  --spacing-slide-over-container: 566px;
+  --spacing-settings-container: 43.5rem;
+
+  /* ForceUI Line Heights */
+  --line-height-7\.5: 1.875rem;
+  --line-height-9\.5: 2.375rem;
+  --line-height-11: 2.75rem;
+
+  /* ForceUI Border Width */
+  --border-width-0\.5: 0.5px;
+
+  /* Radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Sidebar colors */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Chart colors */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* App-specific colors */
+  --color-app-heading: var(--text-app-heading);
+  --color-app-text: var(--gray-500);
+  --font-serif: Lora, serif;
+  --radius: 0.7rem;
+  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);
+  --tracking-tight: calc(var(--tracking-normal) - 0.025em);
+  --tracking-wide: calc(var(--tracking-normal) + 0.025em);
+  --tracking-wider: calc(var(--tracking-normal) + 0.05em);
+  --tracking-widest: calc(var(--tracking-normal) + 0.1em);
+  --tracking-normal: var(--tracking-normal);
+  --shadow-2xl: var(--shadow-2xl);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-md: var(--shadow-md);
+  --shadow: var(--shadow);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-2xs: var(--shadow-2xs);
+  --spacing: var(--spacing);
+  --letter-spacing: var(--letter-spacing);
+  --shadow-offset-y: var(--shadow-offset-y);
+  --shadow-offset-x: var(--shadow-offset-x);
+  --shadow-spread: var(--shadow-spread);
+  --shadow-blur: var(--shadow-blur);
+  --shadow-opacity: var(--shadow-opacity);
+  --color-shadow-color: var(--shadow-color);
+}
+
+/* ForceUI Typography Utilities */
+@layer utilities {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  pre {
+    margin: 0;
+    color: var(--color-text-primary);
+  }
+
+  h1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.875rem;
+  }
+
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+  }
+
+  h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    color: var(--color-text-secondary);
+  }
+}
+
+/* ForceUI Checkbox Override for WordPress 6.9 */
+#wpcontent:has([id^="surecontact-app"]) input[type="checkbox"] {
+  box-shadow: none !important;
+  margin: 0 !important;
+  min-width: auto;
+}
+#wpcontent:has([id^="surecontact-app"]) input[type="checkbox"]:checked {
+  border-color: var(--color-border-interactive) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+#wpcontent:has([id^="surecontact-app"]) input[type="checkbox"]:hover {
+  box-shadow: none !important;
+}
+#wpcontent:has([id^="surecontact-app"]) input[type="checkbox"]:focus,
+#wpcontent:has([id^="surecontact-app"]) input[type="checkbox"]:checked:focus {
+  border-color: var(--color-border-interactive) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+#wpcontent:has([id^="surecontact-app"]) input[type="checkbox"]::before,
+#wpcontent:has([id^="surecontact-app"]) input[type="checkbox"]:checked::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* ForceUI Input Overrides — WP 6.9 compat + RTL support
+ *
+ * Force UI's Input uses hardcoded physical properties (left-0, pl-3, pl-9)
+ * that don't flip in RTL. We replace them with logical equivalents so the
+ * input works in both LTR and RTL without direction-specific selectors.
+ */
+
+/* Base input: reset WP 6.9 styles */
+#wpcontent:has([id^="surecontact-app"])
+  .surecontact__input-md
+  input[type="text"] {
+  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3) !important;
+  border: none;
+  height: 2.5rem;
+  text-align: start;
+}
+
+/* Prefix input: padding-inline-start for icon space (overrides Force UI's pl-9) */
+#wpcontent:has([id^="surecontact-app"])
+  .surecontact__input-md--prefix
+  input[type="text"] {
+  padding-inline-start: calc(var(--spacing) * 10) !important;
+}
+
+/* Suffix input: padding-inline-end for icon space (overrides Force UI's pr-9) */
+#wpcontent:has([id^="surecontact-app"])
+  .surecontact__input-md--suffix
+  input[type="text"] {
+  padding-inline-end: calc(var(--spacing) * 10) !important;
+}
+
+/* Prefix icon: replace Force UI's left-0/pl-3 with logical positioning */
+#wpcontent:has([id^="surecontact-app"])
+  .surecontact__input-md--prefix
+  div.absolute.left-0 {
+  left: unset !important;
+  padding-left: unset !important;
+  inset-inline-start: 0 !important;
+  padding-inline-start: 0.75rem !important;
+}
+
+/* Suffix icon: replace Force UI's right-0/pr-3 with logical positioning */
+#wpcontent:has([id^="surecontact-app"])
+  .surecontact__input-md--suffix
+  div.absolute.right-0 {
+  right: unset !important;
+  padding-right: unset !important;
+  inset-inline-end: 0 !important;
+  padding-inline-end: 0.75rem !important;
+}
+
+/* ForceUI RTL Overrides — Pagination arrow icons */
+:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) svg.lucide-chevron-left,
+:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) svg.lucide-chevron-right {
+  transform: scaleX(-1);
+}
+
+/* ForceUI RTL Overrides — Checkbox checkmark centering */
+:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *)
+  label
+  > input[type="checkbox"]
+  ~ span {
+  --tw-translate-x: 50%;
+}
+
+/* WordPress Admin Integration */
+#wpcontent:has([id^="surecontact-app"]) {
+  height: 100%;
+  padding-inline-start: 0;
+  background-color: var(--color-background-secondary);
+}
+
+#wpbody-content:has([id^="surecontact-app"]) {
+  padding-bottom: 0;
+}
+
+#wpfooter {
+  display: none;
+}
+
+[id^="surecontact-app"] * {
+  font-family: Figtree, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Hide WordPress notices on SureContact pages */
+#wpbody:has(#surecontact-app) {
+  background-color: var(--color-background-secondary);
+}
+
+#wpbody:has(#surecontact-app) #wpbody-content > .notice {
+  display: none;
+}
+
+/* Use the SureContact drawer on SureContact pages */
+#wpbody:has(#surecontact-app) .surecontact-drawer {
+  z-index: 99999 !important;
+}
+
+/* RTL drawer fix: position="left" gives correct slide-in animation (x: -100%)
+   but justify-start flips to the right in RTL. Override to keep drawer on the left.
+   Selector targets only the drawer positioning container, not inner components. */
+[dir="rtl"] .surecontact-drawer > .fixed > .relative > .justify-start {
+  justify-content: flex-end !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:focus {
+  box-shadow: none;
+  color: var(--color-text-primary);
+}
+
+/* === RTL overrides for Force UI components === */
+
+/* Toast: flip close button from right to left */
+[dir="rtl"] .fui-toast-container div.absolute.right-4 {
+  right: auto !important;
+  left: 1rem;
+}
+[dir="rtl"] .fui-toast-container div.absolute.right-3 {
+  right: auto !important;
+  left: 0.75rem;
+}
+
+/* Toast: flip content margin from mr to ml */
+[dir="rtl"] .fui-toast-container div.mr-6 {
+  margin-right: 0 !important;
+  margin-left: 1.5rem;
+}
+[dir="rtl"] .fui-toast-container div.mr-10 {
+  margin-right: 0 !important;
+  margin-left: 2.5rem;
+}
+
+/* Select: flip content grid alignment for RTL */
+[dir="rtl"]
+  [id^="surecontact-app"]
+  button:is([role="combobox"], [aria-haspopup="listbox"])
+  > div:first-child,
+[dir="rtl"]
+  .surecontact-drawer
+  button:is([role="combobox"], [aria-haspopup="listbox"])
+  > div:first-child {
+  justify-items: end;
+  text-align: right;
+}
+
+/* WordPress admin padding flip for RTL */
+[dir="rtl"] #wpcontent:has([id^="surecontact-app"]) {
+  padding-left: unset;
+  padding-right: 0;
+}
+
+/* Input prefix/suffix padding flip for RTL */
+[dir="rtl"]
+  #wpcontent:has([id^="surecontact-app"])
+  .surecontact__input-md--prefix
+  input[type="text"] {
+  padding-left: calc(var(--spacing) * 2);
+  padding-right: calc(var(--spacing) * 10);
+}
+[dir="rtl"]
+  #wpcontent:has([id^="surecontact-app"])
+  .surecontact__input-md--suffix
+  input[type="text"] {
+  padding-right: calc(var(--spacing) * 2);
+  padding-left: calc(var(--spacing) * 10);
+}
+
+/* Drawer: integration list items - keep icon and name together in RTL */
+[dir="rtl"] .surecontact-drawer [role="list"] button.flex {
+  text-align: right;
+}
+[dir="rtl"] .surecontact-drawer [role="list"] button.flex > .flex-1 {
+  flex: none;
+}

@@ -1,0 +1,35 @@
+@import url( "https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" );
+@import "../../global/tailwind.scss";
+
+@layer utilities {
+	hr {
+		@apply border-t border-b-0 border-x-0 border-solid border-border-subtle;
+	}
+
+	input[type="checkbox"] {
+		@apply before:border-0;
+	}
+
+	::-webkit-file-upload-button {
+		@apply text-text-primary;
+	}
+}
+
+th.column-surerank-data {
+	width: 160px !important;
+}
+
+#surerank-root {
+	@apply relative z-[99999];
+}
+
+// Use an attribute selector for the surerank-root class so the PostCSS
+// customPrefixPlugin (which only rewrites selectors starting with ".") leaves
+// it untouched. Scoping to the class — instead of [id^="surerank"] — keeps the
+// base font on the app mounts while excluding non-app markup such as the
+// #surerank-rating-notice admin notice, whose Dashicons must stay intact.
+[class~="surerank-root"] *,
+[class~="surerank-root"] *::before,
+[class~="surerank-root"] *::after {
+	@apply font-sans;
+}

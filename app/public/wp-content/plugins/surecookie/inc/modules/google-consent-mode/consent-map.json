@@ -1,0 +1,9 @@
+{
+	"ad_storage": "marketing",
+	"ad_user_data": "marketing",
+	"ad_personalization": "marketing",
+	"personalization_storage": "marketing",
+	"analytics_storage": "analytics",
+	"functionality_storage": "functional",
+	"security_storage": "essential"
+}

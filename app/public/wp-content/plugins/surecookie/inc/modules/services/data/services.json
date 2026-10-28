@@ -1,0 +1,3113 @@
+{
+    "_meta": {
+        "note": "Unified catalog floor: one entry per service with blocking patterns AND declared cookies. Offline/day-1 fallback; the remote services.json wins per slug. Each cookie keeps its own category.",
+        "version": 3
+    },
+    "ab-tasty": {
+        "label": "AB Tasty",
+        "description": "A/B testing and personalization.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "try.abtasty.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "activecampaign": {
+        "label": "ActiveCampaign",
+        "description": "Email marketing and automation.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "trackcmp.net"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "acuity-scheduling": {
+        "label": "Acuity Scheduling",
+        "description": "Online appointment scheduling.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "embed.acuityscheduling.com"
+            ],
+            "iframes": [
+                "app.acuityscheduling.com"
+            ]
+        },
+        "cookies": []
+    },
+    "addthis": {
+        "label": "AddThis",
+        "description": "Social sharing buttons.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "addthis.com/js",
+                "s7.addthis.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "adobe-analytics": {
+        "label": "Adobe Analytics",
+        "description": "Enterprise web analytics.",
+        "category": "analytics",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "assets.adobedtm.com",
+                "2o7.net",
+                "omtrdc.net"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "adobe-fonts": {
+        "label": "Adobe Fonts (Typekit)",
+        "description": "Loads Adobe (Typekit) web fonts.",
+        "category": "functional",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "use.typekit.net"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "adroll": {
+        "label": "AdRoll",
+        "description": "Retargeting and display ads.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "s.adroll.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "amazon-ads": {
+        "label": "Amazon Ads",
+        "description": "Amazon advertising and retargeting.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "amazon-adsystem.com"
+            ],
+            "iframes": [
+                "amazon-adsystem.com"
+            ]
+        },
+        "cookies": []
+    },
+    "amplitude": {
+        "label": "Amplitude",
+        "description": "Product and behavioral analytics.",
+        "category": "analytics",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.amplitude.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "apple-music": {
+        "label": "Apple Music",
+        "description": "Embeds Apple Music players.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [],
+            "iframes": [
+                "embed.music.apple.com"
+            ]
+        },
+        "cookies": []
+    },
+    "authorize-net": {
+        "label": "Authorize.net",
+        "description": "Payment gateway and fraud detection.",
+        "category": "essential",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "js.authorize.net"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "awin": {
+        "label": "Awin",
+        "description": "Affiliate marketing tracking.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "dwin1.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "bootstrapcdn": {
+        "label": "BootstrapCDN",
+        "description": "Open-source library CDN for Bootstrap, Popper and Font Awesome.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "bootstrapcdn.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "braintree": {
+        "label": "Braintree",
+        "description": "PayPal-owned payment processing.",
+        "category": "essential",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "js.braintreegateway.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "brevo": {
+        "label": "Brevo (Sendinblue)",
+        "description": "Email marketing and automation.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "sibautomation.com",
+                "sibforms.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "brightcove": {
+        "label": "Brightcove",
+        "description": "Video hosting and player.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "players.brightcove.net"
+            ],
+            "iframes": [
+                "players.brightcove.net"
+            ]
+        },
+        "cookies": []
+    },
+    "bunny-cdn": {
+        "label": "Bunny CDN",
+        "description": "Delivers site assets.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "b-cdn.net"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "bunny-fonts": {
+        "label": "Bunny Fonts",
+        "description": "Privacy-friendly web font hosting.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [],
+            "iframes": [],
+            "styles": [
+                "fonts.bunny.net"
+            ]
+        },
+        "cookies": []
+    },
+    "bunny-stream": {
+        "label": "Bunny Stream",
+        "description": "Streams and delivers hosted video.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "assets.mediadelivery.net/playerjs/"
+            ],
+            "iframes": [
+                "iframe.mediadelivery.net",
+                "player.mediadelivery.net",
+                "mediadelivery.net"
+            ]
+        },
+        "cookies": []
+    },
+    "cal-com": {
+        "label": "Cal.com",
+        "description": "Open-source appointment scheduling.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "app.cal.com/embed"
+            ],
+            "iframes": [
+                "cal.com/embed"
+            ]
+        },
+        "cookies": []
+    },
+    "calendly": {
+        "label": "Calendly",
+        "description": "Meeting scheduling and booking.",
+        "category": "functional",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "assets.calendly.com"
+            ],
+            "iframes": [
+                "calendly.com"
+            ]
+        },
+        "cookies": []
+    },
+    "campaign-manager-360": {
+        "label": "Campaign Manager 360 (Google)",
+        "description": "Google ad campaign measurement.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "gcm_compatible": true,
+        "patterns": {
+            "scripts": [
+                "cm.g.doubleclick.net",
+                "campaignmanager.google.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "cdn77": {
+        "label": "CDN77",
+        "description": "Delivers site assets.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn77.org",
+                "cdn77-ssl.net"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "cdnjs": {
+        "label": "cdnjs (Cloudflare CDN)",
+        "description": "Cloudflare open-source library CDN.",
+        "category": "essential",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdnjs.cloudflare.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "chartbeat": {
+        "label": "Chartbeat",
+        "description": "Real-time content analytics.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "static.chartbeat.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "clarity": {
+        "label": "Microsoft Clarity",
+        "description": "Microsoft heatmaps and session replay.",
+        "category": "analytics",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "clarity.ms/tag",
+                "clarity.ms/s/"
+            ],
+            "iframes": []
+        },
+        "cookies": [
+            {
+                "name": "MUID",
+                "domain": ".bing.com",
+                "duration_days": 395,
+                "category": "analytics",
+                "provider": "Microsoft Clarity/Bing",
+                "purpose": "Identifies unique web browsers visiting Microsoft sites. Used for advertising, site analytics, and other operational purposes.",
+                "description": null
+            },
+            {
+                "name": "_clck",
+                "domain": ".domain.com",
+                "duration_days": 365,
+                "category": "analytics",
+                "provider": "Microsoft Clarity",
+                "purpose": "Persists the Clarity User ID and preferences, unique to that site, on the browser. Ensures subsequent visits are attributed to the same user ID.",
+                "description": null
+            },
+            {
+                "name": "_clsk",
+                "domain": ".domain.com",
+                "duration_days": 1,
+                "category": "analytics",
+                "provider": "Microsoft Clarity",
+                "purpose": "Connects multiple page views by a user into a single Clarity session recording.",
+                "description": null
+            },
+            {
+                "name": "anonchk",
+                "domain": ".clarity.ms",
+                "duration_days": 0,
+                "category": "analytics",
+                "provider": "Microsoft Clarity",
+                "purpose": "Indicates whether MUID is transferred to ANID for use in authenticated services. Used for fraud prevention and analytics.",
+                "description": null
+            }
+        ]
+    },
+    "clicky": {
+        "label": "Clicky",
+        "description": "Real-time website analytics.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "static.getclicky.com",
+                "in.getclicky.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "cloudflare-insights": {
+        "label": "Cloudflare Web Analytics",
+        "description": "Privacy-first web analytics.",
+        "category": "analytics",
+        "transfer_countries": [
+            "US"
+        ],
+        "cookieless": true,
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "static.cloudflareinsights.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "cloudflare-turnstile": {
+        "label": "Cloudflare Turnstile",
+        "description": "Privacy-friendly bot protection.",
+        "category": "essential",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "challenges.cloudflare.com"
+            ],
+            "iframes": [
+                "challenges.cloudflare.com"
+            ]
+        },
+        "cookies": []
+    },
+    "comscore": {
+        "label": "Comscore",
+        "description": "Audience measurement analytics.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "sb.scorecardresearch.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "convert": {
+        "label": "Convert Experiences",
+        "description": "A/B testing and experiments.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "convertexperiments.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "convertkit": {
+        "label": "ConvertKit",
+        "description": "Creator email marketing.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "f.convertkit.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "crazy-egg": {
+        "label": "Crazy Egg",
+        "description": "Heatmaps and A/B testing.",
+        "category": "analytics",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "script.crazyegg.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "crisp": {
+        "label": "Crisp Chat",
+        "description": "Live chat and customer messaging.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "client.crisp.chat"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "criteo": {
+        "label": "Criteo",
+        "description": "Retargeting and display ads.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "static.criteo.net",
+                "dynamic.criteo.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "dailymotion": {
+        "label": "Dailymotion",
+        "description": "Embeds Dailymotion videos.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "api.dmcdn.net"
+            ],
+            "iframes": [
+                "dailymotion.com/embed"
+            ]
+        },
+        "cookies": []
+    },
+    "display-video-360": {
+        "label": "Display & Video 360 (Google)",
+        "description": "Google programmatic display ads.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "gcm_compatible": true,
+        "patterns": {
+            "scripts": [
+                "cm.g.doubleclick.net",
+                "displayvideo.google.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "disqus": {
+        "label": "Disqus",
+        "description": "Embedded comment threads.",
+        "category": "functional",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "disqus.com/embed.js"
+            ],
+            "iframes": [
+                "disqus.com/embed"
+            ]
+        },
+        "cookies": []
+    },
+    "doubleclick": {
+        "label": "DoubleClick (Google)",
+        "description": "Google ad serving and retargeting.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "gcm_compatible": true,
+        "patterns": {
+            "scripts": [
+                "stats.g.doubleclick.net",
+                "securepubads.g.doubleclick.net",
+                "doubleclick.net",
+                "pagead2.googlesyndication.com",
+                "tpc.googlesyndication.com",
+                "adservice.google.com"
+            ],
+            "iframes": []
+        },
+        "cookies": [
+            {
+                "name": "IDE",
+                "domain": ".doubleclick.net",
+                "duration_days": 395,
+                "category": "marketing",
+                "provider": "Google DoubleClick",
+                "purpose": "Used by Google DoubleClick to register and report website user actions after viewing or clicking advertiser ads. Enables measurement of ad effectiveness and personalized ads.",
+                "description": null
+            },
+            {
+                "name": "DSID",
+                "domain": ".doubleclick.net",
+                "duration_days": 14,
+                "category": "marketing",
+                "provider": "Google DoubleClick",
+                "purpose": "Used to identify a signed-in user on non-Google sites to respect ad personalization settings.",
+                "description": null
+            },
+            {
+                "name": "test_cookie",
+                "domain": ".doubleclick.net",
+                "duration_days": 0,
+                "category": "marketing",
+                "provider": "Google DoubleClick",
+                "purpose": "Used to check if the user's browser supports cookies. Set by DoubleClick.",
+                "description": null
+            }
+        ]
+    },
+    "drift": {
+        "label": "Drift",
+        "description": "Conversational marketing chat.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "js.driftt.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "ewww-easy-io": {
+        "label": "EWWW Easy IO",
+        "description": "Delivers site assets.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "exactdn.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "ezoic": {
+        "label": "Ezoic",
+        "description": "Ad optimization platform.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "ezojs.com",
+                "go.ezodn.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "facebook-embed": {
+        "label": "Facebook Embeds",
+        "description": "Embeds Facebook posts and videos.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [],
+            "iframes": [
+                "facebook.com/plugins"
+            ]
+        },
+        "cookies": []
+    },
+    "facebook-pixel": {
+        "label": "Facebook Pixel",
+        "description": "Meta ad conversion tracking.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "connect.facebook.net",
+                "fbevents.js",
+                "facebook.com/tr"
+            ],
+            "iframes": []
+        },
+        "cookies": [
+            {
+                "name": "_fbp",
+                "domain": ".domain.com",
+                "duration_days": 90,
+                "category": "marketing",
+                "provider": "Facebook/Meta",
+                "purpose": "Facebook Pixel browser ID for advertising attribution and analytics.",
+                "description": null
+            },
+            {
+                "name": "_fbc",
+                "domain": ".domain.com",
+                "duration_days": 90,
+                "category": "marketing",
+                "provider": "Facebook/Meta Pixel",
+                "purpose": "Stores the Facebook click ID (fbclid) to attribute conversions back to specific Facebook ads. Only set when user arrives via Facebook ad.",
+                "description": null
+            },
+            {
+                "name": "fr",
+                "domain": ".facebook.com",
+                "duration_days": 90,
+                "category": "marketing",
+                "provider": "Facebook",
+                "purpose": "Contains browser and user unique ID combination for targeted advertising.",
+                "description": null
+            }
+        ]
+    },
+    "fathom": {
+        "label": "Fathom Analytics",
+        "description": "Privacy-friendly website analytics.",
+        "category": "analytics",
+        "cookieless": true,
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.usefathom.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "firebase-analytics": {
+        "label": "Firebase Analytics (Google)",
+        "description": "Google app and web analytics.",
+        "category": "analytics",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "gcm_compatible": true,
+        "patterns": {
+            "scripts": [
+                "firebase-settings",
+                "gstatic.com/firebasejs"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "floodlight": {
+        "label": "Floodlight (Google)",
+        "description": "Google conversion and remarketing tags.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "gcm_compatible": true,
+        "patterns": {
+            "scripts": [
+                "fls.doubleclick.net",
+                "ad.doubleclick.net"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "font-awesome": {
+        "label": "Font Awesome",
+        "description": "Loads Font Awesome icons.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "kit.fontawesome.com",
+                "use.fontawesome.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "freshchat": {
+        "label": "Freshchat",
+        "description": "Freshworks live chat.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "wchat.freshchat.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "fullstory": {
+        "label": "FullStory",
+        "description": "Session replay and analytics.",
+        "category": "analytics",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "edge.fullstory.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "giphy": {
+        "label": "GIPHY",
+        "description": "Embeds animated GIFs.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [],
+            "iframes": [
+                "giphy.com/embed"
+            ]
+        },
+        "cookies": []
+    },
+    "google-accounts": {
+        "label": "Google Sign-In",
+        "description": "Google Sign-In authentication.",
+        "category": "functional",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "accounts.google.com/gsi/client"
+            ],
+            "iframes": [
+                "accounts.google.com/gsi/"
+            ]
+        },
+        "cookies": []
+    },
+    "google-ad-manager": {
+        "label": "Google Ad Manager",
+        "description": "Google ad serving platform.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "gcm_compatible": true,
+        "patterns": {
+            "scripts": [
+                "securepubads.g.doubleclick.net",
+                "pubads.g.doubleclick.net",
+                "googletagservices.com/tag/js/gpt.js"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "google-ads": {
+        "label": "Google Ads",
+        "description": "Google Ads conversion and remarketing.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "gcm_compatible": true,
+        "patterns": {
+            "scripts": [
+                "googleadservices.com",
+                "googlesyndication.com",
+                "googleads.g.doubleclick.net"
+            ],
+            "iframes": []
+        },
+        "cookies": [
+            {
+                "name": "_gcl_au",
+                "domain": ".domain.com",
+                "duration_days": 90,
+                "category": "marketing",
+                "provider": "Google Ads",
+                "purpose": "Used by Google AdSense for experimenting with advertisement efficiency across websites using their services. Helps track ad clicks and conversions.",
+                "description": null
+            },
+            {
+                "name": "__gads",
+                "domain": ".domain.com",
+                "duration_days": 395,
+                "category": "marketing",
+                "provider": "Google Ads",
+                "purpose": "Set by Google Ad Manager on publisher sites to track ad performance and user engagement.",
+                "description": null
+            },
+            {
+                "name": "_gcl_aw",
+                "domain": ".domain.com",
+                "duration_days": 90,
+                "category": "marketing",
+                "provider": "Google Ads",
+                "purpose": "Google Ads conversion linker cookie. Stores click information for conversion attribution.",
+                "description": null
+            },
+            {
+                "name": "_gcl_dc",
+                "domain": ".domain.com",
+                "duration_days": 90,
+                "category": "marketing",
+                "provider": "Google Ads",
+                "purpose": "Google Campaign Manager (DoubleClick) conversion linker cookie.",
+                "description": null
+            },
+            {
+                "name": "_gcl_gb",
+                "domain": ".domain.com",
+                "duration_days": 90,
+                "category": "marketing",
+                "provider": "Google Ads",
+                "purpose": "Google Ads and Analytics conversion linker for cross-domain tracking.",
+                "description": null
+            }
+        ]
+    },
+    "google-adsense": {
+        "label": "Google AdSense",
+        "description": "Google display ads.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "gcm_compatible": true,
+        "patterns": {
+            "scripts": [
+                "pagead2.googlesyndication.com",
+                "googlesyndication.com/pagead",
+                "adsbygoogle.js"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "google-analytics": {
+        "label": "Google Analytics",
+        "description": "Website traffic and audience analytics.",
+        "category": "analytics",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": false,
+        "gcm_compatible": true,
+        "patterns": {
+            "scripts": [
+                "google-analytics.com/analytics.js",
+                "googletagmanager.com/gtag/js",
+                "google-analytics.com/ga.js"
+            ],
+            "iframes": []
+        },
+        "cookies": [
+            {
+                "name": "_ga",
+                "domain": ".domain.com",
+                "duration_days": 730,
+                "category": "analytics",
+                "provider": "Google Analytics",
+                "purpose": "Used to distinguish unique users by assigning a randomly generated number as a client identifier. Included in each page request and used to calculate visitor, session and campaign data.",
+                "description": null
+            },
+            {
+                "name": "_gid",
+                "domain": ".domain.com",
+                "duration_days": 1,
+                "category": "analytics",
+                "provider": "Google Analytics",
+                "purpose": "Used to store and update a unique value for each page visited. Groups user behavior across sessions within a 24-hour period.",
+                "description": null
+            },
+            {
+                "name": "_ga_<container-id>",
+                "domain": ".domain.com",
+                "duration_days": 730,
+                "category": "analytics",
+                "provider": "Google Analytics 4",
+                "purpose": "Used to persist session state. Each GA4 property or data stream has its own cookie with unique container ID.",
+                "description": null
+            },
+            {
+                "name": "_gac_gb_<container-id>",
+                "domain": ".domain.com",
+                "duration_days": 90,
+                "category": "marketing",
+                "provider": "Google Analytics",
+                "purpose": "Contains campaign-related information. Used by Google Ads to measure ad campaign performance.",
+                "description": null
+            },
+            {
+                "name": "_gat",
+                "domain": ".domain.com",
+                "duration_days": 0,
+                "category": "analytics",
+                "provider": "Google Analytics",
+                "purpose": "Used to throttle request rate to limit data collection on high traffic sites.",
+                "description": null
+            },
+            {
+                "name": "FPID",
+                "domain": ".domain.com",
+                "duration_days": 730,
+                "category": "analytics",
+                "provider": "Google Analytics 4",
+                "purpose": "First-party identifier used to distinguish users in GA4.",
+                "description": null
+            },
+            {
+                "name": "FPLC",
+                "domain": ".domain.com",
+                "duration_days": 0,
+                "category": "analytics",
+                "provider": "Google Analytics 4",
+                "purpose": "Used for session management in GA4.",
+                "description": null
+            }
+        ]
+    },
+    "google-fonts": {
+        "label": "Google Fonts",
+        "description": "Loads Google web fonts.",
+        "category": "functional",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "gcm_compatible": false,
+        "patterns": {
+            "scripts": [],
+            "iframes": [],
+            "styles": [
+                "fonts.googleapis.com",
+                "fonts.gstatic.com"
+            ]
+        },
+        "cookies": []
+    },
+    "google-hosted-libraries": {
+        "label": "Google Hosted Libraries",
+        "description": "Google-hosted JavaScript libraries.",
+        "category": "essential",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "ajax.googleapis.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "google-maps": {
+        "label": "Google Maps",
+        "description": "Embeds interactive Google Maps.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": false,
+        "patterns": {
+            "scripts": [
+                "maps.googleapis.com"
+            ],
+            "iframes": [
+                "google.com/maps/embed",
+                "maps.google.com/maps"
+            ]
+        },
+        "cookies": [
+            {
+                "name": "NID",
+                "domain": ".google.com",
+                "duration_days": 182,
+                "category": "marketing",
+                "provider": "Google",
+                "purpose": "Stores preferences and information for Google services shown on the map, including personalised ads.",
+                "description": "Set by Google Maps to remember preferences and deliver personalised content."
+            },
+            {
+                "name": "1P_JAR",
+                "domain": ".google.com",
+                "duration_days": 30,
+                "category": "marketing",
+                "provider": "Google",
+                "purpose": "Gathers website statistics and measures conversions for Google services.",
+                "description": "Set by Google to collect site usage statistics."
+            }
+        ]
+    },
+    "google-pay": {
+        "label": "Google Pay",
+        "description": "Google Pay checkout button.",
+        "category": "essential",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "pay.google.com/gp/p/js"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "google-tag-manager": {
+        "label": "Google Tag Manager",
+        "description": "Deploys and manages marketing tags.",
+        "category": "analytics",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "gcm_compatible": true,
+        "patterns": {
+            "scripts": [
+                "googletagmanager.com/gtm.js"
+            ],
+            "iframes": [
+                "googletagmanager.com/ns.html"
+            ]
+        },
+        "cookies": [
+            {
+                "name": "_dc_gtm_UA-*",
+                "domain": ".domain.com",
+                "duration_days": 0,
+                "category": "analytics",
+                "provider": "Google Tag Manager",
+                "purpose": "Used by Google Tag Manager to control loading of Google Analytics script.",
+                "description": null
+            },
+            {
+                "name": "gtm_auth",
+                "domain": ".domain.com",
+                "duration_days": 0,
+                "category": "functional",
+                "provider": "Google Tag Manager",
+                "purpose": "Google Tag Manager environment authentication token for preview mode.",
+                "description": null
+            }
+        ]
+    },
+    "hcaptcha": {
+        "label": "hCaptcha",
+        "description": "Privacy-focused bot protection.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "js.hcaptcha.com"
+            ],
+            "iframes": [
+                "newassets.hcaptcha.com"
+            ]
+        },
+        "cookies": []
+    },
+    "heap": {
+        "label": "Heap",
+        "description": "Automatic product analytics.",
+        "category": "analytics",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.heapanalytics.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "helpscout-beacon": {
+        "label": "Help Scout Beacon",
+        "description": "Help Scout support widget.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "beacon-v2.helpscout.net"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "hotjar": {
+        "label": "Hotjar",
+        "description": "Heatmaps and session recording.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "static.hotjar.com",
+                "hotjar.com/c/hotjar"
+            ],
+            "iframes": []
+        },
+        "cookies": [
+            {
+                "name": "_hjid",
+                "domain": ".domain.com",
+                "duration_days": 365,
+                "category": "analytics",
+                "provider": "Hotjar",
+                "purpose": "Hotjar cookie set when customer first lands on a page with the Hotjar script. Used to persist Hotjar User ID unique to that site.",
+                "description": null
+            },
+            {
+                "name": "_hjSessionUser_*",
+                "domain": ".domain.com",
+                "duration_days": 365,
+                "category": "analytics",
+                "provider": "Hotjar",
+                "purpose": "Set when user first lands on page. Used to persist Hotjar User ID unique to that site. Ensures behavior in subsequent visits attributed to same user ID.",
+                "description": null
+            },
+            {
+                "name": "_hjFirstSeen",
+                "domain": ".domain.com",
+                "duration_days": 0,
+                "category": "analytics",
+                "provider": "Hotjar",
+                "purpose": "Identifies a new user's first session on the website.",
+                "description": null
+            },
+            {
+                "name": "_hjIncludedInSessionSample",
+                "domain": ".domain.com",
+                "duration_days": 0,
+                "category": "analytics",
+                "provider": "Hotjar",
+                "purpose": "Set to determine if user is included in data sampling for session recordings.",
+                "description": null
+            }
+        ]
+    },
+    "hubspot": {
+        "label": "HubSpot",
+        "description": "CRM, marketing, and analytics.",
+        "category": "analytics",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "js.hs-scripts.com",
+                "js.hs-analytics.net",
+                "js.hsforms.net",
+                "js.hscollectedforms.net",
+                "track.hubspot.com",
+                "hs-scripts.com",
+                "hs-analytics.net",
+                "hs-banner.com",
+                "hscollectedforms.net",
+                "hsforms.net",
+                "hsforms.com",
+                "usemessages.com",
+                "track-eu1.hubspot.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "imagekit": {
+        "label": "ImageKit",
+        "description": "Delivers the site's own media and assets.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "ik.imagekit.io"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "impact": {
+        "label": "impact.com",
+        "description": "Partnership and affiliate tracking.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "utt.impactcdn.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "infolinks": {
+        "label": "Infolinks",
+        "description": "In-text advertising.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "resources.infolinks.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "inspectlet": {
+        "label": "Inspectlet",
+        "description": "Session recording and heatmaps.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.inspectlet.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "instagram": {
+        "label": "Instagram",
+        "description": "Embeds Instagram posts.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "platform.instagram.com/en_US/embeds.js",
+                "instagram.com/embed.js"
+            ],
+            "iframes": [
+                "instagram.com/p/",
+                "instagram.com/reel/",
+                "instagram.com/embed"
+            ]
+        },
+        "cookies": []
+    },
+    "intercom": {
+        "label": "Intercom",
+        "description": "Customer messaging and support.",
+        "category": "functional",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "widget.intercom.io",
+                "js.intercomcdn.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "jetpack-site-accelerator": {
+        "label": "Jetpack Site Accelerator",
+        "description": "Delivers WordPress core, theme and plugin assets.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "c0.wp.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "jetpack-stats": {
+        "label": "Jetpack Stats (WordPress.com)",
+        "description": "WordPress.com site statistics.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "stats.wp.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "jotform": {
+        "label": "Jotform",
+        "description": "Embedded online forms.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.jotfor.ms"
+            ],
+            "iframes": [
+                "form.jotform.com"
+            ]
+        },
+        "cookies": []
+    },
+    "jquery": {
+        "label": "jQuery",
+        "description": "Core JavaScript utility library.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "ajax.googleapis.com/ajax/libs/jquery",
+                "code.jquery.com/jquery"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "jsdelivr": {
+        "label": "jsDelivr CDN",
+        "description": "Open-source package CDN.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.jsdelivr.net"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "judge-me": {
+        "label": "Judge.me",
+        "description": "Product reviews widget.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.judge.me"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "jw-player": {
+        "label": "JW Player",
+        "description": "Video hosting and player.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.jwplayer.com",
+                "content.jwplatform.com"
+            ],
+            "iframes": [
+                "content.jwplatform.com"
+            ]
+        },
+        "cookies": []
+    },
+    "kinsta-cdn": {
+        "label": "Kinsta CDN",
+        "description": "Delivers site assets.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "kinstacdn.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "kissmetrics": {
+        "label": "Kissmetrics",
+        "description": "Behavioral product analytics.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "i.kissmetrics.io",
+                "scripts.kissmetrics.io"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "klarna": {
+        "label": "Klarna",
+        "description": "Buy-now-pay-later checkout.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "x.klarnacdn.net"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "klaviyo": {
+        "label": "Klaviyo",
+        "description": "Ecommerce email and SMS marketing.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "static.klaviyo.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "linkedin": {
+        "label": "LinkedIn Insight Tag",
+        "description": "LinkedIn ad conversion tracking.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "snap.licdn.com",
+                "linkedin.com/px"
+            ],
+            "iframes": []
+        },
+        "cookies": [
+            {
+                "name": "li_fat_id",
+                "domain": ".domain.com",
+                "duration_days": 30,
+                "category": "marketing",
+                "provider": "LinkedIn Ads",
+                "purpose": "LinkedIn First-Party Ad Tracking ID for conversion tracking. Captured from ad landing page URLs with click IDs.",
+                "description": null
+            },
+            {
+                "name": "lidc",
+                "domain": ".linkedin.com",
+                "duration_days": 1,
+                "category": "functional",
+                "provider": "LinkedIn",
+                "purpose": "Used for routing and load balancing to ensure page requests are routed to the same server in any browsing session.",
+                "description": null
+            },
+            {
+                "name": "bcookie",
+                "domain": ".linkedin.com",
+                "duration_days": 730,
+                "category": "functional",
+                "provider": "LinkedIn",
+                "purpose": "LinkedIn browser identification cookie for platform features.",
+                "description": null
+            },
+            {
+                "name": "bscookie",
+                "domain": ".linkedin.com",
+                "duration_days": 730,
+                "category": "functional",
+                "provider": "LinkedIn",
+                "purpose": "Secure browser identifier cookie used for authentication.",
+                "description": null
+            },
+            {
+                "name": "UserMatchHistory",
+                "domain": ".linkedin.com",
+                "duration_days": 30,
+                "category": "marketing",
+                "provider": "LinkedIn",
+                "purpose": "LinkedIn Ads ID syncing for audience matching and retargeting.",
+                "description": null
+            },
+            {
+                "name": "lang",
+                "domain": ".linkedin.com",
+                "duration_days": 0,
+                "category": "functional",
+                "provider": "LinkedIn",
+                "purpose": "Remembers the user's selected language version of a website.",
+                "description": null
+            },
+            {
+                "name": "AnalyticsSyncHistory",
+                "domain": ".linkedin.com",
+                "duration_days": 30,
+                "category": "marketing",
+                "provider": "LinkedIn",
+                "purpose": "Used to store information about the time a sync took place with the lms_analytics cookie.",
+                "description": null
+            },
+            {
+                "name": "li_gc",
+                "domain": ".linkedin.com",
+                "duration_days": 730,
+                "category": "functional",
+                "provider": "LinkedIn",
+                "purpose": "LinkedIn guest consent cookie for non-members visiting LinkedIn pages.",
+                "description": null
+            }
+        ]
+    },
+    "livechat": {
+        "label": "LiveChat",
+        "description": "Live chat customer support.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.livechatinc.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "loom": {
+        "label": "Loom",
+        "description": "Embeds Loom video recordings.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [],
+            "iframes": [
+                "loom.com/embed"
+            ]
+        },
+        "cookies": []
+    },
+    "lucky-orange": {
+        "label": "Lucky Orange",
+        "description": "Heatmaps and session recording.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.luckyorange.com",
+                "tools.luckyorange.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "magnite": {
+        "label": "Magnite (Rubicon Project)",
+        "description": "Programmatic ad exchange.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "rubiconproject.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "mailchimp": {
+        "label": "Mailchimp",
+        "description": "Email marketing and automation.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "chimpstatic.com",
+                "list-manage.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "mailerlite": {
+        "label": "MailerLite",
+        "description": "Email marketing and automation.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "static.mailerlite.com",
+                "assets.mailerlite.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "mapbox": {
+        "label": "Mapbox",
+        "description": "Interactive custom maps.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "api.mapbox.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "marketo": {
+        "label": "Marketo",
+        "description": "B2B marketing automation.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "munchkin.marketo.net"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "matomo": {
+        "label": "Matomo",
+        "description": "Privacy-focused web analytics.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "matomo.js",
+                "piwik.js",
+                "matomo.cloud",
+                "/matomo.php"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "media-net": {
+        "label": "Media.net",
+        "description": "Contextual display ads.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "contextual.media.net"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "mediavine": {
+        "label": "Mediavine",
+        "description": "Publisher ad management.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "scripts.mediavine.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "microsoft-advertising": {
+        "label": "Microsoft Advertising (Bing Ads)",
+        "description": "Bing Ads conversion tracking.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "bat.bing.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "mixpanel": {
+        "label": "Mixpanel",
+        "description": "Product and event analytics.",
+        "category": "analytics",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.mxpnl.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "mollie": {
+        "label": "Mollie",
+        "description": "European payment processing.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "js.mollie.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "mouseflow": {
+        "label": "Mouseflow",
+        "description": "Session replay and heatmaps.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.mouseflow.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "new-relic": {
+        "label": "New Relic",
+        "description": "Application performance monitoring.",
+        "category": "analytics",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "js-agent.newrelic.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "nitropack": {
+        "label": "NitroPack",
+        "description": "Delivers optimized site assets.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "nitrocdn.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "olark": {
+        "label": "Olark",
+        "description": "Live chat support widget.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "static.olark.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "omnisend": {
+        "label": "Omnisend",
+        "description": "Ecommerce email and SMS.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "omnisrc.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "onesignal": {
+        "label": "OneSignal",
+        "description": "Web push notifications.",
+        "category": "functional",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.onesignal.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "openstreetmap": {
+        "label": "OpenStreetMap",
+        "description": "Embeds OpenStreetMap maps.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [],
+            "iframes": [
+                "openstreetmap.org/export/embed"
+            ]
+        },
+        "cookies": []
+    },
+    "openx": {
+        "label": "OpenX",
+        "description": "Programmatic ad exchange.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "openx.net"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "optimizely": {
+        "label": "Optimizely",
+        "description": "Experimentation and A/B testing.",
+        "category": "analytics",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.optimizely.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "optimole": {
+        "label": "Optimole",
+        "description": "Delivers the site's own images and assets.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "i.optimole.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "optinmonster": {
+        "label": "OptinMonster",
+        "description": "Lead generation and popups.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "a.omappapi.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "outbrain": {
+        "label": "Outbrain",
+        "description": "Content recommendation ads.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "widgets.outbrain.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "pardot": {
+        "label": "Pardot (Account Engagement)",
+        "description": "Salesforce B2B marketing automation.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "pi.pardot.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "parsely": {
+        "label": "Parse.ly",
+        "description": "Content performance analytics.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.parsely.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "paypal": {
+        "label": "PayPal",
+        "description": "PayPal payments and checkout.",
+        "category": "essential",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "paypal.com/sdk",
+                "paypalobjects.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "pinterest": {
+        "label": "Pinterest Tag",
+        "description": "Pinterest ad conversion tracking.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "pintrk",
+                "s.pinimg.com/ct"
+            ],
+            "iframes": []
+        },
+        "cookies": [
+            {
+                "name": "_pin_unauth",
+                "domain": ".pinterest.com",
+                "duration_days": 365,
+                "category": "marketing",
+                "provider": "Pinterest",
+                "purpose": "Used by Pinterest for tracking unauthenticated users for advertising and analytics.",
+                "description": null
+            },
+            {
+                "name": "_pinterest_ct_ua",
+                "domain": ".domain.com",
+                "duration_days": 365,
+                "category": "marketing",
+                "provider": "Pinterest",
+                "purpose": "Pinterest conversion tracking for advertising campaigns.",
+                "description": null
+            }
+        ]
+    },
+    "piwik-pro": {
+        "label": "Piwik PRO",
+        "description": "Privacy-compliant analytics suite.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "piwik.pro"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "plausible": {
+        "label": "Plausible Analytics",
+        "description": "Lightweight privacy-friendly analytics.",
+        "category": "analytics",
+        "cookieless": true,
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "plausible.io/js"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "posthog": {
+        "label": "PostHog",
+        "description": "Open-source product analytics.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "us.i.posthog.com",
+                "eu.i.posthog.com",
+                "app.posthog.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "pubmatic": {
+        "label": "PubMatic",
+        "description": "Programmatic advertising platform.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "ads.pubmatic.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "pushengage": {
+        "label": "PushEngage",
+        "description": "Web push notification campaigns.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "clientcdn.pushengage.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "quantcast": {
+        "label": "Quantcast",
+        "description": "Audience measurement and consent.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "secure.quantserve.com",
+                "rules.quantcount.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "quora-pixel": {
+        "label": "Quora Pixel",
+        "description": "Quora ad conversion tracking.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "a.quora.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "raptive": {
+        "label": "Raptive (AdThrive)",
+        "description": "Publisher ad management.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "ads.adthrive.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "razorpay": {
+        "label": "Razorpay",
+        "description": "Indian payment gateway.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "checkout.razorpay.com"
+            ],
+            "iframes": [
+                "api.razorpay.com"
+            ]
+        },
+        "cookies": []
+    },
+    "recaptcha": {
+        "label": "Google reCAPTCHA",
+        "description": "Google bot and spam protection.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": false,
+        "gcm_compatible": false,
+        "patterns": {
+            "scripts": [
+                "google.com/recaptcha",
+                "gstatic.com/recaptcha"
+            ],
+            "iframes": [
+                "google.com/recaptcha"
+            ]
+        },
+        "cookies": [
+            {
+                "name": "_GRECAPTCHA",
+                "domain": ".google.com",
+                "duration_days": 180,
+                "category": "functional",
+                "provider": "Google reCAPTCHA",
+                "purpose": "Provides spam and abuse protection by distinguishing humans from bots.",
+                "description": "Set by Google reCAPTCHA for risk analysis; required for the anti-abuse check to work."
+            }
+        ]
+    },
+    "reddit-ads": {
+        "label": "Reddit Ads",
+        "description": "Reddit ad conversion tracking.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "redditstatic.com/ads",
+                "pixel.redditmedia.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "rocketcdn": {
+        "label": "RocketCDN",
+        "description": "Delivers site assets.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "rocketcdn.me"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "rudderstack": {
+        "label": "RudderStack",
+        "description": "Customer data pipeline.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.rudderlabs.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "rumble": {
+        "label": "Rumble",
+        "description": "Embeds Rumble videos.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [],
+            "iframes": [
+                "rumble.com/embed"
+            ]
+        },
+        "cookies": []
+    },
+    "search-ads-360": {
+        "label": "Search Ads 360 (Google)",
+        "description": "Google search campaign management.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "gcm_compatible": true,
+        "patterns": {
+            "scripts": [
+                "searchads.google.com",
+                "cm.g.doubleclick.net"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "segment": {
+        "label": "Segment",
+        "description": "Customer data platform.",
+        "category": "analytics",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.segment.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "sharethis": {
+        "label": "ShareThis",
+        "description": "Social sharing buttons.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "platform-api.sharethis.com",
+                "s.sharethis.com",
+                "sharethis.com/js"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "shortpixel": {
+        "label": "ShortPixel Adaptive Images",
+        "description": "Delivers the site's own images and assets.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.shortpixel.ai"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "sigmize": {
+        "label": "Sigmize",
+        "description": "A/B testing, heatmaps, and session recording.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "api.sigmize.com",
+                "sigmize.com/sdk"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "simple-analytics": {
+        "label": "Simple Analytics",
+        "description": "Privacy-first website analytics.",
+        "category": "analytics",
+        "cookieless": true,
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "scripts.simpleanalyticscdn.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "skimlinks": {
+        "label": "Skimlinks",
+        "description": "Affiliate link monetization.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "s.skimresources.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "slideshare": {
+        "label": "SlideShare",
+        "description": "Embeds SlideShare presentations.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [],
+            "iframes": [
+                "slideshare.net/slideshow/embed_code",
+                "slideshare.net/api/embed"
+            ]
+        },
+        "cookies": []
+    },
+    "smartlook": {
+        "label": "Smartlook",
+        "description": "Session recording and analytics.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "web-sdk.smartlook.com",
+                "rec.smartlook.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "smartsupp": {
+        "label": "Smartsupp",
+        "description": "Live chat and visitor recording.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "smartsuppchat.com/loader.js"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "snapchat": {
+        "label": "Snapchat Pixel",
+        "description": "Snapchat ad conversion tracking.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "sc-static.net/scevent.min.js"
+            ],
+            "iframes": []
+        },
+        "cookies": [
+            {
+                "name": "_scid",
+                "domain": ".snapchat.com",
+                "duration_days": 395,
+                "category": "marketing",
+                "provider": "Snapchat Pixel",
+                "purpose": "Snapchat client-side identifier for advertising attribution and measurement.",
+                "description": null
+            }
+        ]
+    },
+    "soundcloud": {
+        "label": "SoundCloud",
+        "description": "Embeds SoundCloud audio.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [],
+            "iframes": [
+                "w.soundcloud.com/player",
+                "soundcloud.com/player"
+            ]
+        },
+        "cookies": []
+    },
+    "sovrn-commerce": {
+        "label": "Sovrn Commerce (VigLink)",
+        "description": "Affiliate link monetization.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn-static.viglink.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "spotify": {
+        "label": "Spotify",
+        "description": "Embeds Spotify players.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [],
+            "iframes": [
+                "open.spotify.com/embed"
+            ]
+        },
+        "cookies": []
+    },
+    "square": {
+        "label": "Square",
+        "description": "Square payment processing.",
+        "category": "essential",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "web.squarecdn.com",
+                "js.squareup.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "stackpath-cdn": {
+        "label": "StackPath CDN (MaxCDN)",
+        "description": "Delivers site assets.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "stackpathcdn.com",
+                "stackpathdns.com",
+                "netdna-cdn.com",
+                "netdna-ssl.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "statcounter": {
+        "label": "StatCounter",
+        "description": "Website visitor statistics.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "statcounter.com/counter"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "statically": {
+        "label": "Statically",
+        "description": "Delivers site assets.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.statically.io"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "stripe": {
+        "label": "Stripe",
+        "description": "Payment processing and fraud checks.",
+        "category": "essential",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "js.stripe.com"
+            ],
+            "iframes": [
+                "js.stripe.com",
+                "m.stripe.network",
+                "m.stripe.com",
+                "hooks.stripe.com"
+            ]
+        },
+        "cookies": []
+    },
+    "sumo": {
+        "label": "Sumo",
+        "description": "Email capture and popups.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "load.sumo.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "surecart": {
+        "label": "SureCart Affiliate Tracking",
+        "description": "SureCart affiliate referral tracking.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "js.surecart.com",
+                "/surecart/dist/scripts/visits.js",
+                "SureCartAffiliatesConfig"
+            ],
+            "iframes": []
+        },
+        "cookies": [
+            {
+                "name": "sc_click_id",
+                "domain": ".domain.com",
+                "duration_days": 30,
+                "category": "marketing",
+                "provider": "SureCart",
+                "purpose": "Stores the affiliate click ID from a SureCart affiliate link so a later purchase is credited to that affiliate. Its lifetime follows the store's affiliate tracking length.",
+                "description": null
+            }
+        ]
+    },
+    "taboola": {
+        "label": "Taboola",
+        "description": "Content recommendation ads.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "cdn.taboola.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "tawk-to": {
+        "label": "Tawk.to",
+        "description": "Free live chat widget.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "embed.tawk.to",
+                "cdn.tawk.to"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "tealium": {
+        "label": "Tealium",
+        "description": "Tag management and customer data.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "tags.tiqcdn.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "tidio": {
+        "label": "Tidio",
+        "description": "Live chat and chatbots.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "code.tidio.co",
+                "widget-v4.tidiochat.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "tiktok": {
+        "label": "TikTok Pixel",
+        "description": "TikTok ad conversion tracking.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "analytics.tiktok.com",
+                "tiktok.com/i18n"
+            ],
+            "iframes": []
+        },
+        "cookies": [
+            {
+                "name": "_ttp",
+                "domain": ".tiktok.com",
+                "duration_days": 395,
+                "category": "marketing",
+                "provider": "TikTok Pixel",
+                "purpose": "Used by TikTok to track and improve the performance of advertising campaigns, measure conversions, and build audiences.",
+                "description": null
+            },
+            {
+                "name": "_tt_enable_cookie",
+                "domain": ".domain.com",
+                "duration_days": 395,
+                "category": "marketing",
+                "provider": "TikTok",
+                "purpose": "Enables TikTok to set cookies for tracking and advertising.",
+                "description": null
+            }
+        ]
+    },
+    "tiktok-embed": {
+        "label": "TikTok Embeds",
+        "description": "Embeds TikTok videos.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "tiktok.com/embed.js"
+            ],
+            "iframes": [
+                "tiktok.com/embed"
+            ]
+        },
+        "cookies": []
+    },
+    "trustpilot": {
+        "label": "Trustpilot",
+        "description": "Customer review widgets.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "widget.trustpilot.com"
+            ],
+            "iframes": [
+                "widget.trustpilot.com"
+            ]
+        },
+        "cookies": []
+    },
+    "twitch": {
+        "label": "Twitch",
+        "description": "Embeds Twitch streams.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "embed.twitch.tv"
+            ],
+            "iframes": [
+                "player.twitch.tv"
+            ]
+        },
+        "cookies": []
+    },
+    "twitter": {
+        "label": "Twitter/X Pixel",
+        "description": "X (Twitter) ad conversion tracking.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "static.ads-twitter.com",
+                "analytics.twitter.com"
+            ],
+            "iframes": []
+        },
+        "cookies": [
+            {
+                "name": "personalization_id",
+                "domain": ".twitter.com",
+                "duration_days": 730,
+                "category": "marketing",
+                "provider": "Twitter/X",
+                "purpose": "Used by Twitter to track and personalize content and ads for users.",
+                "description": null
+            },
+            {
+                "name": "guest_id",
+                "domain": ".twitter.com",
+                "duration_days": 730,
+                "category": "marketing",
+                "provider": "Twitter/X",
+                "purpose": "Twitter identifier for logged-out users to track interactions and serve personalized content.",
+                "description": null
+            }
+        ]
+    },
+    "typeform": {
+        "label": "Typeform",
+        "description": "Interactive embedded forms.",
+        "category": "functional",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "embed.typeform.com"
+            ],
+            "iframes": [
+                "form.typeform.com"
+            ]
+        },
+        "cookies": []
+    },
+    "umami": {
+        "label": "Umami",
+        "description": "Open-source privacy analytics.",
+        "category": "analytics",
+        "cookieless": true,
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "analytics.umami.is"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "unpkg": {
+        "label": "unpkg CDN",
+        "description": "npm package CDN.",
+        "category": "essential",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "unpkg.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "videopress": {
+        "label": "VideoPress",
+        "description": "WordPress video hosting.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [],
+            "iframes": [
+                "video.wordpress.com/embed/",
+                "videopress.com/embed/",
+                "videopress.com/v/"
+            ]
+        },
+        "cookies": []
+    },
+    "vidyard": {
+        "label": "Vidyard",
+        "description": "Video hosting for marketing.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "play.vidyard.com"
+            ],
+            "iframes": [
+                "play.vidyard.com"
+            ]
+        },
+        "cookies": []
+    },
+    "vimeo": {
+        "label": "Vimeo",
+        "description": "Embeds Vimeo videos.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": false,
+        "patterns": {
+            "scripts": [
+                "player.vimeo.com/api/player.js"
+            ],
+            "iframes": [
+                "player.vimeo.com/video/",
+                "vimeo.com/video/"
+            ]
+        },
+        "cookies": [
+            {
+                "name": "vuid",
+                "domain": ".vimeo.com",
+                "duration_days": 730,
+                "category": "analytics",
+                "provider": "Vimeo",
+                "purpose": "Collects data on visitor behaviour across websites that embed Vimeo videos.",
+                "description": "Vimeo analytics cookie that tracks views of embedded videos."
+            },
+            {
+                "name": "player",
+                "domain": ".vimeo.com",
+                "duration_days": 365,
+                "category": "functional",
+                "provider": "Vimeo",
+                "purpose": "Saves the user's video-player preferences (volume, quality, captions).",
+                "description": "Set by Vimeo to remember embedded-player settings."
+            },
+            {
+                "name": "__cf_bm",
+                "domain": ".vimeo.com",
+                "duration_days": 1,
+                "category": "functional",
+                "provider": "Cloudflare",
+                "purpose": "Distinguishes humans from bots to protect the embedded content.",
+                "description": "Cloudflare bot-management cookie served with Vimeo embeds."
+            }
+        ]
+    },
+    "vwo": {
+        "label": "VWO",
+        "description": "A/B testing and optimization.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "dev.visualwebsiteoptimizer.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "wistia": {
+        "label": "Wistia",
+        "description": "Business video hosting.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "fast.wistia.com",
+                "fast.wistia.net"
+            ],
+            "iframes": [
+                "fast.wistia.net",
+                "fast.wistia.com"
+            ]
+        },
+        "cookies": []
+    },
+    "woopra": {
+        "label": "Woopra",
+        "description": "Customer journey analytics.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "static.woopra.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "xandr": {
+        "label": "Xandr (AppNexus)",
+        "description": "Programmatic ad platform.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "adnxs.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "yandex-metrica": {
+        "label": "Yandex Metrica",
+        "description": "Yandex web analytics.",
+        "category": "analytics",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "mc.yandex.ru"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "yotpo": {
+        "label": "Yotpo",
+        "description": "Reviews and loyalty marketing.",
+        "category": "marketing",
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "staticw2.yotpo.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    },
+    "youtube": {
+        "label": "YouTube",
+        "description": "Embeds YouTube videos.",
+        "category": "marketing",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": false,
+        "patterns": {
+            "scripts": [
+                "youtube.com/iframe_api",
+                "youtube.com/s/player/"
+            ],
+            "iframes": [
+                "youtube.com/embed/",
+                "youtube-nocookie.com/embed/",
+                "youtu.be/"
+            ]
+        },
+        "cookies": [
+            {
+                "name": "VISITOR_INFO1_LIVE",
+                "domain": ".youtube.com",
+                "duration_days": 180,
+                "category": "marketing",
+                "provider": "YouTube (Google)",
+                "purpose": "Estimates the user's bandwidth and limits ad interruptions on embedded videos.",
+                "description": "Set by YouTube to measure bandwidth and personalise the embedded player experience."
+            },
+            {
+                "name": "YSC",
+                "domain": ".youtube.com",
+                "duration_days": 0,
+                "category": "marketing",
+                "provider": "YouTube (Google)",
+                "purpose": "Registers a unique ID to keep statistics of the videos the user has seen.",
+                "description": "Session cookie set by YouTube to track views of embedded videos."
+            },
+            {
+                "name": "VISITOR_PRIVACY_METADATA",
+                "domain": ".youtube.com",
+                "duration_days": 180,
+                "category": "marketing",
+                "provider": "YouTube (Google)",
+                "purpose": "Stores the visitor's cookie consent state for the current domain.",
+                "description": "Set by YouTube to record the visitor's privacy/consent metadata."
+            },
+            {
+                "name": "PREF",
+                "domain": ".youtube.com",
+                "duration_days": 240,
+                "category": "functional",
+                "provider": "YouTube (Google)",
+                "purpose": "Stores player preferences such as preferred playback settings.",
+                "description": "Set by YouTube to remember embedded-player preferences."
+            },
+            {
+                "name": "CONSENT",
+                "domain": ".google.com",
+                "duration_days": 730,
+                "category": "functional",
+                "provider": "Google",
+                "purpose": "Stores the visitor's consent state for Google services.",
+                "description": "Set by Google to persist the visitor's consent choices."
+            }
+        ]
+    },
+    "zendesk": {
+        "label": "Zendesk",
+        "description": "Customer support and live chat.",
+        "category": "functional",
+        "transfer_countries": [
+            "US"
+        ],
+        "pro": true,
+        "patterns": {
+            "scripts": [
+                "static.zdassets.com",
+                "ekr.zdassets.com"
+            ],
+            "iframes": []
+        },
+        "cookies": []
+    }
+}

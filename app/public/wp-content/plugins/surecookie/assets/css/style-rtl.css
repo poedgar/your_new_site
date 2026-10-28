@@ -1,0 +1,1586 @@
+/* ==========================================================================
+   SureCookie Shared Styles - Consolidated CSS for both Frontend and Admin Areas
+========================================================================== */
+
+/* Global Font CSS */
+@font-face {
+	font-family: Figtree;
+	font-style: normal;
+	font-weight: 100;
+	font-display: swap;
+	src: url("../font/Figtree/Figtree-Light.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: Figtree;
+	font-style: normal;
+	font-weight: 200;
+	font-display: swap;
+	src: url("../font/Figtree/Figtree-Light.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: Figtree;
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url("../font/Figtree/Figtree-Light.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: Figtree;
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("../font/Figtree/Figtree-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: Figtree;
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url("../font/Figtree/Figtree-Medium.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: Figtree;
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url("../font/Figtree/Figtree-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: Figtree;
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("../font/Figtree/Figtree-Bold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: Figtree;
+	font-style: normal;
+	font-weight: 800;
+	font-display: swap;
+	src: url("../font/Figtree/Figtree-ExtraBold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: Figtree;
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+	src: url("../font/Figtree/Figtree-Black.woff2") format("woff2");
+}
+
+.surecookie-styles,
+.surecookie-styles *,
+#surecookie-admin-root,
+#surecookie-admin-root *,
+#surecookie-public-root,
+#surecookie-preferences-root,
+:is(#surecookie-public-root, #surecookie-preferences-root) * {
+	font-family: Figtree, sans-serif !important;
+	box-sizing: border-box;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+}
+
+/* Global Focus Styling for Accessibility */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal .surecookie-btn-outline:focus-visible,
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal .surecookie-btn-primary:focus-visible,
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal .surecookie-modal-close-btn:focus-visible,
+:is(#surecookie-public-root, #surecookie-preferences-root) button:focus-visible,
+:is(#surecookie-public-root, #surecookie-preferences-root) a:focus-visible,
+:is(#surecookie-public-root, #surecookie-preferences-root) input:focus-visible {
+	outline: 2px solid var(--surecookie-banner-primary-color, #2563eb);
+	box-shadow: none;
+}
+/* Category trigger + cookie table toggle - use box-shadow so the ring follows border-radius */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal button.surecookie-category-trigger:focus-visible,
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal button.surecookie-cookie-table-toggle:focus-visible {
+	outline: none;
+	box-shadow: 0 0 0 2px var(--surecookie-banner-primary-color, #2563eb);
+}
+/* Toggle switch pill - ring must follow the pill shape, not form a box */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal .surecookie-toggle-btn:focus-visible {
+	outline: none;
+	box-shadow:
+		0 0 0 2px #fff,
+		0 0 0 4px var(--surecookie-banner-primary-color, #2563eb);
+}
+/* Admin-chrome green focus outline. Scoped with :not(.surecookie-public-banner-wrapper)
+   so it does NOT reach the front-end banner (whose wrapper also carries
+   .surecookie-styles); the banner keeps its palette primary-color focus instead. */
+.surecookie-styles:not(.surecookie-public-banner-wrapper) button:focus-visible,
+#surecookie-admin-root button:focus-visible,
+.surecookie-styles:not(.surecookie-public-banner-wrapper) a:focus-visible,
+#surecookie-admin-root a:focus-visible,
+.surecookie-styles:not(.surecookie-public-banner-wrapper) input:focus-visible,
+#surecookie-admin-root input:focus-visible {
+	outline: 2px solid #377a00 !important;
+	box-shadow: none !important;
+}
+.surecookie-styles:not(.surecookie-public-banner-wrapper) a:focus-visible {
+	color: #377a00;
+}
+.surecookie-styles button:focus,
+#surecookie-admin-root button:focus,
+:is(#surecookie-public-root, #surecookie-preferences-root) button:focus,
+.surecookie-styles button:focus:not(:focus-visible),
+#surecookie-admin-root button:focus:not(:focus-visible),
+:is(#surecookie-public-root, #surecookie-preferences-root) button:focus:not(:focus-visible) {
+	outline: none;
+}
+
+/* Keyframe Animations */
+@keyframes surecookie-slide-up-preview {
+	from {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes surecookie-slide-up {
+	from {
+		transform: translateY(20px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+/* Keyframe Animations */
+@keyframes surecookieFadeIn {
+	from {
+		opacity: 0;
+		backdrop-filter: blur(0);
+	}
+	to {
+		opacity: 1;
+		backdrop-filter: blur(2px);
+	}
+}
+
+@keyframes surecookieSlideIn {
+	from {
+		transform: translateY(30px) scale(0.95);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0) scale(1);
+		opacity: 1;
+	}
+}
+
+/* Banner Animation Classes */
+.surecookie-banner-animation-fade,
+.surecookie-banner-animation-slide {
+	will-change: opacity, transform;
+}
+
+.surecookie-banner-animation-fade {
+	animation: surecookieBannerFadeIn 0.5s ease-out;
+}
+
+.surecookie-banner-animation-slide {
+	animation: surecookieBannerSlideIn 0.5s ease-out;
+}
+
+@keyframes surecookieBannerFadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes surecookieBannerSlideIn {
+	from {
+		transform: translateY(20px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+/* ==========================================================================
+   Cookie Banner Styles
+========================================================================== */
+:is(#surecookie-public-root, #surecookie-preferences-root) {
+	all: initial;
+	display: block;
+	position: relative;
+	pointer-events: none;
+	/* Z-index layering - consent UI must sit above all third-party widgets.
+	   2147483647 = max signed 32-bit int, industry standard for consent tools.
+	   Modal must be above banner so it overlays correctly regardless of DOM order. */
+	--surecookie-z-overlay: 2147483645;
+	--surecookie-z-banner: 2147483646;
+	--surecookie-z-modal: 2147483647;
+}
+
+/* Admin preview: the values above outrank every drawer, so stay below Force
+   UI's z-50 drawer context. */
+:is(#surecookie-public-root, #surecookie-preferences-root).surecookie-preview-admin {
+	--surecookie-z-overlay: 20;
+	--surecookie-z-banner: 30;
+	--surecookie-z-modal: 40;
+}
+
+/* Full-screen dim behind the banner (opt-in). Sits just below the banner so
+   the banner stays interactive while the rest of the page is blocked. */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-banner-overlay {
+	position: fixed;
+	inset: 0;
+	background-color: var(--surecookie-banner-overlay-color, rgba(0, 0, 0, 0.6));
+	z-index: var(--surecookie-z-overlay);
+	pointer-events: auto;
+	animation: surecookieFadeIn 0.2s ease-out;
+}
+
+/* Banner Position Styles */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-banner-position-top,
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-banner-position-bottom {
+	position: fixed;
+	right: 0;
+	left: 0;
+	margin: 0;
+	pointer-events: auto;
+	z-index: var(--surecookie-z-banner);
+}
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-banner-position-top {
+	top: 0;
+}
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-banner-position-bottom {
+	bottom: 0;
+}
+
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-banner-position-box-base {
+	position: fixed;
+	max-width: 90vw;
+	pointer-events: auto;
+	z-index: var(--surecookie-z-banner);
+	outline-color: var(--surecookie-banner-primary-color, #2563eb);
+}
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-banner-position-top-left {
+	top: 20px;
+	right: 20px;
+}
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-banner-position-top-right {
+	top: 20px;
+	left: 20px;
+}
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-banner-position-bottom-left {
+	bottom: 20px;
+	right: 20px;
+}
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-banner-position-bottom-right {
+	bottom: 20px;
+	left: 20px;
+}
+
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-banner-position-bottom-center,
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-banner-position-middle {
+	position: fixed;
+	max-width: 90vw;
+	pointer-events: auto;
+	z-index: var(--surecookie-z-banner);
+}
+/* Centering uses margin:auto instead of transform so slide animations
+   (which set transform) don't override the centering and cause a jerk. */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-banner-position-bottom-center {
+	bottom: 20px;
+	right: 0;
+	left: 0;
+	margin-inline: auto;
+	width: fit-content;
+}
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-banner-position-middle {
+	inset: 0;
+	margin: auto;
+	width: fit-content;
+	height: fit-content;
+}
+
+/* Banner Container Styles */
+.surecookie-banner-container {
+	box-shadow: 0 0 50px -12px rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	display: block;
+	visibility: visible;
+	opacity: 1;
+}
+.surecookie-banner-container-banner {
+	padding: 24px;
+	border-radius: 0;
+}
+.surecookie-banner-container-box-with-logo {
+	padding: 20px 16px;
+	border-radius: 12px;
+}
+.surecookie-banner-container-box {
+	padding: 16px;
+	border-radius: 12px;
+}
+
+/* Banner Inner Container */
+.surecookie-banner-inner {
+	display: flex;
+	flex-direction: column;
+}
+.surecookie-banner-inner-banner {
+	margin: 0 auto;
+}
+.surecookie-banner-inner-box {
+	margin: 0;
+}
+
+/* Banner Logo */
+.surecookie-banner-logo-wrapper {
+	width: 100%;
+	display: block;
+	flex-shrink: 0;
+}
+.surecookie-banner-logo {
+	height: 24px;
+	width: auto;
+	margin-bottom: 20px;
+	display: block;
+	max-width: 100%;
+}
+
+/* Banner Content */
+.surecookie-banner-content {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.surecookie-banner-content-banner {
+	flex-direction: row;
+	align-items: center;
+	gap: 16px;
+}
+.surecookie-banner-content-box {
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 24px;
+}
+
+/* Banner Text */
+.surecookie-banner-text-wrapper {
+	flex: 1;
+}
+
+/* Override base reset for banner headings */
+.surecookie-banner-heading {
+	font-size: 16px;
+	font-weight: 600;
+	margin: 0 0 6px 0;
+	line-height: 1.5;
+}
+.surecookie-banner-heading-white {
+	color: #fff;
+}
+.surecookie-banner-description {
+	font-size: 14px;
+	margin: 0;
+	line-height: 1.6;
+	color: var(--surecookie-banner-text-color);
+}
+.surecookie-banner-description,
+.surecookie-modal-description {
+	overflow-wrap: anywhere;
+}
+.surecookie-banner-description p,
+.surecookie-modal-description p {
+	margin-bottom: 0;
+}
+
+/*
+ * Restore the browser-default heading scale inside the Jodit editor and the
+ * banner description (the admin preflight resets h1–h6 to inherit). Plain CSS
+ * file: selectors stay flat - native CSS nesting breaks parsing in browsers
+ * without CSS Nesting support.
+ */
+.jodit-wysiwyg h1,
+.surecookie-banner-description h1 {
+	font-size: 2em;
+	font-weight: 700;
+}
+.jodit-wysiwyg h2,
+.surecookie-banner-description h2 {
+	font-size: 1.5em;
+	font-weight: 700;
+}
+.jodit-wysiwyg h3,
+.surecookie-banner-description h3 {
+	font-size: 1.17em;
+	font-weight: 700;
+}
+.jodit-wysiwyg h4,
+.surecookie-banner-description h4 {
+	font-size: 1em;
+	font-weight: 700;
+}
+.jodit-wysiwyg h5,
+.surecookie-banner-description h5 {
+	font-size: 0.83em;
+	font-weight: 700;
+}
+.jodit-wysiwyg h6,
+.surecookie-banner-description h6 {
+	font-size: 0.67em;
+	font-weight: 700;
+}
+.jodit-wysiwyg a,
+.surecookie-banner-description a {
+	color: var(--surecookie-banner-primary-color, #2563eb);
+	text-decoration: none;
+}
+
+/*
+ * Restore browser-default list rendering for rich-text lists. The admin
+ * preflight and wp-admin's common.css strip list-style/margin/padding, which
+ * hides the bullets/numbers inside the Jodit editor and the banner/modal
+ * previews; on the frontend, themes with global list resets do the same.
+ */
+.jodit-wysiwyg ul,
+.jodit-wysiwyg ol,
+.surecookie-banner-description ul,
+.surecookie-banner-description ol,
+.surecookie-modal-description ul,
+.surecookie-modal-description ol,
+.surecookie-forwarding-description ul,
+.surecookie-forwarding-description ol {
+	list-style: revert;
+	margin: revert;
+	padding: revert;
+}
+
+/* Banner Buttons */
+.surecookie-banner-buttons {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+.surecookie-banner-buttons-banner {
+	width: auto;
+}
+.surecookie-banner-buttons-box {
+	width: 100%;
+}
+
+/* Button Base Styles */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-btn-base {
+	padding: 8px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 14px;
+	border: none;
+	min-width: fit-content;
+	white-space: nowrap;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	user-select: none;
+	background-image: none;
+	text-transform: none;
+	letter-spacing: 0;
+	line-height: 1.5;
+}
+
+/* Accessible focus indicator for banner buttons */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-btn-base:focus-visible {
+	outline: 2px solid var(--surecookie-banner-primary-color, #2563eb);
+	outline-offset: 2px;
+}
+
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-btn-transparent {
+	background-color: transparent;
+}
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-btn-with-border {
+	border: 1px solid;
+}
+.surecookie-btn-font-semibold {
+	font-weight: 600;
+}
+
+/* Button background colors */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-accept-btn,
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-accept-all-btn {
+	background-color: var(--surecookie-banner-primary-color, #2563eb);
+	color: var(--surecookie-banner-primary-text-color, #fff);
+}
+
+/* Decline button uses the secondary palette role. Falls back to primary so
+   existing palettes that did not define a separate decline color keep
+   their previous appearance. */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-decline-btn {
+	background-color: var(--surecookie-banner-secondary-color, var(--surecookie-banner-primary-color, #2563eb));
+	color: var(--surecookie-banner-secondary-text-color, #fff);
+}
+
+/* Button hover styles - accept/accept-all darken via primary-hover. */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-accept-btn:hover,
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-accept-all-btn:hover,
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-btn-primary:hover {
+	background-color: var(--surecookie-banner-primary-hover-color, #1d4ed8);
+	border-color: var(--surecookie-banner-primary-hover-color, #1d4ed8);
+}
+
+/* Decline hover: subtle darken via filter so we don't need a separate
+   secondary-hover variable. */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-decline-btn:hover {
+	filter: brightness(0.92);
+}
+
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-btn {
+	background-color: transparent;
+	border: 1px solid currentcolor;
+}
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-btn:hover {
+	opacity: 0.8;
+}
+
+/* Preferences button always carries a primary-colored border so the button
+   is discoverable on both light and dark banners. Both the public root and
+   the preview root are listed because the rule needs to fire in both. */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-btn,
+.surecookie-preview-root-container .surecookie-preferences-btn {
+	border: 1px solid var(--surecookie-banner-primary-color, #2563eb);
+}
+
+/* On dark banners use the accent colour instead of the white text colour */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-banner[data-dark-mode="true"] .surecookie-preferences-btn {
+	border-color: var(--surecookie-banner-primary-color, #2563eb);
+}
+
+/* Public Banner Specific Styles */
+.surecookie-public-banner {
+	position: fixed;
+	display: block;
+	visibility: visible;
+	opacity: 1;
+	pointer-events: auto;
+	box-sizing: border-box;
+	z-index: var(--surecookie-z-banner);
+}
+.surecookie-public-banner[data-banner="true"] {
+	box-sizing: border-box;
+}
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-public-banner-wrapper {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: visible;
+	pointer-events: auto;
+}
+
+/* Branding */
+.surecookie-branding {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	color: var(--surecookie-banner-text-color, #374151);
+	font-size: 12px;
+	font-weight: 400;
+	margin-right: auto;
+	opacity: 0.8;
+}
+.surecookie-branding span:last-child {
+	font-weight: 600;
+}
+
+/* Branding in banner notice type needs top margin */
+.surecookie-banner-content-banner .surecookie-branding-mobile {
+	margin-top: 10px;
+}
+
+/* ==========================================================================
+   Preferences Modal Styles
+========================================================================== */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: var(--surecookie-z-modal);
+	overflow-x: hidden;
+	overflow-y: auto;
+	animation: surecookieFadeIn 0.2s ease-out;
+	pointer-events: auto;
+}
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-modal-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100%;
+	padding: 16px 5px;
+}
+.surecookie-preferences-modal {
+	width: 90vw;
+	max-width: 640px;
+	height: auto;
+	border-radius: 16px;
+	box-shadow: 0 25px 50px -12px #00000040;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	animation: surecookieSlideIn 0.3s ease-out;
+	position: relative;
+	outline-color: var(--surecookie-banner-primary-color);
+}
+.surecookie-preferences-modal .surecookie-modal-header {
+	padding: 24px 24px 20px 24px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 16px;
+}
+.surecookie-preferences-modal .surecookie-modal-header-text {
+	flex: 1;
+	min-width: 0;
+}
+.surecookie-preferences-modal .surecookie-modal-title {
+	margin: 0 0 8px 0;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.3;
+	color: var(--surecookie-banner-text-color);
+}
+.surecookie-preferences-modal .surecookie-modal-description {
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.5;
+	opacity: 0.85;
+	color: var(--surecookie-banner-text-color);
+}
+.surecookie-preferences-modal .surecookie-modal-close-btn {
+	flex-shrink: 0;
+	align-self: flex-start;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 4px;
+	margin: 0;
+	margin-top: -4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0.6;
+	transition: opacity 0.2s;
+	color: var(--surecookie-banner-text-color);
+}
+.surecookie-preferences-modal .surecookie-modal-close-btn:hover {
+	opacity: 1;
+}
+.surecookie-preferences-modal .surecookie-modal-tabs {
+	display: flex;
+	border-bottom: 1px solid #37415126;
+	margin: 0 24px;
+	gap: 0;
+}
+.surecookie-preferences-modal .surecookie-modal-tab {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 10px 16px;
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--surecookie-banner-text-color);
+	opacity: 0.6;
+	border-bottom: 2px solid transparent;
+	margin-bottom: -1px;
+	transition:
+		opacity 0.15s,
+		border-color 0.15s;
+}
+.surecookie-preferences-modal .surecookie-modal-tab:hover {
+	opacity: 0.85;
+}
+.surecookie-preferences-modal .surecookie-modal-tab.active {
+	opacity: 1;
+	border-bottom-color: var(--surecookie-banner-primary-color, #2563eb);
+}
+.surecookie-preferences-modal .surecookie-forwarding-panel {
+	padding: 16px 24px;
+	overflow-y: auto;
+	max-height: 280px;
+}
+.surecookie-preferences-modal .surecookie-forwarding-description {
+	margin: 0 0 12px 0;
+	font-size: 13px;
+	line-height: 1.5;
+	opacity: 0.85;
+	color: var(--surecookie-banner-text-color);
+}
+.surecookie-preferences-modal .surecookie-forwarding-note {
+	margin: 0;
+	font-size: 13px;
+	line-height: 1.5;
+	opacity: 0.7;
+	color: var(--surecookie-banner-text-color);
+}
+.surecookie-preferences-modal .surecookie-forwarding-accordion {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+.surecookie-preferences-modal .surecookie-forwarding-toggle {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 10px 0 8px;
+	width: 100%;
+	text-align: right;
+}
+.surecookie-preferences-modal .surecookie-forwarding-count {
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--surecookie-banner-text-color);
+}
+.surecookie-preferences-modal .surecookie-forwarding-chevron {
+	display: flex;
+	align-items: center;
+	color: var(--surecookie-banner-text-color);
+	opacity: 0.6;
+	transition: transform 0.2s;
+	flex-shrink: 0;
+}
+.surecookie-preferences-modal .surecookie-forwarding-chevron.expanded {
+	transform: rotate(-90deg);
+}
+.surecookie-preferences-modal .surecookie-forwarding-sites {
+	list-style: none;
+	margin: 10px 0 0 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid;
+	border-color: rgba(55, 65, 81, 0.15);
+	border-radius: 8px;
+	overflow: hidden;
+}
+.surecookie-preferences-modal .surecookie-forwarding-site {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid rgba(55, 65, 81, 0.1);
+}
+.surecookie-preferences-modal .surecookie-forwarding-site:last-child {
+	border-bottom: none;
+}
+.surecookie-preferences-modal .surecookie-forwarding-site-link {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	width: 100%;
+	padding: 10px 12px;
+	font-size: 13px;
+	color: var(--surecookie-banner-text-color);
+	text-decoration: none;
+	opacity: 0.85;
+	transition:
+		opacity 0.15s ease,
+		background-color 0.15s ease;
+}
+.surecookie-preferences-modal .surecookie-forwarding-site-link:hover {
+	opacity: 1;
+	background-color: rgba(55, 65, 81, 0.06);
+	text-decoration: none;
+}
+.surecookie-preferences-modal .surecookie-forwarding-site-globe {
+	flex-shrink: 0;
+	opacity: 0.6;
+}
+.surecookie-preferences-modal .surecookie-forwarding-site-url {
+	flex: 1;
+	min-width: 0;
+	overflow-wrap: anywhere;
+	line-height: 1.4;
+}
+.surecookie-preferences-modal .surecookie-forwarding-site-ext {
+	flex-shrink: 0;
+	opacity: 0.4;
+	margin-right: auto;
+}
+.surecookie-preferences-modal .surecookie-categories-wrapper {
+	position: relative;
+	margin: 0 24px;
+	overflow: visible;
+}
+.surecookie-preferences-modal .surecookie-categories-scroll {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	overflow-y: auto;
+	max-height: 280px;
+	padding: 0 8px;
+	margin: 0 -8px;
+}
+.surecookie-preferences-modal .surecookie-categories-scroll::-webkit-scrollbar {
+	display: none;
+}
+.surecookie-preferences-modal .surecookie-categories-list {
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+.surecookie-preferences-modal .surecookie-category-item {
+	padding: 16px 0;
+	border-bottom: 1px solid #37415126;
+}
+.surecookie-preferences-modal .surecookie-category-item:last-child {
+	border-bottom: none;
+}
+.surecookie-preferences-modal .surecookie-category-header,
+.surecookie-preferences-modal .surecookie-category-trigger,
+.surecookie-preferences-modal .surecookie-expand-icon {
+	display: flex;
+	align-items: center;
+}
+.surecookie-preferences-modal .surecookie-category-header {
+	justify-content: space-between;
+	gap: 12px;
+}
+.surecookie-preferences-modal .surecookie-category-trigger {
+	flex: 1;
+	cursor: pointer;
+	gap: 12px;
+	background: transparent;
+	border: none;
+	padding: 4px;
+	margin: -4px;
+	border-radius: 4px;
+	text-align: inherit;
+}
+.surecookie-preferences-modal .surecookie-expand-icon {
+	justify-content: center;
+	transition: transform 0.2s;
+	opacity: 0.5;
+	color: var(--surecookie-banner-text-color);
+	width: 20px;
+}
+.surecookie-preferences-modal .surecookie-expand-icon.expanded {
+	transform: rotate(-90deg);
+}
+.surecookie-preferences-modal .surecookie-category-name {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--surecookie-banner-text-color);
+}
+.surecookie-preferences-modal .surecookie-category-controls {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+.surecookie-preferences-modal .surecookie-always-active {
+	font-size: 12px;
+	color: var(--surecookie-banner-text-color, #6b7280);
+	opacity: 0.65;
+	font-weight: 500;
+}
+.surecookie-preferences-modal .surecookie-toggle-btn {
+	width: 40px;
+	height: 20px;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	transition: background-color 0.3s ease;
+	flex-shrink: 0;
+	padding: 0;
+}
+.surecookie-preferences-modal .surecookie-toggle-btn:disabled,
+.surecookie-preferences-modal .surecookie-toggle-btn[aria-disabled="true"] {
+	cursor: not-allowed;
+}
+.surecookie-preferences-modal .surecookie-toggle-knob {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #fff;
+	transition: right 0.3s ease;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.surecookie-preferences-modal .surecookie-toggle-knob.checked {
+	right: 24px;
+}
+.surecookie-preferences-modal .surecookie-category-details {
+	margin-top: 12px;
+	padding-right: 32px;
+}
+.surecookie-preferences-modal .surecookie-category-desc {
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.6;
+	color: var(--surecookie-banner-text-color);
+}
+.surecookie-preferences-modal .surecookie-cookie-table-wrapper {
+	overflow-x: auto;
+	margin-bottom: 10px;
+}
+.surecookie-preferences-modal .surecookie-cookie-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 12px;
+	margin-bottom: 0;
+	text-align: right;
+	border: none;
+	color: var(--surecookie-banner-text-color);
+}
+.surecookie-preferences-modal .surecookie-cookie-table td,
+.surecookie-preferences-modal .surecookie-cookie-table th {
+	padding: 8px 4px;
+	border: none;
+	background: none;
+}
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-cookie-table th,
+.surecookie-modal-branding-content span:last-child {
+	font-weight: 600;
+}
+.surecookie-preferences-modal .surecookie-cookie-table tr {
+	border: none;
+	border-bottom: 1px solid rgba(156, 163, 175, 0.15);
+}
+.surecookie-preferences-modal .surecookie-modal-footer {
+	padding: 20px 24px;
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	justify-content: flex-start;
+}
+.surecookie-preferences-modal .surecookie-footer-actions {
+	display: flex;
+	gap: 12px;
+	flex: 1;
+}
+/* Outline buttons share base sizing/typography. Border color comes from the
+   relevant palette role; the label uses the banner's text color so it stays
+   readable on any palette and doesn't compete with the brand color. */
+.surecookie-preferences-modal .surecookie-btn-outline,
+.surecookie-preferences-modal .surecookie-btn-outline-secondary {
+	min-width: 82px;
+	height: 40px;
+	padding: 0 12px;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 8px;
+	background-color: transparent;
+	cursor: pointer;
+	white-space: nowrap;
+	color: var(--surecookie-banner-text-color, #374151);
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+/* Modal Reject All shares Accept All's border so the paired action group reads as one. */
+.surecookie-preferences-modal .surecookie-btn-outline,
+.surecookie-preferences-modal .surecookie-btn-outline-secondary {
+	border: 1px solid var(--surecookie-banner-primary-color);
+}
+
+/* These two carry no hover of their own above, so a theme's global
+   `button:hover` was the only hover declaration and won: Elementor kits set
+   white on white and flattened the radius, and both buttons vanished (#1385).
+   Restating the idle appearance at the ID specificity the banner buttons
+   already use is what no theme selector can outrank. */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal .surecookie-btn-outline:hover,
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal .surecookie-btn-outline:active,
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal .surecookie-btn-outline-secondary:hover,
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal .surecookie-btn-outline-secondary:active {
+	background-color: transparent;
+	border: 1px solid var(--surecookie-banner-primary-color);
+	border-radius: 8px;
+	color: var(--surecookie-banner-text-color, #374151);
+}
+.surecookie-preferences-modal .surecookie-btn-primary {
+	min-width: 136px;
+	height: 40px;
+	padding: 0 12px;
+	font-size: 14px;
+	font-weight: 500;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.2s;
+	white-space: nowrap;
+	background-color: var(--surecookie-banner-primary-color);
+	color: var(--surecookie-banner-primary-text-color, #fff);
+	text-transform: none;
+	letter-spacing: 0;
+}
+.surecookie-preferences-modal .surecookie-btn-primary:hover {
+	background-color: var(--surecookie-banner-primary-hover-color);
+}
+.surecookie-modal-footer-branding {
+	/* Border + container text derive from the banner text color so the
+	   footer aligns with whatever palette (preset or custom) is active. */
+	border-top: 1px solid color-mix(in srgb, var(--surecookie-banner-text-color, #1f2937) 15%, transparent);
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	justify-content: flex-end;
+	padding: 12px 20px;
+	color: var(--surecookie-banner-text-color, #9ca3af);
+	font-size: 12px;
+	font-weight: 400;
+}
+
+/* Fallback for browsers without color-mix() support - keeps the original
+   binary light/dark border colors so old browsers still render correctly. */
+@supports not (border-top-color: color-mix(in srgb, red 50%, blue)) {
+	.surecookie-modal-footer-branding {
+		border-top: 1px solid #1f2937;
+	}
+	.surecookie-preferences-modal[style*="backgroundColor: #fff"] .surecookie-modal-footer-branding,
+	.surecookie-preferences-modal[style*="backgroundColor: rgb(255"] .surecookie-modal-footer-branding {
+		border-top-color: #37415115;
+	}
+}
+
+/* Branding content wrapper - keeps the three branding elements together on
+   the right. Uses the banner text color (muted) so the "Powered by SureCookie"
+   line reads as branding, not as a CTA, regardless of the active palette. */
+.surecookie-preferences-modal .surecookie-modal-branding-content {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	/* Same resets as the legal links beside it: the modal is a body child, so a
+	   theme's generic `a` rule still reaches both, and only one of them being
+	   insulated left the footer row mismatched. */
+	padding: 0;
+	border: 0;
+	margin: 0;
+	background: none;
+	box-shadow: none;
+	color: var(--surecookie-banner-text-color, #6b7280);
+	font: inherit;
+	opacity: 0.75;
+	text-decoration: none;
+	text-transform: none;
+}
+.surecookie-preferences-modal .surecookie-modal-branding-content:hover {
+	opacity: 1;
+}
+
+/* Cookie policy link substituted into the modal DESCRIPTION by the
+   {cookie_policy_link} token - not the footer. */
+.surecookie-modal-policy-link {
+	color: var(--surecookie-banner-primary-color);
+	text-decoration: none;
+	font-size: inherit;
+}
+.surecookie-modal-policy-link:hover {
+	text-decoration: underline;
+}
+
+/* Legal links in the preferences-modal footer, opposite the branding. They sit
+   inside the consent UI because the overlay makes the rest of the page inert,
+   so a footer imprint is unreachable while the prompt is up (#1244).
+   Everything is reset against generic theme anchor styles: the modal is a body
+   child, so a theme's `a { }` rule still reaches it. */
+.surecookie-preferences-modal .surecookie-policy-links {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 2px 6px;
+	/* Pins the links left and keeps the branding at the far right, without the
+	   footer having to switch justification on whether branding is rendered. */
+	margin-left: auto;
+	padding: 0;
+	color: inherit;
+	font: inherit;
+}
+.surecookie-preferences-modal .surecookie-policy-links .surecookie-policy-link {
+	padding: 0;
+	border: 0;
+	margin: 0;
+	background: none;
+	box-shadow: none;
+	color: inherit;
+	font: inherit;
+	opacity: 0.75;
+	text-decoration: none;
+	text-transform: none;
+}
+.surecookie-preferences-modal .surecookie-policy-links .surecookie-policy-link:hover,
+.surecookie-preferences-modal .surecookie-policy-links .surecookie-policy-link:focus-visible {
+	color: inherit;
+	opacity: 1;
+	text-decoration: underline;
+}
+.surecookie-preferences-modal .surecookie-policy-link-sep {
+	opacity: 0.5;
+}
+
+/* Who receives the data in this category, and the third countries it reaches. */
+.surecookie-preferences-modal .surecookie-category-disclosure {
+	margin: 8px 0 0;
+	font-size: 13px;
+	line-height: 1.6;
+	color: var(--surecookie-banner-text-color);
+	opacity: 0.85;
+}
+.surecookie-preferences-modal .surecookie-category-disclosure > div {
+	margin-bottom: 4px;
+}
+.surecookie-preferences-modal .surecookie-category-disclosure dt,
+.surecookie-preferences-modal .surecookie-category-disclosure dd {
+	display: inline;
+	margin: 0;
+}
+.surecookie-preferences-modal .surecookie-category-disclosure dt {
+	font-weight: 600;
+}
+/* Generated rather than part of the msgid, so a locale can restyle the
+   punctuation without the string itself carrying it. */
+.surecookie-preferences-modal .surecookie-category-disclosure dt::after {
+	content: ": ";
+}
+
+/* Skeleton loading placeholders for category cards */
+@keyframes surecookie-pulse {
+	0%,
+	100% {
+		opacity: 0.4;
+	}
+	50% {
+		opacity: 0.15;
+	}
+}
+.surecookie-preferences-modal .surecookie-skeleton {
+	display: block;
+	border-radius: 4px;
+	background-color: currentcolor;
+	opacity: 0.15;
+	animation: surecookie-pulse 1.5s ease-in-out infinite;
+}
+.surecookie-preferences-modal .surecookie-skeleton-icon {
+	width: 18px;
+	height: 18px;
+	border-radius: 4px;
+	flex-shrink: 0;
+}
+.surecookie-preferences-modal .surecookie-skeleton-title {
+	width: 120px;
+	height: 16px;
+	border-radius: 4px;
+}
+.surecookie-preferences-modal .surecookie-skeleton-toggle {
+	width: 40px;
+	height: 20px;
+	border-radius: 10px;
+	flex-shrink: 0;
+}
+.surecookie-preferences-modal .surecookie-skeleton-badge {
+	width: 80px;
+	height: 16px;
+	border-radius: 4px;
+	flex-shrink: 0;
+}
+
+/* Cookie Table Toggle Styles */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal .surecookie-cookie-table-toggle {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+	margin-top: 12px;
+	cursor: pointer;
+	user-select: none;
+	width: fit-content;
+	transition: opacity 0.2s ease;
+	background: transparent;
+	border: none;
+	padding: 4px;
+	margin-right: -4px;
+	border-radius: 4px;
+	box-shadow: none;
+}
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal .surecookie-cookie-table-toggle:hover {
+	opacity: 0.7;
+}
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal .surecookie-cookie-table-label {
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--surecookie-banner-text-color);
+	opacity: 0.9;
+}
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal .surecookie-table-chevron {
+	display: flex;
+	align-items: center;
+	transition: transform 0.2s ease;
+	opacity: 0.6;
+	color: var(--surecookie-banner-text-color);
+}
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal .surecookie-table-chevron.expanded {
+	transform: rotate(-90deg);
+}
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal .surecookie-cookie-table-wrapper {
+	margin-top: 8px;
+}
+
+/* Content Blocking Placeholder Styles */
+/* Content blocker placeholder - doubled selectors (0,2,0 specificity) to beat theme styles without !important */
+.surecookie-placeholder.surecookie-placeholder {
+	position: relative;
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	border: 0;
+	font-family: Figtree, sans-serif;
+}
+/*
+ * WordPress responsive embeds (.wp-has-aspect-ratio) reserve their height with a
+ * ::before aspect-ratio spacer and absolutely position the iframe to fill it. A
+ * blocked placeholder must overlay that spacer the same way. Left in flow, its
+ * own height stacks on top of the spacer and roughly doubles the embed height,
+ * leaving a large empty gap around Vimeo/YouTube/etc. embeds. `!important` is
+ * required here to beat the inline `height` the blocker (and JS sizing) sets on
+ * the placeholder - specificity alone cannot override an inline style.
+ */
+.wp-has-aspect-ratio .wp-block-embed__wrapper > .surecookie-placeholder {
+	position: absolute;
+	inset: 0;
+	height: auto !important;
+}
+.surecookie-placeholder.surecookie-placeholder .surecookie-placeholder-content {
+	position: absolute;
+	inset: 0;
+	text-align: center;
+	padding: 24px;
+	z-index: 10;
+	background-color: var(--surecookie-banner-background-color, #1f2937);
+	border-radius: 12px;
+	box-shadow:
+		0 4px 18px 0 rgb(0 0 0 / 0.1),
+		0 2px 4px -2px rgb(0 0 0 / 0.1);
+	-webkit-backdrop-filter: blur(10px);
+	width: 100%;
+	height: 100%;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+/* Show placeholder overlay only when consent is pending */
+.surecookie-placeholder.surecookie-pending .surecookie-placeholder-content {
+	display: flex;
+}
+.surecookie-placeholder.surecookie-placeholder .surecookie-placeholder-text {
+	color: var(--surecookie-banner-text-color, #e5e7eb);
+	font-size: 14px;
+	margin: 0 0 16px 0;
+	line-height: 1.5;
+	padding: 0;
+	text-transform: none;
+	letter-spacing: normal;
+}
+/* Rich-text (Jodit) content inside the placeholder description. wp_kses_post, not
+   the toolbar, is the element ceiling, and the overlay sits on an arbitrary theme -
+   so strip theme chrome off every descendant, never the author's own formatting
+   (font-weight/style/decoration are deliberately absent). */
+.surecookie-placeholder.surecookie-placeholder .surecookie-placeholder-text * {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	box-shadow: none;
+	color: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	text-align: inherit;
+	list-style-position: inside;
+}
+/* An <hr> is nothing but the border the reset above just removed. */
+.surecookie-placeholder.surecookie-placeholder .surecookie-placeholder-text hr {
+	border-top: 1px solid;
+	opacity: 0.3;
+}
+/* Both selectors: the child one spaces blockquote/heading/list/pre now that their
+   margins are gone, the descendant one keeps paragraphs inside a wrapper spaced. */
+.surecookie-placeholder.surecookie-placeholder .surecookie-placeholder-text > *:not(:last-child),
+.surecookie-placeholder.surecookie-placeholder .surecookie-placeholder-text p:not(:last-child) {
+	margin-bottom: 8px;
+}
+.surecookie-placeholder.surecookie-placeholder .surecookie-placeholder-text a {
+	color: inherit;
+	text-decoration: underline;
+}
+/* When there is no Accept & Load button (e.g. quarantined trackers held by the
+   Compliance Guard), the text is the last child - drop its bottom margin so the
+   overlay content stays vertically centered. */
+.surecookie-placeholder.surecookie-placeholder .surecookie-placeholder-text:last-child {
+	margin-bottom: 0;
+}
+.surecookie-placeholder.surecookie-placeholder button.surecookie-placeholder-button {
+	background-color: var(--surecookie-banner-primary-color, #2563eb);
+	color: var(--surecookie-banner-primary-text-color, #fff);
+	border: none;
+	padding: 8px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 500;
+	font-family: Figtree, sans-serif;
+	transition: background-color 0.2s ease;
+	box-shadow: none;
+	text-decoration: none;
+	text-transform: none;
+	letter-spacing: normal;
+	line-height: 1.5;
+	display: inline-block;
+	margin: 0;
+}
+.surecookie-placeholder.surecookie-placeholder button.surecookie-placeholder-button:hover {
+	background-color: var(--surecookie-banner-primary-hover-color, #1d4ed8);
+}
+.surecookie-placeholder.surecookie-placeholder button.surecookie-placeholder-button:focus {
+	outline: 2px solid var(--surecookie-banner-primary-color, #60a5fa);
+	outline-offset: 2px;
+}
+
+/* Optional preview image shown behind the overlay while consent is pending */
+.surecookie-placeholder.surecookie-placeholder .surecookie-placeholder-image {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	display: none;
+	z-index: 1;
+}
+.surecookie-placeholder.surecookie-pending .surecookie-placeholder-image {
+	display: block;
+}
+.surecookie-placeholder.surecookie-loaded .surecookie-placeholder-image {
+	display: none;
+}
+/* With an image, the overlay sits over a dark scrim instead of a solid card so
+   the image stays visible while keeping the text/button legible. */
+.surecookie-placeholder.surecookie-placeholder-has-image .surecookie-placeholder-content {
+	background-color: rgb(0 0 0 / 0.55);
+	box-shadow: none;
+	border-radius: 0;
+}
+/* The scrim is always dark, so light text over it. The blocker sets #fff inline
+   for the image case, so theme styles can't override; a text-shadow keeps it
+   readable over busy images. */
+.surecookie-placeholder.surecookie-placeholder-has-image .surecookie-placeholder-text,
+.surecookie-placeholder.surecookie-placeholder-has-image .surecookie-placeholder-text p,
+.surecookie-placeholder.surecookie-placeholder-has-image .surecookie-placeholder-text a {
+	color: #fff;
+	text-shadow: 0 1px 3px rgb(0 0 0 / 0.7);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+	/* Small horizontal gutter so the rounded modal isn't flush with the screen edge. */
+	:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-modal-wrapper {
+		padding: 16px 8px;
+	}
+	.surecookie-preferences-modal {
+		width: 100%;
+		max-width: 100%;
+		border-radius: 16px;
+	}
+	.surecookie-preferences-modal .surecookie-modal-footer {
+		padding: 10px;
+		justify-content: space-between;
+	}
+	/* The three labels are translated, so the row's width is locale-dependent and
+	   no breakpoint can be right for every language: wrap instead, and let each
+	   line's items share its width so a wrapped action still reads as a button. */
+	.surecookie-preferences-modal .surecookie-modal-footer,
+	.surecookie-preferences-modal .surecookie-footer-actions {
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+	.surecookie-preferences-modal .surecookie-footer-actions,
+	.surecookie-preferences-modal .surecookie-modal-footer > button {
+		flex: 1 1 auto;
+	}
+	.surecookie-preferences-modal .surecookie-modal-footer button {
+		height: 32px;
+		font-size: 13px;
+		min-width: 0;
+	}
+
+	/* Box / popup banners keep their rounded corners on mobile. */
+	.surecookie-banner-container-box,
+	.surecookie-banner-container-box-with-logo {
+		border-radius: 12px;
+	}
+}
+
+@media (max-width: 767px) {
+	.surecookie-container-mobile {
+		padding: 20px 18px;
+	}
+	.surecookie-content-mobile {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 24px;
+	}
+	.surecookie-buttons-mobile {
+		width: 100%;
+		justify-content: center;
+	}
+	.surecookie-button-mobile {
+		width: 100%;
+		text-align: center;
+	}
+	.surecookie-branding-mobile {
+		width: 100%;
+		justify-content: center;
+		margin-right: 0;
+		margin-top: 8px;
+	}
+}
+
+/* ==========================================================================
+   Accessibility Styles
+========================================================================== */
+
+/* Screen-reader-only utility - visually hidden but announced by screen readers.
+   The -1px margin keeps its box inside <body>: rendered last, it would add 1px of scroll overflow. */
+.surecookie-sr-only {
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Category accordion trigger - button reset so it inherits container layout */
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal button.surecookie-category-trigger {
+	background: none;
+	border: none;
+	padding: 0;
+	font: inherit;
+	color: inherit;
+	text-align: right;
+	justify-content: flex-start;
+	width: 100%;
+	box-shadow: none;
+}
+
+:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal .surecookie-modal-close-btn:focus-visible {
+	opacity: 1;
+}
+
+/* ==========================================================================
+   Reduced Motion Support
+========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+	/* Disable banner entrance animations */
+	.surecookie-banner-animation-fade,
+	.surecookie-banner-animation-slide {
+		animation: none;
+		will-change: auto;
+	}
+
+	/* Disable modal animations */
+	:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-modal-backdrop,
+	:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-banner-overlay,
+	.surecookie-preferences-modal {
+		animation: none;
+	}
+
+	/* Disable all UI transitions in preferences modal */
+	.surecookie-preferences-modal .surecookie-toggle-knob,
+	.surecookie-preferences-modal .surecookie-toggle-btn,
+	.surecookie-preferences-modal .surecookie-expand-icon,
+	:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-preferences-modal .surecookie-table-chevron,
+	.surecookie-preferences-modal .surecookie-modal-close-btn {
+		transition: none;
+	}
+
+	/* Disable skeleton pulse for users who prefer reduced motion */
+	.surecookie-preferences-modal .surecookie-skeleton {
+		animation: none;
+		opacity: 0.2;
+	}
+}
+
+/* ==========================================================================
+   High Contrast / Forced Colors Support
+========================================================================== */
+@media (forced-colors: active) {
+	/* Ensure banner and modal buttons have visible borders */
+	:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-btn-base,
+	.surecookie-preferences-modal .surecookie-btn-outline,
+	.surecookie-preferences-modal .surecookie-btn-primary {
+		border: 1px solid buttontext;
+	}
+
+	/* Ensure focus indicators use system colors */
+	:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-btn-base:focus-visible,
+	.surecookie-preferences-modal .surecookie-btn-outline:focus-visible,
+	.surecookie-preferences-modal .surecookie-btn-primary:focus-visible,
+	.surecookie-preferences-modal .surecookie-modal-close-btn:focus-visible {
+		outline: 2px solid highlight;
+		outline-offset: 2px;
+	}
+
+	/* Ensure toggle switches have visible borders */
+	.surecookie-preferences-modal .surecookie-toggle-btn {
+		border: 1px solid buttontext;
+	}
+
+	/* Ensure modal and banner have visible boundaries */
+	.surecookie-preferences-modal,
+	:is(#surecookie-public-root, #surecookie-preferences-root) .surecookie-banner {
+		border: 1px solid canvastext;
+	}
+}
+
+/* Compatibility CSS - Presto Player placeholder: Stands on its own (no hidden iframe sibling).
+   Wrapper stays transparent so the card's box-shadow renders against the page
+   background like the normal iframe-blocker placeholder. Aspect-ratio sizing
+   is applied inline from the block's `aspect_ratio` attribute. */
+.surecookie-placeholder.surecookie-placeholder-presto {
+	position: relative;
+	width: 100%;
+	min-height: 80px;
+}
+.surecookie-placeholder.surecookie-placeholder-presto .surecookie-placeholder-content {
+	position: absolute;
+	inset: 0;
+}
+/* Audio variant - no aspect-ratio, fixed-ish height for the message + button card. */
+.surecookie-placeholder.surecookie-placeholder-audio {
+	min-height: 96px;
+}
+/* Presto Player Compatibility CSS Complete. */

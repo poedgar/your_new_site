@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=window.wp.i18n;(0,e.__)("Start with a letter, then use letters, digits, hyphens or underscores.","spectra-blocks"),(0,e.__)("Start with a lowercase letter, then use lowercase letters, digits or hyphens.","spectra-blocks"),(0,e.__)("Start with a letter, then use letters, digits, hyphens or underscores.","spectra-blocks")})();

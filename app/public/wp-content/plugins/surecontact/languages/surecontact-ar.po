@@ -1,0 +1,5143 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SureContact – Newsletters, Email Marketing, Automation, Revenue Tracking & CRM 1.5.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/surecontact\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-03T12:37:36+00:00\n"
+"PO-Revision-Date: 2026-06-03T12:37:36+00:00\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+"X-Domain: surecontact\n"
+"X-Generator: WP-CLI 2.12.0\n"
+
+#. Plugin Name of the plugin
+#: surecontact.php
+msgid "SureContact – Newsletters, Email Marketing, Automation, Revenue Tracking & CRM"
+msgstr "SureContact – النشرات الإخبارية، التسويق عبر البريد الإلكتروني، الأتمتة، تتبع الإيرادات و CRM"
+
+#. Plugin URI of the plugin
+#: surecontact.php
+msgid "https://surecontact.com"
+msgstr "https://surecontact.com"
+
+#. Description of the plugin
+#: surecontact.php
+msgid "Send newsletters, set up email automations, manage contacts and track ecommerce revenue in a CRM for WordPress."
+msgstr "إرسال النشرات الإخبارية، إعداد الأتمتة عبر البريد الإلكتروني، إدارة جهات الاتصال وتتبع إيرادات التجارة الإلكترونية في CRM لـ WordPress."
+
+#. Author of the plugin
+#: surecontact.php
+#: includes/admin/class-admin-menu.php:69
+#: includes/admin/class-admin-menu.php:70
+#: includes/integrations/class-gravity-forms-integration.php:632
+#: includes/integrations/class-gravity-forms-integration.php:686
+#: src/App.jsx:84
+#: src/components/AuthPage.jsx:223
+msgid "SureContact"
+msgstr "SureContact"
+
+#. Author URI of the plugin
+#: surecontact.php
+msgid "https://profiles.wordpress.org/brainstormforce/"
+msgstr "https://profiles.wordpress.org/brainstormforce/"
+
+#: includes/abilities/class-abilities-loader.php:97
+msgid "SureContact CRM"
+msgstr "SureContact CRM"
+
+#: includes/abilities/class-abilities-loader.php:98
+msgid "CRM integration rules, lists, tags, and contact automation tools."
+msgstr "قواعد تكامل CRM والقوائم والعلامات وأدوات أتمتة جهات الاتصال."
+
+#: includes/abilities/class-abstract-ability.php:174
+#: includes/abilities/settings/class-get-setting.php:110
+msgid "SureContact is not connected."
+msgstr "SureContact غير متصل."
+
+#: includes/abilities/class-abstract-ability.php:175
+msgid "Connect SureContact via Settings > SureContact first."
+msgstr "قم بتوصيل SureContact عبر الإعدادات > SureContact أولاً."
+
+#. translators: %s: integration/plugin name
+#: includes/abilities/class-abstract-ability.php:217
+#, php-format
+msgid "The %s plugin is not active."
+msgstr "الملحق %s غير مفعل."
+
+#: includes/abilities/class-abstract-ability.php:220
+msgid "Install and activate the required plugin to use this integration."
+msgstr "قم بتثبيت وتفعيل الملحق المطلوب لاستخدام هذا التكامل."
+
+#: includes/abilities/class-abstract-ability.php:287
+msgid "An unknown error occurred."
+msgstr "حدث خطأ غير معروف."
+
+#: includes/abilities/crm/class-create-list.php:41
+#: includes/class-operation-labels.php:115
+msgid "Create List"
+msgstr "إنشاء قائمة"
+
+#: includes/abilities/crm/class-create-list.php:95
+#: includes/api-wp/class-lists-tags-api.php:476
+#: includes/api/class-lists-tags-api.php:151
+msgid "List name is required."
+msgstr "اسم القائمة مطلوب."
+
+#: includes/abilities/crm/class-create-list.php:107
+msgid "List creation request queued for background processing. The CRM API is temporarily unavailable — the list will be created automatically when connectivity is restored."
+msgstr "تمت جدولة طلب إنشاء القائمة لمعالجة الخلفية. واجهة برمجة تطبيقات CRM غير متاحة مؤقتًا - ستُنشأ القائمة تلقائيًا عند استعادة الاتصال."
+
+#: includes/abilities/crm/class-create-list.php:115
+#: includes/abilities/crm/class-create-tag.php:115
+#: includes/api-wp/class-lists-tags-api.php:502
+#: includes/api-wp/class-lists-tags-api.php:569
+msgid "Invalid response from SureContact API."
+msgstr "استجابة غير صالحة من واجهة برمجة تطبيقات SureContact."
+
+#. translators: %s: list name
+#: includes/abilities/crm/class-create-list.php:128
+#, php-format
+msgid "List \"%s\" created successfully."
+msgstr "تم إنشاء القائمة \"%s\" بنجاح."
+
+#: includes/abilities/crm/class-create-tag.php:41
+#: includes/class-operation-labels.php:116
+msgid "Create Tag"
+msgstr "إنشاء علامة"
+
+#: includes/abilities/crm/class-create-tag.php:95
+#: includes/api-wp/class-lists-tags-api.php:543
+#: includes/api/class-lists-tags-api.php:193
+msgid "Tag name is required."
+msgstr "اسم العلامة مطلوب."
+
+#: includes/abilities/crm/class-create-tag.php:107
+msgid "Tag creation request queued for background processing. The CRM API is temporarily unavailable — the tag will be created automatically when connectivity is restored."
+msgstr "تمت جدولة طلب إنشاء العلامة لمعالجة الخلفية. واجهة برمجة تطبيقات CRM غير متاحة مؤقتًا - ستُنشأ العلامة تلقائيًا عند استعادة الاتصال."
+
+#. translators: %s: tag name
+#: includes/abilities/crm/class-create-tag.php:128
+#, php-format
+msgid "Tag \"%s\" created successfully."
+msgstr "تم إنشاء العلامة \"%s\" بنجاح."
+
+#: includes/abilities/crm/class-get-list.php:40
+msgid "Get All Lists"
+msgstr "الحصول على جميع القوائم"
+
+#: includes/abilities/crm/class-get-list.php:100
+msgid "No lists found. Run surecontact/import-metadata to sync from CRM, or create one with surecontact/create-list."
+msgstr "لم يتم العثور على قوائم. قم بتشغيل surecontact/import-metadata للمزامنة من CRM، أو إنشاء واحدة باستخدام surecontact/create-list."
+
+#. translators: %d: number of lists found
+#: includes/abilities/crm/class-get-list.php:122
+#, php-format
+msgid "Found %d list."
+msgid_plural "Found %d lists."
+msgstr[0] "تم العثور على %d قائمة."
+msgstr[1] "تم العثور على %d قائمة."
+msgstr[2] "تم العثور على %d قائمتين."
+msgstr[3] "تم العثور على %d قوائم."
+msgstr[4] "تم العثور على %d قائمة."
+msgstr[5] "تم العثور على %d قائمة."
+
+#: includes/abilities/crm/class-get-tag.php:40
+msgid "Get All Tags"
+msgstr "الحصول على جميع العلامات"
+
+#: includes/abilities/crm/class-get-tag.php:100
+msgid "No tags found. Run surecontact/import-metadata to sync from CRM, or create one with surecontact/create-tag."
+msgstr "لم يتم العثور على علامات. قم بتشغيل surecontact/import-metadata للمزامنة من CRM، أو إنشاء واحدة باستخدام surecontact/create-tag."
+
+#. translators: %d: number of tags found
+#: includes/abilities/crm/class-get-tag.php:122
+#, php-format
+msgid "Found %d tag."
+msgid_plural "Found %d tags."
+msgstr[0] "تم العثور على %d وسم."
+msgstr[1] "تم العثور على %d وسم."
+msgstr[2] "تم العثور على %d وسمين."
+msgstr[3] "تم العثور على %d وسوم."
+msgstr[4] "تم العثور على %d وسمًا."
+msgstr[5] "تم العثور على %d وسم."
+
+#: includes/abilities/crm/class-import-metadata.php:41
+msgid "Sync Lists & Tags from CRM"
+msgstr "مزامنة القوائم والعلامات من CRM"
+
+#: includes/abilities/crm/class-import-metadata.php:133
+#: includes/api-wp/class-lists-tags-api.php:304
+#: src/components/ListSelect.jsx:72
+#: src/components/TagSelect.jsx:72
+#: src/screens/settings/components/SettingsHeader.jsx:24
+msgid "Failed to sync lists and tags from CRM."
+msgstr "فشلت مزامنة القوائم والعلامات من CRM."
+
+#. translators: %d: number of lists
+#: includes/abilities/crm/class-import-metadata.php:145
+#, php-format
+msgid "%d list"
+msgid_plural "%d lists"
+msgstr[0] "%d قائمة"
+msgstr[1] "%d قائمة"
+msgstr[2] "%d قائمتين"
+msgstr[3] "%d قوائم"
+msgstr[4] "%d قائمة"
+msgstr[5] "%d قائمة"
+
+#. translators: %d: number of tags
+#: includes/abilities/crm/class-import-metadata.php:147
+#, php-format
+msgid "%d tag"
+msgid_plural "%d tags"
+msgstr[0] "%d وسم"
+msgstr[1] "%d وسم"
+msgstr[2] "%d وسمين"
+msgstr[3] "%d وسوم"
+msgstr[4] "%d وسمًا"
+msgstr[5] "%d وسم"
+
+#. translators: 1: formatted list count (e.g. "3 lists"), 2: formatted tag count (e.g. "5 tags")
+#: includes/abilities/crm/class-import-metadata.php:152
+#, php-format
+msgid "Synced %1$s and %2$s from CRM."
+msgstr "تم مزامنة %1$s و %2$s من CRM."
+
+#: includes/abilities/fields/class-create-contact-field.php:41
+msgid "Create Custom Contact Field"
+msgstr "إنشاء حقل اتصال مخصص"
+
+#: includes/abilities/fields/class-create-contact-field.php:118
+msgid "name, label, and field_type are all required."
+msgstr "الاسم، العلامة، ونوع الحقل جميعها مطلوبة."
+
+#. translators: %s: comma-separated list of valid types
+#: includes/abilities/fields/class-create-contact-field.php:127
+#, php-format
+msgid "Invalid field_type. Must be one of: %s"
+msgstr "نوع الحقل غير صالح. يجب أن يكون واحدًا من: %s"
+
+#. translators: %s: field label
+#: includes/abilities/fields/class-create-contact-field.php:161
+#, php-format
+msgid "Custom field \"%s\" created successfully."
+msgstr "تم إنشاء الحقل المخصص \"%s\" بنجاح."
+
+#: includes/abilities/fields/class-get-contact-field.php:40
+msgid "Get Contact Fields"
+msgstr "الحصول على حقول الاتصال"
+
+#. translators: 1: number of primary fields, 2: number of custom fields
+#: includes/abilities/fields/class-get-contact-field.php:111
+#, php-format
+msgid "Found %1$d primary and %2$d custom field."
+msgid_plural "Found %1$d primary and %2$d custom fields."
+msgstr[0] "تم العثور على %1$d حقل أساسي و%2$d حقل مخصص."
+msgstr[1] "تم العثور على %1$d حقل أساسي و%2$d حقل مخصص."
+msgstr[2] "تم العثور على %1$d حقلين أساسيين و%2$d حقلين مخصصين."
+msgstr[3] "تم العثور على %1$d حقول أساسية و%2$d حقول مخصصة."
+msgstr[4] "تم العثور على %1$d حقلًا أساسيًا و%2$d حقلًا مخصصًا."
+msgstr[5] "تم العثور على %1$d حقل أساسي و%2$d حقل مخصص."
+
+#: includes/abilities/integrations/class-get-integration.php:39
+msgid "Get Integration Details"
+msgstr "الحصول على تفاصيل التكامل"
+
+#. translators: %s: integration slug
+#: includes/abilities/integrations/class-get-integration.php:131
+#: includes/api-wp/class-integration-rules-api.php:1563
+#, php-format
+msgid "Integration not found: %s"
+msgstr "لم يتم العثور على التكامل: %s"
+
+#: includes/abilities/integrations/class-get-integration.php:134
+msgid "Use surecontact/list-integration to see available integrations and their slugs."
+msgstr "استخدم surecontact/list-integration لرؤية التكاملات المتاحة وعناوينها."
+
+#. translators: %s: integration name
+#: includes/abilities/integrations/class-get-integration.php:142
+#, php-format
+msgid "Details retrieved for \"%s\" integration."
+msgstr "تم استرجاع التفاصيل لتكامل \"%s\"."
+
+#. translators: %s: integration slug
+#: includes/abilities/integrations/class-get-integration.php:148
+#, php-format
+msgid "Integration \"%s\" is registered but its required plugin is not active. Install and activate the plugin first."
+msgstr "التكامل \"%s\" مسجل ولكن الإضافة المطلوبة ليست نشطة. قم بتثبيت وتفعيل الإضافة أولاً."
+
+#. translators: %s: integration slug
+#: includes/abilities/integrations/class-get-integration.php:154
+#, php-format
+msgid "Integration \"%s\" is available but could not be loaded. Check for plugin conflicts."
+msgstr "التكامل \"%s\" متاح ولكن لم يكن من الممكن تحميله. تحقق من تعارضات الإضافات."
+
+#: includes/abilities/integrations/class-get-item-field.php:40
+msgid "Get Item Fields"
+msgstr "الحصول على حقول العنصر"
+
+#: includes/abilities/integrations/class-get-item-field.php:129
+#: includes/abilities/integrations/class-list-integration-item.php:116
+msgid "The required plugin must be installed and active. Use surecontact/list-integration to check."
+msgstr "يجب تثبيت الإضافة المطلوبة وأن تكون نشطة. استخدم surecontact/list-integration للتحقق."
+
+#. translators: 1: number of fields, 2: item ID, 3: integration slug
+#: includes/abilities/integrations/class-get-item-field.php:139
+#, php-format
+msgid "Found %1$d field for item %2$s in \"%3$s\" integration."
+msgid_plural "Found %1$d fields for item %2$s in \"%3$s\" integration."
+msgstr[0] "تم العثور على %1$d حقل للعنصر %2$s في تكامل \"%3$s\"."
+msgstr[1] "تم العثور على %1$d حقل للعنصر %2$s في تكامل \"%3$s\"."
+msgstr[2] "تم العثور على %1$d حقلين للعنصر %2$s في تكامل \"%3$s\"."
+msgstr[3] "تم العثور على %1$d حقول للعنصر %2$s في تكامل \"%3$s\"."
+msgstr[4] "تم العثور على %1$d حقلًا للعنصر %2$s في تكامل \"%3$s\"."
+msgstr[5] "تم العثور على %1$d حقل للعنصر %2$s في تكامل \"%3$s\"."
+
+#: includes/abilities/integrations/class-list-integration-item.php:39
+msgid "List Integration Items"
+msgstr "قائمة عناصر التكامل"
+
+#. translators: 1: number of items, 2: integration slug
+#: includes/abilities/integrations/class-list-integration-item.php:135
+#, php-format
+msgid "Found %1$d item for \"%2$s\" integration."
+msgid_plural "Found %1$d items for \"%2$s\" integration."
+msgstr[0] "تم العثور على %1$d عنصر لتكامل \"%2$s\"."
+msgstr[1] "تم العثور على %1$d عنصر لتكامل \"%2$s\"."
+msgstr[2] "تم العثور على %1$d عنصرين لتكامل \"%2$s\"."
+msgstr[3] "تم العثور على %1$d عناصر لتكامل \"%2$s\"."
+msgstr[4] "تم العثور على %1$d عنصرًا لتكامل \"%2$s\"."
+msgstr[5] "تم العثور على %1$d عنصر لتكامل \"%2$s\"."
+
+#: includes/abilities/integrations/class-list-integration.php:39
+msgid "List All Integrations"
+msgstr "قائمة جميع التكاملات"
+
+#. translators: %d: number of integrations
+#: includes/abilities/integrations/class-list-integration.php:156
+#, php-format
+msgid "Found %d integration."
+msgid_plural "Found %d integrations."
+msgstr[0] "تم العثور على %d تكامل."
+msgstr[1] "تم العثور على %d تكامل."
+msgstr[2] "تم العثور على %d تكاملين."
+msgstr[3] "تم العثور على %d عمليات تكامل."
+msgstr[4] "تم العثور على %d تكاملًا."
+msgstr[5] "تم العثور على %d تكامل."
+
+#: includes/abilities/integrations/class-update-integration-setting.php:39
+msgid "Update Integration Settings"
+msgstr "تحديث إعدادات التكامل"
+
+#: includes/abilities/integrations/class-update-integration-setting.php:112
+msgid "Settings must be an object."
+msgstr "يجب أن تكون الإعدادات كائنًا."
+
+#: includes/abilities/integrations/class-update-integration-setting.php:120
+msgid "No valid settings keys provided."
+msgstr "لم يتم توفير مفاتيح إعدادات صالحة."
+
+#: includes/abilities/integrations/class-update-integration-setting.php:121
+msgid "Use surecontact/get-integration to see available settings_fields. To enable/disable the integration, use surecontact/update-integration-status instead."
+msgstr "استخدم surecontact/get-integration لرؤية حقول الإعدادات المتاحة. لتمكين/تعطيل التكامل، استخدم surecontact/update-integration-status بدلاً من ذلك."
+
+#: includes/abilities/integrations/class-update-integration-setting.php:135
+msgid "Use surecontact/get-integration to see available settings fields."
+msgstr "استخدم surecontact/get-integration لرؤية حقول الإعدادات المتاحة."
+
+#. translators: %s: integration slug
+#: includes/abilities/integrations/class-update-integration-setting.php:143
+#, php-format
+msgid "Settings saved for \"%s\" integration."
+msgstr "تم حفظ الإعدادات لتكامل \"%s\"."
+
+#: includes/abilities/integrations/class-update-integration-status.php:39
+msgid "Enable/Disable Integration"
+msgstr "تمكين/تعطيل التكامل"
+
+#: includes/abilities/integrations/class-update-integration-status.php:126
+msgid "Use surecontact/list-integration to see available integrations."
+msgstr "استخدم surecontact/list-integration لرؤية التكاملات المتاحة."
+
+#: includes/abilities/integrations/class-update-integration-status.php:129
+#: includes/abilities/rules/class-update-rule-status.php:146
+#: includes/api-wp/class-integration-rules-api.php:1062
+msgid "enabled"
+msgstr "مفعل"
+
+#: includes/abilities/integrations/class-update-integration-status.php:129
+#: includes/abilities/rules/class-update-rule-status.php:146
+#: includes/api-wp/class-integration-rules-api.php:1062
+msgid "disabled"
+msgstr "معاق"
+
+#. translators: 1: integration slug, 2: enabled/disabled
+#. translators: %1$s: integration slug, %2$s: enabled/disabled.
+#: includes/abilities/integrations/class-update-integration-status.php:134
+#: includes/api-wp/class-integration-rules-api.php:1069
+#, php-format
+msgid "Integration \"%1$s\" %2$s successfully."
+msgstr "تم دمج \"%1$s\" %2$s بنجاح."
+
+#: includes/abilities/rules/class-create-rule.php:39
+msgid "Create Automation Rule"
+msgstr "إنشاء قاعدة أتمتة"
+
+#: includes/abilities/rules/class-create-rule.php:147
+#: includes/abilities/rules/class-get-rule.php:116
+msgid "item_id and item_type are required."
+msgstr "item_id و item_type مطلوبان."
+
+#: includes/abilities/rules/class-create-rule.php:148
+msgid "Use surecontact/list-integration-item to find item IDs and types. Use \"all\" as item_id for a global item rule."
+msgstr "استخدم surecontact/list-integration-item للعثور على معرفات وأنواع العناصر. استخدم \"all\" كـ item_id لقاعدة عنصر عالمية."
+
+#: includes/abilities/rules/class-create-rule.php:153
+msgid "Config must be an object."
+msgstr "يجب أن يكون config كائنًا."
+
+#: includes/abilities/rules/class-create-rule.php:175
+msgid "Use surecontact/get-integration to see valid item types and events, and surecontact/list-integration-item for valid item IDs."
+msgstr "استخدم surecontact/get-integration لرؤية أنواع العناصر والأحداث الصحيحة، و surecontact/list-integration-item لعرض معرفات العناصر الصحيحة."
+
+#: includes/abilities/rules/class-create-rule.php:181
+msgid "Integration rule saved successfully."
+msgstr "تم حفظ قاعدة الدمج بنجاح."
+
+#: includes/abilities/rules/class-delete-rule.php:39
+msgid "Delete Automation Rule"
+msgstr "حذف قاعدة أتمتة"
+
+#: includes/abilities/rules/class-delete-rule.php:116
+msgid "item_id and item_type are required to delete a rule."
+msgstr "item_id و item_type مطلوبان لحذف قاعدة."
+
+#: includes/abilities/rules/class-delete-rule.php:117
+msgid "Use surecontact/list-rule to find the rule you want to delete. To manage global integration settings, use surecontact/update-integration-status instead."
+msgstr "استخدم surecontact/list-rule للعثور على القاعدة التي تريد حذفها. لإدارة إعدادات الدمج العالمية، استخدم surecontact/update-integration-status بدلاً من ذلك."
+
+#: includes/abilities/rules/class-delete-rule.php:139
+#: includes/abilities/rules/class-get-rule.php:138
+#: includes/abilities/rules/class-update-rule-status.php:143
+msgid "Use surecontact/list-rule to see existing rules."
+msgstr "استخدم surecontact/list-rule لرؤية القواعد الحالية."
+
+#: includes/abilities/rules/class-delete-rule.php:143
+msgid "Integration rule deleted successfully."
+msgstr "تم حذف قاعدة الدمج بنجاح."
+
+#: includes/abilities/rules/class-get-rule.php:39
+msgid "Get Automation Rule"
+msgstr "احصل على قاعدة الأتمتة"
+
+#: includes/abilities/rules/class-get-rule.php:117
+msgid "Use surecontact/list-rule to see existing rules, or surecontact/list-integration-item to find item IDs."
+msgstr "استخدم surecontact/list-rule لرؤية القواعد الحالية، أو surecontact/list-integration-item للعثور على معرفات العناصر."
+
+#: includes/abilities/rules/class-get-rule.php:145
+msgid "No rule configuration found for this combination."
+msgstr "لم يتم العثور على تكوين قاعدة لهذا المزيج."
+
+#: includes/abilities/rules/class-get-rule.php:155
+msgid "Rule configuration retrieved successfully."
+msgstr "تم استرجاع تكوين القاعدة بنجاح."
+
+#: includes/abilities/rules/class-list-rule.php:39
+msgid "List All Automation Rules"
+msgstr "قائمة جميع قواعد الأتمتة"
+
+#. translators: %d: number of rules
+#: includes/abilities/rules/class-list-rule.php:172
+#, php-format
+msgid "Found %d integration rule."
+msgid_plural "Found %d integration rules."
+msgstr[0] "تم العثور على %d قاعدة تكامل."
+msgstr[1] "تم العثور على %d قاعدة تكامل."
+msgstr[2] "تم العثور على %d قاعدتي تكامل."
+msgstr[3] "تم العثور على %d قواعد تكامل."
+msgstr[4] "تم العثور على %d قاعدة تكامل."
+msgstr[5] "تم العثور على %d قاعدة تكامل."
+
+#: includes/abilities/rules/class-update-rule-status.php:39
+msgid "Enable/Disable Rule"
+msgstr "تمكين/تعطيل القاعدة"
+
+#: includes/abilities/rules/class-update-rule-status.php:119
+msgid "item_id and item_type are required to update a rule status."
+msgstr "item_id و item_type مطلوبان لتحديث حالة القاعدة."
+
+#: includes/abilities/rules/class-update-rule-status.php:120
+msgid "Use surecontact/list-rule to find the rule. To toggle global integration status, use surecontact/update-integration-status instead."
+msgstr "استخدم surecontact/list-rule للعثور على القاعدة. لتبديل حالة الدمج العالمية، استخدم surecontact/update-integration-status بدلاً من ذلك."
+
+#. translators: %s: enabled/disabled
+#: includes/abilities/rules/class-update-rule-status.php:151
+#, php-format
+msgid "Rule %s successfully."
+msgstr "تمت معالجة القاعدة %s بنجاح."
+
+#: includes/abilities/settings/class-get-setting.php:39
+msgid "Get SureContact Settings"
+msgstr "احصل على إعدادات SureContact"
+
+#: includes/abilities/settings/class-get-setting.php:109
+msgid "SureContact is connected."
+msgstr "تم الاتصال بـ SureContact."
+
+#: includes/admin/class-admin-menu.php:81
+#: includes/admin/class-admin-menu.php:82
+#: src/components/NavMenu.jsx:21
+msgid "Dashboard"
+msgstr "لوحة القيادة"
+
+#: includes/admin/wordpress-fields.php:35
+#: includes/class-field-mapper.php:268
+#: includes/integrations/class-fluentcrm-integration.php:203
+msgid "First Name"
+msgstr "الاسم الأول"
+
+#: includes/admin/wordpress-fields.php:40
+#: includes/class-field-mapper.php:272
+#: includes/integrations/class-fluentcrm-integration.php:207
+msgid "Last Name"
+msgstr "اسم العائلة"
+
+#: includes/admin/wordpress-fields.php:45
+#: includes/class-field-mapper.php:264
+msgid "Email Address"
+msgstr "عنوان البريد الإلكتروني"
+
+#: includes/admin/wordpress-fields.php:51
+msgid "Username"
+msgstr "اسم المستخدم"
+
+#: includes/admin/wordpress-fields.php:57
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#: includes/admin/wordpress-fields.php:63
+msgid "Website"
+msgstr "الموقع الإلكتروني"
+
+#: includes/admin/wordpress-fields.php:69
+msgid "User Registered"
+msgstr "المستخدم المسجل"
+
+#: includes/admin/wordpress-fields.php:75
+msgid "Role"
+msgstr "الدور"
+
+#: includes/admin/wordpress-fields.php:81
+msgid "Nickname"
+msgstr "اللقب"
+
+#: includes/admin/wordpress-fields.php:86
+msgid "Biographical Info"
+msgstr "معلومات السيرة الذاتية"
+
+#: includes/admin/wordpress-fields.php:91
+msgid "Language/Locale"
+msgstr "اللغة/الموقع"
+
+#: includes/api-wp/class-api-base.php:69
+msgid "You do not have permission to perform this action."
+msgstr "ليس لديك إذن لتنفيذ هذا الإجراء."
+
+#: includes/api-wp/class-api-base.php:93
+msgid "Nonce is missing."
+msgstr "Nonce مفقود."
+
+#: includes/api-wp/class-api-base.php:102
+msgid "Nonce is invalid."
+msgstr "Nonce غير صالح."
+
+#: includes/api-wp/class-bulk-sync-api.php:225
+msgid "Invalid sync type"
+msgstr "نوع التزام غير صالح"
+
+#: includes/api-wp/class-bulk-sync-api.php:242
+msgid "Email field mapping is required before syncing. Please configure it in Contact Fields settings."
+msgstr "تعيين حقل البريد الإلكتروني مطلوب قبل المزامنة. يرجى تكوينه في إعدادات حقول الاتصال."
+
+#: includes/api-wp/class-bulk-sync-api.php:255
+msgid "Failed to start sync"
+msgstr "فشل في بدء المزامنة"
+
+#: includes/api-wp/class-bulk-sync-api.php:455
+msgid "Job not found"
+msgstr "وظيفة غير موجودة"
+
+#: includes/api-wp/class-bulk-sync-api.php:479
+msgid "Job is already in a terminal state and cannot be cancelled"
+msgstr "الوظيفة في حالة نهائية ولا يمكن إلغاؤها"
+
+#. translators: %1$d: total stopped actions, %2$d: pending actions count, %3$d: running actions count
+#: includes/api-wp/class-bulk-sync-api.php:524
+#, php-format
+msgid "Job cancelled successfully. Stopped %1$d action (%2$d pending, %3$d running)."
+msgid_plural "Job cancelled successfully. Stopped %1$d actions (%2$d pending, %3$d running)."
+msgstr[0] "تم إلغاء المهمة بنجاح. تم إيقاف %1$d إجراء (%2$d قيد الانتظار، %3$d قيد التشغيل)."
+msgstr[1] "تم إلغاء المهمة بنجاح. تم إيقاف %1$d إجراء (%2$d قيد الانتظار، %3$d قيد التشغيل)."
+msgstr[2] "تم إلغاء المهمة بنجاح. تم إيقاف %1$d إجراءين (%2$d قيد الانتظار، %3$d قيد التشغيل)."
+msgstr[3] "تم إلغاء المهمة بنجاح. تم إيقاف %1$d إجراءات (%2$d قيد الانتظار، %3$d قيد التشغيل)."
+msgstr[4] "تم إلغاء المهمة بنجاح. تم إيقاف %1$d إجراءً (%2$d قيد الانتظار، %3$d قيد التشغيل)."
+msgstr[5] "تم إلغاء المهمة بنجاح. تم إيقاف %1$d إجراء (%2$d قيد الانتظار، %3$d قيد التشغيل)."
+
+#: includes/api-wp/class-field-mapping.php:123
+msgid "Field mappings configuration"
+msgstr "تكوين تعيين الحقول"
+
+#: includes/api-wp/class-field-mapping.php:157
+msgid "Field name (unique identifier)"
+msgstr "اسم الحقل (معرف فريد)"
+
+#: includes/api-wp/class-field-mapping.php:163
+msgid "Field label (display name)"
+msgstr "تسمية الحقل (اسم العرض)"
+
+#: includes/api-wp/class-field-mapping.php:169
+msgid "Field type"
+msgstr "نوع الحقل"
+
+#: includes/api-wp/class-field-mapping.php:176
+msgid "Options for select/multi_select fields"
+msgstr "خيارات حقول الاختيار/الاختيار المتعدد"
+
+#: includes/api-wp/class-field-mapping.php:191
+msgid "Whether the field is required"
+msgstr "ما إذا كان الحقل مطلوبًا"
+
+#: includes/api-wp/class-field-mapping.php:276
+#: src/screens/contact-fields/FieldMappingTable.jsx:57
+msgid "Field mappings saved successfully!"
+msgstr "تم حفظ تعيينات الحقول بنجاح!"
+
+#: includes/api-wp/class-field-mapping.php:284
+#: src/api/fieldMapping.js:113
+#: src/api/fieldMapping.js:118
+msgid "Failed to save field mappings."
+msgstr "فشل في حفظ تعيينات الحقول."
+
+#: includes/api-wp/class-field-mapping.php:331
+#: src/components/CustomFieldSelect.jsx:62
+#: src/screens/contact-fields/FieldMappingTable.jsx:143
+msgid "CRM fields synced successfully!"
+msgstr "تم مزامنة حقول إدارة العلاقات مع العملاء بنجاح!"
+
+#: includes/api-wp/class-field-mapping.php:371
+msgid "Options are required for select and multi-select fields."
+msgstr "الخيارات مطلوبة لحقول الاختيار والاختيار المتعدد."
+
+#: includes/api-wp/class-field-mapping.php:435
+#: src/screens/contact-fields/FieldMappingTable.jsx:113
+#: src/screens/integrations/IntegrationsTableCard.jsx:149
+msgid "Custom field created successfully!"
+msgstr "تم إنشاء حقل مخصص بنجاح!"
+
+#: includes/api-wp/class-integration-rules-api.php:477
+msgid "Integration metadata not available."
+msgstr "بيانات التعريف للتكامل غير متاحة."
+
+#: includes/api-wp/class-integration-rules-api.php:664
+msgid "Failed to save integration configuration."
+msgstr "فشل في حفظ تكوين التكامل."
+
+#: includes/api-wp/class-integration-rules-api.php:678
+msgid "Configuration saved successfully."
+msgstr "تم حفظ التكوين بنجاح."
+
+#: includes/api-wp/class-integration-rules-api.php:704
+msgid "Failed to update integration status."
+msgstr "فشل في تحديث حالة التكامل."
+
+#: includes/api-wp/class-integration-rules-api.php:712
+msgid "Configuration not found."
+msgstr "تكوين غير موجود."
+
+#: includes/api-wp/class-integration-rules-api.php:720
+msgid "Integration status updated successfully."
+msgstr "تم تحديث حالة التكامل بنجاح."
+
+#: includes/api-wp/class-integration-rules-api.php:746
+msgid "Failed to delete integration configuration or configuration not found."
+msgstr "فشل في حذف تكوين التكامل أو تكوين غير موجود."
+
+#: includes/api-wp/class-integration-rules-api.php:760
+msgid "Configuration deleted successfully."
+msgstr "تم حذف التكوين بنجاح."
+
+#: includes/api-wp/class-integration-rules-api.php:896
+#: includes/api-wp/class-integration-rules-api.php:1105
+#: includes/api-wp/class-integration-rules-api.php:1551
+msgid "Integrations loader not initialized."
+msgstr "لم يتم تهيئة محمل التكامل."
+
+#. translators: %s: integration slug
+#: includes/api-wp/class-integration-rules-api.php:1055
+#, php-format
+msgid "Failed to toggle integration: %s"
+msgstr "فشل في تبديل التكامل: %s"
+
+#: includes/api-wp/class-integration-rules-api.php:1097
+msgid "You do not have permission to activate plugins."
+msgstr "لا تملك إذن لتنشيط الإضافات."
+
+#: includes/api-wp/class-integration-rules-api.php:1138
+msgid "No plugin file registered for this integration."
+msgstr "لا يوجد ملف إضافات مسجل لهذا التكامل."
+
+#: includes/api-wp/class-integration-rules-api.php:1147
+msgid "This plugin is not installed. Please install it first."
+msgstr "هذه الإضافة غير مثبتة. يرجى تثبيتها أولاً."
+
+#. translators: %s: plugin file path
+#: includes/api-wp/class-integration-rules-api.php:1166
+#, php-format
+msgid "Required dependency \"%s\" is not installed."
+msgstr "التبعية المطلوبة \"%s\" غير مثبتة."
+
+#. translators: %1$s: plugin file path, %2$s: error message
+#: includes/api-wp/class-integration-rules-api.php:1179
+#, php-format
+msgid "Failed to activate dependency \"%1$s\": %2$s"
+msgstr "فشل في تنشيط التبعية \"%1$s\": %2$s"
+
+#: includes/api-wp/class-integration-rules-api.php:1194
+msgid "Plugin is already active."
+msgstr "الإضافة نشطة بالفعل."
+
+#: includes/api-wp/class-integration-rules-api.php:1213
+msgid "Plugin activated successfully."
+msgstr "تم تنشيط الإضافة بنجاح."
+
+#: includes/api-wp/class-integration-rules-api.php:1351
+msgid "Failed to save integration settings."
+msgstr "فشل في حفظ إعدادات التكامل."
+
+#: includes/api-wp/class-integration-rules-api.php:1359
+msgid "Integration settings saved successfully."
+msgstr "تم حفظ إعدادات التكامل بنجاح."
+
+#. translators: %s: integration slug
+#: includes/api-wp/class-integration-rules-api.php:1576
+#, php-format
+msgid "Integration \"%s\" is not available. The required plugin may not be installed or active."
+msgstr "التكامل \"%s\" غير متاح. قد لا تكون الإضافة المطلوبة مثبتة أو نشطة."
+
+#: includes/api-wp/class-lists-tags-api.php:95
+msgid "Optional search term to filter results."
+msgstr "مصطلح بحث اختياري لتصفية النتائج."
+
+#: includes/api-wp/class-lists-tags-api.php:119
+msgid "The name of the list to create."
+msgstr "اسم القائمة التي سيتم إنشاؤها."
+
+#: includes/api-wp/class-lists-tags-api.php:146
+msgid "The name of the tag to create."
+msgstr "اسم الوسم الذي سيتم إنشاؤه."
+
+#: includes/api-wp/class-lists-tags-api.php:192
+msgid "No cached lists found. Please sync lists and tags."
+msgstr "لم يتم العثور على قوائم مخزنة. يرجى مزامنة القوائم والوسوم."
+
+#: includes/api-wp/class-lists-tags-api.php:242
+msgid "No cached tags found. Please sync lists and tags."
+msgstr "لم يتم العثور على وسوم مخزنة. يرجى مزامنة القوائم والوسوم."
+
+#. translators: %d: number of lists
+#: includes/api-wp/class-lists-tags-api.php:314
+#, php-format
+msgid "%d list synced"
+msgid_plural "%d lists synced"
+msgstr[0] "تمت مزامنة %d قائمة"
+msgstr[1] "تمت مزامنة %d قائمة"
+msgstr[2] "تمت مزامنة %d قائمتين"
+msgstr[3] "تمت مزامنة %d قوائم"
+msgstr[4] "تمت مزامنة %d قائمة"
+msgstr[5] "تمت مزامنة %d قائمة"
+
+#. translators: %d: number of tags
+#: includes/api-wp/class-lists-tags-api.php:323
+#, php-format
+msgid "%d tag synced"
+msgid_plural "%d tags synced"
+msgstr[0] "تمت مزامنة %d وسم"
+msgstr[1] "تمت مزامنة %d وسم"
+msgstr[2] "تمت مزامنة %d وسمين"
+msgstr[3] "تمت مزامنة %d وسوم"
+msgstr[4] "تمت مزامنة %d وسمًا"
+msgstr[5] "تمت مزامنة %d وسم"
+
+#: includes/api-wp/class-lists-tags-api.php:522
+msgid "List created successfully."
+msgstr "تم إنشاء القائمة بنجاح."
+
+#: includes/api-wp/class-lists-tags-api.php:589
+msgid "Tag created successfully."
+msgstr "تم إنشاء الوسم بنجاح."
+
+#: includes/api-wp/class-queue-rest-controller.php:435
+msgid "Log entry not found or could not be deleted."
+msgstr "لم يتم العثور على إدخال السجل أو لم يمكن حذفه."
+
+#: includes/api-wp/class-queue-rest-controller.php:443
+msgid "Log entry deleted."
+msgstr "تم حذف إدخال السجل."
+
+#. translators: %d: number of deleted entries
+#: includes/api-wp/class-queue-rest-controller.php:465
+#, php-format
+msgid "%d log entries deleted."
+msgstr "%d إدخالات سجل تم حذفها."
+
+#. translators: %d: number of cleared entries
+#: includes/api-wp/class-queue-rest-controller.php:489
+#, php-format
+msgid "%d log entries cleared."
+msgstr "%d إدخالات سجل تم مسحها."
+
+#: includes/api-wp/class-queue-rest-controller.php:578
+msgid "Request queued for immediate retry."
+msgstr "تم وضع الطلب في قائمة الانتظار لإعادة المحاولة فورًا."
+
+#. translators: %d: number of items queued for retry
+#: includes/api-wp/class-queue-rest-controller.php:599
+#, php-format
+msgid "%d items queued for retry."
+msgstr "%d عنصر في قائمة الانتظار لإعادة المحاولة."
+
+#. translators: %1$d: succeeded count, %2$d: failed count
+#: includes/api-wp/class-queue-rest-controller.php:624
+#, php-format
+msgid "%1$d succeeded, %2$d failed."
+msgstr "%1$d تم بنجاح، %2$d فشل."
+
+#: includes/api-wp/class-queue-rest-controller.php:648
+msgid "Queue item not found or could not be deleted."
+msgstr "لم يتم العثور على عنصر في قائمة الانتظار أو لم يمكن حذفه."
+
+#: includes/api-wp/class-queue-rest-controller.php:656
+msgid "Queue item deleted."
+msgstr "تم حذف عنصر من قائمة الانتظار."
+
+#. translators: %d: number of deleted items
+#: includes/api-wp/class-queue-rest-controller.php:678
+#, php-format
+msgid "%d queue items deleted."
+msgstr "%d عنصر من قائمة الانتظار تم حذفه."
+
+#: includes/api-wp/class-rest-controller.php:173
+msgid "Authorization header is required."
+msgstr "مطلوب رأس تفويض."
+
+#: includes/api-wp/class-rest-controller.php:182
+msgid "Invalid authorization header format. Expected: Bearer {token}"
+msgstr "صياغة رأس التفويض غير صالحة. المتوقع: Bearer {token}"
+
+#: includes/api-wp/class-rest-controller.php:196
+msgid "No active connection found."
+msgstr "لم يتم العثور على اتصال نشط."
+
+#: includes/api-wp/class-rest-controller.php:205
+msgid "Invalid bearer token."
+msgstr "رمز التوثيق غير صالح."
+
+#: includes/api-wp/class-rest-controller.php:246
+msgid "Name must be between 1 and 60 characters."
+msgstr "يجب أن يتراوح الاسم بين 1 و 60 حرفًا."
+
+#: includes/api-wp/class-rest-controller.php:266
+#: includes/class-auth-manager.php:367
+msgid "A valid email address is required."
+msgstr "عنوان بريد إلكتروني صالح مطلوب."
+
+#: includes/api-wp/class-rest-controller.php:293
+msgid "This site is already connected to SureContact."
+msgstr "هذا الموقع مرتبط بالفعل بـ SureContact."
+
+#: includes/api-wp/class-rest-controller.php:311
+msgid "Account created and connected to SureContact."
+msgstr "تم إنشاء الحساب وربطه بـ SureContact."
+
+#: includes/api-wp/class-rest-controller.php:329
+msgid "Successfully disconnected from SureContact."
+msgstr "تم قطع الاتصال بنجاح من SureContact."
+
+#: includes/api-wp/class-rest-controller.php:354
+msgid "Workspace UUID does not match."
+msgstr "UUID لمكان العمل لا يتطابق."
+
+#: includes/api-wp/class-rest-controller.php:364
+msgid "Connection successfully disconnected by SaaS platform."
+msgstr "تم قطع الاتصال بنجاح بواسطة منصة SaaS."
+
+#: includes/api-wp/class-settings-api.php:173
+msgid "Invalid settings data provided."
+msgstr "تم تقديم بيانات إعدادات غير صالحة."
+
+#: includes/api-wp/class-settings-api.php:194
+msgid "Settings updated successfully."
+msgstr "تم تحديث الإعدادات بنجاح."
+
+#: includes/api-wp/class-settings-api.php:262
+msgid "Auto-Create Contacts on Registration"
+msgstr "إنشاء جهات الاتصال تلقائيًا عند التسجيل"
+
+#: includes/api-wp/class-settings-api.php:263
+msgid "Automatically create a contact in SureContact when a new user registers on your WordPress site."
+msgstr "يتم إنشاء جهة اتصال تلقائيًا في SureContact عندما يقوم مستخدم جديد بالتسجيل في موقع WordPress الخاص بك."
+
+#: includes/api-wp/class-settings-api.php:268
+msgid "Auto-Sync Contact Updates"
+msgstr "تحديث جهات الاتصال تلقائيًا"
+
+#: includes/api-wp/class-settings-api.php:269
+msgid "Automatically sync all contact changes to SureContact, including profile updates, custom field changes, role changes, and login activity."
+msgstr "تتم مزامنة جميع تغييرات جهات الاتصال تلقائيًا مع SureContact، بما في ذلك تحديثات الملف الشخصي، وتغييرات الحقول المخصصة، وتغييرات الأدوار، ونشاط تسجيل الدخول."
+
+#: includes/api-wp/class-settings-api.php:274
+msgid "Sync User Roles as Lists"
+msgstr "مزامنة أدوار المستخدمين كقوائم"
+
+#: includes/api-wp/class-settings-api.php:275
+msgid "Automatically create lists based on WordPress user roles and assign contacts to them. A list will be created for each role if it doesn't exist."
+msgstr "يتم إنشاء قوائم تلقائيًا بناءً على أدوار مستخدمي WordPress وتعيين جهات الاتصال لها. سيتم إنشاء قائمة لكل دور إذا لم تكن موجودة."
+
+#: includes/api-wp/class-settings-api.php:280
+msgid "Sync User Roles as Tags"
+msgstr "مزامنة أدوار المستخدمين كوسوم"
+
+#: includes/api-wp/class-settings-api.php:281
+msgid "Automatically create tags based on WordPress user roles and apply them to contacts. A tag will be created for each role if it doesn't exist."
+msgstr "يتم إنشاء وسوم تلقائيًا بناءً على أدوار مستخدمي WordPress وتطبيقها على جهات الاتصال. سيتم إنشاء وسمة لكل دور إذا لم تكن موجودة."
+
+#: includes/api-wp/class-settings-api.php:286
+msgid "Assign Lists"
+msgstr "تعيين القوائم"
+
+#: includes/api-wp/class-settings-api.php:287
+msgid "Select lists to automatically apply to new users who register an account in WordPress. These contacts will be added to the selected lists in SureContact."
+msgstr "حدد القوائم التي سيتم تطبيقها تلقائيًا على المستخدمين الجدد الذين يسجلون حسابًا في WordPress. سيتم إضافة هذه الجهات إلى القوائم المحددة في SureContact."
+
+#: includes/api-wp/class-settings-api.php:292
+msgid "Assign Tags"
+msgstr "تعيين الوسوم"
+
+#: includes/api-wp/class-settings-api.php:293
+msgid "Select tags to automatically apply to new users who register an account in WordPress. These contacts will be tagged with the selected tags in SureContact."
+msgstr "اختر علامات لتطبيقها تلقائيًا على المستخدمين الجدد الذين يسجلون حسابًا في WordPress. سيتم وضع علامة على هؤلاء الاتصالات بالعلامات المختارة في SureContact."
+
+#: includes/api-wp/class-settings-api.php:300
+msgid "Log Retention Period"
+msgstr "فترة الاحتفاظ بالسجلات"
+
+#: includes/api-wp/class-settings-api.php:301
+msgid "How long to keep success and error log entries before automatic cleanup. Failed queue items are always kept for 7 days."
+msgstr "مدة الاحتفاظ بسجلات النجاح والخطأ قبل التنظيف التلقائي. العناصر الفاشلة في قائمة الانتظار تُحتفظ دائمًا لمدة 7 أيام."
+
+#: includes/api-wp/class-settings-api.php:305
+msgid "1 day"
+msgstr "1 يوم"
+
+#: includes/api-wp/class-settings-api.php:306
+msgid "2 days"
+msgstr "2 يوم"
+
+#: includes/api-wp/class-settings-api.php:307
+msgid "3 days"
+msgstr "3 أيام"
+
+#: includes/api-wp/class-settings-api.php:308
+msgid "5 days"
+msgstr "5 أيام"
+
+#: includes/api-wp/class-settings-api.php:309
+msgid "7 days"
+msgstr "7 أيام"
+
+#: includes/api-wp/class-settings-api.php:310
+msgid "14 days"
+msgstr "14 يوم"
+
+#: includes/api-wp/class-settings-api.php:311
+msgid "30 days"
+msgstr "30 يوم"
+
+#: includes/api/class-company-api.php:72
+msgid "Company name is required to create a company."
+msgstr "اسم الشركة مطلوب لإنشاء شركة."
+
+#: includes/api/class-company-api.php:104
+msgid "Company UUID is required to update a company."
+msgstr "UUID الشركة مطلوب لتحديث شركة."
+
+#: includes/api/class-company-api.php:137
+msgid "Company UUID is required to delete a company."
+msgstr "UUID الشركة مطلوب لحذف شركة."
+
+#: includes/api/class-company-api.php:172
+#: includes/api/class-company-api.php:330
+msgid "Company and contact UUIDs are required."
+msgstr "UUID الشركة و UUID الاتصال مطلوبان."
+
+#: includes/api/class-company-api.php:233
+msgid "Company UUID and contact UUIDs are required."
+msgstr "UUID الشركة و UUIDات الاتصال المطلوبة."
+
+#. translators: %d: maximum count
+#: includes/api/class-company-api.php:241
+#, php-format
+msgid "Bulk attach accepts at most %d contact UUIDs per call."
+msgstr "تقبل الإضافة المجملة على الأكثر %d UUIDات الاتصال لكل مكالمة."
+
+#: includes/api/class-company-api.php:284
+msgid "Contact UUID and company UUIDs are required."
+msgstr "UUID الاتصال و UUIDات الشركة مطلوبة."
+
+#. translators: %d: maximum count
+#: includes/api/class-company-api.php:292
+#, php-format
+msgid "Bulk attach accepts at most %d company UUIDs per call."
+msgstr "تقبل الإضافة المجملة على الأكثر %d UUIDات الشركة لكل مكالمة."
+
+#: includes/api/class-company-api.php:368
+msgid "Domain is required."
+msgstr "المجال مطلوب."
+
+#: includes/api/class-company-api.php:395
+msgid "Company name is required."
+msgstr "اسم الشركة مطلوب."
+
+#: includes/api/class-company-api.php:433
+#: includes/class-company-service.php:402
+msgid "Custom field name is required."
+msgstr "اسم الحقل المخصص مطلوب."
+
+#: includes/api/class-company-api.php:465
+msgid "Company UUID is required."
+msgstr "UUID الشركة مطلوب."
+
+#: includes/api/class-company-api.php:499
+#: includes/api/class-company-api.php:532
+msgid "Note UUID is required."
+msgstr "UUID الملاحظة مطلوب."
+
+#: includes/api/class-contact-api.php:75
+#: includes/api/class-contact-api.php:82
+msgid "Email address is required to create a contact."
+msgstr "عنوان البريد الإلكتروني مطلوب لإنشاء جهة اتصال."
+
+#: includes/api/class-contact-api.php:90
+msgid "List UUIDs must be an array."
+msgstr "يجب أن تكون UUIDات القائمة مصفوفة."
+
+#: includes/api/class-contact-api.php:98
+msgid "Tag UUIDs must be an array."
+msgstr "يجب أن تكون UUIDات العلامات مصفوفة."
+
+#: includes/api/class-contact-api.php:129
+msgid "Valid email address is required."
+msgstr "عنوان بريد إلكتروني صالح مطلوب."
+
+#: includes/api/class-contact-api.php:165
+msgid "No contact found with this email address."
+msgstr "لم يتم العثور على جهة اتصال بهذا العنوان الإلكتروني."
+
+#: includes/api/class-contact-api.php:184
+msgid "Contacts must be a non-empty array."
+msgstr "يجب أن تكون جهات الاتصال مصفوفة غير فارغة."
+
+#: includes/api/class-contact-api.php:229
+msgid "Batch UUID is required."
+msgstr "UUID الدفعة مطلوب."
+
+#: includes/api/class-contact-api.php:279
+#: includes/api/class-contact-api.php:323
+#: includes/api/class-contact-api.php:367
+#: includes/api/class-contact-api.php:411
+msgid "Contact UUID is required."
+msgstr "مطلوب UUID للجهة الاتصال."
+
+#: includes/api/class-contact-api.php:286
+#: includes/api/class-contact-api.php:374
+msgid "List UUIDs must be a non-empty array."
+msgstr "يجب أن تكون UUIDs للقائمة مصفوفة غير فارغة."
+
+#: includes/api/class-contact-api.php:330
+#: includes/api/class-contact-api.php:418
+msgid "Tag UUIDs must be a non-empty array."
+msgstr "يجب أن تكون UUIDs للتاج مصفوفة غير فارغة."
+
+#: includes/api/class-contact-api.php:459
+msgid "Valid old email address is required."
+msgstr "مطلوب عنوان بريد إلكتروني قديم صالح."
+
+#: includes/api/class-contact-api.php:466
+msgid "Valid new email address is required."
+msgstr "مطلوب عنوان بريد إلكتروني جديد صالح."
+
+#: includes/api/class-contact-api.php:473
+msgid "Old and new email addresses are the same."
+msgstr "العناوين الإلكترونية القديمة والجديدة هي نفسها."
+
+#: includes/api/class-ecommerce-api.php:85
+msgid "Contact email is required to track a purchase."
+msgstr "مطلوب البريد الإلكتروني للجهة الاتصال لتتبع عملية الشراء."
+
+#: includes/api/class-ecommerce-api.php:92
+#: includes/api/class-ecommerce-api.php:172
+#: includes/api/class-ecommerce-api.php:225
+msgid "Order ID is required."
+msgstr "مطلوب معرف الطلب."
+
+#: includes/api/class-ecommerce-api.php:99
+msgid "Total amount is required."
+msgstr "المبلغ الإجمالي مطلوب."
+
+#: includes/api/class-ecommerce-api.php:106
+msgid "Currency is required."
+msgstr "مطلوب العملة."
+
+#: includes/api/class-ecommerce-api.php:113
+msgid "Purchase must contain at least one product."
+msgstr "يجب أن تحتوي عملية الشراء على منتج واحد على الأقل."
+
+#: includes/api/class-ecommerce-api.php:120
+msgid "Purchase date is required."
+msgstr "مطلوب تاريخ الشراء."
+
+#: includes/api/class-ecommerce-api.php:232
+msgid "Refund amount is required."
+msgstr "مبلغ الاسترداد مطلوب."
+
+#: includes/api/class-fields-api.php:101
+msgid "Field name is required."
+msgstr "مطلوب اسم الحقل."
+
+#: includes/api/class-fields-api.php:108
+#: src/components/CreateCustomFieldForm.jsx:140
+msgid "Field label is required."
+msgstr "مطلوب تسمية الحقل."
+
+#: includes/api/class-fields-api.php:115
+msgid "Field type is required."
+msgstr "مطلوب نوع الحقل."
+
+#: includes/class-auth-manager.php:359
+msgid "First and last name are required."
+msgstr "مطلوب الاسم الأول والأخير."
+
+#: includes/class-auth-manager.php:391
+msgid "Unable to prepare signup request. Please try again."
+msgstr "غير قادر على إعداد طلب التسجيل. يرجى المحاولة مرة أخرى."
+
+#: includes/class-auth-manager.php:435
+msgid "Unable to create your SureContact account. Please try again."
+msgstr "غير قادر على إنشاء حساب SureContact الخاص بك. يرجى المحاولة مرة أخرى."
+
+#: includes/class-auth-manager.php:455
+#: includes/class-auth-manager.php:468
+msgid "Unexpected response from SureContact. Please try again."
+msgstr "استجابة غير متوقعة من SureContact. يرجى المحاولة مرة أخرى."
+
+#: includes/class-company-service.php:73
+msgid "Company was created but no UUID was returned by the API."
+msgstr "تم إنشاء الشركة ولكن لم يتم إرجاع أي UUID من API."
+
+#: includes/class-company-service.php:242
+msgid "Note was created but no UUID was returned."
+msgstr "تم إنشاء الملاحظة ولكن لم يتم إرجاع أي UUID."
+
+#: includes/class-field-mapper.php:276
+#: src/components/CreateCustomFieldForm.jsx:21
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#: includes/class-field-mapper.php:280
+msgid "Company Name"
+msgstr "اسم الشركة"
+
+#: includes/class-field-mapper.php:284
+msgid "Job Title"
+msgstr "المسمى الوظيفي"
+
+#: includes/class-field-mapper.php:288
+msgid "Birthdate"
+msgstr "تاريخ الميلاد"
+
+#: includes/class-field-mapper.php:292
+msgid "Gender"
+msgstr "الجنس"
+
+#: includes/class-field-mapper.php:296
+msgid "Anniversary"
+msgstr "ذكرى الزواج"
+
+#: includes/class-field-mapper.php:300
+msgid "Prefix"
+msgstr "بادئة"
+
+#: includes/class-field-mapper.php:304
+msgid "Suffix"
+msgstr "لاحقة"
+
+#: includes/class-field-mapper.php:308
+#: includes/integrations/class-fluentcrm-integration.php:243
+msgid "Timezone"
+msgstr "التوقيت"
+
+#: includes/class-field-mapper.php:312
+msgid "Language"
+msgstr "اللغة"
+
+#: includes/class-field-mapper.php:316
+msgid "Created At"
+msgstr "تاريخ الإنشاء"
+
+#: includes/class-field-mapper.php:320
+msgid "Updated At"
+msgstr "تاريخ التحديث"
+
+#: includes/class-field-mapper.php:384
+msgid "Standard WordPress Fields"
+msgstr "حقول ووردبريس القياسية"
+
+#: includes/class-field-mapper.php:411
+msgid "Custom Field Keys (Added Manually)"
+msgstr "مفاتيح الحقول المخصصة (مضافة يدويًا)"
+
+#: includes/class-field-mapper.php:415
+msgid "Additional wp_usermeta Table Fields"
+msgstr "حقول جدول wp_usermeta الإضافية"
+
+#: includes/class-field-mapper.php:872
+msgid "Never"
+msgstr "أبدًا"
+
+#. translators: %s: human readable time difference
+#: includes/class-field-mapper.php:877
+#, php-format
+msgid "%s ago"
+msgstr "%s منذ"
+
+#. translators: %1$s: provided slug, %2$s: comma-separated valid slugs
+#: includes/class-integrations-loader.php:834
+#, php-format
+msgid "Integration not found: \"%1$s\". Available integrations: %2$s"
+msgstr "لم يتم العثور على التكامل: \"%1$s\". التكاملات المتاحة: %2$s"
+
+#. translators: %1$s: provided item type, %2$s: comma-separated valid types
+#: includes/class-integrations-loader.php:859
+#, php-format
+msgid "Invalid item type \"%1$s\". Valid types: %2$s"
+msgstr "نوع العنصر غير صالح \"%1$s\". الأنواع الصالحة: %2$s"
+
+#. translators: %1$s: provided item ID, %2$s: item type
+#: includes/class-integrations-loader.php:879
+#, php-format
+msgid "Item ID \"%1$s\" not found for item type \"%2$s\"."
+msgstr "ID العنصر \"%1$s\" غير موجود لنوع العنصر \"%2$s\"."
+
+#. translators: %1$s: provided event, %2$s: item type, %3$s: comma-separated valid events
+#: includes/class-integrations-loader.php:899
+#, php-format
+msgid "Invalid event \"%1$s\" for item type \"%2$s\". Valid events: %3$s"
+msgstr "حدث غير صالح \"%1$s\" لنوع العنصر \"%2$s\". الأحداث الصالحة: %3$s"
+
+#. translators: 1: integration source name (e.g. "WooCommerce"), 2: operation label (e.g. "Track Purchase").
+#: includes/class-operation-labels.php:67
+#, php-format
+msgid "%1$s — %2$s"
+msgstr "%1$s — %2$s"
+
+#: includes/class-operation-labels.php:105
+msgid "Create Contact"
+msgstr "إنشاء جهة اتصال"
+
+#: includes/class-operation-labels.php:106
+msgid "Bulk Sync Contacts"
+msgstr "مزامنة جهات الاتصال جماعيًا"
+
+#: includes/class-operation-labels.php:107
+msgid "Attach Lists"
+msgstr "إرفاق القوائم"
+
+#: includes/class-operation-labels.php:108
+msgid "Detach Lists"
+msgstr "فصل القوائم"
+
+#: includes/class-operation-labels.php:109
+msgid "Attach Tags"
+msgstr "إرفاق العلامات"
+
+#: includes/class-operation-labels.php:110
+msgid "Detach Tags"
+msgstr "فصل العلامات"
+
+#: includes/class-operation-labels.php:111
+msgid "Update Email"
+msgstr "تحديث البريد الإلكتروني"
+
+#: includes/class-operation-labels.php:112
+msgid "Track Purchase"
+msgstr "تتبع الشراء"
+
+#: includes/class-operation-labels.php:113
+msgid "Cancel Purchase"
+msgstr "إلغاء الشراء"
+
+#: includes/class-operation-labels.php:114
+msgid "Refund Purchase"
+msgstr "استرداد الشراء"
+
+#: includes/class-operation-labels.php:117
+msgid "Sync Custom Field"
+msgstr "مزامنة الحقل المخصص"
+
+#: includes/class-queue-manager.php:142
+msgid "This log entry is not an API request and cannot be retried."
+msgstr "مدخل السجل هذا ليس طلب API ولا يمكن إعادة المحاولة."
+
+#: includes/class-queue-manager.php:146
+msgid "Retry failed. Check the log entry for details."
+msgstr "فشل إعادة المحاولة. تحقق من مدخل السجل للحصول على التفاصيل."
+
+#: includes/class-saas-client.php:247
+#: includes/class-saas-client.php:310
+#: includes/class-saas-client.php:374
+#: includes/class-saas-client.php:491
+msgid "Invalid JSON response from API"
+msgstr "استجابة JSON غير صالحة من API"
+
+#. translators: %s: exception message
+#: includes/class-saas-client.php:255
+#: includes/class-saas-client.php:318
+#: includes/class-saas-client.php:382
+#: includes/class-saas-client.php:435
+#: includes/class-saas-client.php:499
+#, php-format
+msgid "Exception during API request: %s"
+msgstr "استثناء أثناء طلب API: %s"
+
+#. translators: %d: HTTP status code
+#: includes/class-saas-client.php:556
+#, php-format
+msgid "Request failed (error %d). Please try again."
+msgstr "فشل الطلب (خطأ %d). يرجى المحاولة مرة أخرى."
+
+#: includes/integrations/class-base-integration.php:1164
+#: includes/integrations/class-fluentcrm-integration.php:338
+msgid "Add to Lists"
+msgstr "أضف إلى القوائم"
+
+#: includes/integrations/class-base-integration.php:1165
+msgid "Select lists to add contacts to"
+msgstr "اختر القوائم لإضافة جهات الاتصال إليها"
+
+#: includes/integrations/class-base-integration.php:1170
+#: includes/integrations/class-fluentcrm-integration.php:344
+msgid "Add Tags"
+msgstr "أضف علامات"
+
+#: includes/integrations/class-base-integration.php:1171
+msgid "Select tags to add to contacts"
+msgstr "اختر العلامات لإضافتها إلى جهات الاتصال"
+
+#: includes/integrations/class-base-integration.php:1176
+msgid "Remove from Lists"
+msgstr "إزالة من القوائم"
+
+#: includes/integrations/class-base-integration.php:1177
+msgid "Select lists to remove contacts from"
+msgstr "اختر القوائم لإزالة جهات الاتصال منها"
+
+#: includes/integrations/class-base-integration.php:1182
+msgid "Remove Tags"
+msgstr "إزالة علامات"
+
+#: includes/integrations/class-base-integration.php:1183
+msgid "Select tags to remove from contacts"
+msgstr "اختر العلامات لإزالتها من جهات الاتصال"
+
+#: includes/integrations/class-cartflows-integration.php:43
+msgid "Sync CartFlows step completions, track upsell/downsell conversions, and order bump additions."
+msgstr "مزامنة إكمال خطوات CartFlows، تتبع تحويلات البيع الإضافي/البيع المنخفض، وإضافات طلب الدفع."
+
+#: includes/integrations/class-cartflows-integration.php:60
+msgid "CartFlows"
+msgstr "CartFlows"
+
+#: includes/integrations/class-cartflows-integration.php:78
+msgid "Last Flow ID"
+msgstr "آخر معرف تدفق"
+
+#: includes/integrations/class-cartflows-integration.php:82
+msgid "Last Flow Name"
+msgstr "آخر اسم تدفق"
+
+#: includes/integrations/class-cartflows-integration.php:86
+msgid "Last Step ID"
+msgstr "آخر معرف خطوة"
+
+#: includes/integrations/class-cartflows-integration.php:90
+msgid "Last Step Name"
+msgstr "آخر اسم خطوة"
+
+#: includes/integrations/class-cartflows-integration.php:94
+msgid "Last Step Type"
+msgstr "آخر نوع خطوة"
+
+#: includes/integrations/class-cartflows-integration.php:98
+msgid "Upsells Accepted Count"
+msgstr "عدد الزيادة المقبولة"
+
+#: includes/integrations/class-cartflows-integration.php:102
+msgid "Downsells Accepted Count"
+msgstr "عدد التخفيض المقبول"
+
+#: includes/integrations/class-cartflows-integration.php:106
+msgid "Order Bumps Added Count"
+msgstr "عدد إضافات طلب الدفع"
+
+#: includes/integrations/class-cartflows-integration.php:146
+msgid "Step"
+msgstr "خطوة"
+
+#: includes/integrations/class-cartflows-integration.php:154
+msgid "Upsell"
+msgstr "زيادة"
+
+#: includes/integrations/class-cartflows-integration.php:158
+msgid "Downsell"
+msgstr "تخفيض"
+
+#: includes/integrations/class-cartflows-integration.php:162
+msgid "Order Bump"
+msgstr "طلب دفع"
+
+#: includes/integrations/class-cartflows-integration.php:166
+msgid "Pre-Checkout Offer"
+msgstr "عرض ما قبل الدفع"
+
+#: includes/integrations/class-cartflows-integration.php:186
+msgid "CartFlows Pro"
+msgstr "CartFlows Pro"
+
+#: includes/integrations/class-cartflows-integration.php:221
+msgid "Email will be identified from: 1) URL parameter (billing_email, email), 2) CartFlows Pro session, 3) WooCommerce customer data, 4) Logged-in user. If no email can be identified, this rule will not trigger."
+msgstr "سيتم تحديد البريد الإلكتروني من: 1) معلمة URL (billing_email، email)، 2) جلسة CartFlows Pro، 3) بيانات عميل WooCommerce، 4) المستخدم المسجل الدخول. إذا لم يكن بالإمكان تحديد بريد إلكتروني، فلن يتم تفعيل هذه القاعدة."
+
+#: includes/integrations/class-cartflows-integration.php:228
+msgid "Started"
+msgstr "بدأ"
+
+#: includes/integrations/class-cartflows-integration.php:233
+#: src/screens/sync-contacts/JobHistory.jsx:15
+msgid "Completed"
+msgstr "اكتمل"
+
+#: includes/integrations/class-cartflows-integration.php:241
+#: includes/integrations/class-cartflows-integration.php:253
+#: includes/integrations/class-cartflows-integration.php:273
+msgid "Accepted"
+msgstr "مقبول"
+
+#: includes/integrations/class-cartflows-integration.php:245
+#: includes/integrations/class-cartflows-integration.php:257
+msgid "Rejected"
+msgstr "مرفوض"
+
+#: includes/integrations/class-cartflows-integration.php:265
+msgid "Added"
+msgstr "تمت الإضافة"
+
+#: includes/integrations/class-cartflows-integration.php:1690
+#: includes/integrations/class-cartflows-integration.php:1941
+msgid "All Steps"
+msgstr "جميع الخطوات"
+
+#: includes/integrations/class-cartflows-integration.php:1696
+#: includes/integrations/class-cartflows-integration.php:1959
+msgid "All Landing Pages"
+msgstr "جميع صفحات الهبوط"
+
+#: includes/integrations/class-cartflows-integration.php:1702
+#: includes/integrations/class-cartflows-integration.php:1961
+msgid "All Checkouts"
+msgstr "جميع صفحات الدفع"
+
+#: includes/integrations/class-cartflows-integration.php:1708
+#: includes/integrations/class-cartflows-integration.php:1963
+msgid "All Thank You Pages"
+msgstr "جميع صفحات الشكر"
+
+#: includes/integrations/class-cartflows-integration.php:1714
+#: includes/integrations/class-cartflows-integration.php:1965
+msgid "All Optin Pages"
+msgstr "جميع صفحات الاشتراك"
+
+#: includes/integrations/class-cartflows-integration.php:1752
+msgid "Untitled Step"
+msgstr "خطوة غير مسماة"
+
+#: includes/integrations/class-cartflows-integration.php:1780
+#: includes/integrations/class-cartflows-integration.php:1943
+msgid "All Upsells"
+msgstr "جميع عمليات البيع الإضافية"
+
+#: includes/integrations/class-cartflows-integration.php:1805
+#: includes/integrations/class-cartflows-integration.php:1945
+msgid "All Downsells"
+msgstr "جميع عمليات البيع التنازلية"
+
+#: includes/integrations/class-cartflows-integration.php:1830
+#: includes/integrations/class-cartflows-integration.php:1947
+msgid "All Order Bumps"
+msgstr "جميع إضافات الطلب"
+
+#: includes/integrations/class-cartflows-integration.php:1850
+#: includes/integrations/class-cartflows-integration.php:2048
+msgid "Untitled Order Bump"
+msgstr "إضافة طلب غير مسماة"
+
+#: includes/integrations/class-cartflows-integration.php:1879
+#: includes/integrations/class-cartflows-integration.php:1949
+msgid "All Pre-Checkout Offers"
+msgstr "جميع عروض ما قبل الدفع"
+
+#: includes/integrations/class-cartflows-integration.php:1910
+#: includes/integrations/class-cartflows-integration.php:2014
+msgid "Untitled Checkout"
+msgstr "دفع غير مسمى"
+
+#: includes/integrations/class-cartflows-integration.php:1988
+msgid "Untitled"
+msgstr "غير مسمى"
+
+#: includes/integrations/class-contact-form-7-integration.php:57
+msgid "Sync Contact Form 7 submissions with per-form field mapping"
+msgstr "مزامنة تقديمات نموذج الاتصال 7 مع تخطيط الحقول لكل نموذج"
+
+#: includes/integrations/class-contact-form-7-integration.php:87
+#: includes/integrations/class-elementor-forms-integration.php:277
+#: includes/integrations/class-fluent-forms-integration.php:66
+#: includes/integrations/class-gravity-forms-integration.php:130
+#: includes/integrations/class-jetformbuilder-integration.php:90
+#: includes/integrations/class-sureforms-integration.php:85
+#: includes/integrations/class-wpforms-integration.php:80
+msgid "Form"
+msgstr "نموذج"
+
+#: includes/integrations/class-contact-form-7-integration.php:106
+#: includes/integrations/class-convert-pro-integration.php:138
+#: includes/integrations/class-elementor-forms-integration.php:296
+#: includes/integrations/class-fluent-forms-integration.php:85
+#: includes/integrations/class-gravity-forms-integration.php:149
+#: includes/integrations/class-jetformbuilder-integration.php:109
+#: includes/integrations/class-sureforms-integration.php:104
+#: includes/integrations/class-wpforms-integration.php:99
+msgid "Submission"
+msgstr "تقديم"
+
+#: includes/integrations/class-contact-form-7-integration.php:132
+#: includes/integrations/class-convert-pro-integration.php:159
+#: includes/integrations/class-elementor-forms-integration.php:319
+#: includes/integrations/class-fluent-forms-integration.php:109
+#: includes/integrations/class-gravity-forms-integration.php:175
+#: includes/integrations/class-jetformbuilder-integration.php:131
+#: includes/integrations/class-sureforms-integration.php:130
+#: includes/integrations/class-wpforms-integration.php:125
+msgid "Field Mapping"
+msgstr "تخطيط الحقول"
+
+#: includes/integrations/class-contact-form-7-integration.php:133
+#: includes/integrations/class-elementor-forms-integration.php:320
+#: includes/integrations/class-fluent-forms-integration.php:110
+#: includes/integrations/class-gravity-forms-integration.php:176
+#: includes/integrations/class-jetformbuilder-integration.php:132
+#: includes/integrations/class-sureforms-integration.php:131
+#: includes/integrations/class-wpforms-integration.php:126
+msgid "Map form fields to CRM fields. At minimum, you should map the email field."
+msgstr "قم بتخطيط حقول النموذج إلى حقول CRM. على الأقل، يجب عليك تخطيط حقل البريد الإلكتروني."
+
+#: includes/integrations/class-convert-pro-integration.php:86
+msgid "Sync Convert Pro call-to-action submissions with per call-to-action field mapping"
+msgstr "مزامنة تقديمات دعوة العمل لـ Convert Pro مع تخطيط الحقول لكل دعوة للعمل"
+
+#: includes/integrations/class-convert-pro-integration.php:119
+msgid "Call-to-action"
+msgstr "دعوة للعمل"
+
+#: includes/integrations/class-convert-pro-integration.php:160
+msgid "Map call-to-action fields to CRM fields. At minimum, map the email field."
+msgstr "قم بتخطيط حقول دعوة العمل إلى حقول CRM. على الأقل، قم بتخطيط حقل البريد الإلكتروني."
+
+#: includes/integrations/class-edd-integration.php:60
+msgid "Sync Easy Digital Downloads customer contact information and track order purchases"
+msgstr "مزامنة معلومات الاتصال الخاصة بعملاء Easy Digital Downloads وتتبع طلبات الشراء"
+
+#: includes/integrations/class-edd-integration.php:90
+#: includes/integrations/class-latepoint-integration.php:265
+#: includes/integrations/class-surecart-integration.php:317
+#: includes/integrations/class-woocommerce-integration.php:271
+msgid "Track Order Data"
+msgstr "تتبع بيانات الطلب"
+
+#: includes/integrations/class-edd-integration.php:91
+msgid "Send detailed order information (products, amounts, dates) to SureContact for revenue tracking and analytics"
+msgstr "إرسال معلومات الطلب التفصيلية (المنتجات، الكميات، المواعيد) إلى SureContact لتتبع الإيرادات والتحليلات"
+
+#: includes/integrations/class-edd-integration.php:97
+#: includes/integrations/class-latepoint-integration.php:286
+#: includes/integrations/class-surecart-integration.php:324
+#: includes/integrations/class-woocommerce-integration.php:278
+msgid "Track Refunds"
+msgstr "تتبع المبالغ المستردة"
+
+#: includes/integrations/class-edd-integration.php:98
+msgid "Send refund information to SureContact when payments are refunded"
+msgstr "إرسال معلومات استرداد الأموال إلى SureContact عندما يتم استرداد المدفوعات"
+
+#: includes/integrations/class-edd-integration.php:105
+#: includes/integrations/class-woocommerce-integration.php:263
+msgid "Sync Guest Customers"
+msgstr "مزامنة العملاء الضيوف"
+
+#: includes/integrations/class-edd-integration.php:106
+msgid "Create contacts in SureContact for guest checkout customers (customers without WordPress accounts)"
+msgstr "إنشاء جهات اتصال في SureContact لعملاء الخروج الضيوف (العملاء بدون حسابات WordPress)"
+
+#: includes/integrations/class-edd-integration.php:116
+#: includes/integrations/class-woocommerce-integration.php:330
+msgid "Enable Abandoned Cart Tracking"
+msgstr "تمكين تتبع سلة المهملات"
+
+#: includes/integrations/class-edd-integration.php:117
+#: includes/integrations/class-woocommerce-integration.php:331
+msgid "Track abandoned carts and apply lists/tags to contacts who abandon their carts"
+msgstr "تتبع السلات المهجورة وتطبيق القوائم/التسميات على جهات الاتصال الذين يتخلون عن سلاتهم"
+
+#: includes/integrations/class-edd-integration.php:123
+#: includes/integrations/class-woocommerce-integration.php:337
+msgid "Abandonment Threshold (minutes)"
+msgstr "عتبة التخلي (الدقائق)"
+
+#: includes/integrations/class-edd-integration.php:124
+#: includes/integrations/class-woocommerce-integration.php:338
+msgid "Minutes of inactivity before a cart is considered abandoned (minimum 5, maximum 10080)"
+msgstr "عدد الدقائق من عدم النشاط قبل اعتبار السلة مهجورة (حد أدنى 5، حد أقصى 10080)"
+
+#: includes/integrations/class-edd-integration.php:132
+#: includes/integrations/class-woocommerce-integration.php:346
+msgid "Abandoned Cart Lists"
+msgstr "قوائم السلات المهجورة"
+
+#: includes/integrations/class-edd-integration.php:133
+#: includes/integrations/class-woocommerce-integration.php:347
+msgid "Add contacts to these lists when their cart is abandoned"
+msgstr "إضافة جهات الاتصال إلى هذه القوائم عندما يتم التخلي عن سلتهم"
+
+#: includes/integrations/class-edd-integration.php:139
+#: includes/integrations/class-woocommerce-integration.php:353
+msgid "Abandoned Cart Tags"
+msgstr "علامات السلات المهجورة"
+
+#: includes/integrations/class-edd-integration.php:140
+#: includes/integrations/class-woocommerce-integration.php:354
+msgid "Apply these tags to contacts when their cart is abandoned"
+msgstr "تطبيق هذه العلامات على جهات الاتصال عندما يتم التخلي عن سلتهم"
+
+#: includes/integrations/class-edd-integration.php:146
+#: includes/integrations/class-woocommerce-integration.php:360
+msgid "Cart Data Retention (days)"
+msgstr "احتفاظ ببيانات السلة (أيام)"
+
+#: includes/integrations/class-edd-integration.php:147
+#: includes/integrations/class-woocommerce-integration.php:361
+msgid "Number of days to keep abandoned and recovered cart records before cleanup"
+msgstr "عدد الأيام للاحتفاظ بسجلات السلات المهجورة والمستعادة قبل التنظيف"
+
+#. translators: %s is the payment status label.
+#: includes/integrations/class-edd-integration.php:159
+#, php-format
+msgid "Lists for \"%s\" Status"
+msgstr "القوائم لحالة \"%s\""
+
+#. translators: %s is the payment status label in lowercase.
+#: includes/integrations/class-edd-integration.php:161
+#, php-format
+msgid "Additional lists to add contacts to when payment status is %s (combined with default lists above)"
+msgstr "قوائم إضافية لإضافة جهات الاتصال عندما تكون حالة الدفع %s (بالإضافة إلى القوائم الافتراضية أعلاه)"
+
+#: includes/integrations/class-edd-integration.php:181
+msgid "Download"
+msgstr "تنزيل"
+
+#: includes/integrations/class-edd-integration.php:185
+msgid "Discount Code"
+msgstr "رمز الخصم"
+
+#: includes/integrations/class-edd-integration.php:204
+#: includes/integrations/class-surecart-integration.php:375
+#: includes/integrations/class-woocommerce-integration.php:428
+msgid "Purchase"
+msgstr "شراء"
+
+#: includes/integrations/class-edd-integration.php:208
+#: includes/integrations/class-surecart-integration.php:383
+#: includes/integrations/class-woocommerce-integration.php:432
+msgid "Refund"
+msgstr "استرداد"
+
+#: includes/integrations/class-edd-integration.php:216
+msgid "Discount Applied"
+msgstr "تم تطبيق الخصم"
+
+#: includes/integrations/class-edd-integration.php:257
+#: includes/integrations/class-edd-integration.php:379
+msgid "All Downloads"
+msgstr "جميع التنزيلات"
+
+#: includes/integrations/class-edd-integration.php:319
+#: includes/integrations/class-edd-integration.php:382
+msgid "All Discount Codes"
+msgstr "جميع رموز الخصم"
+
+#: includes/integrations/class-edd-integration.php:1066
+msgid "Full refund"
+msgstr "استرداد كامل"
+
+#: includes/integrations/class-edd-integration.php:1066
+msgid "Partial refund"
+msgstr "استرداد جزئي"
+
+#: includes/integrations/class-edd-order-sync.php:88
+#: includes/integrations/class-surecart-order-sync.php:88
+#: includes/integrations/class-woocommerce-order-sync.php:88
+msgid "Orders"
+msgstr "الطلبات"
+
+#: includes/integrations/class-edd-order-sync.php:89
+msgid "Synchronize all Easy Digital Downloads orders and revenue data to SureContact"
+msgstr "تزامن جميع طلبات Easy Digital Downloads وبيانات الإيرادات إلى SureContact"
+
+#: includes/integrations/class-edd-order-sync.php:108
+#: includes/integrations/class-surecart-order-sync.php:108
+#: includes/integrations/class-woocommerce-order-sync.php:108
+msgid "No orders found to sync"
+msgstr "لم يتم العثور على طلبات للتزامن"
+
+#: includes/integrations/class-edd-order-sync.php:156
+#: includes/integrations/class-fluentcrm-contact-sync.php:231
+#: includes/integrations/class-surecart-order-sync.php:156
+#: includes/integrations/class-woocommerce-customer-sync.php:171
+#: includes/integrations/class-woocommerce-order-sync.php:156
+#: includes/integrations/class-wordpress-user-sync.php:171
+msgid "Failed to retrieve job status"
+msgstr "فشل في استرجاع حالة الوظيفة"
+
+#: includes/integrations/class-edd-order-sync.php:487
+#: includes/integrations/class-latepoint-integration.php:704
+#: includes/integrations/class-surecart-integration.php:1479
+#: includes/integrations/class-surecart-order-sync.php:528
+#: includes/integrations/class-woocommerce-order-sync.php:481
+msgid "Order cancelled"
+msgstr "تم إلغاء الطلب"
+
+#: includes/integrations/class-edd-order-sync.php:557
+#: includes/integrations/class-surecart-integration.php:1315
+#: includes/integrations/class-surecart-order-sync.php:598
+#: includes/integrations/class-woocommerce-order-sync.php:539
+msgid "Order refunded"
+msgstr "تم استرداد الطلب"
+
+#: includes/integrations/class-elementor-forms-integration.php:46
+msgid "Sync Elementor Forms submissions with per-form field mapping"
+msgstr "تزامن تقديمات نماذج Elementor مع تخطيط الحقول حسب النموذج"
+
+#: includes/integrations/class-fluent-forms-integration.php:39
+msgid "Sync Fluent Forms submissions with per-form field mapping"
+msgstr "تزامن تقديمات نماذج Fluent مع تخطيط الحقول حسب النموذج"
+
+#: includes/integrations/class-fluentcrm-company-sync.php:119
+msgid "Companies"
+msgstr "شركات"
+
+#: includes/integrations/class-fluentcrm-company-sync.php:120
+msgid "Synchronize all FluentCRM companies (and their contact links) to SureContact."
+msgstr "تزامن جميع شركات FluentCRM (ورابط جهات الاتصال الخاصة بهم) إلى SureContact."
+
+#: includes/integrations/class-fluentcrm-company-sync.php:137
+msgid "FluentCRM Company module is not available."
+msgstr "وحدة شركة FluentCRM غير متاحة."
+
+#: includes/integrations/class-fluentcrm-company-sync.php:146
+msgid "No companies to sync."
+msgstr "لا توجد شركات للمزامنة."
+
+#: includes/integrations/class-fluentcrm-company-sync.php:195
+msgid "Action Scheduler is not available."
+msgstr "جدول الإجراءات غير متاح."
+
+#: includes/integrations/class-fluentcrm-company-sync.php:248
+msgid "Failed to retrieve job status."
+msgstr "فشل في استرجاع حالة الوظيفة."
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:88
+msgid "Contacts"
+msgstr "جهات الاتصال"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:89
+msgid "Synchronize all subscribed FluentCRM contacts to SureContact"
+msgstr "مزامنة جميع جهات اتصال FluentCRM المشترك فيها إلى SureContact"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:133
+msgid "No subscribers to sync"
+msgstr "لا يوجد مشتركين للمزامنة"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:159
+msgid "Action Scheduler is not available"
+msgstr "جدول الإجراءات غير متاح"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:178
+msgid "No subscribers found to sync"
+msgstr "لا توجد مشتركين للعثور عليهم للمزامنة"
+
+#. translators: %s: error message
+#: includes/integrations/class-fluentcrm-contact-sync.php:189
+#: includes/integrations/class-woocommerce-customer-sync.php:140
+#: includes/integrations/class-wordpress-user-sync.php:140
+#, php-format
+msgid "Failed to start sync: %s"
+msgstr "فشل في بدء المزامنة: %s"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:386
+#: includes/integrations/class-fluentcrm-contact-sync.php:419
+msgid "No valid contacts to sync"
+msgstr "لا توجد جهات اتصال صالحة للمزامنة"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:396
+#: includes/integrations/class-woocommerce-customer-sync.php:326
+#: includes/integrations/class-wordpress-user-sync.php:326
+msgid "CRM did not return batch_uuid"
+msgstr "لم يُرجع CRM batch_uuid"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:523
+msgid "FluentCRM is not active"
+msgstr "FluentCRM غير نشط"
+
+#: includes/integrations/class-fluentcrm-contact-sync.php:583
+msgid "No subscribers found"
+msgstr "لم يتم العثور على مشتركين"
+
+#: includes/integrations/class-fluentcrm-integration.php:79
+msgid "Sync FluentCRM contacts with bulk import support for large datasets"
+msgstr "مزامنة جهات اتصال FluentCRM بدعم استيراد جماعي لمجموعات البيانات الكبيرة"
+
+#: includes/integrations/class-fluentcrm-integration.php:176
+msgid "FluentCRM"
+msgstr "FluentCRM"
+
+#: includes/integrations/class-fluentcrm-integration.php:199
+msgid "Name Prefix"
+msgstr "بادئة الاسم"
+
+#: includes/integrations/class-fluentcrm-integration.php:211
+#: src/components/CreateCustomFieldForm.jsx:19
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: includes/integrations/class-fluentcrm-integration.php:215
+#: includes/integrations/class-latepoint-integration.php:125
+#: includes/integrations/class-surecart-integration.php:140
+msgid "Phone"
+msgstr "الهاتف"
+
+#: includes/integrations/class-fluentcrm-integration.php:219
+#: includes/integrations/class-surecart-integration.php:116
+msgid "Address Line 1"
+msgstr "عنوان السطر 1"
+
+#: includes/integrations/class-fluentcrm-integration.php:223
+#: includes/integrations/class-surecart-integration.php:120
+msgid "Address Line 2"
+msgstr "عنوان السطر 2"
+
+#: includes/integrations/class-fluentcrm-integration.php:227
+#: includes/integrations/class-surecart-integration.php:124
+msgid "City"
+msgstr "المدينة"
+
+#: includes/integrations/class-fluentcrm-integration.php:231
+#: includes/integrations/class-surecart-integration.php:128
+msgid "State"
+msgstr "الولاية"
+
+#: includes/integrations/class-fluentcrm-integration.php:235
+#: includes/integrations/class-surecart-integration.php:136
+msgid "Postal Code"
+msgstr "الرمز البريدي"
+
+#: includes/integrations/class-fluentcrm-integration.php:239
+#: includes/integrations/class-surecart-integration.php:132
+msgid "Country"
+msgstr "البلد"
+
+#: includes/integrations/class-fluentcrm-integration.php:247
+msgid "Date of Birth"
+msgstr "تاريخ الميلاد"
+
+#: includes/integrations/class-fluentcrm-integration.php:251
+msgid "Contact Status"
+msgstr "حالة الاتصال"
+
+#: includes/integrations/class-fluentcrm-integration.php:255
+msgid "Contact Type"
+msgstr "نوع الاتصال"
+
+#: includes/integrations/class-fluentcrm-integration.php:259
+msgid "Source"
+msgstr "المصدر"
+
+#: includes/integrations/class-fluentcrm-integration.php:263
+msgid "Life Time Value"
+msgstr "قيمة العمر"
+
+#: includes/integrations/class-fluentcrm-integration.php:267
+msgid "Total Points"
+msgstr "إجمالي النقاط"
+
+#: includes/integrations/class-fluentcrm-integration.php:271
+msgid "Contact Created Date"
+msgstr "تاريخ إنشاء الاتصال"
+
+#: includes/integrations/class-fluentcrm-integration.php:275
+msgid "Last Activity Date"
+msgstr "تاريخ آخر نشاط"
+
+#: includes/integrations/class-fluentcrm-integration.php:279
+msgid "Contact Updated Date"
+msgstr "تاريخ تحديث الاتصال"
+
+#: includes/integrations/class-fluentcrm-integration.php:308
+msgid "Enable Real-time Sync"
+msgstr "تمكين المزامنة في الوقت الفعلي"
+
+#: includes/integrations/class-fluentcrm-integration.php:309
+msgid "Automatically sync FluentCRM contacts when they are created or updated"
+msgstr "مزامنة جهات اتصال FluentCRM تلقائياً عند إنشائها أو تحديثها"
+
+#: includes/integrations/class-fluentcrm-integration.php:314
+msgid "Sync Only Subscribed Contacts"
+msgstr "مزامنة جهات الاتصال المشتركة فقط"
+
+#: includes/integrations/class-fluentcrm-integration.php:315
+msgid "Only sync contacts with \"subscribed\" status (recommended)"
+msgstr "مزامنة جهات الاتصال ذات حالة \"مشتركة\" فقط (موصى به)"
+
+#: includes/integrations/class-fluentcrm-integration.php:320
+msgid "Sync Lists"
+msgstr "مزامنة القوائم"
+
+#: includes/integrations/class-fluentcrm-integration.php:321
+msgid "Sync FluentCRM lists assigned to each contact (applies to both real-time and bulk sync)"
+msgstr "مزامنة قوائم FluentCRM المعينة لكل اتصال (تنطبق على كل من المزامنة في الوقت الفعلي والمجمعة)"
+
+#: includes/integrations/class-fluentcrm-integration.php:326
+msgid "Sync Tags"
+msgstr "مزامنة العلامات"
+
+#: includes/integrations/class-fluentcrm-integration.php:327
+msgid "Sync FluentCRM tags assigned to each contact (applies to both real-time and bulk sync)"
+msgstr "مزامنة علامات FluentCRM المعينة لكل اتصال (تنطبق على كل من المزامنة في الوقت الفعلي والمجمعة)"
+
+#: includes/integrations/class-fluentcrm-integration.php:332
+msgid "Sync Custom Fields"
+msgstr "مزامنة الحقول المخصصة"
+
+#: includes/integrations/class-fluentcrm-integration.php:333
+msgid "Sync FluentCRM custom fields from each contact (applies to both real-time and bulk sync)"
+msgstr "مزامنة الحقول المخصصة لـ FluentCRM من كل اتصال (تنطبق على كل من المزامنة في الوقت الفعلي والمجمعة)"
+
+#: includes/integrations/class-fluentcrm-integration.php:339
+msgid "Select lists to add to ALL FluentCRM contacts when synced (in addition to their individual lists)"
+msgstr "اختر القوائم لإضافتها إلى جميع جهات اتصال FluentCRM عند المزامنة (بالإضافة إلى قوائمهم الفردية)"
+
+#: includes/integrations/class-fluentcrm-integration.php:345
+msgid "Select tags to add to ALL FluentCRM contacts when synced (in addition to their individual tags)"
+msgstr "اختر العلامات لإضافتها إلى جميع جهات اتصال FluentCRM عند المزامنة (بالإضافة إلى علاماتهم الفردية)"
+
+#: includes/integrations/class-gravity-forms-integration.php:66
+msgid "Sync Gravity Forms submissions with per-form field mapping"
+msgstr "مزامنة تقديمات Gravity Forms مع تخطيط الحقول لكل نموذج"
+
+#. translators: %s: contact ID returned by SureContact.
+#: includes/integrations/class-gravity-forms-integration.php:661
+#, php-format
+msgid "Synced (ID: %s)"
+msgstr "تمت المزامنة (معرف: %s)"
+
+#: includes/integrations/class-gravity-forms-integration.php:706
+msgid "Synced to SureContact:"
+msgstr "تمت المزامنة إلى SureContact:"
+
+#: includes/integrations/class-gravity-forms-integration.php:709
+msgid "Yes"
+msgstr "نعم"
+
+#: includes/integrations/class-gravity-forms-integration.php:712
+msgid "No"
+msgstr "لا"
+
+#: includes/integrations/class-gravity-forms-integration.php:721
+msgid "Contact ID:"
+msgstr "معرف الاتصال:"
+
+#: includes/integrations/class-gravity-forms-integration.php:738
+msgid "Process SureContact actions again"
+msgstr "قم بمعالجة إجراءات SureContact مرة أخرى"
+
+#: includes/integrations/class-jetformbuilder-integration.php:60
+msgid "Sync JetFormBuilder form submissions with per-form field mapping"
+msgstr "مزامنة تقديمات JetFormBuilder مع تخطيط الحقول لكل نموذج"
+
+#: includes/integrations/class-latepoint-integration.php:52
+msgid "Sync LatePoint customer contact information and track bookings, orders, and payments."
+msgstr "مزامنة معلومات اتصال العملاء في LatePoint وتتبع الحجوزات والطلبات والمدفوعات."
+
+#: includes/integrations/class-latepoint-integration.php:75
+msgid "LatePoint Pro"
+msgstr "LatePoint Pro"
+
+#: includes/integrations/class-latepoint-integration.php:106
+msgid "LatePoint"
+msgstr "LatePoint"
+
+#: includes/integrations/class-latepoint-integration.php:129
+msgid "Customer Notes"
+msgstr "ملاحظات العملاء"
+
+#: includes/integrations/class-latepoint-integration.php:133
+msgid "Admin Notes"
+msgstr "ملاحظات المشرف"
+
+#: includes/integrations/class-latepoint-integration.php:141
+msgid "Last Booking Code"
+msgstr "آخر رمز حجز"
+
+#: includes/integrations/class-latepoint-integration.php:145
+msgid "Last Service"
+msgstr "آخر خدمة"
+
+#: includes/integrations/class-latepoint-integration.php:149
+msgid "Last Agent"
+msgstr "آخر وكيل"
+
+#: includes/integrations/class-latepoint-integration.php:153
+msgid "Last Location"
+msgstr "آخر موقع"
+
+#: includes/integrations/class-latepoint-integration.php:157
+msgid "Last Booking Date"
+msgstr "آخر تاريخ حجز"
+
+#: includes/integrations/class-latepoint-integration.php:161
+msgid "Total Bookings"
+msgstr "إجمالي الحجوزات"
+
+#: includes/integrations/class-latepoint-integration.php:251
+msgid "Sync Customer Data"
+msgstr "مزامنة بيانات العملاء"
+
+#: includes/integrations/class-latepoint-integration.php:252
+msgid "Automatically sync LatePoint customers to SureContact when they are created or updated"
+msgstr "مزامنة عملاء LatePoint تلقائيًا مع SureContact عند إنشائهم أو تحديثهم"
+
+#: includes/integrations/class-latepoint-integration.php:258
+msgid "Track Bookings"
+msgstr "تتبع الحجوزات"
+
+#: includes/integrations/class-latepoint-integration.php:259
+msgid "Track booking events (created, status changes) in SureContact"
+msgstr "تتبع أحداث الحجز (تم الإنشاء، تغييرات الحالة) في SureContact"
+
+#: includes/integrations/class-latepoint-integration.php:266
+msgid "Send detailed order information to SureContact for revenue tracking and analytics"
+msgstr "إرسال معلومات الطلب التفصيلية إلى SureContact لتتبع الإيرادات والتحليلات"
+
+#: includes/integrations/class-latepoint-integration.php:272
+msgid "Track Transactions"
+msgstr "تتبع المعاملات"
+
+#: includes/integrations/class-latepoint-integration.php:273
+msgid "Send payment transaction information to SureContact"
+msgstr "إرسال معلومات معاملات الدفع إلى SureContact"
+
+#: includes/integrations/class-latepoint-integration.php:279
+#: includes/integrations/class-surecart-integration.php:331
+#: includes/integrations/class-woocommerce-integration.php:285
+msgid "Track Cancellations"
+msgstr "تتبع الإلغاءات"
+
+#: includes/integrations/class-latepoint-integration.php:280
+msgid "Send cancellation information to SureContact when bookings are cancelled"
+msgstr "إرسال معلومات الإلغاء إلى SureContact عند إلغاء الحجوزات"
+
+#: includes/integrations/class-latepoint-integration.php:287
+msgid "Send refund information to SureContact when transactions are refunded"
+msgstr "إرسال معلومات استرداد الأموال إلى SureContact عند استرداد المعاملات"
+
+#: includes/integrations/class-latepoint-integration.php:307
+msgid "Service"
+msgstr "خدمة"
+
+#: includes/integrations/class-latepoint-integration.php:311
+msgid "Location"
+msgstr "موقع"
+
+#: includes/integrations/class-latepoint-integration.php:315
+#: includes/integrations/class-surecart-integration.php:356
+#: includes/integrations/class-woocommerce-integration.php:408
+msgid "Coupon"
+msgstr "قسيمة"
+
+#: includes/integrations/class-latepoint-integration.php:333
+msgid "Booking Created"
+msgstr "تم إنشاء الحجز"
+
+#: includes/integrations/class-latepoint-integration.php:337
+msgid "Booking Approved"
+msgstr "تمت الموافقة على الحجز"
+
+#: includes/integrations/class-latepoint-integration.php:341
+msgid "Booking Pending"
+msgstr "الحجز قيد الانتظار"
+
+#: includes/integrations/class-latepoint-integration.php:345
+msgid "Booking Cancelled"
+msgstr "تم إلغاء الحجز"
+
+#: includes/integrations/class-latepoint-integration.php:349
+msgid "Booking Completed"
+msgstr "تم إكمال الحجز"
+
+#: includes/integrations/class-latepoint-integration.php:353
+msgid "Booking No Show"
+msgstr "لم يحضر الحجز"
+
+#: includes/integrations/class-latepoint-integration.php:366
+#: includes/integrations/class-surecart-integration.php:391
+#: includes/integrations/class-woocommerce-integration.php:444
+msgid "Applied"
+msgstr "تم التطبيق"
+
+#. translators: %s: service name or 'Booking'
+#: includes/integrations/class-latepoint-integration.php:668
+#, php-format
+msgid "%s cancelled"
+msgstr "%s تم إلغاؤه"
+
+#: includes/integrations/class-latepoint-integration.php:669
+#: includes/integrations/class-latepoint-integration.php:1452
+msgid "Booking"
+msgstr "الحجز"
+
+#: includes/integrations/class-latepoint-integration.php:747
+msgid "Transaction refunded"
+msgstr "تم استرداد المعاملة"
+
+#: includes/integrations/class-latepoint-integration.php:1418
+msgid "Booking Order"
+msgstr "طلب الحجز"
+
+#: includes/integrations/class-latepoint-integration.php:1522
+#: includes/integrations/class-latepoint-integration.php:1660
+msgid "All Services"
+msgstr "جميع الخدمات"
+
+#: includes/integrations/class-latepoint-integration.php:1536
+msgid "Untitled Service"
+msgstr "خدمة بلا عنوان"
+
+#: includes/integrations/class-latepoint-integration.php:1565
+#: includes/integrations/class-latepoint-integration.php:1662
+msgid "All Locations"
+msgstr "جميع المواقع"
+
+#: includes/integrations/class-latepoint-integration.php:1579
+msgid "Untitled Location"
+msgstr "موقع بلا عنوان"
+
+#: includes/integrations/class-latepoint-integration.php:1610
+#: includes/integrations/class-latepoint-integration.php:1664
+#: includes/integrations/class-surecart-integration.php:2211
+#: includes/integrations/class-surecart-integration.php:2263
+#: includes/integrations/class-woocommerce-integration.php:2063
+#: includes/integrations/class-woocommerce-integration.php:2109
+msgid "All Coupons"
+msgstr "جميع القسائم"
+
+#: includes/integrations/class-latepoint-integration.php:1632
+msgid "Untitled Coupon"
+msgstr "قسيمة بلا عنوان"
+
+#: includes/integrations/class-presto-player-integration.php:59
+msgid "Track video engagement and apply tags based on watch progress and completion"
+msgstr "تتبع تفاعل الفيديو وتطبيق العلامات بناءً على تقدم المشاهدة والانتهاء"
+
+#: includes/integrations/class-presto-player-integration.php:87
+msgid "Video"
+msgstr "فيديو"
+
+#: includes/integrations/class-presto-player-integration.php:106
+msgid "Email Submission"
+msgstr "تقديم البريد الإلكتروني"
+
+#: includes/integrations/class-presto-player-integration.php:110
+msgid "Video Start"
+msgstr "بدء الفيديو"
+
+#: includes/integrations/class-presto-player-integration.php:114
+msgid "Progress Tracking"
+msgstr "تتبع التقدم"
+
+#: includes/integrations/class-presto-player-integration.php:118
+msgid "Video Complete"
+msgstr "فيديو مكتمل"
+
+#: includes/integrations/class-presto-player-integration.php:145
+msgid "Percentage"
+msgstr "نسبة"
+
+#: includes/integrations/class-presto-player-integration.php:156
+msgid "Progress Thresholds"
+msgstr "عتبات التقدم"
+
+#: includes/integrations/class-presto-player-integration.php:157
+msgid "Add one or more progress percentages to track. For each percentage, you can assign lists and tags to add or remove when the video reaches that point."
+msgstr "أضف واحدًا أو أكثر من نسب التقدم للتتبع. لكل نسبة، يمكنك تعيين قوائم وعلامات للإضافة أو الإزالة عندما يصل الفيديو إلى هذه النقطة."
+
+#: includes/integrations/class-presto-player-integration.php:955
+#: includes/integrations/class-presto-player-integration.php:997
+msgid "All Videos"
+msgstr "جميع الفيديوهات"
+
+#: includes/integrations/class-presto-player-integration.php:1036
+msgid "Untitled Video"
+msgstr "فيديو بلا عنوان"
+
+#: includes/integrations/class-surecart-integration.php:73
+msgid "Sync SureCart customer contact information and track order purchases. Note: SureCart automatically creates WordPress accounts for all customers."
+msgstr "مزامنة معلومات الاتصال بعملاء SureCart وتتبع مشتريات الطلبات. ملاحظة: يقوم SureCart تلقائيًا بإنشاء حسابات WordPress لجميع العملاء."
+
+#: includes/integrations/class-surecart-integration.php:97
+msgid "SureCart"
+msgstr "SureCart"
+
+#: includes/integrations/class-surecart-integration.php:318
+msgid "Send detailed order information including subscription renewals to SureContact for revenue tracking and analytics"
+msgstr "إرسال معلومات الطلب التفصيلية بما في ذلك تجديدات الاشتراكات إلى SureContact لتتبع الإيرادات والتحليلات"
+
+#: includes/integrations/class-surecart-integration.php:325
+msgid "Send refund information to SureContact when purchases are refunded"
+msgstr "إرسال معلومات الاسترداد إلى SureContact عند استرداد المشتريات"
+
+#: includes/integrations/class-surecart-integration.php:332
+msgid "Send cancellation information to SureContact when orders or subscriptions are cancelled"
+msgstr "إرسال معلومات الإلغاء إلى SureContact عند إلغاء الطلبات أو الاشتراكات"
+
+#: includes/integrations/class-surecart-integration.php:352
+#: includes/integrations/class-woocommerce-integration.php:400
+msgid "Product"
+msgstr "منتج"
+
+#: includes/integrations/class-surecart-integration.php:379
+#: includes/integrations/class-woocommerce-integration.php:436
+msgid "Cancellation"
+msgstr "إلغاء"
+
+#: includes/integrations/class-surecart-integration.php:2018
+#: includes/integrations/class-surecart-integration.php:2261
+#: includes/integrations/class-woocommerce-integration.php:1923
+#: includes/integrations/class-woocommerce-integration.php:2105
+msgid "All Products"
+msgstr "جميع المنتجات"
+
+#: includes/integrations/class-surecart-order-sync.php:89
+msgid "Synchronize all SureCart orders and customer data to SureContact"
+msgstr "مزامنة جميع طلبات SureCart وبيانات العملاء إلى SureContact"
+
+#: includes/integrations/class-suredash-integration.php:50
+msgid "Track SureDash community engagement including posts, comments, bookmarks, and reactions"
+msgstr "تتبع تفاعل مجتمع SureDash بما في ذلك المنشورات والتعليقات والإشارات والردود"
+
+#: includes/integrations/class-suredash-integration.php:70
+msgid "SureDash Pro"
+msgstr "SureDash Pro"
+
+#: includes/integrations/class-suredash-integration.php:116
+msgid "Community Space"
+msgstr "مساحة المجتمع"
+
+#: includes/integrations/class-suredash-integration.php:120
+msgid "Course"
+msgstr "دورة"
+
+#: includes/integrations/class-suredash-integration.php:139
+msgid "Post Created"
+msgstr "تم إنشاء المنشور"
+
+#: includes/integrations/class-suredash-integration.php:143
+msgid "Comment Added"
+msgstr "تم إضافة تعليق"
+
+#: includes/integrations/class-suredash-integration.php:147
+msgid "Content Bookmarked"
+msgstr "محتوى تم وضع علامة عليه"
+
+#: includes/integrations/class-suredash-integration.php:151
+msgid "Content Reacted/Liked"
+msgstr "محتوى تم التفاعل معه/الإعجاب به"
+
+#: includes/integrations/class-suredash-integration.php:159
+msgid "Lesson Completed"
+msgstr "الدرس مكتمل"
+
+#: includes/integrations/class-suredash-integration.php:163
+msgid "Course Completed"
+msgstr "الدورة مكتملة"
+
+#: includes/integrations/class-suredash-integration.php:871
+#: includes/integrations/class-suredash-integration.php:967
+msgid "All Spaces"
+msgstr "جميع المساحات"
+
+#: includes/integrations/class-suredash-integration.php:916
+#: includes/integrations/class-suredash-integration.php:981
+msgid "All Courses"
+msgstr "جميع الدورات"
+
+#: includes/integrations/class-sureforms-integration.php:57
+msgid "Sync SureForms submissions with per-form field mapping"
+msgstr "مزامنة طلبات SureForms مع تخطيط الحقول لكل نموذج"
+
+#: includes/integrations/class-suremembers-integration.php:49
+msgid "Sync SureMembers access group memberships and track member lifecycle events"
+msgstr "مزامنة عضويات مجموعة الوصول في SureMembers وتتبع أحداث دورة حياة الأعضاء"
+
+#: includes/integrations/class-suremembers-integration.php:66
+msgid "SureMembers"
+msgstr "SureMembers"
+
+#: includes/integrations/class-suremembers-integration.php:85
+msgid "Membership Status"
+msgstr "حالة العضوية"
+
+#: includes/integrations/class-suremembers-integration.php:90
+msgid "Membership Name"
+msgstr "اسم العضوية"
+
+#: includes/integrations/class-suremembers-integration.php:95
+msgid "Access Group ID"
+msgstr "معرف مجموعة الوصول"
+
+#: includes/integrations/class-suremembers-integration.php:100
+msgid "Active Groups Count"
+msgstr "عدد المجموعات النشطة"
+
+#: includes/integrations/class-suremembers-integration.php:105
+msgid "Access Status"
+msgstr "حالة الوصول"
+
+#: includes/integrations/class-suremembers-integration.php:110
+msgid "Access Granted Date"
+msgstr "تاريخ منح الوصول"
+
+#: includes/integrations/class-suremembers-integration.php:115
+msgid "Access Modified Date"
+msgstr "تاريخ تعديل الوصول"
+
+#: includes/integrations/class-suremembers-integration.php:120
+msgid "Expiration Date"
+msgstr "تاريخ انتهاء الصلاحية"
+
+#: includes/integrations/class-suremembers-integration.php:125
+msgid "Days Until Expiration"
+msgstr "الأيام المتبقية حتى انتهاء الصلاحية"
+
+#: includes/integrations/class-suremembers-integration.php:130
+msgid "Integration Source"
+msgstr "مصدر التكامل"
+
+#: includes/integrations/class-suremembers-integration.php:135
+msgid "WooCommerce Order IDs"
+msgstr "معرفات طلبات WooCommerce"
+
+#: includes/integrations/class-suremembers-integration.php:140
+msgid "Days as Member"
+msgstr "الأيام كعضو"
+
+#: includes/integrations/class-suremembers-integration.php:145
+msgid "Last Login"
+msgstr "آخر تسجيل دخول"
+
+#: includes/integrations/class-suremembers-integration.php:184
+msgid "Membership"
+msgstr "عضوية"
+
+#: includes/integrations/class-suremembers-integration.php:203
+msgid "Access Granted"
+msgstr "تم منح الوصول"
+
+#: includes/integrations/class-suremembers-integration.php:207
+msgid "Access Revoked"
+msgstr "تم إلغاء الوصول"
+
+#: includes/integrations/class-suremembers-integration.php:211
+msgid "Access Expired"
+msgstr "انتهت صلاحية الوصول"
+
+#: includes/integrations/class-suremembers-integration.php:215
+msgid "Member Logged In"
+msgstr "تسجيل دخول العضو"
+
+#: includes/integrations/class-suremembers-integration.php:912
+#: includes/integrations/class-suremembers-integration.php:954
+msgid "All Memberships"
+msgstr "جميع العضويات"
+
+#: includes/integrations/class-woocommerce-customer-sync.php:88
+msgid "Customers"
+msgstr "العملاء"
+
+#: includes/integrations/class-woocommerce-customer-sync.php:89
+msgid "Synchronize all WooCommerce customers (including guests) to SureContact"
+msgstr "مزامنة جميع عملاء WooCommerce (بما في ذلك الضيوف) إلى SureContact"
+
+#: includes/integrations/class-woocommerce-customer-sync.php:108
+msgid "No customers found to sync"
+msgstr "لم يتم العثور على عملاء للمزامنة"
+
+#: includes/integrations/class-woocommerce-customer-sync.php:313
+#: includes/integrations/class-wordpress-user-sync.php:313
+msgid "No valid contacts to sync in first batch"
+msgstr "لا توجد جهات اتصال صالحة للمزامنة في الدفعة الأولى"
+
+#: includes/integrations/class-woocommerce-integration.php:70
+msgid "Sync WooCommerce customer contact information"
+msgstr "مزامنة معلومات اتصال العملاء في WooCommerce"
+
+#: includes/integrations/class-woocommerce-integration.php:100
+msgid "WooCommerce Customer"
+msgstr "عميل WooCommerce"
+
+#: includes/integrations/class-woocommerce-integration.php:105
+msgid "WooCommerce Order"
+msgstr "طلب WooCommerce"
+
+#: includes/integrations/class-woocommerce-integration.php:123
+msgid "Billing First Name"
+msgstr "الاسم الأول للفواتير"
+
+#: includes/integrations/class-woocommerce-integration.php:127
+msgid "Billing Last Name"
+msgstr "اسم العائلة للفواتير"
+
+#: includes/integrations/class-woocommerce-integration.php:131
+msgid "Billing Company"
+msgstr "شركة الفواتير"
+
+#: includes/integrations/class-woocommerce-integration.php:135
+msgid "Billing Address 1"
+msgstr "عنوان الفواتير 1"
+
+#: includes/integrations/class-woocommerce-integration.php:139
+msgid "Billing Address 2"
+msgstr "عنوان الفواتير 2"
+
+#: includes/integrations/class-woocommerce-integration.php:143
+msgid "Billing City"
+msgstr "مدينة الفواتير"
+
+#: includes/integrations/class-woocommerce-integration.php:147
+msgid "Billing Postcode"
+msgstr "رمز بريد الفواتير"
+
+#: includes/integrations/class-woocommerce-integration.php:151
+msgid "Billing State"
+msgstr "ولاية الفواتير"
+
+#: includes/integrations/class-woocommerce-integration.php:155
+msgid "Billing Country"
+msgstr "بلد الفواتير"
+
+#: includes/integrations/class-woocommerce-integration.php:159
+msgid "Billing Phone"
+msgstr "هاتف الفواتير"
+
+#: includes/integrations/class-woocommerce-integration.php:163
+msgid "Billing Email"
+msgstr "البريد الإلكتروني للفواتير"
+
+#: includes/integrations/class-woocommerce-integration.php:167
+msgid "Shipping First Name"
+msgstr "الاسم الأول للشحن"
+
+#: includes/integrations/class-woocommerce-integration.php:171
+msgid "Shipping Last Name"
+msgstr "اسم العائلة للشحن"
+
+#: includes/integrations/class-woocommerce-integration.php:175
+msgid "Shipping Company"
+msgstr "شركة الشحن"
+
+#: includes/integrations/class-woocommerce-integration.php:179
+msgid "Shipping Address 1"
+msgstr "عنوان الشحن 1"
+
+#: includes/integrations/class-woocommerce-integration.php:183
+msgid "Shipping Address 2"
+msgstr "عنوان الشحن 2"
+
+#: includes/integrations/class-woocommerce-integration.php:187
+msgid "Shipping City"
+msgstr "مدينة الشحن"
+
+#: includes/integrations/class-woocommerce-integration.php:191
+msgid "Shipping Postcode"
+msgstr "رمز بريد الشحن"
+
+#: includes/integrations/class-woocommerce-integration.php:195
+msgid "Shipping State"
+msgstr "ولاية الشحن"
+
+#: includes/integrations/class-woocommerce-integration.php:199
+msgid "Shipping Country"
+msgstr "بلد الشحن"
+
+#: includes/integrations/class-woocommerce-integration.php:214
+msgid "Total Order Count"
+msgstr "إجمالي عدد الطلبات"
+
+#: includes/integrations/class-woocommerce-integration.php:218
+msgid "Total Amount Spent"
+msgstr "إجمالي المبلغ المنفق"
+
+#: includes/integrations/class-woocommerce-integration.php:222
+msgid "Last Order Date"
+msgstr "تاريخ الطلب الأخير"
+
+#: includes/integrations/class-woocommerce-integration.php:226
+msgid "First Order Date"
+msgstr "تاريخ الطلب الأول"
+
+#: includes/integrations/class-woocommerce-integration.php:230
+msgid "Average Order Value"
+msgstr "متوسط قيمة الطلب"
+
+#: includes/integrations/class-woocommerce-integration.php:234
+msgid "Order Notes"
+msgstr "ملاحظات الطلب"
+
+#: includes/integrations/class-woocommerce-integration.php:264
+msgid "Sync guest checkout customers to SureContact (customers without WordPress accounts)"
+msgstr "مزامنة عملاء تسجيل المغادرة الضيوف مع SureContact (العملاء بدون حسابات WordPress)"
+
+#: includes/integrations/class-woocommerce-integration.php:272
+msgid "Send order information to SureContact for revenue tracking"
+msgstr "إرسال معلومات الطلب إلى SureContact لتتبع الإيرادات"
+
+#: includes/integrations/class-woocommerce-integration.php:279
+msgid "Send refund information to SureContact"
+msgstr "إرسال معلومات الاسترداد إلى SureContact"
+
+#: includes/integrations/class-woocommerce-integration.php:286
+msgid "Send cancellation information to SureContact when orders are cancelled"
+msgstr "إرسال معلومات الإلغاء إلى SureContact عند إلغاء الطلبات"
+
+#: includes/integrations/class-woocommerce-integration.php:294
+msgid "Auto-Tag Product Categories"
+msgstr "تسمية تلقائية لفئات المنتجات"
+
+#: includes/integrations/class-woocommerce-integration.php:295
+msgid "Automatically create and apply tags based on product category names when purchased"
+msgstr "إنشاء وتطبيق تسمية تلقائية بناءً على أسماء فئات المنتجات عند الشراء"
+
+#: includes/integrations/class-woocommerce-integration.php:301
+msgid "Auto-Tag Product Names"
+msgstr "تسمية تلقائية لأسماء المنتجات"
+
+#: includes/integrations/class-woocommerce-integration.php:302
+msgid "Automatically create and apply tags based on product names when purchased"
+msgstr "إنشاء وتطبيق تسمية تلقائية بناءً على أسماء المنتجات عند الشراء"
+
+#: includes/integrations/class-woocommerce-integration.php:308
+msgid "Auto-Tag Product SKUs"
+msgstr "تسمية تلقائية لأرقام المنتجات"
+
+#: includes/integrations/class-woocommerce-integration.php:309
+msgid "Automatically create and apply tags based on product SKUs when purchased"
+msgstr "إنشاء وتطبيق تسمية تلقائية بناءً على أرقام المنتجات عند الشراء"
+
+#: includes/integrations/class-woocommerce-integration.php:315
+msgid "Auto-Tag Prefix"
+msgstr "بادئة التسمية التلقائية"
+
+#: includes/integrations/class-woocommerce-integration.php:316
+msgid "Prefix to add to automatically generated tags (e.g., \"Purchased -\")"
+msgstr "بادئة لإضافتها إلى التسميات المُنشأة تلقائيًا (مثل، \"تم الشراء -\")"
+
+#: includes/integrations/class-woocommerce-integration.php:322
+msgid "Product Review Tags"
+msgstr "تسميات مراجعة المنتج"
+
+#: includes/integrations/class-woocommerce-integration.php:323
+msgid "Apply these tags when a customer leaves a product review"
+msgstr "تطبيق هذه التسميات عندما يترك العميل مراجعة منتج"
+
+#. translators: %s: WooCommerce order status label.
+#: includes/integrations/class-woocommerce-integration.php:370
+#, php-format
+msgid "Order Status: %s"
+msgstr "حالة الطلب: %s"
+
+#. translators: %s: WooCommerce order status label.
+#: includes/integrations/class-woocommerce-integration.php:374
+#, php-format
+msgid "Select lists to add contacts to when order status changes to %s."
+msgstr "حدد القوائم لإضافة جهات الاتصال عندما تتغير حالة الطلب إلى %s."
+
+#: includes/integrations/class-woocommerce-integration.php:404
+msgid "Product Category"
+msgstr "فئة المنتج"
+
+#: includes/integrations/class-woocommerce-integration.php:567
+msgid "SureContact: Guest customer sync disabled."
+msgstr "SureContact: مزامنة عملاء الضيوف معطلة."
+
+#: includes/integrations/class-woocommerce-integration.php:574
+msgid "SureContact: Order tracked."
+msgstr "SureContact: تم تتبع الطلب."
+
+#: includes/integrations/class-woocommerce-integration.php:645
+msgid "SureContact: No actions configured, contact not synced."
+msgstr "SureContact: لا توجد إجراءات مُعدة، لم يتم مزامنة جهة الاتصال."
+
+#: includes/integrations/class-woocommerce-integration.php:669
+msgid "SureContact: Contact sync failed."
+msgstr "SureContact: فشل مزامنة جهة الاتصال."
+
+#: includes/integrations/class-woocommerce-integration.php:682
+msgid "SureContact: Contact synced and lists/tags applied."
+msgstr "SureContact: تمت مزامنة جهة الاتصال وتطبيق القوائم/التسميات."
+
+#: includes/integrations/class-woocommerce-integration.php:2019
+#: includes/integrations/class-woocommerce-integration.php:2107
+msgid "All Product Categories"
+msgstr "جميع فئات المنتجات"
+
+#: includes/integrations/class-woocommerce-order-sync.php:89
+msgid "Synchronize all WooCommerce orders and revenue data to SureContact"
+msgstr "مزامنة جميع طلبات WooCommerce وبيانات الإيرادات إلى SureContact"
+
+#: includes/integrations/class-wordpress-integration.php:63
+msgid "Sync WordPress users, registration, and profile updates"
+msgstr "مزامنة مستخدمي WordPress، والتسجيل، وتحديثات الملف الشخصي"
+
+#: includes/integrations/class-wordpress-integration.php:786
+msgid "Page"
+msgstr "صفحة"
+
+#: includes/integrations/class-wordpress-integration.php:790
+msgid "Post"
+msgstr "مشاركة"
+
+#: includes/integrations/class-wordpress-integration.php:808
+msgid "Visited"
+msgstr "تم الزيارة"
+
+#: includes/integrations/class-wordpress-integration.php:840
+msgid "All Pages"
+msgstr "جميع الصفحات"
+
+#: includes/integrations/class-wordpress-integration.php:877
+msgid "All Posts"
+msgstr "جميع المشاركات"
+
+#: includes/integrations/class-wordpress-user-sync.php:88
+msgid "Users"
+msgstr "المستخدمون"
+
+#: includes/integrations/class-wordpress-user-sync.php:89
+msgid "Synchronize all WordPress users to SureContact in the background"
+msgstr "مزامنة جميع مستخدمي WordPress مع SureContact في الخلفية"
+
+#: includes/integrations/class-wordpress-user-sync.php:108
+msgid "No users found to sync"
+msgstr "لم يتم العثور على مستخدمين للمزامنة"
+
+#: includes/integrations/class-wpforms-integration.php:52
+msgid "Sync WPForms submissions with per-form field mapping"
+msgstr "مزامنة تسليمات WPForms مع تخطيط الحقول لكل نموذج"
+
+#. translators: %s: Error message from the sync process.
+#: includes/integrations/class-wpforms-integration.php:459
+#, php-format
+msgid "Error syncing form entry to SureContact: %s"
+msgstr "خطأ في مزامنة إدخال النموذج إلى SureContact: %s"
+
+#. translators: %s: Contact UUID.
+#: includes/integrations/class-wpforms-integration.php:466
+#, php-format
+msgid "Entry synced to SureContact (contact UUID: %s)"
+msgstr "تم مزامنة الإدخال مع SureContact (UUID جهة الاتصال: %s)"
+
+#: includes/traits/class-api-retry.php:179
+msgid "Cannot queue: missing data"
+msgstr "لا يمكن وضعه في قائمة الانتظار: بيانات مفقودة"
+
+#. translators: %s: field name
+#: includes/traits/class-api-retry.php:194
+#, php-format
+msgid "Cannot queue: missing required field \"%s\""
+msgstr "لا يمكن وضعه في قائمة الانتظار: حقل مطلوب غير موجود \"%s\""
+
+#: includes/traits/class-api-retry.php:236
+msgid "Request queued for retry."
+msgstr "تم وضع الطلب في قائمة الانتظار لإعادة المحاولة."
+
+#: includes/traits/class-api-retry.php:245
+msgid "Failed to queue request for retry"
+msgstr "فشل في وضع الطلب في قائمة الانتظار لإعادة المحاولة"
+
+#: includes/traits/class-api-retry.php:337
+msgid "Each call must have \"callback\" and \"queue_data\" keys"
+msgstr "يجب أن يحتوي كل استدعاء على مفاتيح \"callback\" و \"queue_data\""
+
+#: includes/traits/class-api-retry.php:379
+msgid "Request queued for processing."
+msgstr "تم وضع الطلب في قائمة الانتظار للمعالجة."
+
+#: includes/traits/class-api-retry.php:386
+msgid "Request completed successfully."
+msgstr "تم استكمال الطلب بنجاح."
+
+#: surecontact.php:456
+msgid "Access Dashboard"
+msgstr "الوصول إلى لوحة التحكم"
+
+#: surecontact.php:457
+msgid "Get Started Now"
+msgstr "ابدأ الآن"
+
+#: surecontact.php:488
+msgid "Rate our plugin"
+msgstr "قييم الإضافة الخاصة بنا"
+
+#: src/api/auth.js:50
+#: src/api/auth.js:62
+msgid "Unable to create your SureContact account."
+msgstr "غير قادر على إنشاء حسابك في SureContact."
+
+#: src/api/bulkSync.js:43
+#: src/api/bulkSync.js:47
+msgid "Failed to start sync job."
+msgstr "فشل في بدء وظيفة المزامنة."
+
+#: src/api/bulkSync.js:76
+#: src/api/bulkSync.js:80
+msgid "Failed to fetch job status."
+msgstr "فشل في جلب حالة الوظيفة."
+
+#: src/api/bulkSync.js:143
+#: src/api/bulkSync.js:147
+msgid "Failed to fetch recent jobs."
+msgstr "فشل في جلب الوظائف الأخيرة."
+
+#: src/api/bulkSync.js:176
+#: src/api/bulkSync.js:180
+msgid "Failed to cancel job."
+msgstr "فشل في إلغاء الوظيفة."
+
+#: src/api/bulkSync.js:209
+#: src/api/bulkSync.js:215
+msgid "Failed to fetch available sync types."
+msgstr "فشل في جلب أنواع المزامنة المتاحة."
+
+#: src/api/fieldMapping.js:39
+msgid "Invalid data received from server."
+msgstr "تم استقبال بيانات غير صالحة من الخادم."
+
+#: src/api/fieldMapping.js:44
+msgid "Failed to fetch field mapping data."
+msgstr "فشل في جلب بيانات تخطيط الحقول."
+
+#: src/api/fieldMapping.js:76
+#: src/api/fieldMapping.js:80
+#: src/components/CustomFieldSelect.jsx:68
+msgid "Failed to sync CRM fields."
+msgstr "فشل في مزامنة حقول CRM."
+
+#: src/api/fieldMapping.js:157
+#: src/api/fieldMapping.js:162
+msgid "Failed to create custom field."
+msgstr "فشل في إنشاء حقل مخصص."
+
+#: src/api/integrations.js:38
+#: src/api/integrations.js:70
+#: src/api/integrations.js:105
+#: src/api/integrations.js:142
+#: src/api/integrations.js:174
+#: src/api/integrations.js:212
+#: src/api/integrations.js:245
+#: src/api/integrations.js:287
+#: src/api/integrations.js:340
+#: src/api/integrations.js:395
+#: src/api/integrations.js:465
+#: src/api/integrations.js:520
+#: src/api/integrations.js:573
+#: src/api/integrations.js:613
+#: src/api/integrations.js:645
+msgid "Invalid response from server"
+msgstr "استجابة غير صالحة من الخادم"
+
+#: src/api/integrations.js:42
+#: src/api/integrations.js:109
+msgid "Failed to fetch integrations"
+msgstr "فشل في جلب التكاملات"
+
+#: src/api/integrations.js:74
+msgid "Failed to fetch global settings integrations"
+msgstr "فشل في جلب إعدادات التكاملات العالمية"
+
+#: src/api/integrations.js:146
+#: src/hooks/useIntegrations.js:150
+msgid "Failed to toggle integration"
+msgstr "فشل في تبديل التكامل"
+
+#: src/api/integrations.js:179
+msgid "Failed to fetch integration settings"
+msgstr "فشل في جلب إعدادات التكامل"
+
+#: src/api/integrations.js:217
+msgid "Failed to save integration settings"
+msgstr "فشل في حفظ إعدادات التكامل"
+
+#: src/api/integrations.js:250
+msgid "Failed to fetch integration metadata"
+msgstr "فشل في جلب بيانات التكامل"
+
+#: src/api/integrations.js:292
+msgid "Failed to fetch integration items"
+msgstr "فشل في جلب عناصر التكامل"
+
+#: src/api/integrations.js:344
+msgid "Failed to fetch item fields"
+msgstr "فشل في جلب حقول العناصر"
+
+#: src/api/integrations.js:400
+msgid "Failed to fetch integration configuration"
+msgstr "فشل في جلب تكوين التكامل"
+
+#: src/api/integrations.js:470
+msgid "Failed to save integration configuration"
+msgstr "فشل في حفظ تكوين التكامل"
+
+#: src/api/integrations.js:525
+msgid "Failed to update integration status"
+msgstr "فشل في تحديث حالة التكامل"
+
+#: src/api/integrations.js:578
+msgid "Failed to delete integration configuration"
+msgstr "فشل في حذف تكوين التكامل"
+
+#: src/api/integrations.js:618
+msgid "Failed to activate plugin"
+msgstr "فشل في تفعيل الإضافة"
+
+#: src/api/integrations.js:650
+msgid "Failed to fetch configured integrations"
+msgstr "فشل في جلب التكاملات المكونة"
+
+#: src/api/listsAndTags.js:56
+#: src/api/listsAndTags.js:60
+msgid "Failed to fetch lists"
+msgstr "فشل في جلب القوائم"
+
+#: src/api/listsAndTags.js:89
+#: src/api/listsAndTags.js:93
+msgid "Failed to fetch list"
+msgstr "فشل في جلب القائمة"
+
+#: src/api/listsAndTags.js:126
+#: src/api/listsAndTags.js:130
+#: src/components/ListSelect.jsx:149
+msgid "Failed to create list"
+msgstr "فشل في إنشاء قائمة"
+
+#: src/api/listsAndTags.js:161
+#: src/api/listsAndTags.js:165
+msgid "Failed to update list"
+msgstr "فشل في تحديث القائمة"
+
+#: src/api/listsAndTags.js:194
+#: src/api/listsAndTags.js:198
+msgid "Failed to delete list"
+msgstr "فشل في حذف القائمة"
+
+#: src/api/listsAndTags.js:229
+#: src/api/listsAndTags.js:233
+msgid "Failed to add contacts to list"
+msgstr "فشل في إضافة جهات الاتصال إلى القائمة"
+
+#: src/api/listsAndTags.js:264
+#: src/api/listsAndTags.js:268
+msgid "Failed to remove contacts from list"
+msgstr "فشل في إزالة جهات الاتصال من القائمة"
+
+#: src/api/listsAndTags.js:299
+#: src/api/listsAndTags.js:303
+msgid "Failed to bulk attach lists"
+msgstr "فشل في ربط القوائم بالجملة"
+
+#: src/api/listsAndTags.js:334
+#: src/api/listsAndTags.js:338
+msgid "Failed to bulk detach lists"
+msgstr "فشل في فصل القوائم بالجملة"
+
+#: src/api/listsAndTags.js:384
+#: src/api/listsAndTags.js:388
+msgid "Failed to fetch tags"
+msgstr "فشل في جلب العلامات"
+
+#: src/api/listsAndTags.js:417
+#: src/api/listsAndTags.js:421
+msgid "Failed to fetch tag"
+msgstr "فشل في جلب العلامة"
+
+#: src/api/listsAndTags.js:454
+#: src/api/listsAndTags.js:458
+#: src/components/TagSelect.jsx:149
+msgid "Failed to create tag"
+msgstr "فشل في إنشاء علامة"
+
+#: src/api/listsAndTags.js:489
+#: src/api/listsAndTags.js:493
+msgid "Failed to update tag"
+msgstr "فشل في تحديث العلامة"
+
+#: src/api/listsAndTags.js:522
+#: src/api/listsAndTags.js:526
+msgid "Failed to delete tag"
+msgstr "فشل في حذف العلامة"
+
+#: src/api/listsAndTags.js:557
+#: src/api/listsAndTags.js:561
+msgid "Failed to attach tags to contact"
+msgstr "فشل في ربط العلامات بالجهة"
+
+#: src/api/listsAndTags.js:592
+#: src/api/listsAndTags.js:596
+msgid "Failed to detach tags from contact"
+msgstr "فشل في فصل العلامات عن الجهة"
+
+#: src/api/listsAndTags.js:627
+#: src/api/listsAndTags.js:631
+msgid "Failed to attach lists to contact"
+msgstr "فشل في ربط القوائم بالجهة"
+
+#: src/api/listsAndTags.js:673
+#: src/api/listsAndTags.js:677
+msgid "Failed to bulk attach tags"
+msgstr "فشل في ربط العلامات بالجملة"
+
+#: src/api/listsAndTags.js:708
+#: src/api/listsAndTags.js:712
+msgid "Failed to bulk detach tags"
+msgstr "فشل في فصل العلامات بكميات كبيرة"
+
+#: src/api/listsAndTags.js:743
+#: src/api/listsAndTags.js:747
+msgid "Failed to bulk sync tags"
+msgstr "فشل في مزامنة العلامات بكميات كبيرة"
+
+#: src/api/listsAndTags.js:778
+#: src/api/listsAndTags.js:782
+msgid "Failed to sync lists and tags"
+msgstr "فشل في مزامنة القوائم والعلامات"
+
+#: src/api/queue.js:17
+msgid "Invalid ID provided"
+msgstr "معرف غير صالح مزود"
+
+#: src/api/queue.js:24
+msgid "IDs array is required and must not be empty"
+msgstr "مصفوفة المعرفات مطلوبة ويجب ألا تكون فارغة"
+
+#: src/api/queue.js:49
+#: src/api/queue.js:54
+msgid "Failed to fetch logs"
+msgstr "فشل في جلب السجلات"
+
+#: src/api/queue.js:70
+#: src/api/queue.js:75
+msgid "Failed to fetch stats"
+msgstr "فشل في جلب الإحصائيات"
+
+#: src/api/queue.js:92
+#: src/api/queue.js:97
+msgid "Failed to delete log"
+msgstr "فشل في حذف السجل"
+
+#: src/api/queue.js:115
+#: src/api/queue.js:120
+#: src/hooks/useLogs.js:113
+msgid "Failed to delete logs"
+msgstr "فشل في حذف السجلات"
+
+#: src/api/queue.js:136
+#: src/api/queue.js:141
+#: src/hooks/useLogs.js:185
+msgid "Failed to clear logs"
+msgstr "فشل في مسح السجلات"
+
+#: src/api/queue.js:159
+#: src/api/queue.js:164
+msgid "Failed to fetch queue logs"
+msgstr "فشل في جلب سجلات قائمة الانتظار"
+
+#: src/api/queue.js:180
+#: src/api/queue.js:185
+msgid "Failed to fetch queue stats"
+msgstr "فشل في جلب إحصائيات قائمة الانتظار"
+
+#: src/api/queue.js:202
+#: src/api/queue.js:207
+#: src/hooks/useLogs.js:89
+msgid "Failed to retry item"
+msgstr "فشل في إعادة محاولة العنصر"
+
+#: src/api/queue.js:223
+#: src/api/queue.js:228
+#: src/api/queue.js:246
+#: src/api/queue.js:251
+#: src/hooks/useLogs.js:137
+#: src/hooks/useLogs.js:161
+msgid "Failed to retry items"
+msgstr "فشل في إعادة محاولة العناصر"
+
+#: src/api/queue.js:268
+#: src/api/queue.js:273
+msgid "Failed to delete queue item"
+msgstr "فشل في حذف عنصر من قائمة الانتظار"
+
+#: src/api/queue.js:291
+#: src/api/queue.js:296
+msgid "Failed to delete queue items"
+msgstr "فشل في حذف عناصر قائمة الانتظار"
+
+#: src/api/settings.js:48
+#: src/api/settings.js:52
+msgid "Failed to fetch settings"
+msgstr "فشل في جلب الإعدادات"
+
+#: src/api/settings.js:82
+#: src/api/settings.js:86
+#: src/hooks/useIntegrations.js:178
+#: src/screens/settings/Settings.jsx:35
+msgid "Failed to save settings"
+msgstr "فشل في حفظ الإعدادات"
+
+#: src/App.jsx:71
+msgid "Authentication"
+msgstr "المصادقة"
+
+#: src/App.jsx:106
+msgid "Syncing lists, tags, and custom fields…"
+msgstr "مزامنة القوائم والعلامات والحقول المخصصة…"
+
+#: src/App.jsx:113
+#: src/components/ListSelect.jsx:63
+#: src/components/ListSelect.jsx:67
+#: src/components/TagSelect.jsx:63
+#: src/components/TagSelect.jsx:67
+#: src/screens/settings/components/SettingsHeader.jsx:15
+#: src/screens/settings/components/SettingsHeader.jsx:19
+msgid "Lists and tags synced successfully!"
+msgstr "تمت مزامنة القوائم والعلامات بنجاح!"
+
+#: src/App.jsx:131
+msgid "Custom fields synced successfully!"
+msgstr "تمت مزامنة الحقول المخصصة بنجاح!"
+
+#: src/components/AuthPage.jsx:67
+msgid "Capture leads with forms"
+msgstr "التقاط العملاء المحتملين باستخدام النماذج"
+
+#: src/components/AuthPage.jsx:68
+msgid "Beautiful popups, inline forms, and landing pages that convert WordPress visitors into subscribers."
+msgstr "مربعات جميلة، نماذج مدمجة، وصفحات هبوط تعمل على تحويل زوار WordPress إلى مشتركين."
+
+#: src/components/AuthPage.jsx:72
+msgid "Don’t miss out"
+msgstr "لا تفوت الفرصة"
+
+#: src/components/AuthPage.jsx:73
+msgid "Subscribe to get our weekly drops & member-only deals."
+msgstr "اشترك للحصول على تنبيهاتنا الأسبوعية وعروض الأعضاء فقط."
+
+#: src/components/AuthPage.jsx:81
+msgid "Send campaigns that land"
+msgstr "أرسل حملات تجذب الاهتمام"
+
+#: src/components/AuthPage.jsx:82
+msgid "Drag-and-drop email editor with 60+ templates. Send broadcasts, newsletters, and product updates."
+msgstr "محرر بريد إلكتروني بالسحب والإفلات مع أكثر من 60 نموذج. أرسل نشرات إخبارية وتحديثات للمنتجات."
+
+#: src/components/AuthPage.jsx:87
+msgid "New drop"
+msgstr "إصدار جديد"
+
+#: src/components/AuthPage.jsx:93
+msgid "Cart back"
+msgstr "عودة السلة"
+
+#: src/components/AuthPage.jsx:99
+#: src/components/AuthPage.jsx:117
+msgid "Welcome"
+msgstr "مرحبًا"
+
+#: src/components/AuthPage.jsx:107
+msgid "Automate your workflow"
+msgstr "قم بأتمتة سير عملك"
+
+#: src/components/AuthPage.jsx:108
+msgid "Welcome series, abandoned carts, post-purchase follow-ups — running on autopilot."
+msgstr "سلسلة الترحيب، العربات المهجورة، المتابعات بعد الشراء - تعمل تلقائيًا."
+
+#: src/components/AuthPage.jsx:113
+msgid "Signup"
+msgstr "اشترك"
+
+#: src/components/AuthPage.jsx:121
+msgid "Wait 3d"
+msgstr "انتظر 3 أيام"
+
+#: src/components/AuthPage.jsx:125
+msgid "Offer"
+msgstr "عرض"
+
+#: src/components/AuthPage.jsx:131
+msgid "Built-in lightweight CRM"
+msgstr "CRM خفيف مبني مسبقًا"
+
+#: src/components/AuthPage.jsx:132
+msgid "Custom fields, tags, segments and a full activity timeline for every contact you collect."
+msgstr "حقول مخصصة، علامات، شرائح وتوقيت نشاط كامل لكل جهة اتصال تجمعها."
+
+#: src/components/AuthPage.jsx:154
+msgid "E-commerce integration"
+msgstr "تكامل التجارة الإلكترونية"
+
+#: src/components/AuthPage.jsx:155
+msgid "Seamlessly integrate with WooCommerce, SureCart, and Easy Digital Downloads for complete customer insights."
+msgstr "انسجم بسلاسة مع WooCommerce وSureCart وEasy Digital Downloads للحصول على رؤى كاملة عن العملاء."
+
+#: src/components/AuthPage.jsx:189
+msgid "Secure & GDPR-ready"
+msgstr "آمن وجاهز للامتثال لـ GDPR"
+
+#: src/components/AuthPage.jsx:190
+msgid "OAuth-based auth, encrypted connections, double opt-in, and full consent management built in."
+msgstr "تسجيل دخول معتمد على OAuth، اتصالات مشفرة، اختيار مزدوج، وإدارة موافقة كاملة مدمجة."
+
+#: src/components/AuthPage.jsx:212
+msgid "Authentication failed"
+msgstr "فشل المصادقة"
+
+#: src/components/AuthPage.jsx:213
+msgid "Please try again. If the problem persists, contact support."
+msgstr "يرجى المحاولة مرة أخرى. إذا استمر المشكلة، اتصل بالدعم."
+
+#: src/components/AuthPage.jsx:232
+msgid "Email marketing & CRM "
+msgstr "التسويق عبر البريد الإلكتروني وCRM "
+
+#: src/components/AuthPage.jsx:233
+msgid "built for WordPress"
+msgstr "مبني لووردبريس"
+
+#: src/components/AuthPage.jsx:236
+msgid "Turn your WordPress visitors into customers. Capture leads with forms, sync contacts in real-time, and send beautiful campaigns — all without leaving your dashboard."
+msgstr "حوّل زوار ووردبريس لديك إلى عملاء. قم بجمع العملاء المحتملين باستخدام النماذج، مزامنة جهات الاتصال في الوقت الحقيقي، وإرسال حملات رائعة - كل ذلك دون مغادرة لوحة التحكم الخاصة بك."
+
+#: src/components/AuthPage.jsx:245
+msgid "Already have an account?"
+msgstr "هل لديك حساب بالفعل؟"
+
+#: src/components/AuthPage.jsx:247
+msgid "Sign in"
+msgstr "تسجيل الدخول"
+
+#: src/components/AuthPage.jsx:258
+#: src/screens/dashboard/Dashboard.jsx:274
+msgid "SureContact overview video"
+msgstr "فيديو نظرة عامة على SureContact"
+
+#: src/components/AuthPage.jsx:271
+msgid "Features"
+msgstr "الميزات"
+
+#: src/components/AuthPage.jsx:274
+msgid "What if email marketing was "
+msgstr "ماذا لو كان التسويق عبر البريد الإلكتروني "
+
+#: src/components/AuthPage.jsx:275
+msgid "actually easy"
+msgstr "سهلًا فعلاً"
+
+#: src/components/AuthPage.jsx:276
+msgid "?"
+msgstr "?"
+
+#: src/components/AuthPage.jsx:279
+msgid "SureContact gives you everything you need to grow a list, send beautiful emails, and automate your follow-ups — natively inside WordPress."
+msgstr "يوفر لك SureContact كل ما تحتاجه لتنمية قائمة، إرسال رسائل بريد إلكتروني رائعة، وأتمتة متابعاتك - بشكل أصلي داخل ووردبريس."
+
+#: src/components/AuthPage.jsx:311
+msgid "Get started in minutes"
+msgstr "ابدأ في دقائق"
+
+#: src/components/AuthPage.jsx:314
+msgid "How it works"
+msgstr "كيف يعمل"
+
+#: src/components/AuthPage.jsx:317
+msgid "From plugin activation to your first campaign — three steps, no friction."
+msgstr "من تفعيل البرنامج المساعد إلى حملتك الأولى - ثلاث خطوات، دون احتكاك."
+
+#: src/components/AuthPage.jsx:324
+msgid "Confirm your details"
+msgstr "أكد تفاصيلك"
+
+#: src/components/AuthPage.jsx:325
+msgid "Your name, email, and site URL are auto-filled from WordPress. Just confirm and continue — no signup form to fight with."
+msgstr "اسمك، بريدك الإلكتروني، ورابط موقعك تم تعبئته تلقائيًا من ووردبريس. فقط أكد واستمر - لا يوجد نموذج تسجيل للاشتباك معه."
+
+#: src/components/AuthPage.jsx:328
+msgid "Sync your contacts"
+msgstr "متزامن مع جهات الاتصال الخاص بك"
+
+#: src/components/AuthPage.jsx:329
+msgid "SureContact pulls in existing WP users, WooCommerce customers, and form submissions automatically. Two-way sync keeps everything fresh."
+msgstr "يتم سحب مستخدمي WP الحاليين و العملاء من WooCommerce و إرسال النماذج تلقائيًا بواسطة SureContact. تزامن ثنائي الاتجاه يحافظ على كل شيء جديد."
+
+#: src/components/AuthPage.jsx:332
+msgid "Send your first campaign"
+msgstr "أرسل حملتك الأولى"
+
+#: src/components/AuthPage.jsx:333
+msgid "Pick a template, drag in a few blocks, hit send. Or set up a welcome automation that runs while you sleep."
+msgstr "اختر قالبًا، اسحب بعض الكتل، اضغط إرسال. أو قم بإعداد أتمتة للترحيب تعمل أثناء نومك."
+
+#: src/components/AuthPage.jsx:362
+#: src/components/NavMenu.jsx:23
+#: src/screens/integrations/IntegrationsTableCard.jsx:1513
+msgid "Integrations"
+msgstr "التكاملات"
+
+#: src/components/AuthPage.jsx:365
+msgid "SureContact "
+msgstr "SureContact "
+
+#: src/components/AuthPage.jsx:366
+msgid "already works"
+msgstr "يعمل بالفعل"
+
+#: src/components/AuthPage.jsx:367
+msgid " with your favorite WordPress plugins"
+msgstr " مع المكونات الإضافية المفضلة لديك في ووردبريس"
+
+#: src/components/AuthPage.jsx:370
+msgid "Connect once. Sync everything. Out-of-the-box integrations with every major form, commerce, and theme plugin in the WordPress ecosystem."
+msgstr "اتصل مرة واحدة. قم بتزامن كل شيء. تكاملات جاهزة للاستخدام مع كل نموذج رئيسي، وتجارة، وموضوع في نظام ووردبريس."
+
+#: src/components/AuthPage.jsx:396
+#, js-format
+msgid "+ %d more native integrations"
+msgstr "+ %d تكاملات أصلية أخرى"
+
+#: src/components/AuthPage.jsx:408
+msgid "Testimonials"
+msgstr "الشهادات"
+
+#: src/components/AuthPage.jsx:411
+msgid "Trusted by WordPress teams worldwide"
+msgstr "موثوق من قبل فرق ووردبريس في جميع أنحاء العالم"
+
+#: src/components/AuthPage.jsx:414
+msgid "Over 12M+ sites use Brainstorm Force plugins to ship faster."
+msgstr "أكثر من 12 مليون موقع يستخدمون مكونات Brainstorm Force لتسريع الشحن."
+
+#: src/components/AuthPage.jsx:422
+#: src/components/AuthPage.jsx:440
+msgid "SureContact User"
+msgstr "مستخدم SureContact"
+
+#: src/components/AuthPage.jsx:423
+msgid "SureContact is on another level. I love that the heavy lifting happens outside WordPress, and the connector syncing multiple sites into one dashboard is exactly what I needed. I’ve finally ditched MailerLite."
+msgstr "SureContact في مستوى آخر. أحب أن الحمل الثقيل يحدث خارج ووردبريس، وتزامن المحول بين عدة مواقع في لوحة تحكم واحدة هو بالضبط ما كنت بحاجة إليه. لقد تخليت أخيرًا عن MailerLite."
+
+#: src/components/AuthPage.jsx:428
+msgid "Founder, Hillman Academy"
+msgstr "مؤسس، هيلمان أكاديمى"
+
+#: src/components/AuthPage.jsx:429
+msgid "You guys are the GOAT! The speed of implementation is unchallenged to any other software provider I’ve ever used. Simply Amazing! Thanks, I’ll get started with setting everything up using Mailersend now."
+msgstr "أنتم الأروع! سرعة التنفيذ لا تتحدى أي مزود برامج آخر استخدمته من قبل. ببساطة مذهل! شكرًا، سأبدأ الآن في إعداد كل شيء باستخدام Mailersend."
+
+#: src/components/AuthPage.jsx:434
+msgid "Founder, EDITO Sarl"
+msgstr "مؤسس، EDITO Sarl"
+
+#: src/components/AuthPage.jsx:435
+msgid "Incredibly fast and responsive support. List-Unsubscribe and List-Unsubscribe-Post headers were implemented immediately, and everything worked perfectly in testing."
+msgstr "دعم سريع للغاية واستجابة. تم تنفيذ رؤوس List-Unsubscribe و List-Unsubscribe-Post على الفور، وعمل كل شيء بشكل مثالي في اختبار."
+
+#: src/components/AuthPage.jsx:441
+msgid "SureContact’s connector-based implementation is way better than MailerPress. No comparison."
+msgstr "تطبيق SureContact القائم على المحول أفضل بكثير من MailerPress. لا مقارنة."
+
+#: src/components/AuthPage.jsx:446
+msgid "Demo Queen"
+msgstr "ملكة العرض"
+
+#: src/components/AuthPage.jsx:447
+msgid "I expected SureContact to be a nice-to-have. 67 minutes later, I loved it. It feels like OttoKit’s answer to email."
+msgstr "توقعت أن يكون SureContact شيئًا يمكن الاستغناء عنه. بعد 67 دقيقة، أحببته. يبدو وكأنه إجابة OttoKit على البريد الإلكتروني."
+
+#: src/components/AuthPage.jsx:453
+msgid "Does exactly what it promises. The focus is squarely on conversion and user experience. The team behind the plugin consistently proves they understand entrepreneurial needs, and their support is top-tier."
+msgstr "يفعل بالضبط ما يعد به. التركيز على التحويل وتجربة المستخدم. الفريق وراء المكون الإضافي يثبت باستمرار أنهم يفهمون احتياجات رواد الأعمال، ودعمهم من الدرجة الأولى."
+
+#: src/components/AuthPage.jsx:489
+msgid "Trusted by 12M+ businesses"
+msgstr "موثوق من قبل أكثر من 12 مليون عمل"
+
+#: src/components/AuthPage.jsx:500
+msgid "Ready to grow your list?"
+msgstr "هل أنت مستعد لتنمية قائمتك؟"
+
+#: src/components/AuthPage.jsx:503
+msgid "Join 12M+ WordPress sites already using SureContact to capture, nurture, and convert their visitors."
+msgstr "انضم إلى أكثر من 12 مليون موقع ووردبريس يستخدمون بالفعل SureContact لالتقاط وزرع وتحويل زوارهم."
+
+#: src/components/AuthPage.jsx:508
+msgid "Get started"
+msgstr "ابدأ الآن"
+
+#: src/components/ConfigFields.jsx:127
+#: src/screens/integrations/IntegrationSettings.jsx:231
+msgid "Select an option"
+msgstr "اختر خيارًا"
+
+#: src/components/ConfigFields.jsx:205
+#: src/components/ConfigFields.jsx:370
+#: src/components/ListSelect.jsx:41
+#: src/screens/integrations/IntegrationSettings.jsx:341
+msgid "Select lists…"
+msgstr "اختر القوائم..."
+
+#: src/components/ConfigFields.jsx:227
+#: src/components/ConfigFields.jsx:389
+#: src/components/TagSelect.jsx:41
+#: src/screens/integrations/IntegrationSettings.jsx:380
+msgid "Select tags…"
+msgstr "اختر العلامات..."
+
+#: src/components/ConfigFields.jsx:293
+msgid "Add"
+msgstr "إضافة"
+
+#: src/components/ConfigFields.jsx:299
+msgid "No items added yet. Click \"Add\" to create your first entry."
+msgstr "لم يتم إضافة أي عناصر بعد. انقر \"إضافة\" لإنشاء الإدخال الأول."
+
+#. translators: %d: item number
+#: src/components/ConfigFields.jsx:310
+#, js-format
+msgid "Item %d"
+msgstr "عنصر %d"
+
+#: src/components/ConfigFields.jsx:318
+msgid "Remove item"
+msgstr "إزالة العنصر"
+
+#. translators: 1: field label, 2: item number
+#: src/components/ConfigFields.jsx:371
+#: src/components/ConfigFields.jsx:390
+#, js-format
+msgid "%1$s for item %2$d"
+msgstr "%1$s للعنصر %2$d"
+
+#: src/components/ConfigFields.jsx:421
+msgid "No form fields available to map"
+msgstr "لا توجد حقول نموذج متاحة للتخطيط"
+
+#: src/components/ConfigFields.jsx:427
+msgid "Form Field"
+msgstr "حقل النموذج"
+
+#: src/components/ConfigFields.jsx:430
+msgid "CRM Field"
+msgstr "حقل CRM"
+
+#. translators: %s: form field label
+#. translators: %s: field label
+#: src/components/ConfigFields.jsx:464
+#: src/screens/integrations/IntegrationSettings.jsx:491
+#, js-format
+msgid "Select CRM field for %s"
+msgstr "حدد حقل CRM لـ %s"
+
+#: src/components/ConfigFields.jsx:489
+msgid "No configuration required."
+msgstr "لا حاجة لتكوين."
+
+#: src/components/CreateCustomFieldForm.jsx:15
+msgid "Text"
+msgstr "نص"
+
+#: src/components/CreateCustomFieldForm.jsx:16
+msgid "Number"
+msgstr "رقم"
+
+#: src/components/CreateCustomFieldForm.jsx:17
+msgid "Date"
+msgstr "تاريخ"
+
+#: src/components/CreateCustomFieldForm.jsx:18
+msgid "Timestamp"
+msgstr "طابع زمني"
+
+#: src/components/CreateCustomFieldForm.jsx:20
+msgid "URL"
+msgstr "URL"
+
+#: src/components/CreateCustomFieldForm.jsx:22
+msgid "Dropdown"
+msgstr "قائمة منسدلة"
+
+#: src/components/CreateCustomFieldForm.jsx:23
+msgid "Multi-Select"
+msgstr "تحديد متعدد"
+
+#: src/components/CreateCustomFieldForm.jsx:24
+msgid "Checkbox"
+msgstr "مربع اختيار"
+
+#: src/components/CreateCustomFieldForm.jsx:25
+msgid "Text Area"
+msgstr "منطقة نص"
+
+#: src/components/CreateCustomFieldForm.jsx:144
+msgid "Field slug is required."
+msgstr "يجب أن يكون هناك سلاugs للحقل."
+
+#: src/components/CreateCustomFieldForm.jsx:146
+msgid "Slug can only contain lowercase letters, numbers, and underscores."
+msgstr "يمكن أن تحتوي slug فقط على حروف صغيرة، أرقام، وشرطات سفلية."
+
+#: src/components/CreateCustomFieldForm.jsx:155
+msgid "At least one option is required."
+msgstr "يجب أن تكون هناك خيار واحد على الأقل."
+
+#: src/components/CreateCustomFieldForm.jsx:209
+msgid "Field Label"
+msgstr "تسمية الحقل"
+
+#: src/components/CreateCustomFieldForm.jsx:215
+msgid "e.g., Company Size"
+msgstr "مثل، حجم الشركة"
+
+#: src/components/CreateCustomFieldForm.jsx:227
+msgid "Field Slug"
+msgstr "Slug الحقل"
+
+#: src/components/CreateCustomFieldForm.jsx:233
+msgid "e.g., company_size"
+msgstr "مثل، company_size"
+
+#: src/components/CreateCustomFieldForm.jsx:241
+msgid "Unique identifier for this field. Only lowercase letters, numbers, and underscores."
+msgstr "معرف فريد لهذا الحقل. فقط حروف صغيرة، أرقام، وشرطات سفلية."
+
+#: src/components/CreateCustomFieldForm.jsx:251
+msgid "Field Type"
+msgstr "نوع الحقل"
+
+#: src/components/CreateCustomFieldForm.jsx:269
+msgid "Required Field"
+msgstr "حقل مطلوب"
+
+#: src/components/CreateCustomFieldForm.jsx:272
+msgid "Make this field mandatory when creating contacts."
+msgstr "اجعل هذا الحقل إلزاميًا عند إنشاء جهات الاتصال."
+
+#: src/components/CreateCustomFieldForm.jsx:280
+msgid "Mark field as required"
+msgstr "علامة الحقل كحقل مطلوب"
+
+#: src/components/CreateCustomFieldForm.jsx:287
+msgid "Options"
+msgstr "خيارات"
+
+#: src/components/CreateCustomFieldForm.jsx:296
+msgid "Option"
+msgstr "خيار"
+
+#: src/components/CreateCustomFieldForm.jsx:309
+msgid "Remove option"
+msgstr "إزالة الخيار"
+
+#: src/components/CreateCustomFieldForm.jsx:323
+msgid "Add Option"
+msgstr "إضافة خيار"
+
+#: src/components/CreateCustomFieldForm.jsx:342
+#: src/screens/contact-fields/components/CreateCustomFieldDialog.jsx:65
+#: src/screens/dashboard/Dashboard.jsx:306
+#: src/screens/integrations/IntegrationSettings.jsx:553
+#: src/screens/integrations/IntegrationsTableCard.jsx:2094
+#: src/screens/logs/components/LogsHeader.jsx:92
+#: src/screens/logs/components/LogsHeader.jsx:130
+#: src/screens/logs/components/LogsTable.jsx:534
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:48
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: src/components/CreateCustomFieldForm.jsx:351
+#: src/components/ListSelect.jsx:221
+#: src/components/TagSelect.jsx:221
+#: src/screens/contact-fields/components/CreateCustomFieldDialog.jsx:74
+#: src/screens/integrations/IntegrationsTableCard.jsx:2035
+msgid "Creating…"
+msgstr "جاري الإنشاء…"
+
+#: src/components/CreateCustomFieldForm.jsx:352
+#: src/screens/contact-fields/components/CreateCustomFieldDialog.jsx:75
+#: src/screens/integrations/IntegrationsTableCard.jsx:2036
+msgid "Create Field"
+msgstr "إنشاء حقل"
+
+#: src/components/CustomFieldSelect.jsx:46
+#: src/components/CustomFieldSelect.jsx:127
+msgid "Select Option"
+msgstr "اختر خيار"
+
+#: src/components/CustomFieldSelect.jsx:47
+msgid "Search fields…"
+msgstr "البحث عن الحقول…"
+
+#: src/components/CustomFieldSelect.jsx:48
+msgid "Select CRM field"
+msgstr "اختر حقل CRM"
+
+#. translators: %s: last sync time
+#: src/components/CustomFieldSelect.jsx:63
+#: src/screens/contact-fields/FieldMappingTable.jsx:144
+#, js-format
+msgid "Last sync: %s"
+msgstr "آخر مزامنة: %s"
+
+#: src/components/CustomFieldSelect.jsx:67
+#: src/screens/contact-fields/FieldMappingTable.jsx:148
+msgid "Error syncing fields"
+msgstr "خطأ في مزامنة الحقول"
+
+#: src/components/CustomFieldSelect.jsx:133
+#: src/components/NavMenu.jsx:22
+msgid "Contact Fields"
+msgstr "حقول الاتصال"
+
+#: src/components/CustomFieldSelect.jsx:144
+msgid "Custom Fields"
+msgstr "حقول مخصصة"
+
+#: src/components/CustomFieldSelect.jsx:156
+#: src/components/ListSelect.jsx:183
+#: src/components/TagSelect.jsx:183
+#: src/screens/integrations/IntegrationsTableCard.jsx:1288
+msgid "Loading…"
+msgstr "جاري التحميل…"
+
+#: src/components/CustomFieldSelect.jsx:163
+msgid "No fields found for"
+msgstr "لم يتم العثور على حقول لـ"
+
+#: src/components/CustomFieldSelect.jsx:183
+#: src/components/ListSelect.jsx:222
+#: src/components/TagSelect.jsx:222
+msgid "Create"
+msgstr "إنشاء"
+
+#: src/components/CustomFieldSelect.jsx:184
+#: src/screens/contact-fields/components/CreateCustomFieldDialog.jsx:36
+#: src/screens/integrations/IntegrationsTableCard.jsx:1511
+msgid "Create Custom Field"
+msgstr "إنشاء حقل مخصص"
+
+#: src/components/CustomFieldSelect.jsx:191
+#: src/components/CustomFieldSelect.jsx:196
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:55
+msgid "Pull Custom Fields"
+msgstr "سحب الحقول المخصصة"
+
+#: src/components/ErrorBoundary.jsx:61
+msgid "Something went wrong"
+msgstr "حدث خطأ ما"
+
+#: src/components/ErrorBoundary.jsx:64
+msgid "We're sorry, but something unexpected happened. Please try refreshing the page."
+msgstr "نحن آسفون، لكن حدث شيء غير متوقع. يرجى محاولة تحديث الصفحة."
+
+#: src/components/ErrorBoundary.jsx:72
+#: src/components/ErrorBoundary.jsx:160
+msgid "Try Again"
+msgstr "حاول مرة أخرى"
+
+#: src/components/ErrorBoundary.jsx:78
+msgid "Reload Page"
+msgstr "إعادة تحميل الصفحة"
+
+#: src/components/ErrorBoundary.jsx:86
+msgid "Error Details (Development Mode)"
+msgstr "تفاصيل الخطأ (وضع التطوير)"
+
+#: src/components/ErrorBoundary.jsx:90
+msgid "Error:"
+msgstr "خطأ:"
+
+#: src/components/ErrorBoundary.jsx:97
+msgid "Component Stack:"
+msgstr "تراكم المكونات:"
+
+#. translators: %s: page title
+#: src/components/ErrorBoundary.jsx:136
+#, js-format
+msgid "There was an error loading the %s page. Please try refreshing the page."
+msgstr "حدث خطأ أثناء تحميل صفحة %s. يرجى محاولة تحديث الصفحة."
+
+#: src/components/ErrorBoundary.jsx:144
+msgid "Oops! Something went wrong"
+msgstr "عذرًا! حدث خطأ ما"
+
+#. translators: %s: page title
+#: src/components/ErrorBoundary.jsx:147
+#, js-format
+msgid "We encountered an error while loading the %s page. This might be a temporary issue."
+msgstr "واجهنا خطأ أثناء تحميل صفحة %s. قد يكون هذا مشكلة مؤقتة."
+
+#: src/components/ErrorBoundary.jsx:154
+#: src/components/ErrorBoundary.jsx:246
+msgid "Refresh Page"
+msgstr "تحديث الصفحة"
+
+#. translators: %s: component name
+#: src/components/ErrorBoundary.jsx:185
+#, js-format
+msgid "Error loading %s"
+msgstr "خطأ في تحميل %s"
+
+#. translators: %s: component name
+#. translators: %s: data type
+#: src/components/ErrorBoundary.jsx:194
+#: src/components/ErrorBoundary.jsx:228
+#, js-format
+msgid "Unable to load %s"
+msgstr "غير قادر على تحميل %s"
+
+#. translators: %s: component name
+#: src/components/ErrorBoundary.jsx:207
+#, js-format
+msgid "There was an error loading the %s. Please try again."
+msgstr "حدث خطأ أثناء تحميل %s. يرجى المحاولة مرة أخرى."
+
+#. translators: %s: data type
+#: src/components/ErrorBoundary.jsx:222
+#, js-format
+msgid "Failed to load %s. Please check your connection and try again."
+msgstr "فشل تحميل %s. يرجى التحقق من اتصالك والمحاولة مرة أخرى."
+
+#. translators: %s: data type
+#: src/components/ErrorBoundary.jsx:230
+#, js-format
+msgid "We're having trouble loading the %s. This could be due to a network issue or server problem."
+msgstr "نواجه مشكلة في تحميل %s. قد يكون ذلك بسبب مشكلة في الشبكة أو الخادم."
+
+#: src/components/ErrorBoundary.jsx:240
+#: src/screens/logs/components/LogsTable.jsx:302
+msgid "Retry"
+msgstr "إعادة المحاولة"
+
+#: src/components/ListSelect.jsx:42
+msgid "Search lists…"
+msgstr "بحث في القوائم…"
+
+#: src/components/ListSelect.jsx:43
+msgid "Select lists"
+msgstr "حدد القوائم"
+
+#: src/components/ListSelect.jsx:71
+#: src/components/TagSelect.jsx:71
+#: src/screens/settings/components/SettingsHeader.jsx:23
+msgid "Error syncing lists and tags"
+msgstr "خطأ في مزامنة القوائم والعلامات"
+
+#. translators: %s: list name
+#: src/components/ListSelect.jsx:145
+#, js-format
+msgid "List \"%s\" created successfully!"
+msgstr "قائمة \"%s\" تم إنشاؤها بنجاح!"
+
+#: src/components/ListSelect.jsx:190
+msgid "No lists found for"
+msgstr "لا توجد قوائم متاحة لـ"
+
+#: src/components/ListSelect.jsx:197
+msgid "No lists available"
+msgstr "لا توجد قوائم متاحة"
+
+#: src/components/ListSelect.jsx:229
+#: src/components/ListSelect.jsx:234
+#: src/components/TagSelect.jsx:229
+#: src/components/TagSelect.jsx:234
+#: src/screens/settings/components/SettingsHeader.jsx:63
+msgid "Sync Lists & Tags"
+msgstr "مزامنة القوائم والعلامات"
+
+#: src/components/NavMenu.jsx:24
+#: src/screens/sync-contacts/components/SyncContactsHeader.jsx:17
+msgid "Bulk Sync"
+msgstr "مزامنة جماعية"
+
+#: src/components/NavMenu.jsx:25
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: src/components/NavMenu.jsx:26
+#: src/screens/logs/components/LogsHeader.jsx:23
+msgid "Logs"
+msgstr "السجلات"
+
+#: src/components/NavMenu.jsx:146
+msgid "Open navigation menu"
+msgstr "افتح قائمة التنقل"
+
+#: src/components/NavMenu.jsx:167
+msgid "Go to dashboard"
+msgstr "اذهب إلى لوحة التحكم"
+
+#: src/components/NavMenu.jsx:188
+msgid "Main navigation"
+msgstr "التنقل الرئيسي"
+
+#. translators: %s: version number
+#: src/components/NavMenu.jsx:217
+#, js-format
+msgid "V %s"
+msgstr "الإصدار %s"
+
+#: src/components/SignupForm.jsx:22
+msgid "Account created!"
+msgstr "تم إنشاء الحساب!"
+
+#: src/components/SignupForm.jsx:23
+msgid "Connecting your site to SureContact…"
+msgstr "جارٍ ربط موقعك بـ SureContact…"
+
+#: src/components/SignupForm.jsx:33
+msgid "This email already has an account."
+msgstr "هذا البريد الإلكتروني له حساب بالفعل."
+
+#: src/components/SignupForm.jsx:34
+msgid "Use the “Sign in” link below to connect this site."
+msgstr "استخدم رابط “تسجيل الدخول” أدناه لربط هذا الموقع."
+
+#: src/components/SignupForm.jsx:41
+msgid "We couldn’t reach your site to verify the install."
+msgstr "لم نتمكن من الوصول إلى موقعك للتحقق من التثبيت."
+
+#: src/components/SignupForm.jsx:42
+msgid "Check that your site is publicly accessible and try again."
+msgstr "تحقق من أن موقعك متاح للعامة وحاول مرة أخرى."
+
+#: src/components/SignupForm.jsx:49
+msgid "That email address isn’t valid."
+msgstr "عنوان البريد الإلكتروني هذا غير صالح."
+
+#: src/components/SignupForm.jsx:57
+msgid "Too many attempts."
+msgstr "عدد المحاولات كثير جدًا."
+
+#: src/components/SignupForm.jsx:58
+msgid "Please wait a minute and try again."
+msgstr "يرجى الانتظار دقيقة ثم المحاولة مرة أخرى."
+
+#: src/components/SignupForm.jsx:64
+msgid "Something went wrong."
+msgstr "حدث خطأ ما."
+
+#: src/components/SignupForm.jsx:65
+msgid "Please try again."
+msgstr "الرجاء المحاولة مرة أخرى."
+
+#: src/components/SignupForm.jsx:77
+msgid "First name is required."
+msgstr "الاسم الأول مطلوب."
+
+#: src/components/SignupForm.jsx:79
+#: src/components/SignupForm.jsx:85
+msgid "Must be 60 characters or fewer."
+msgstr "يجب أن يكون 60 حرفًا أو أقل."
+
+#: src/components/SignupForm.jsx:83
+msgid "Last name is required."
+msgstr "اسم العائلة مطلوب."
+
+#: src/components/SignupForm.jsx:89
+msgid "Email is required."
+msgstr "البريد الإلكتروني مطلوب."
+
+#: src/components/SignupForm.jsx:91
+msgid "Enter a valid email address."
+msgstr "أدخل عنوان بريد إلكتروني صحيح."
+
+#: src/components/SignupForm.jsx:115
+msgid "First name"
+msgstr "الاسم الأول"
+
+#: src/components/SignupForm.jsx:122
+msgid "e.g., Jane"
+msgstr "مثل، جين"
+
+#: src/components/SignupForm.jsx:132
+msgid "Last name"
+msgstr "اسم العائلة"
+
+#: src/components/SignupForm.jsx:139
+msgid "e.g., Doe"
+msgstr "مثل، دو"
+
+#: src/components/SignupForm.jsx:151
+msgid "Work email"
+msgstr "بريد العمل"
+
+#: src/components/SignupForm.jsx:159
+msgid "e.g., you@company.com"
+msgstr "مثل، you@company.com"
+
+#: src/components/SignupForm.jsx:177
+msgid "Connecting…"
+msgstr "جارٍ الاتصال…"
+
+#: src/components/SignupForm.jsx:179
+msgid "Creating your account…"
+msgstr "جارٍ إنشاء حسابك…"
+
+#: src/components/SignupForm.jsx:180
+msgid "Create Account & Connect"
+msgstr "إنشاء حساب & الاتصال"
+
+#: src/components/TagSelect.jsx:42
+msgid "Search tags…"
+msgstr "البحث عن العلامات…"
+
+#: src/components/TagSelect.jsx:43
+msgid "Select tags"
+msgstr "تحديد العلامات"
+
+#. translators: %s: tag name
+#: src/components/TagSelect.jsx:145
+#, js-format
+msgid "Tag \"%s\" created successfully!"
+msgstr "تم إنشاء العلامة \"%s\" بنجاح!"
+
+#: src/components/TagSelect.jsx:190
+msgid "No tags found for"
+msgstr "لم يتم العثور على علامات لـ"
+
+#: src/components/TagSelect.jsx:197
+msgid "No tags available"
+msgstr "لا توجد علامات متاحة"
+
+#. translators: %s: integration name
+#: src/hooks/useIntegrations.js:124
+#, js-format
+msgid "Enabling %s…"
+msgstr "جارٍ تفعيل %s…"
+
+#. translators: %s: integration name
+#: src/hooks/useIntegrations.js:125
+#, js-format
+msgid "Disabling %s…"
+msgstr "جارٍ تعطيل %s…"
+
+#: src/hooks/useIntegrations.js:132
+#: src/screens/integrations/IntegrationsTableCard.jsx:1230
+#: src/screens/integrations/IntegrationsTableCard.jsx:1501
+msgid "Integration"
+msgstr "التكامل"
+
+#. translators: %s: integration name
+#: src/hooks/useIntegrations.js:140
+#, js-format
+msgid "%s enabled successfully"
+msgstr "%s تم تفعيله بنجاح"
+
+#. translators: %s: integration name
+#: src/hooks/useIntegrations.js:141
+#, js-format
+msgid "%s disabled successfully"
+msgstr "%s تم تعطيله بنجاح"
+
+#: src/hooks/useIntegrations.js:175
+msgid "Settings saved successfully"
+msgstr "تم حفظ الإعدادات بنجاح"
+
+#: src/hooks/useLogs.js:84
+msgid "Item queued for retry"
+msgstr "تم إدراج العنصر لإعادة المحاولة"
+
+#: src/hooks/useLogs.js:108
+msgid "Logs deleted"
+msgstr "تم حذف السجلات"
+
+#: src/hooks/useLogs.js:132
+msgid "Items queued for retry"
+msgstr "تم إدراج العناصر لإعادة المحاولة"
+
+#: src/hooks/useLogs.js:156
+msgid "All failed items queued for retry"
+msgstr "جميع العناصر الفاشلة في قائمة الانتظار لإعادة المحاولة"
+
+#: src/hooks/useLogs.js:180
+msgid "Logs cleared"
+msgstr "تم مسح السجلات"
+
+#: src/screens/contact-fields/components/CreateCustomFieldDialog.jsx:41
+#: src/screens/integrations/IntegrationsTableCard.jsx:1518
+msgid "Create a new custom field in your SureContact CRM."
+msgstr "إنشاء حقل مخصص جديد في SureContact CRM."
+
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:19
+msgid "Contact Fields Mapping"
+msgstr "تخطيط حقول الاتصال"
+
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:24
+msgid "Configure field mappings between WordPress and SureContact"
+msgstr "تكوين تخطيطات الحقول بين WordPress و SureContact"
+
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:40
+#: src/screens/integrations/components/NotesPopup.jsx:341
+#: src/screens/integrations/IntegrationSettings.jsx:564
+#: src/screens/integrations/IntegrationsTableCard.jsx:2052
+#: src/screens/settings/Settings.jsx:122
+msgid "Saving…"
+msgstr "جارٍ الحفظ…"
+
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:40
+#: src/screens/integrations/IntegrationsTableCard.jsx:2053
+#: src/screens/settings/Settings.jsx:122
+msgid "Save Changes"
+msgstr "حفظ التغييرات"
+
+#: src/screens/contact-fields/components/FieldMappingHeader.jsx:55
+#: src/screens/settings/components/SettingsHeader.jsx:63
+msgid "Syncing…"
+msgstr "جارٍ المزامنة…"
+
+#. translators: %s: field label
+#: src/screens/contact-fields/components/FieldRow.jsx:56
+#: src/screens/contact-fields/components/FieldRow.jsx:119
+#, js-format
+msgid "Enable sync for %s"
+msgstr "تمكين المزامنة لـ %s"
+
+#: src/screens/contact-fields/components/FieldRow.jsx:62
+msgid "Type:"
+msgstr "النوع:"
+
+#: src/screens/contact-fields/components/FieldRow.jsx:72
+msgid "SureContact Field:"
+msgstr "حقل SureContact:"
+
+#. translators: %s: field label
+#: src/screens/contact-fields/components/FieldRow.jsx:78
+#: src/screens/contact-fields/components/FieldRow.jsx:110
+#, js-format
+msgid "Map %s to SureContact field"
+msgstr "خريطة %s إلى حقل SureContact"
+
+#: src/screens/contact-fields/components/InfoBanner.jsx:16
+msgid "Field Mapping Guide"
+msgstr "دليل تخطيط الحقول"
+
+#: src/screens/contact-fields/components/InfoBanner.jsx:17
+msgid "Only fields that are marked as \"Active\" (Sync enabled) will be synchronized to your CRM. Map WordPress fields to corresponding CRM fields using the dropdowns below."
+msgstr "فقط الحقول التي تم وضع علامة عليها بـ \"نشط\" (تم تمكين المزامنة) ستتم مزامنتها مع CRM الخاص بك. قم بتخطيط حقول WordPress إلى حقول CRM المقابلة باستخدام القوائم المنسدلة أدناه."
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:62
+msgid "Error saving mappings"
+msgstr "خطأ في حفظ التكوينات"
+
+#. translators: %s: field label
+#: src/screens/contact-fields/FieldMappingTable.jsx:114
+#: src/screens/integrations/IntegrationsTableCard.jsx:150
+#, js-format
+msgid "Field \"%s\" is now available."
+msgstr "الحقل \"%s\" متاح الآن."
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:134
+#: src/screens/integrations/IntegrationsTableCard.jsx:171
+msgid "Error creating custom field"
+msgstr "خطأ في إنشاء حقل مخصص"
+
+#. translators: %s: field group title
+#: src/screens/contact-fields/FieldMappingTable.jsx:218
+#, js-format
+msgid "%s field mappings"
+msgstr "%s تخطيطات الحقول"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:222
+msgid "WordPress Field"
+msgstr "حقل WordPress"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:224
+#: src/screens/integrations/IntegrationsTableCard.jsx:1232
+msgid "Type"
+msgstr "النوع"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:226
+#: src/screens/integrations/IntegrationSettings.jsx:426
+msgid "SureContact Field"
+msgstr "حقل SureContact"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:229
+msgid "Sync"
+msgstr "المزامنة"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:301
+msgid "Error Loading Data"
+msgstr "خطأ في تحميل البيانات"
+
+#: src/screens/contact-fields/FieldMappingTable.jsx:302
+msgid "Failed to load field mapping data. Please refresh the page and try again."
+msgstr "فشل في تحميل بيانات تخطيط الحقول. يرجى تحديث الصفحة والمحاولة مرة أخرى."
+
+#: src/screens/dashboard/Dashboard.jsx:45
+msgid "Disconnect failed"
+msgstr "فشل في قطع الاتصال"
+
+#: src/screens/dashboard/Dashboard.jsx:49
+msgid "Disconnected"
+msgstr "تم فصل الاتصال"
+
+#: src/screens/dashboard/Dashboard.jsx:50
+msgid "You have been disconnected."
+msgstr "لقد تم فصل اتصالك."
+
+#: src/screens/dashboard/Dashboard.jsx:58
+msgid "Disconnect Failed"
+msgstr "فشل في قطع الاتصال"
+
+#: src/screens/dashboard/Dashboard.jsx:59
+msgid "Unable to disconnect"
+msgstr "غير قادر على قطع الاتصال"
+
+#: src/screens/dashboard/Dashboard.jsx:71
+msgid "VIP Support"
+msgstr "الدعم VIP"
+
+#: src/screens/dashboard/Dashboard.jsx:76
+msgid "Help Center"
+msgstr "مركز المساعدة"
+
+#: src/screens/dashboard/Dashboard.jsx:81
+msgid "Join the Community"
+msgstr "انضم إلى المجتمع"
+
+#: src/screens/dashboard/Dashboard.jsx:86
+msgid "Rate Us"
+msgstr "قيمنا"
+
+#: src/screens/dashboard/Dashboard.jsx:106
+msgid "Welcome to SureContact"
+msgstr "مرحبًا بك في SureContact"
+
+#: src/screens/dashboard/Dashboard.jsx:111
+msgid "SureContact is a comprehensive CRM platform that helps you manage customer relationships and data effectively. Connect your WordPress site to centralize customer information, track interactions, and streamline your business operations."
+msgstr "SureContact هو منصة CRM شاملة تساعدك على إدارة علاقات العملاء والبيانات بفعالية. قم بتوصيل موقع WordPress الخاص بك لتجميع معلومات العملاء وتتبع التفاعلات وتبسيط عملياتك التجارية."
+
+#: src/screens/dashboard/Dashboard.jsx:116
+msgid "By visiting the CRM, you will be able to see all synced contacts and manage tags, lists, and custom fields. You can create beautiful campaigns and automations, along with many other features. Excited to get started? Please click the button below."
+msgstr "من خلال زيارة CRM، ستتمكن من رؤية جميع جهات الاتصال المتزامنة وإدارة العلامات والقوائم والحقول المخصصة. يمكنك إنشاء حملات وأتمتة جميلة، إلى جانب العديد من الميزات الأخرى. متحمس للبدء؟ يرجى النقر على الزر أدناه."
+
+#: src/screens/dashboard/Dashboard.jsx:127
+msgid "Visit CRM"
+msgstr "زيارة CRM"
+
+#: src/screens/dashboard/Dashboard.jsx:136
+msgid "Read Full Guide"
+msgstr "اقرأ الدليل الكامل"
+
+#: src/screens/dashboard/Dashboard.jsx:148
+msgid "Watch SureContact overview video"
+msgstr "شاهد فيديو نظرة عامة على SureContact"
+
+#: src/screens/dashboard/Dashboard.jsx:179
+msgid "Connection Status"
+msgstr "حالة الاتصال"
+
+#: src/screens/dashboard/Dashboard.jsx:184
+msgid "Your site is connected to SureContact"
+msgstr "موقعك متصل بـ SureContact"
+
+#: src/screens/dashboard/Dashboard.jsx:195
+msgid "Connected"
+msgstr "متصل"
+
+#: src/screens/dashboard/Dashboard.jsx:196
+#: src/screens/dashboard/Dashboard.jsx:200
+#: src/screens/dashboard/Dashboard.jsx:314
+msgid "Disconnect"
+msgstr "فصل الاتصال"
+
+#: src/screens/dashboard/Dashboard.jsx:228
+msgid "Quick Access"
+msgstr "وصول سريع"
+
+#: src/screens/dashboard/Dashboard.jsx:288
+msgid "Disconnect from SureContact?"
+msgstr "هل تريد فصل الاتصال عن SureContact؟"
+
+#: src/screens/dashboard/Dashboard.jsx:292
+msgid "This will remove authentication and cached SureContact data from WordPress. You can reconnect anytime."
+msgstr "سيساعد ذلك على إزالة المصادقة وبيانات SureContact المخزنة مؤقتًا من WordPress. يمكنك إعادة الاتصال في أي وقت."
+
+#: src/screens/dashboard/Dashboard.jsx:297
+msgid "Are you sure you want to disconnect your WordPress site from SureContact? This action will remove all cached data and authentication tokens."
+msgstr "هل أنت متأكد أنك تريد فصل موقع WordPress الخاص بك عن SureContact؟ ستؤدي هذه العملية إلى إزالة جميع البيانات المخزنة مؤقتًا ورموز المصادقة."
+
+#: src/screens/dashboard/Dashboard.jsx:314
+msgid "Disconnecting…"
+msgstr "فصل الاتصال…"
+
+#: src/screens/integrations/components/IntegrationNoticeBanner.jsx:33
+msgid "Important Note:"
+msgstr "ملاحظة مهمة:"
+
+#: src/screens/integrations/components/IntegrationNoticeBanner.jsx:33
+msgid "Make sure to go to the Contact Fields tab first, match your plugin fields with the corresponding CRM fields, and mark them as Active. After completing this step, return here and then enable the additional settings below. If you do not complete this step, the settings below will not work as expected, and your contacts will not sync with the SureContact CRM."
+msgstr "تأكد من الذهاب إلى علامة تبويب حقول الاتصال أولاً، ومطابقة حقول المكون الإضافي الخاص بك مع حقول CRM المقابلة، وعلامتها على أنها نشطة. بعد إكمال هذه الخطوة، عد إلى هنا ثم قم بتمكين الإعدادات الإضافية أدناه. إذا لم تكمل هذه الخطوة، فلن تعمل الإعدادات أدناه كما هو متوقع، ولن تتزامن جهات الاتصال الخاصة بك مع SureContact CRM."
+
+#: src/screens/integrations/components/IntegrationsHeader.jsx:19
+msgid "Plugin Integrations"
+msgstr "تكاملات المكون الإضافي"
+
+#: src/screens/integrations/components/IntegrationsHeader.jsx:24
+msgid "Manage integrations with WordPress plugins to sync data to SureContact"
+msgstr "إدارة التكاملات مع مكونات WordPress الإضافية لمزامنة البيانات إلى SureContact"
+
+#: src/screens/integrations/components/IntegrationsHeader.jsx:37
+msgid "Add Integration"
+msgstr "إضافة تكامل"
+
+#. translators: 1: event label, 2: item title
+#: src/screens/integrations/components/NotesPopup.jsx:53
+#: src/screens/integrations/IntegrationsTableCard.jsx:1708
+#: src/screens/integrations/IntegrationsTableCard.jsx:1731
+#, js-format
+msgid "On %1$s of %2$s"
+msgstr "في %1$s من %2$s"
+
+#. translators: %s: color name
+#: src/screens/integrations/components/NotesPopup.jsx:259
+#, js-format
+msgid "Select %s color"
+msgstr "اختر لون %s"
+
+#. translators: %s: color name
+#: src/screens/integrations/components/NotesPopup.jsx:291
+#, js-format
+msgid "Note color: %s. Click to change"
+msgstr "لون الملاحظة: %s. انقر لتغييره"
+
+#: src/screens/integrations/components/NotesPopup.jsx:306
+msgid "Delete note"
+msgstr "حذف الملاحظة"
+
+#: src/screens/integrations/components/NotesPopup.jsx:314
+msgid "Close"
+msgstr "أغلق"
+
+#: src/screens/integrations/components/NotesPopup.jsx:325
+msgid "Add note here…"
+msgstr "أضف ملاحظة هنا…"
+
+#: src/screens/integrations/components/NotesPopup.jsx:341
+msgid "Save"
+msgstr "احفظ"
+
+#: src/screens/integrations/IntegrationCard.jsx:63
+msgid "Enabled"
+msgstr "مُمكّن"
+
+#: src/screens/integrations/IntegrationCard.jsx:65
+#: src/screens/integrations/IntegrationsTableCard.jsx:1291
+msgid "Disabled"
+msgstr "مُعطّل"
+
+#: src/screens/integrations/IntegrationCard.jsx:68
+msgid "Not Installed"
+msgstr "غير مُثبت"
+
+#: src/screens/integrations/IntegrationCard.jsx:96
+msgid "Open documentation in new window"
+msgstr "فتح الوثيقة في نافذة جديدة"
+
+#: src/screens/integrations/IntegrationCard.jsx:99
+msgid "Documentation"
+msgstr "الوثائق"
+
+#. translators: 1: action label (Enable or Disable), 2: integration name
+#: src/screens/integrations/IntegrationCard.jsx:125
+#, js-format
+msgid "%1$s %2$s integration"
+msgstr "%1$s %2$s تكامل"
+
+#: src/screens/integrations/IntegrationCard.jsx:125
+msgid "Disable"
+msgstr "تعطيل"
+
+#: src/screens/integrations/IntegrationCard.jsx:125
+msgid "Enable"
+msgstr "تفعيل"
+
+#: src/screens/integrations/IntegrationCard.jsx:134
+#: src/screens/integrations/IntegrationCard.jsx:143
+msgid "Hide settings"
+msgstr "إخفاء الإعدادات"
+
+#: src/screens/integrations/IntegrationCard.jsx:134
+#: src/screens/integrations/IntegrationCard.jsx:143
+msgid "Show settings"
+msgstr "عرض الإعدادات"
+
+#: src/screens/integrations/Integrations.jsx:66
+msgid "Failed to load integrations"
+msgstr "فشل في تحميل التكاملات"
+
+#: src/screens/integrations/IntegrationSettings.jsx:416
+msgid "Loading field mapping…"
+msgstr "جارٍ تحميل تخطيط الحقول…"
+
+#: src/screens/integrations/IntegrationSettings.jsx:422
+msgid "Plugin Field"
+msgstr "حقل الإضافات"
+
+#: src/screens/integrations/IntegrationSettings.jsx:444
+#: src/screens/integrations/IntegrationSettings.jsx:489
+msgid "---Skip---"
+msgstr "---تجاوز---"
+
+#: src/screens/integrations/IntegrationSettings.jsx:488
+msgid "Select CRM field…"
+msgstr "حدد حقل CRM…"
+
+#: src/screens/integrations/IntegrationSettings.jsx:507
+msgid "No fields available for mapping."
+msgstr "لا توجد حقول متاحة للتخطيط."
+
+#: src/screens/integrations/IntegrationSettings.jsx:525
+msgid "No settings available for this integration."
+msgstr "لا توجد إعدادات متاحة لهذا التكامل."
+
+#: src/screens/integrations/IntegrationSettings.jsx:564
+msgid "Save Settings"
+msgstr "حفظ الإعدادات"
+
+#: src/screens/integrations/IntegrationsList.jsx:19
+#: src/screens/integrations/IntegrationsList.jsx:77
+msgid "Global Settings"
+msgstr "الإعدادات العالمية"
+
+#: src/screens/integrations/IntegrationsList.jsx:60
+#: src/screens/integrations/IntegrationsTableCard.jsx:1579
+msgid "No integrations found"
+msgstr "لم يتم العثور على تكاملات"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:475
+msgid "Please select a type."
+msgstr "يرجى تحديد نوع."
+
+#. translators: %s: item type
+#: src/screens/integrations/IntegrationsTableCard.jsx:481
+#, js-format
+msgid "Please select a %s to configure."
+msgstr "يرجى تحديد %s للتكوين."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:481
+msgid "item"
+msgstr "عنصر"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:488
+msgid "Please select an event."
+msgstr "يرجى تحديد حدث."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:494
+msgid "Please configure at least one action."
+msgstr "يرجى تكوين إجراء واحد على الأقل."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:548
+msgid "Integration configured successfully!"
+msgstr "تم تكوين التكامل بنجاح!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:557
+msgid "Failed to save integration. Please try again."
+msgstr "فشل في حفظ التكامل. يرجى المحاولة مرة أخرى."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:629
+msgid "Failed to load integration configuration."
+msgstr "فشل في تحميل تكوين التكامل."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:656
+msgid "Configuration deleted successfully!"
+msgstr "تم حذف التكوين بنجاح!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:689
+msgid "Failed to delete configuration. Please try again."
+msgstr "فشل في حذف التكوين. يرجى المحاولة مرة أخرى."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:772
+msgid "Title saved successfully!"
+msgstr "تم حفظ العنوان بنجاح!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:781
+msgid "Failed to save title. Please try again."
+msgstr "فشل في حفظ العنوان. يرجى المحاولة مرة أخرى."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:846
+msgid "Notes deleted successfully!"
+msgstr "تم حذف الملاحظات بنجاح!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:852
+msgid "Failed to delete notes. Please try again."
+msgstr "فشل في حذف الملاحظات. يرجى المحاولة مرة أخرى."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:896
+msgid "Notes saved successfully!"
+msgstr "تم حفظ الملاحظات بنجاح!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:905
+msgid "Failed to save notes. Please try again."
+msgstr "فشل في حفظ الملاحظات. يرجى المحاولة مرة أخرى."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:942
+#: src/screens/integrations/IntegrationsTableCard.jsx:1006
+msgid "Configuration not found"
+msgstr "تكوين غير موجود"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:987
+msgid "Note saved successfully!"
+msgstr "تم حفظ الملاحظة بنجاح!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:994
+msgid "Failed to save note. Please try again."
+msgstr "فشل في حفظ الملاحظة. يرجى المحاولة مرة أخرى."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1038
+msgid "Note deleted successfully!"
+msgstr "تم حذف الملاحظة بنجاح!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1043
+msgid "Failed to delete note. Please try again."
+msgstr "فشل في حذف الملاحظة. يرجى المحاولة مرة أخرى."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1067
+msgid "Enabling integration…"
+msgstr "جارٍ تفعيل التكامل…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1067
+msgid "Disabling integration…"
+msgstr "جارٍ تعطيل التكامل…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1079
+msgid "Integration enabled successfully!"
+msgstr "تم تفعيل التكامل بنجاح!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1079
+msgid "Integration disabled successfully!"
+msgstr "تم تعطيل التكامل بنجاح!"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1085
+msgid "Failed to update integration status. Please try again."
+msgstr "فشل في تحديث حالة التكامل. يرجى المحاولة مرة أخرى."
+
+#. translators: %s: plugin name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1094
+#: src/screens/integrations/IntegrationsTableCard.jsx:1290
+#, js-format
+msgid "Activating %s…"
+msgstr "جارٍ تفعيل %s…"
+
+#. translators: %s: plugin name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1099
+#, js-format
+msgid "%s activated successfully!"
+msgstr "%s تم تفعيله بنجاح!"
+
+#. translators: %s: plugin name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1109
+#, js-format
+msgid "Failed to activate %s."
+msgstr "فشل في تفعيل %s."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1231
+msgid "Configuration"
+msgstr "تكوين"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1233
+msgid "Event"
+msgstr "حدث"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1234
+msgid "Created On"
+msgstr "تاريخ الإنشاء"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1235
+#: src/screens/logs/components/LogsTable.jsx:241
+msgid "Status"
+msgstr "الحالة"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1236
+#: src/screens/logs/components/LogsTable.jsx:247
+msgid "Actions"
+msgstr "الإجراءات"
+
+#. translators: %s: plugin name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1263
+#, js-format
+msgid "Click to activate %s"
+msgstr "انقر لتفعيل %s"
+
+#. translators: %s: plugin name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1269
+#, js-format
+msgid "Activate %s plugin"
+msgstr "تفعيل ملحق %s"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1321
+msgid "Global Configuration"
+msgstr "تكوين عالمي"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1327
+msgid "Global"
+msgstr "عالمي"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1339
+msgid "N/A"
+msgstr "لا شيء متاح"
+
+#. translators: %s: integration name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1349
+#, js-format
+msgid "Disable %s integration"
+msgstr "تعطيل تكامل %s"
+
+#. translators: %s: integration name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1350
+#, js-format
+msgid "Enable %s integration"
+msgstr "قم بتمكين تكامل %s"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1360
+msgid "Edit Note"
+msgstr "تحرير الملاحظة"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1360
+msgid "Add Note"
+msgstr "إضافة ملاحظة"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1369
+msgid "Edit note"
+msgstr "تحرير الملاحظة"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1369
+msgid "Add note"
+msgstr "إضافة ملاحظة"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1382
+#: src/screens/integrations/IntegrationsTableCard.jsx:1391
+msgid "Edit integration"
+msgstr "تحرير التكامل"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1399
+#: src/screens/integrations/IntegrationsTableCard.jsx:1408
+msgid "Delete integration"
+msgstr "حذف التكامل"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1442
+msgid "No integrations yet"
+msgstr "لا توجد تكاملات بعد"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1447
+msgid "Get started by adding your first integration to connect with your other plugins"
+msgstr "ابدأ بإضافة أول تكامل لك للتواصل مع إضافاتك الأخرى"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1489
+msgid "Go back"
+msgstr "ارجع"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1514
+msgid "Configure Integration"
+msgstr "تهيئة التكامل"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1520
+msgid "Select the integration you want to configure"
+msgstr "اختر التكامل الذي تريد تهيئته"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1521
+msgid "Configure the integration settings"
+msgstr "تهيئة إعدادات التكامل"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1548
+msgid "Search integrations…"
+msgstr "البحث عن التكاملات…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1549
+msgid "Search integrations"
+msgstr "البحث عن التكاملات"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1559
+msgid "Clear search"
+msgstr "مسح البحث"
+
+#. translators: %s: search query
+#: src/screens/integrations/IntegrationsTableCard.jsx:1578
+#, js-format
+msgid "No integrations found matching \"%s\""
+msgstr "لم يتم العثور على تكاملات تطابق \"%s\""
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1588
+msgid "Active Plugins"
+msgstr "الإضافات النشطة"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1632
+msgid "Inactive Plugins"
+msgstr "الإضافات غير النشطة"
+
+#. translators: %s: integration name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1643
+#, js-format
+msgid "%s - This plugin is not installed or inactive"
+msgstr "%s - هذه الإضافة غير مثبتة أو غير نشطة"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1719
+msgid "Save title"
+msgstr "احفظ العنوان"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1739
+msgid "Edit title"
+msgstr "تحرير العنوان"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1761
+msgid "Add notes here…"
+msgstr "أضف ملاحظات هنا…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1774
+msgid "Delete notes"
+msgstr "حذف الملاحظات"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1781
+msgid "Save notes"
+msgstr "احفظ الملاحظات"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1795
+msgid "Edit notes"
+msgstr "تحرير الملاحظات"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1810
+msgid "Select Type"
+msgstr "اختر النوع"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1823
+msgid "Select a type…"
+msgstr "اختر نوعًا…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1828
+msgid "Select type"
+msgstr "اختر النوع"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1842
+msgid "Select the type of item to configure."
+msgstr "اختر نوع العنصر الذي تريد تهيئته."
+
+#. translators: %s: item type
+#: src/screens/integrations/IntegrationsTableCard.jsx:1851
+#: src/screens/integrations/IntegrationsTableCard.jsx:1868
+#, js-format
+msgid "Select %s"
+msgstr "اختر %s"
+
+#. translators: 1: article (a/an), 2: item type
+#: src/screens/integrations/IntegrationsTableCard.jsx:1866
+#, js-format
+msgid "Select %1$s %2$s…"
+msgstr "اختر %1$s %2$s…"
+
+#. translators: 1: item type (plural), 2: article (a/an), 3: item type, 4: integration name
+#: src/screens/integrations/IntegrationsTableCard.jsx:1880
+#, js-format
+msgid "No %1$ss found. Please create %2$s %3$s in %4$s first."
+msgstr "لم يتم العثور على %1$ss. يرجى إنشاء %2$s %3$s في %4$s أولاً."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1885
+msgid "Thank you pages only support the \"Started\" event since they represent the completion destination of a funnel. Email will be identified from: 1) URL parameter (billing_email, email), 2) CartFlows Pro session, 3) WooCommerce customer data, 4) Logged-in user. If no email can be identified, this rule will not trigger."
+msgstr "صفحات الشكر تدعم فقط حدث \"بداية\" لأنها تمثل وجهة الإكمال لقمع المبيعات. سيتم التعرف على البريد الإلكتروني من: 1) معلمة URL (billing_email، email)، 2) جلسة CartFlows Pro، 3) بيانات عملاء WooCommerce، 4) مستخدم مسجل الدخول. إذا لم يمكن تحديد بريد إلكتروني، فلن يتم تفعيل هذه القاعدة."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1898
+msgid "Select Event"
+msgstr "اختر حدث"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1909
+msgid "Select an event…"
+msgstr "اختر حدث…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1911
+msgid "Select event"
+msgstr "اختر الحدث"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1936
+msgid "Select the event that will trigger these actions."
+msgstr "اختر الحدث الذي سيؤدي إلى تفعيل هذه الإجراءات."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1964
+msgid "Title"
+msgstr "عنوان"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1964
+#: src/screens/integrations/IntegrationsTableCard.jsx:1982
+msgid "Optional"
+msgstr "اختياري"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1969
+msgid "Enter a title for this rule"
+msgstr "أدخل عنوانًا لهذه القاعدة"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1976
+msgid "Give this rule a descriptive title to easily identify it."
+msgstr "امنح هذه القاعدة عنوانًا وصفيًا لتسهيل التعرف عليها."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1982
+msgid "Notes"
+msgstr "ملاحظات"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1986
+msgid "Add any notes or description for this rule"
+msgstr "أضف أي ملاحظات أو وصف لهذه القاعدة"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:1993
+msgid "Add notes to remember the purpose or details of this rule."
+msgstr "أضف ملاحظات لتذكر الغرض أو تفاصيل هذه القاعدة."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2013
+msgid "No additional configuration available for this item."
+msgstr "لا توجد تكوينات إضافية متاحة لهذا العنصر."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2068
+msgid "Delete Integration Configuration?"
+msgstr "حذف إعدادات التكامل؟"
+
+#. translators: 1: configuration scope, 2: integration name
+#: src/screens/integrations/IntegrationsTableCard.jsx:2072
+#, js-format
+msgid "This will permanently remove the %1$s configuration for %2$s."
+msgstr "سيتم إزالة إعداد %1$s بشكل دائم لـ %2$s."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2072
+msgid "global"
+msgstr "عالمي"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2078
+msgid "Are you sure you want to delete this configuration? This action cannot be undone and will remove all settings and disable the integration."
+msgstr "هل أنت متأكد أنك تريد حذف هذا التكوين؟ لا يمكن التراجع عن هذا الإجراء وسيؤدي إلى إزالة جميع الإعدادات وتعطيل التكامل."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2079
+msgid "Are you sure you want to delete this configuration? This action cannot be undone and will remove all settings."
+msgstr "هل أنت متأكد أنك تريد حذف هذا التكوين؟ لا يمكن التراجع عن هذا الإجراء وسيؤدي إلى إزالة جميع الإعدادات."
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2083
+msgid "Configuration:"
+msgstr "التكوين:"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2104
+#: src/screens/logs/components/LogsTable.jsx:549
+msgid "Deleting…"
+msgstr "جارٍ الحذف…"
+
+#: src/screens/integrations/IntegrationsTableCard.jsx:2104
+#: src/screens/logs/components/LogsTable.jsx:316
+#: src/screens/logs/components/LogsTable.jsx:549
+msgid "Delete"
+msgstr "احذف"
+
+#: src/screens/logs/components/LogsFilter.jsx:12
+#: src/screens/logs/components/LogsFilter.jsx:41
+#: src/screens/logs/components/LogsFilter.jsx:44
+msgid "All Statuses"
+msgstr "جميع الحالات"
+
+#: src/screens/logs/components/LogsFilter.jsx:13
+#: src/screens/logs/components/LogsStats.jsx:39
+msgid "Success"
+msgstr "نجاح"
+
+#: src/screens/logs/components/LogsFilter.jsx:14
+#: src/screens/logs/components/LogsStats.jsx:46
+#: src/screens/logs/components/LogsTable.jsx:358
+msgid "Error"
+msgstr "خطأ"
+
+#: src/screens/logs/components/LogsFilter.jsx:15
+#: src/screens/logs/components/LogsStats.jsx:53
+#: src/screens/sync-contacts/JobHistory.jsx:24
+#: src/screens/sync-contacts/JobHistory.jsx:38
+#: src/screens/sync-contacts/JobProgress.jsx:113
+#: src/screens/sync-contacts/JobProgress.jsx:146
+msgid "Failed"
+msgstr "فشل"
+
+#: src/screens/logs/components/LogsFilter.jsx:16
+#: src/screens/sync-contacts/JobHistory.jsx:14
+#: src/screens/sync-contacts/JobProgress.jsx:43
+msgid "Processing"
+msgstr "جاري المعالجة"
+
+#: src/screens/logs/components/LogsFilter.jsx:46
+msgid "Filter by status"
+msgstr "تصفية حسب الحالة"
+
+#: src/screens/logs/components/LogsFilter.jsx:64
+msgid "Search endpoint or operation..."
+msgstr "نقطة النهاية أو العملية البحث..."
+
+#: src/screens/logs/components/LogsFilter.jsx:67
+msgid "Search logs"
+msgstr "بحث السجلات"
+
+#: src/screens/logs/components/LogsHeader.jsx:28
+msgid "Monitor API activity and manage failed requests"
+msgstr "مراقبة نشاط API وإدارة الطلبات الفاشلة"
+
+#: src/screens/logs/components/LogsHeader.jsx:44
+msgid "Retry All Failed"
+msgstr "إعادة محاولة جميع الفاشلة"
+
+#: src/screens/logs/components/LogsHeader.jsx:55
+#: src/screens/logs/components/LogsHeader.jsx:143
+msgid "Clear Logs"
+msgstr "مسح السجلات"
+
+#: src/screens/logs/components/LogsHeader.jsx:65
+msgid "Refresh"
+msgstr "تحديث"
+
+#: src/screens/logs/components/LogsHeader.jsx:78
+msgid "Retry All Failed?"
+msgstr "إعادة محاولة جميع الفاشلة؟"
+
+#: src/screens/logs/components/LogsHeader.jsx:82
+msgid "This will reset all failed and errored entries and queue them for retry via background processing."
+msgstr "هذا سيعيد تعيين جميع الإدخالات الفاشلة والخاطئة ويقوم بجدولتها لإعادة المحاولة عبر المعالجة في الخلفية."
+
+#: src/screens/logs/components/LogsHeader.jsx:104
+msgid "Retrying…"
+msgstr "إعادة المحاولة…"
+
+#: src/screens/logs/components/LogsHeader.jsx:104
+msgid "Retry All"
+msgstr "إعادة محاولة جميع"
+
+#: src/screens/logs/components/LogsHeader.jsx:116
+msgid "Clear Logs?"
+msgstr "مسح السجلات؟"
+
+#: src/screens/logs/components/LogsHeader.jsx:120
+msgid "This will permanently delete all completed log entries (success and error). Failed and processing entries will be preserved."
+msgstr "هذا سيؤدي إلى حذف جميع إدخالات السجل المكتملة (نجاح وخطأ) بشكل دائم. ستبقى الإدخالات الفاشلة وتحت المعالجة."
+
+#: src/screens/logs/components/LogsHeader.jsx:143
+msgid "Clearing…"
+msgstr "جارٍ المسح…"
+
+#: src/screens/logs/components/LogsStats.jsx:60
+#: src/screens/sync-contacts/JobHistory.jsx:20
+msgid "Total"
+msgstr "الإجمالي"
+
+#: src/screens/logs/components/LogsTable.jsx:119
+msgid "Failed to load logs. Please try again."
+msgstr "فشل في تحميل السجلات. يرجى المحاولة مرة أخرى."
+
+#: src/screens/logs/components/LogsTable.jsx:173
+msgid "No log entries"
+msgstr "لا توجد إدخالات سجلات"
+
+#: src/screens/logs/components/LogsTable.jsx:174
+msgid "API activity will appear here"
+msgstr "سيظهر نشاط API هنا"
+
+#. translators: %d: number of selected logs
+#: src/screens/logs/components/LogsTable.jsx:193
+#, js-format
+msgid "%d selected"
+msgstr "%d محدد"
+
+#. translators: %d: number of selected retryable logs
+#: src/screens/logs/components/LogsTable.jsx:205
+#, js-format
+msgid "Retry Selected (%d)"
+msgstr "إعادة محاولة المحدد (%d)"
+
+#: src/screens/logs/components/LogsTable.jsx:218
+msgid "Delete Selected"
+msgstr "حذف المحدد"
+
+#: src/screens/logs/components/LogsTable.jsx:226
+msgid "Clear"
+msgstr "مسح"
+
+#: src/screens/logs/components/LogsTable.jsx:238
+msgid "Select all"
+msgstr "تحديد الكل"
+
+#: src/screens/logs/components/LogsTable.jsx:242
+msgid "Operation"
+msgstr "العملية"
+
+#: src/screens/logs/components/LogsTable.jsx:243
+msgid "Endpoint"
+msgstr "نقطة النهاية"
+
+#: src/screens/logs/components/LogsTable.jsx:244
+msgid "Method"
+msgstr "الطريقة"
+
+#: src/screens/logs/components/LogsTable.jsx:245
+msgid "Response"
+msgstr "الاستجابة"
+
+#: src/screens/logs/components/LogsTable.jsx:246
+#: src/screens/sync-contacts/JobHistory.jsx:22
+#: src/screens/sync-contacts/JobProgress.jsx:134
+msgid "Created"
+msgstr "تم الإنشاء"
+
+#. translators: %d: log ID
+#: src/screens/logs/components/LogsTable.jsx:264
+#, js-format
+msgid "Select log #%d"
+msgstr "حدد سجل #%d"
+
+#. translators: %d: log ID
+#: src/screens/logs/components/LogsTable.jsx:312
+#, js-format
+msgid "Retry request #%d"
+msgstr "إعادة محاولة الطلب #%d"
+
+#. translators: %d: log ID
+#: src/screens/logs/components/LogsTable.jsx:325
+#, js-format
+msgid "Delete log #%d"
+msgstr "حذف السجل #%d"
+
+#: src/screens/logs/components/LogsTable.jsx:339
+msgid "Full Endpoint"
+msgstr "نقطة النهاية الكاملة"
+
+#: src/screens/logs/components/LogsTable.jsx:348
+msgid "Retries"
+msgstr "إعادة المحاولة"
+
+#: src/screens/logs/components/LogsTable.jsx:358
+msgid "Message"
+msgstr "الرسالة"
+
+#: src/screens/logs/components/LogsTable.jsx:368
+msgid "Request Payload"
+msgstr "حمولة الطلب"
+
+#: src/screens/logs/components/LogsTable.jsx:377
+msgid "Response Data"
+msgstr "بيانات الاستجابة"
+
+#. translators: 1: start entry, 2: end entry, 3: total entries
+#: src/screens/logs/components/LogsTable.jsx:399
+#, js-format
+msgid "Showing %1$d to %2$d of %3$d entries"
+msgstr "عرض من %1$d إلى %2$d من إجمالي %3$d إدخالات"
+
+#: src/screens/logs/components/LogsTable.jsx:409
+#: src/screens/logs/components/LogsTable.jsx:428
+msgid "Rows per page"
+msgstr "الصفوف لكل صفحة"
+
+#: src/screens/logs/components/LogsTable.jsx:442
+msgid "Logs pagination"
+msgstr "صفحات سجلات"
+
+#: src/screens/logs/components/LogsTable.jsx:452
+msgid "Go to previous page"
+msgstr "اذهب إلى الصفحة السابقة"
+
+#. translators: %d: page number
+#: src/screens/logs/components/LogsTable.jsx:477
+#, js-format
+msgid "Page %d"
+msgstr "الصفحة %d"
+
+#: src/screens/logs/components/LogsTable.jsx:492
+msgid "Go to next page"
+msgstr "اذهب إلى الصفحة التالية"
+
+#: src/screens/logs/components/LogsTable.jsx:507
+msgid "Delete Log Entry?"
+msgstr "حذف إدخال السجل؟"
+
+#: src/screens/logs/components/LogsTable.jsx:508
+msgid "Delete Selected Logs?"
+msgstr "حذف السجلات المحددة؟"
+
+#: src/screens/logs/components/LogsTable.jsx:515
+msgid "This will permanently delete this log entry. This action cannot be undone."
+msgstr "سيؤدي ذلك إلى حذف هذا الإدخال من السجل بشكل دائم. لا يمكن التراجع عن هذا الإجراء."
+
+#. translators: %d: number of log entries
+#: src/screens/logs/components/LogsTable.jsx:518
+#, js-format
+msgid "This will permanently delete %d log entries. This action cannot be undone."
+msgstr "سيؤدي ذلك إلى حذف %d إدخالات من السجل بشكل دائم. لا يمكن التراجع عن هذا الإجراء."
+
+#: src/screens/logs/Logs.jsx:52
+msgid "Logs refreshed"
+msgstr "تم تحديث السجلات"
+
+#: src/screens/settings/components/SettingsHeader.jsx:42
+msgid "Sync Settings"
+msgstr "إعدادات المزامنة"
+
+#: src/screens/settings/components/SettingsHeader.jsx:47
+msgid "Configure automatic synchronization between WordPress and SureContact"
+msgstr "تكوين المزامنة التلقائية بين WordPress وSureContact"
+
+#: src/screens/settings/Settings.jsx:32
+msgid "Settings saved successfully!"
+msgstr "تم حفظ الإعدادات بنجاح!"
+
+#: src/screens/sync-contacts/components/SyncContactsHeader.jsx:22
+msgid "Synchronize data from your integrations to SureContact in the background"
+msgstr "مزامنة البيانات من تكاملاتك إلى SureContact في الخلفية"
+
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:16
+msgid "Start Migration"
+msgstr "بدء الترحيل"
+
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:16
+msgid "Start Sync"
+msgstr "بدء المزامنة"
+
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:40
+msgid "Confirm"
+msgstr "تأكيد"
+
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:119
+msgid "Email field mapping is required before syncing."
+msgstr "يجب تكوين تعيين حقل البريد الإلكتروني قبل المزامنة."
+
+#: src/screens/sync-contacts/IntegrationSyncCard.jsx:125
+msgid "Configure Contact Fields"
+msgstr "تكوين حقول الاتصال"
+
+#: src/screens/sync-contacts/JobHistory.jsx:13
+#: src/screens/sync-contacts/JobProgress.jsx:41
+msgid "Queued"
+msgstr "بند قائمة الانتظار"
+
+#: src/screens/sync-contacts/JobHistory.jsx:16
+msgid "Cancelled"
+msgstr "ملغى"
+
+#: src/screens/sync-contacts/JobHistory.jsx:21
+#: src/screens/sync-contacts/JobHistory.jsx:36
+#: src/screens/sync-contacts/JobProgress.jsx:99
+#: src/screens/sync-contacts/JobProgress.jsx:128
+msgid "Synced"
+msgstr "تمت المزامنة"
+
+#: src/screens/sync-contacts/JobHistory.jsx:23
+#: src/screens/sync-contacts/JobProgress.jsx:140
+msgid "Updated"
+msgstr "تم التحديث"
+
+#: src/screens/sync-contacts/JobHistory.jsx:35
+#: src/screens/sync-contacts/JobProgress.jsx:93
+msgid "Total Companies"
+msgstr "إجمالي الشركات"
+
+#: src/screens/sync-contacts/JobHistory.jsx:37
+#: src/screens/sync-contacts/JobProgress.jsx:105
+msgid "Linked Contacts"
+msgstr "جهات الاتصال المرتبطة"
+
+#: src/screens/sync-contacts/JobHistory.jsx:50
+msgid "Recent Jobs"
+msgstr "الوظائف الأخيرة"
+
+#: src/screens/sync-contacts/JobHistory.jsx:68
+msgid "No sync jobs yet"
+msgstr "لا توجد مهام مزامنة حتى الآن"
+
+#. translators: 1: processed batch count, 2: total batch count
+#: src/screens/sync-contacts/JobHistory.jsx:115
+#, js-format
+msgid "%1$d / %2$d batches"
+msgstr "%1$d / %2$d دفعات"
+
+#. translators: %s: formatted date
+#: src/screens/sync-contacts/JobHistory.jsx:140
+#, js-format
+msgid "Created: %s"
+msgstr "تم الإنشاء: %s"
+
+#. translators: %s: formatted date
+#: src/screens/sync-contacts/JobHistory.jsx:144
+#, js-format
+msgid "Completed: %s"
+msgstr "تم الانتهاء: %s"
+
+#. translators: 1: start index, 2: end index, 3: total jobs
+#: src/screens/sync-contacts/JobHistory.jsx:284
+#, js-format
+msgid "Showing %1$d to %2$d of %3$d jobs"
+msgstr "عرض %1$d إلى %2$d من %3$d وظيفة"
+
+#: src/screens/sync-contacts/JobProgress.jsx:29
+msgid "Sync job cancelled successfully"
+msgstr "تم إلغاء مهمة المزامنة بنجاح"
+
+#: src/screens/sync-contacts/JobProgress.jsx:53
+msgid "Sync Progress"
+msgstr "تقدم المزامنة"
+
+#: src/screens/sync-contacts/JobProgress.jsx:65
+msgid "Cancelling…"
+msgstr "يتم الإلغاء…"
+
+#: src/screens/sync-contacts/JobProgress.jsx:65
+msgid "Cancel Sync"
+msgstr "إلغاء المزامنة"
+
+#. translators: 1: processed batch count, 2: total batch count
+#: src/screens/sync-contacts/JobProgress.jsx:74
+#, js-format
+msgid "%1$d of %2$d batches processed"
+msgstr "%1$d من %2$d دفعات تمت معالجتها"
+
+#. translators: %s: progress percentage
+#: src/screens/sync-contacts/JobProgress.jsx:82
+#, js-format
+msgid "Sync progress: %s%% complete"
+msgstr "تقدم المزامنة: %s%% مكتمل"
+
+#: src/screens/sync-contacts/JobProgress.jsx:91
+#: src/screens/sync-contacts/JobProgress.jsx:120
+msgid "Sync statistics"
+msgstr "إحصائيات المزامنة"
+
+#: src/screens/sync-contacts/JobProgress.jsx:122
+msgid "Total Items"
+msgstr "إجمالي العناصر"
+
+#. translators: %s: formatted date
+#: src/screens/sync-contacts/JobProgress.jsx:159
+#, js-format
+msgid "Started: %s"
+msgstr "بدأت: %s"
+
+#: src/screens/sync-contacts/SyncActions.jsx:86
+msgid "A sync job is already running. Please wait for it to complete before starting a new one."
+msgstr "توجد مهمة مزامنة بالفعل قيد التشغيل. يرجى الانتظار حتى تكتمل قبل بدء مهمة جديدة."
+
+#: src/screens/sync-contacts/SyncContacts.jsx:41
+msgid "Sync in Progress"
+msgstr "مزامنة قيد التقدم"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:41
+msgid "A sync job is currently running in the background"
+msgstr "مهمة المزامنة قيد التشغيل حاليًا في الخلفية"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:69
+msgid "Sync Completed"
+msgstr "اكتملت المزامنة"
+
+#. translators: 1: synced count, 2: created count, 3: updated count, 4: failed count
+#: src/screens/sync-contacts/SyncContacts.jsx:70
+#, js-format
+msgid "%1$s records synced (%2$s created, %3$s updated, %4$s failed)"
+msgstr "%1$s سجلات تمت مزامنتها (%2$s تم إنشاؤها، %3$s تم تحديثها، %4$s فاشلة)"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:73
+msgid "Sync Cancelled"
+msgstr "تم إلغاء المزامنة"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:73
+msgid "Sync job was cancelled"
+msgstr "تم إلغاء مهمة المزامنة"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:75
+msgid "Sync Timeout"
+msgstr "انتهاء مدة المزامنة"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:75
+msgid "Sync job timed out after 30 minutes. Please try again or contact support."
+msgstr "انتهت مدة مهمة المزامنة بعد 30 دقيقة. يرجى المحاولة مرة أخرى أو الاتصال بالدعم."
+
+#: src/screens/sync-contacts/SyncContacts.jsx:77
+#: src/screens/sync-contacts/SyncContacts.jsx:102
+msgid "Sync Failed"
+msgstr "فشلت المزامنة"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:77
+msgid "Sync job failed. Please try again or contact support."
+msgstr "فشلت مهمة المزامنة. يرجى المحاولة مرة أخرى أو الاتصال بالدعم."
+
+#: src/screens/sync-contacts/SyncContacts.jsx:95
+msgid "Nothing to Sync"
+msgstr "لا شيء للمزامنة"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:95
+msgid "No records found to sync"
+msgstr "لا توجد سجلات للبحث عنها"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:100
+msgid "Sync Started"
+msgstr "تم بدء المزامنة"
+
+#: src/screens/sync-contacts/SyncContacts.jsx:100
+msgid "Sync job started successfully!"
+msgstr "بدأت وظيفة المزامنة بنجاح!"

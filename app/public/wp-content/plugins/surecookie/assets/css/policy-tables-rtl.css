@@ -1,0 +1,152 @@
+/**
+ * Cookie Policy Shortcode Styles
+ *
+ * Structural-only styles for [surecookie_cookie_policy_content] output.
+ * Typography (font-family, font-size, color) is inherited from the theme.
+ *
+ * @package SureCookie
+ * @since x.x.x
+ */
+
+.surecookie-cookie-policy {
+	max-width: 100%;
+}
+
+/* ── Table of Contents ─────────────────────────── */
+
+.surecookie-cookie-policy-toc {
+	margin-bottom: 2em;
+	padding: 1.25em 1.5em;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	background: rgba(0, 0, 0, 0.015);
+}
+
+.surecookie-cookie-policy-toc h3 {
+	margin: 0 0 0.75em;
+	font-size: 1em;
+	font-weight: 600;
+}
+
+.surecookie-cookie-policy-toc ol {
+	margin: 0;
+	padding-right: 1.25em;
+}
+
+.surecookie-cookie-policy-toc li {
+	margin-bottom: 0.35em;
+}
+
+.surecookie-cookie-policy-toc a {
+	text-decoration: none;
+}
+
+.surecookie-cookie-policy-toc a:hover {
+	text-decoration: underline;
+}
+
+/* ── Category ──────────────────────────────────── */
+
+.surecookie-cookie-policy-category {
+	margin-bottom: 2em;
+}
+
+.surecookie-cookie-policy-category h3 {
+	margin-bottom: 0.25em;
+}
+
+.surecookie-cookie-policy-category > p {
+	margin-bottom: 1em;
+}
+
+/* ── Provider grouping ─────────────────────────── */
+
+.surecookie-cookie-policy-provider {
+	margin-bottom: 1.5em;
+}
+
+.surecookie-cookie-policy-provider-name {
+	margin: 0 0 0.5em;
+	font-size: 0.95em;
+	font-weight: 600;
+}
+
+/* ── Table ─────────────────────────────────────── */
+
+.surecookie-cookie-policy-table-wrap {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.surecookie-cookie-policy-table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.surecookie-cookie-policy-table th,
+.surecookie-cookie-policy-table td {
+	padding: 0.625em 0.75em;
+	text-align: right;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.surecookie-cookie-policy-table th {
+	font-weight: 600;
+	background: rgba(0, 0, 0, 0.03);
+}
+
+.surecookie-cookie-policy-table tbody tr:nth-child(even) {
+	background: rgba(0, 0, 0, 0.015);
+}
+
+.surecookie-cookie-policy-table td:first-child {
+	font-weight: 500;
+	word-break: break-all;
+}
+
+/* ── Last updated ──────────────────────────────── */
+.surecookie-cookie-policy-last-updated {
+	margin-top: 2em;
+	padding-top: 1em;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	font-size: 0.875em;
+}
+
+/* ── Mobile card layout ────────────────────────── */
+
+@media (max-width: 600px) {
+	.surecookie-cookie-policy-category {
+		padding: 0 0.5em;
+	}
+
+	.surecookie-cookie-policy-table thead {
+		display: none;
+	}
+
+	.surecookie-cookie-policy-table tbody tr {
+		display: block;
+		padding: 0.75em 1em;
+		border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+	}
+
+	.surecookie-cookie-policy-table tbody tr:nth-child(even) {
+		background: none;
+	}
+
+	.surecookie-cookie-policy-table td {
+		display: block;
+		padding: 0.35em 0;
+		border-bottom: none;
+	}
+
+	/* Column label on the mobile card layout. Same reason as above: it is real
+	   text, so it keeps the theme's full contrast. */
+	.surecookie-cookie-policy-table td::before {
+		content: attr(data-label);
+		display: block;
+		margin-bottom: 0.15em;
+		font-weight: 600;
+		font-size: 0.85em;
+	}
+}

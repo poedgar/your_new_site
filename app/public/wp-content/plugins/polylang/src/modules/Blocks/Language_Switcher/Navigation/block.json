@@ -1,0 +1,85 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "polylang/navigation-language-switcher",
+    "version": "3.9.1",
+    "title": "Navigation Language Switcher",
+    "category": "design",
+	"parent": [ "core/navigation" ],
+    "description": "Language switcher suitable for navigation.",
+    "example": {},
+	"attributes": {
+		"layout": {
+			"type": "string",
+			"enum": ["vertical", "horizontal", "dropdown", "select"],
+			"default": "horizontal"
+		},
+		"show_labels": {
+			"type": "string",
+			"enum": ["names", "codes", ""],
+			"default": "names"
+		},
+		"show_flags": {
+			"type": "boolean",
+			"default": false
+		},
+		"force_home": {
+			"type": "boolean",
+			"default": false
+		},
+		"hide_current": {
+			"type": "boolean",
+			"default": false
+		},
+		"hide_if_no_translation": {
+			"type": "boolean",
+			"default": false
+		},
+		"flag_aspect_ratio": {
+			"type": "string",
+			"enum": ["3:2", "1:1"],
+			"default": "3:2"
+		},
+		"flag_border_radius": {
+			"type": "number",
+			"default": 0
+		},
+		"flag_width": {
+			"type": "string",
+			"default": "18px"
+		},
+		"flag_label_spacing": {
+			"type": "string",
+			"default": "0.3em"
+		},
+		"className": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"usesContext": [
+		"textColor",
+		"customTextColor",
+		"backgroundColor",
+		"customBackgroundColor",
+		"overlayTextColor",
+		"customOverlayTextColor",
+		"overlayBackgroundColor",
+		"customOverlayBackgroundColor",
+		"fontSize",
+		"customFontSize",
+		"showSubmenuIcon",
+		"maxNestingLevel",
+		"openSubmenusOnClick",
+		"style",
+		"isResponsive",
+		"submenuVisibility"
+	],
+	"supports": {
+		"contentRole": true
+	},
+    "textdomain": "polylang",
+    "style": "pll-navigation-language-switcher",
+    "editorStyle": "pll-navigation-language-switcher-editor",
+    "editorScript": "pll_blocks"
+}

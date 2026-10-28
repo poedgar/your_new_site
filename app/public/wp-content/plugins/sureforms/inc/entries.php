@@ -1,0 +1,922 @@
+<?php
+/**
+ * Sureforms entries.
+ *
+ * @package sureforms.
+ * @since 2.0.0
+ */
+
+namespace SRFM\Inc;
+
+use SRFM\Inc\Database\Tables\Entries as EntriesTable;
+use SRFM\Inc\Traits\Get_Instance;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+/**
+ * Entries Class.
+ *
+ * @since 2.0.0
+ */
+class Entries {
+	use Get_Instance;
+
+	/**
+	 * Constructor
+	 *
+	 * @since 2.0.0
+	 */
+	public function __construct() {
+		// Constructor code here.
+	}
+
+	/**
+	 * Get entries with filters, sorting, and pagination.
+	 *
+	 * @param array<string,mixed> $args {
+	 *     Optional. An array of arguments to customize the query.
+	 *
+	 *     @type int          $form_id     Form ID to filter entries. Default 0 (all forms).
+	 *     @type string       $status      Entry status: 'all', 'read', 'unread', 'trash'. Default 'all'.
+	 *     @type string       $search      Search term matching entry ID (numeric terms), form title, or submitted form data (3+ characters). Default empty.
+	 *     @type string       $date_from   Start date for filtering entries (YYYY-MM-DD format). Default empty.
+	 *     @type string       $date_to     End date for filtering entries (YYYY-MM-DD format). Default empty.
+	 *     @type string       $orderby     Column to order by. Default 'created_at'.
+	 *     @type string       $order       Sort direction: 'ASC' or 'DESC'. Default 'DESC'.
+	 *     @type int          $per_page    Number of entries per page. Default 20.
+	 *     @type int          $page        Current page number. Default 1.
+	 *     @type array<mixed> $entry_ids   Specific entry IDs to fetch. Default empty array.
+	 * }
+	 *
+	 * @since 2.0.0
+	 * @return array<string,mixed> {
+	 *     @type array<mixed> $entries      Array of entry objects.
+	 *     @type int          $total        Total number of entries matching the query.
+	 *     @type int          $per_page     Number of entries per page.
+	 *     @type int          $current_page Current page number.
+	 *     @type int          $total_pages  Total number of pages.
+	 *     @type bool         $emptyTrash   Whether the trash is empty (true) or contains items (false).
+	 * }
+	 */
+	public static function get_entries( $args = [] ) {
+		$defaults = [
+			'form_id'   => 0,
+			'status'    => 'all',
+			'search'    => '',
+			'date_from' => '',
+			'date_to'   => '',
+			'orderby'   => 'created_at',
+			'order'     => 'DESC',
+			'per_page'  => 20,
+			'page'      => 1,
+			'entry_ids' => [],
+		];
+
+		/**
+		 * Parsed and sanitized arguments for the entries query.
+		 *
+		 * @var array{form_id: int, status: string, search: string, date_from: string, date_to: string, orderby: string, order: string, per_page: int, page: int, entry_ids: array<int>} $args
+		 */
+		$args = wp_parse_args( $args, $defaults );
+
+		// Build where conditions.
+		$where_conditions = self::build_where_conditions( $args );
+
+		// Get total count for pagination. When a search term is active the WHERE includes
+		// an unindexed form_data LIKE, so the COUNT is a full scan of the candidate rows —
+		// and it re-runs on every pagination click for an answer that cannot change between
+		// clicks. Cache it briefly (30s) keyed on the exact conditions; ≤30s staleness in a
+		// pager total is harmless for an admin screen. Unsearched listings stay uncached so
+		// totals reflect trash/delete/read mutations immediately.
+		if ( ! empty( $args['search'] ) ) {
+			// wp_json_encode() returns false on failure, and (string) false is '' — which
+			// would make every search share md5('') and serve one search's total for all
+			// others. Skip the cache entirely rather than key it ambiguously.
+			$encoded_conditions = wp_json_encode( $where_conditions );
+			$count_cache_key    = is_string( $encoded_conditions )
+				? 'srfm_entries_search_count_' . md5( $encoded_conditions )
+				: '';
+			$cached_total       = '' !== $count_cache_key ? get_transient( $count_cache_key ) : false;
+
+			if ( is_numeric( $cached_total ) ) {
+				$total = absint( $cached_total );
+			} else {
+				$total = EntriesTable::get_instance()->get_total_count( $where_conditions );
+				// Honor the skip-on-encode-failure decision above: only cache when we have
+				// an unambiguous key. Otherwise set_transient( '', … ) would write a single
+				// global transient shared across all searches.
+				if ( '' !== $count_cache_key ) {
+					set_transient( $count_cache_key, $total, 30 );
+				}
+			}
+		} else {
+			$total = EntriesTable::get_instance()->get_total_count( $where_conditions );
+		}
+
+		// Calculate offset.
+		$offset = ( absint( $args['page'] ) - 1 ) * absint( $args['per_page'] );
+
+		// Get entries.
+		$entries = EntriesTable::get_all(
+			[
+				'where'   => $where_conditions,
+				'columns' => '*',
+				'orderby' => Helper::get_string_value( $args['orderby'] ),
+				'order'   => Helper::get_string_value( $args['order'] ),
+				'limit'   => absint( $args['per_page'] ),
+				'offset'  => $offset,
+			]
+		);
+
+		// Check if trash is empty.
+		$trash_count = EntriesTable::get_instance()->get_total_count(
+			[
+				[
+					[
+						'key'     => 'status',
+						'compare' => '=',
+						'value'   => 'trash',
+					],
+				],
+			]
+		);
+
+		return [
+			'entries'      => $entries,
+			'total'        => $total,
+			'per_page'     => absint( $args['per_page'] ),
+			'current_page' => absint( $args['page'] ),
+			'total_pages'  => ceil( $total / max( 1, absint( $args['per_page'] ) ) ),
+			'emptyTrash'   => 0 === $trash_count,
+		];
+	}
+
+	/**
+	 * Update entry status (trash/untrash/read/unread).
+	 *
+	 * @param int|array<int> $entry_ids Entry ID or array of entry IDs.
+	 * @param string         $status    New status: 'trash', 'unread', 'read', or 'restore'.
+	 *
+	 * @since 2.0.0
+	 * @return array<string,mixed> {
+	 *     @type bool  $success   Whether the operation was successful.
+	 *     @type int   $updated   Number of entries updated.
+	 *     @type array<string> $errors    Array of error messages.
+	 * }
+	 */
+	public static function update_status( $entry_ids, $status ) {
+		$entry_ids = is_array( $entry_ids ) ? array_map( 'absint', $entry_ids ) : [ absint( $entry_ids ) ];
+		$entry_ids = array_filter( $entry_ids ); // Remove any zero values.
+
+		if ( empty( $entry_ids ) ) {
+			return [
+				'success' => false,
+				'updated' => 0,
+				'errors'  => [ __( 'No valid entry IDs provided.', 'sureforms' ) ],
+			];
+		}
+
+		// Validate status.
+		$valid_statuses = [ 'trash', 'unread', 'read', 'restore' ];
+		if ( ! in_array( $status, $valid_statuses, true ) ) {
+			return [
+				'success' => false,
+				'updated' => 0,
+				'errors'  => [ __( 'Invalid status provided.', 'sureforms' ) ],
+			];
+		}
+
+		// Map 'restore' to 'unread'.
+		$actual_status = 'restore' === $status ? 'unread' : $status;
+
+		$updated = 0;
+		$errors  = [];
+
+		foreach ( $entry_ids as $entry_id ) {
+			$result = EntriesTable::update( $entry_id, [ 'status' => $actual_status ] );
+
+			if ( false === $result ) {
+				$errors[] = sprintf(
+					// translators: %d is the entry ID.
+					__( 'Failed to update entry #%d.', 'sureforms' ),
+					$entry_id
+				);
+			} else {
+				++$updated;
+			}
+		}
+
+		return [
+			'success' => $updated > 0,
+			'updated' => $updated,
+			'errors'  => $errors,
+		];
+	}
+
+	/**
+	 * Permanently delete entries.
+	 *
+	 * @param int|array<int> $entry_ids Entry ID or array of entry IDs.
+	 *
+	 * @since 2.0.0
+	 * @return array<string,mixed> {
+	 *     @type bool  $success   Whether the operation was successful.
+	 *     @type int   $deleted   Number of entries deleted.
+	 *     @type array<string> $errors    Array of error messages.
+	 * }
+	 */
+	public static function delete_entries( $entry_ids ) {
+		$entry_ids = is_array( $entry_ids ) ? array_map( 'absint', $entry_ids ) : [ absint( $entry_ids ) ];
+		$entry_ids = array_filter( $entry_ids );
+
+		if ( empty( $entry_ids ) ) {
+			return [
+				'success' => false,
+				'deleted' => 0,
+				'errors'  => [ __( 'No valid entry IDs provided.', 'sureforms' ) ],
+			];
+		}
+
+		$deleted = 0;
+		$errors  = [];
+
+		foreach ( $entry_ids as $entry_id ) {
+			$result = EntriesTable::delete( $entry_id );
+
+			if ( false === $result ) {
+				$errors[] = sprintf(
+					// translators: %d is the entry ID.
+					__( 'Failed to delete entry #%d.', 'sureforms' ),
+					$entry_id
+				);
+			} else {
+				++$deleted;
+			}
+		}
+
+		return [
+			'success' => $deleted > 0,
+			'deleted' => $deleted,
+			'errors'  => $errors,
+		];
+	}
+
+	/**
+	 * Export entries to CSV format.
+	 *
+	 * @param array<string,mixed> $args {
+	 *     Optional. An array of arguments for export.
+	 *
+	 *     @type int|array<int> $entry_ids Entry ID or array of entry IDs to export.
+	 *     @type int            $form_id   Form ID to export all entries from.
+	 *     @type string         $status    Entry status filter.
+	 *     @type string         $search    Search term filter.
+	 *     @type string         $date_from Start date for filtering entries (YYYY-MM-DD format).
+	 *     @type string         $date_to   End date for filtering entries (YYYY-MM-DD format).
+	 * }
+	 *
+	 * @since 2.0.0
+	 * @return array<string,mixed> {
+	 *     @type bool   $success  Whether the export was successful.
+	 *     @type string $filename Export filename (if single form).
+	 *     @type string $filepath Full path to the exported file.
+	 *     @type string $type     Export type: 'csv' or 'zip'.
+	 *     @type string $error    Error message if failed.
+	 * }
+	 */
+	public static function export_entries( $args = [] ) {
+		$defaults = [
+			'entry_ids' => [],
+			'form_id'   => 0,
+			'status'    => 'all',
+			'search'    => '',
+			'date_from' => '',
+			'date_to'   => '',
+		];
+
+		/**
+		 * Parsed and sanitized arguments for the export operation.
+		 *
+		 * @var array{entry_ids: int|array<int>, form_id: int, status: string, search: string, date_from: string, date_to: string} $args
+		 */
+		$args = wp_parse_args( $args, $defaults );
+
+		// Get entry IDs to export.
+		if ( empty( $args['entry_ids'] ) ) {
+			// If no specific entry IDs provided, get all matching entries.
+			$where_conditions = self::build_where_conditions( $args );
+			$all_entries      = EntriesTable::get_all(
+				[
+					'where'   => $where_conditions,
+					'columns' => 'ID',
+				],
+				false
+			);
+			$entry_ids        = array_map( 'absint', array_column( $all_entries, 'ID' ) );
+		} else {
+			/**
+			 * Entry IDs converted to array of integers.
+			 *
+			 * @var array<int> $entry_ids
+			 */
+			$entry_ids = is_array( $args['entry_ids'] ) ? array_map( 'absint', $args['entry_ids'] ) : [ absint( (int) $args['entry_ids'] ) ];
+		}
+
+		if ( empty( $entry_ids ) ) {
+			return [
+				'success' => false,
+				'error'   => __( 'No entries found to export.', 'sureforms' ),
+			];
+		}
+
+		// Get form IDs from entry IDs.
+		$form_ids       = EntriesTable::get_form_ids_by_entries( $entry_ids );
+		$is_single_form = count( $form_ids ) === 1;
+
+		$temp_dir = wp_normalize_path( trailingslashit( get_temp_dir() ) );
+
+		// Check if temp directory is writable.
+		if ( ! wp_is_writable( $temp_dir ) ) {
+			return [
+				'success' => false,
+				'error'   => __( 'Temporary directory is not writable.', 'sureforms' ),
+			];
+		}
+
+		$csv_files = [];
+		$zip       = null;
+		$temp_zip  = '';
+
+		// Create ZIP if multiple forms.
+		if ( ! $is_single_form ) {
+			if ( ! class_exists( 'ZipArchive' ) ) {
+				return [
+					'success' => false,
+					'error'   => __( 'ZipArchive class is not available.', 'sureforms' ),
+				];
+			}
+
+			$temp_zip = $temp_dir . 'srfm-entries-export-' . time() . '.zip';
+			$zip      = new \ZipArchive();
+
+			if ( ! $zip->open( $temp_zip, \ZipArchive::CREATE ) ) {
+				return [
+					'success' => false,
+					'error'   => __( 'Unable to create ZIP file.', 'sureforms' ),
+				];
+			}
+		}
+
+		$csv_filepath = '';
+
+		// Process each form.
+		foreach ( $form_ids as $form_id ) {
+			$results = self::get_entries_data_for_export( $entry_ids, $form_id );
+
+			if ( empty( $results ) ) {
+				continue;
+			}
+
+			$sanitized_form_title = sanitize_title( get_the_title( $form_id ) );
+			$sanitized_form_title = ! empty( $sanitized_form_title ) ? $sanitized_form_title : "srfm-entries-{$form_id}";
+
+			$csv_filename = 'srfm-entries-' . $sanitized_form_title . '.csv';
+			$csv_filepath = $temp_dir . $csv_filename;
+
+			if ( file_exists( $csv_filepath ) ) {
+				wp_delete_file( $csv_filepath );
+			}
+
+			$stream = fopen( $csv_filepath, 'wb' ); // phpcs:ignore -- Using fopen to decrease the memory use.
+
+			if ( ! is_resource( $stream ) ) {
+				continue;
+			}
+
+			$csv_files[] = $csv_filepath;
+
+			// Build CSV content.
+			$block_data = self::build_block_key_map_and_labels( $results );
+			self::write_csv_header( $stream, $block_data['labels'] );
+			self::write_csv_rows( $stream, $results, $block_data['map'] );
+
+			fclose( $stream ); // phpcs:ignore -- Using fopen to decrease the memory use.
+
+			// Add to ZIP if multiple forms.
+			if ( ! $is_single_form && $zip && filesize( $csv_filepath ) > 0 ) {
+				$zip->addFile( $csv_filepath, $csv_filename );
+			}
+		}
+
+		// Single form - return CSV.
+		if ( $is_single_form && ! empty( $csv_filepath ) && file_exists( $csv_filepath ) ) {
+			return [
+				'success'  => true,
+				'filename' => basename( $csv_filepath ),
+				'filepath' => $csv_filepath,
+				'type'     => 'csv',
+			];
+		}
+
+		// Multiple forms - return ZIP.
+		if ( ! $is_single_form && $zip ) {
+			$zip->close();
+
+			// Clean up CSV files.
+			foreach ( $csv_files as $csv_file ) {
+				if ( file_exists( $csv_file ) ) {
+					wp_delete_file( $csv_file );
+				}
+			}
+
+			return [
+				'success'  => true,
+				'filename' => 'SureForms-Entries.zip',
+				'filepath' => $temp_zip,
+				'type'     => 'zip',
+			];
+		}
+
+		return [
+			'success' => false,
+			'error'   => __( 'Unable to generate export file.', 'sureforms' ),
+		];
+	}
+
+	/**
+	 * Get adjacent entry IDs (previous and next) for navigation.
+	 * Navigation follows chronological order: Previous = older, Next = newer.
+	 *
+	 * @param int                 $current_entry_id Current entry ID.
+	 * @param array<string,mixed> $args {
+	 *     Optional. An array of arguments to filter the navigation context.
+	 *
+	 *     @type int    $form_id   Form ID to filter entries. Default 0 (all forms).
+	 *     @type string $status    Entry status: 'all', 'read', 'unread', 'trash'. Default 'all'.
+	 *     @type string $search    Search term to filter entries by entry ID. Default empty.
+	 *     @type string $date_from Start date for filtering entries (YYYY-MM-DD format). Default empty.
+	 *     @type string $date_to   End date for filtering entries (YYYY-MM-DD format). Default empty.
+	 *     @type string $orderby   Column to order by. Default 'created_at'.
+	 *     @type string $order     Sort direction: 'ASC' or 'DESC'. Default 'DESC'.
+	 * }
+	 *
+	 * @since 2.4.0
+	 * @return array<string,int|null> {
+	 *     @type int|null $previous_id Previous entry ID (older entry) or null if at the oldest.
+	 *     @type int|null $next_id     Next entry ID (newer entry) or null if at the newest.
+	 * }
+	 */
+	public static function get_adjacent_entry_ids( $current_entry_id, $args = [] ) {
+		$defaults = [
+			'form_id'   => 0,
+			'status'    => 'all',
+			'search'    => '',
+			'date_from' => '',
+			'date_to'   => '',
+			'orderby'   => 'created_at',
+			'order'     => 'DESC',
+		];
+
+		$args = wp_parse_args( $args, $defaults );
+
+		// Build where conditions.
+		$where_conditions = self::build_where_conditions( $args );
+
+		// Get all entry IDs in chronological order (oldest to newest).
+		// This ensures Previous = older, Next = newer regardless of listing page sort.
+		$all_entries = EntriesTable::get_all(
+			[
+				'where'   => $where_conditions,
+				'columns' => 'ID',
+				'orderby' => 'created_at',
+				'order'   => 'ASC',
+			],
+			false
+		);
+
+		// Extract entry IDs into a simple array.
+		$entry_ids = array_map(
+			static function ( $entry ) {
+				return is_array( $entry ) ? Helper::get_integer_value( $entry['ID'] ) : 0;
+			},
+			$all_entries
+		);
+
+		// Find the position of the current entry.
+		$current_position = array_search( absint( $current_entry_id ), $entry_ids, true );
+
+		if ( false === $current_position ) {
+			// Current entry not found in the filtered list.
+			return [
+				'previous_id' => null,
+				'next_id'     => null,
+			];
+		}
+
+		// Convert to integer after validation.
+		$current_position = Helper::get_integer_value( $current_position );
+
+		// Get previous and next entry IDs.
+		$previous_id = $current_position > 0 ? $entry_ids[ $current_position - 1 ] : null;
+		$next_id     = $current_position < count( $entry_ids ) - 1 ? $entry_ids[ $current_position + 1 ] : null;
+
+		return [
+			'previous_id' => $previous_id,
+			'next_id'     => $next_id,
+		];
+	}
+
+	/**
+	 * Neutralize CSV formula/macro injection in an exported cell.
+	 *
+	 * Spreadsheet applications (Excel, Google Sheets, LibreOffice) interpret a
+	 * cell whose value begins with `=`, `+`, `-`, `@`, a tab, or a carriage
+	 * return as a formula and may execute it when an admin opens the export.
+	 * A submitter could store `=HYPERLINK(...)` or `=cmd|...` in a field and
+	 * have it run on the admin's machine. Prefixing such values with a single
+	 * quote forces the spreadsheet to treat them as literal text.
+	 *
+	 * Well-formed numbers (including negative and decimal values) are returned
+	 * unchanged so numeric columns remain numeric in the spreadsheet.
+	 *
+	 * Public so every CSV writer in the product can share one implementation rather
+	 * than carrying its own copy — SureForms Pro exports partial entries through a
+	 * separate writer and needs the same guard.
+	 *
+	 * @param string $value Cell value (already normalized for CSV).
+	 *
+	 * @since 2.10.0
+	 * @since 2.12.3 Promoted from private to public so other export writers can reuse it.
+	 * @return string Safe cell value.
+	 */
+	public static function escape_csv_formula( $value ) {
+		$value = Helper::get_string_value( $value );
+
+		if ( '' === $value || is_numeric( $value ) ) {
+			return $value;
+		}
+
+		if ( in_array( $value[0], [ '=', '+', '-', '@', "\t", "\r" ], true ) ) {
+			return "'" . $value;
+		}
+
+		return $value;
+	}
+
+	/**
+	 * Build where conditions for entry queries.
+	 *
+	 * @param array<string, int|string|array<int>> $args Query arguments.
+	 *
+	 * @since 2.0.0
+	 * @return array<mixed> Where conditions array.
+	 */
+	private static function build_where_conditions( $args ) {
+		$where_conditions = [];
+
+		// Filter by entry IDs.
+		if ( ! empty( $args['entry_ids'] ) && is_array( $args['entry_ids'] ) ) {
+			$where_conditions[] = [
+				[
+					'key'     => 'ID',
+					'compare' => 'IN',
+					'value'   => array_map( 'absint', $args['entry_ids'] ),
+				],
+			];
+			return $where_conditions;
+		}
+
+		// Filter by status.
+		if ( 'all' !== $args['status'] ) {
+			$where_conditions[] = [
+				[
+					'key'     => 'status',
+					'compare' => '=',
+					'value'   => Helper::get_string_value( $args['status'] ),
+				],
+			];
+		} else {
+			// Exclude trash when status is 'all'.
+			$where_conditions[] = [
+				[
+					'key'     => 'status',
+					'compare' => '!=',
+					'value'   => 'trash',
+				],
+			];
+		}
+
+		// Filter by form ID.
+		$form_id = Helper::get_integer_value( $args['form_id'] ?? 0 );
+		if ( ! empty( $args['form_id'] ) && $form_id > 0 ) {
+			$where_conditions[] = [
+				[
+					'key'     => 'form_id',
+					'compare' => '=',
+					'value'   => $form_id,
+				],
+			];
+		}
+
+		// Filter by date range.
+		if ( ! empty( $args['date_from'] ) || ! empty( $args['date_to'] ) ) {
+			$date_conditions = [];
+
+			if ( ! empty( $args['date_from'] ) ) {
+				$date_conditions[] = [
+					'key'     => 'created_at',
+					'compare' => '>=',
+					'value'   => Helper::get_string_value( $args['date_from'] ),
+				];
+			}
+
+			if ( ! empty( $args['date_to'] ) ) {
+				$date_conditions[] = [
+					'key'     => 'created_at',
+					'compare' => '<=',
+					'value'   => Helper::get_string_value( $args['date_to'] ),
+				];
+			}
+
+			if ( ! empty( $date_conditions ) ) {
+				$where_conditions[] = $date_conditions;
+			}
+		}
+
+		// Filter by search (entry ID + form title + submitted form data).
+		// Use an explicit empty-string test rather than ! empty(): empty( '0' ) is true in
+		// PHP, so searching "0" silently dropped the entire search group and returned every
+		// entry while the UI still showed the term.
+		if ( isset( $args['search'] ) && is_string( $args['search'] ) && '' !== $args['search'] ) {
+			global $wpdb;
+
+			$search_term  = sanitize_text_field( $args['search'] );
+			$search_group = [ 'RELATION' => 'OR' ];
+
+			// If numeric, match entry ID.
+			if ( is_numeric( $search_term ) ) {
+				$search_group[] = [
+					'key'     => 'ID',
+					'compare' => '=',
+					'value'   => absint( $search_term ),
+				];
+			}
+
+			// Match form titles.
+			$matching_form_ids = self::get_form_ids_by_title( $search_term );
+			if ( ! empty( $matching_form_ids ) ) {
+				$search_group[] = [
+					'key'     => 'form_id',
+					'compare' => 'IN',
+					'value'   => $matching_form_ids,
+				];
+			}
+
+			// Match submitted form data. The form_data column stores plain JSON
+			// (Helper::encode_json() uses JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE),
+			// so a LIKE matches submitted values textually — including emails, URLs and
+			// non-ASCII input. The query compiler (Base::prepare_where_clauses()) wraps
+			// the value in "%...%" itself; esc_like() here neutralizes user-typed wildcard
+			// characters ("%", "_") so they match literally.
+			// Performance guard: the LIKE cannot use an index (full scan of the LONGTEXT
+			// column within the other filters), so require at least 3 characters before
+			// matching form data. Shorter terms would match almost every row anyway while
+			// costing the most. Numeric terms are exempt above (exact, indexed ID lookup),
+			// and form-title matching is a cheap separate posts query.
+			if ( mb_strlen( $search_term ) >= 3 ) {
+				$search_group[] = [
+					'key'     => 'form_data',
+					'compare' => 'LIKE',
+					'value'   => $wpdb->esc_like( $search_term ),
+				];
+			}
+
+			// Guard: a short non-numeric term that matches no form title produces no
+			// usable condition — force an empty result instead of silently returning
+			// every entry (an OR-group with no conditions would be dropped by the
+			// query compiler).
+			if ( count( $search_group ) > 1 ) {
+				$where_conditions[] = $search_group;
+			} else {
+				$where_conditions[] = [
+					[
+						'key'     => 'ID',
+						'compare' => '=',
+						'value'   => 0,
+					],
+				];
+			}
+		}
+
+		return $where_conditions;
+	}
+
+	/**
+	 * Get form IDs whose title matches the search term.
+	 *
+	 * @param string $search_term Search term to match against form titles.
+	 *
+	 * @since 2.6.0
+	 * @return array<int> Array of matching form IDs.
+	 */
+	private static function get_form_ids_by_title( $search_term ) {
+		$forms = get_posts(
+			[
+				'post_type'      => SRFM_FORMS_POST_TYPE,
+				'post_status'    => 'any',
+				's'              => $search_term,
+				'search_columns' => [ 'post_title' ],
+				'posts_per_page' => 100,
+				'fields'         => 'ids',
+				'no_found_rows'  => true,
+			]
+		);
+
+		return ! empty( $forms ) ? array_map( 'absint', $forms ) : [];
+	}
+
+	/**
+	 * Get entries data for export based on entry IDs and form ID.
+	 *
+	 * @param array<int> $entry_ids Entry IDs.
+	 * @param int        $form_id   Form ID.
+	 *
+	 * @since 2.0.0
+	 * @return array<mixed> Entry data.
+	 */
+	private static function get_entries_data_for_export( $entry_ids, $form_id ) {
+		return EntriesTable::get_all(
+			[
+				'where'   => [
+					[
+						[
+							'key'     => 'ID',
+							'compare' => 'IN',
+							'value'   => $entry_ids,
+						],
+						[
+							'key'     => 'form_id',
+							'compare' => '=',
+							'value'   => $form_id,
+						],
+					],
+				],
+				'columns' => '*',
+			],
+			false
+		);
+	}
+
+	/**
+	 * Build block key map and labels for CSV export.
+	 *
+	 * @param array<mixed> $results Entry results.
+	 *
+	 * @since 2.0.0
+	 * @return array{map: array<string,string>, labels: array<string,string>} Map and labels.
+	 */
+	private static function build_block_key_map_and_labels( $results ) {
+		$block_key_map = [];
+		$block_labels  = [];
+		$excluded      = Helper::get_excluded_fields();
+
+		foreach ( $results as $entry ) {
+			$form_data = is_array( $entry ) && isset( $entry['form_data'] ) ? Helper::get_array_value( $entry['form_data'] ) : [];
+
+			foreach ( $form_data as $srfm_key => $value ) {
+				if ( in_array( $srfm_key, $excluded, true ) ) {
+					continue;
+				}
+
+				$block_id = Helper::get_block_id_from_key( $srfm_key );
+
+				if ( empty( $block_id ) ) {
+					continue;
+				}
+
+				$block_key_map[ $block_id ] = $srfm_key;
+				$block_labels[ $block_id ]  = Helper::get_field_label_from_key( $srfm_key );
+			}
+		}
+
+		return [
+			'map'    => $block_key_map,
+			'labels' => $block_labels,
+		];
+	}
+
+	/**
+	 * Write CSV header row.
+	 *
+	 * @param resource      $stream       File stream.
+	 * @param array<string> $block_labels Block labels.
+	 *
+	 * @since 2.0.0
+	 * @return void
+	 */
+	private static function write_csv_header( $stream, $block_labels ) {
+		// Labels are decoded out of stored form_data keys, so they are submitter-influenced
+		// and need the same formula escaping as the data cells — see write_csv_rows().
+		$labels = array_map(
+			static function ( $label ) {
+				return self::escape_csv_formula( Helper::get_string_value( $label ) );
+			},
+			array_values( $block_labels )
+		);
+
+		$header = array_merge(
+			[ __( 'Entry ID', 'sureforms' ), __( 'Date', 'sureforms' ), __( 'Status', 'sureforms' ) ],
+			$labels
+		);
+		fputcsv( $stream, $header ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fputcsv
+	}
+
+	/**
+	 * Write CSV data rows.
+	 *
+	 * @param resource             $stream        File stream.
+	 * @param array<mixed>         $results       Entry results.
+	 * @param array<string,string> $block_key_map Block key map.
+	 *
+	 * @since 2.0.0
+	 * @return void
+	 */
+	private static function write_csv_rows( $stream, $results, $block_key_map ) {
+		foreach ( $results as $entry ) {
+			if ( ! is_array( $entry ) ) {
+				continue;
+			}
+
+			$row       = [];
+			$row[]     = isset( $entry['ID'] ) ? Helper::get_integer_value( $entry['ID'] ) : '';
+			$row[]     = isset( $entry['created_at'] ) ? Helper::get_string_value( $entry['created_at'] ) : '';
+			$row[]     = isset( $entry['status'] ) ? Helper::get_string_value( $entry['status'] ) : '';
+			$form_data = isset( $entry['form_data'] ) ? Helper::get_array_value( $entry['form_data'] ) : [];
+
+			foreach ( $block_key_map as $srfm_key ) {
+				$field_value = $form_data[ $srfm_key ] ?? '';
+				$row[]       = self::escape_csv_formula( self::normalize_field_values( $field_value, $srfm_key ) );
+			}
+
+			fputcsv( $stream, $row ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fputcsv
+		}
+	}
+
+	/**
+	 * Normalize field values for CSV export.
+	 *
+	 * @param mixed  $field_value Field value.
+	 * @param string $field_key   Field key for field type.
+	 *
+	 * @since 2.0.0
+	 * @return string Normalized value.
+	 */
+	private static function normalize_field_values( $field_value, $field_key = '' ) {
+		/**
+		 * Filter field value for CSV normalization.
+		 *
+		 * Allows modification of field values during CSV export. This is particularly
+		 * useful for custom field types (like repeater fields in Pro) that need
+		 * special formatting for CSV export.
+		 *
+		 * @since 2.3.0
+		 *
+		 * @param mixed  $field_value The field value to normalize.
+		 * @param string $field_key   The field key for identifying field type.
+		 *
+		 * @return mixed The filtered field value. Return a string to override default normalization.
+		 */
+		$filtered_value = apply_filters( 'srfm_normalize_csv_field_value', $field_value, $field_key );
+
+		// If filter returned a string, use it directly (custom handling was applied).
+		if ( is_string( $filtered_value ) && $filtered_value !== $field_value ) {
+			return $filtered_value;
+		}
+
+		// Handle arrays (multi-select, checkboxes, upload fields, etc.).
+		if ( is_array( $field_value ) ) {
+			// Upload field URLs are stored rawurlencode'd — decode before export.
+			if ( str_contains( $field_key, 'srfm-upload' ) ) {
+				$decoded_values = array_map(
+					static function ( $val ) {
+						return sanitize_text_field( rawurldecode( Helper::get_string_value( $val ) ) );
+					},
+					$field_value
+				);
+				return implode( ', ', $decoded_values );
+			}
+			return implode( ', ', array_map( 'sanitize_text_field', $field_value ) );
+		}
+
+		// Textarea fields contain intentional line breaks — use sanitize_textarea_field()
+		// to preserve them. sanitize_text_field() strips newlines, flattening multi-line
+		// content in the CSV export.
+		if ( str_contains( $field_key, 'srfm-textarea' ) ) {
+			return sanitize_textarea_field( Helper::get_string_value( $field_value ) );
+		}
+
+		return sanitize_text_field( Helper::get_string_value( $field_value ) );
+	}
+}

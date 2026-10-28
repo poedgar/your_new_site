@@ -1,0 +1,153 @@
+/**
+ * Privacy Policy Shortcode Styles
+ *
+ * Structural-only styles for the [surecookie_privacy_*] output.
+ * Typography (font-family, font-size, color) is inherited from the theme.
+ *
+ * @package SureCookie
+ * @since x.x.x
+ */
+
+.surecookie-privacy-policy {
+	max-width: 100%;
+	/* Shortcode output is a plain div, so it carries no wp-block-* class and the
+	   theme's block spacing skips it. Without this the section that follows sits
+	   flush against it, and so does any heading rendered inside it. */
+	margin-block: 1.5em;
+}
+
+.surecookie-privacy-policy > *:first-child {
+	margin-top: 0;
+}
+
+.surecookie-privacy-policy > *:last-child {
+	margin-bottom: 0;
+}
+
+/* Headings rendered inside shortcode output, such as the per-regime rights
+   sections, need the same breathing room a core/heading block would get. */
+.surecookie-privacy-policy h2,
+.surecookie-privacy-policy h3 {
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+.surecookie-privacy-policy h2:first-child,
+.surecookie-privacy-policy h3:first-child {
+	margin-top: 0;
+}
+
+/* ── Dates ─────────────────────────────────────── */
+
+.surecookie-privacy-policy-dates {
+	opacity: 0.75;
+	font-size: 0.9em;
+}
+
+/* ── Identity and contact ──────────────────────── */
+
+.surecookie-privacy-policy-identity,
+.surecookie-privacy-policy-contact {
+	line-height: 1.6;
+}
+
+/* ── Lists ─────────────────────────────────────── */
+
+.surecookie-privacy-policy-categories,
+.surecookie-privacy-policy-egress,
+.surecookie-privacy-policy-regional {
+	margin: 0 0 1.5em;
+	padding-right: 1.25em;
+}
+
+.surecookie-privacy-policy-categories li,
+.surecookie-privacy-policy-egress li,
+.surecookie-privacy-policy-regional li {
+	margin-bottom: 0.5em;
+}
+
+/* ── Third-party table ─────────────────────────── */
+
+.surecookie-privacy-policy-table {
+	width: 100%;
+	margin-bottom: 2em;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.surecookie-privacy-policy-table th,
+.surecookie-privacy-policy-table td {
+	padding: 0.75em 1em;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	text-align: right;
+	vertical-align: top;
+	overflow-wrap: break-word;
+	word-break: break-word;
+}
+
+.surecookie-privacy-policy-table th {
+	background: rgba(0, 0, 0, 0.03);
+	font-weight: 600;
+}
+
+/* Purpose carries a sentence while the other three carry a word or a hostname,
+   so give it the room table-layout:fixed would otherwise split four ways. */
+.surecookie-privacy-policy-table th:nth-child(2) {
+	width: 40%;
+}
+
+.surecookie-privacy-policy-table th:nth-child(3) {
+	width: 18%;
+}
+
+/* ── Unresolved sections ───────────────────────── */
+
+/* An editor-only hint. Never shown to visitors, so it only needs to read as
+   secondary rather than as an error. */
+.surecookie-privacy-policy-hint {
+	opacity: 0.7;
+	font-size: 0.9em;
+}
+
+/* ── Small screens ─────────────────────────────── */
+
+/* Stack the table into label/value rows, driven by the data-label attribute the
+   renderer puts on every cell. Mirrors the cookie policy table. */
+@media screen and (max-width: 600px) {
+	.surecookie-privacy-policy-table,
+	.surecookie-privacy-policy-table tbody,
+	.surecookie-privacy-policy-table tr,
+	.surecookie-privacy-policy-table td {
+		display: block;
+		width: 100%;
+	}
+
+	.surecookie-privacy-policy-table thead {
+		display: none;
+	}
+
+	.surecookie-privacy-policy-table tr {
+		margin-bottom: 1em;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+	}
+
+	.surecookie-privacy-policy-table td {
+		border: 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+		padding-right: 40%;
+		position: relative;
+	}
+
+	.surecookie-privacy-policy-table td:last-child {
+		border-bottom: 0;
+	}
+
+	.surecookie-privacy-policy-table td::before {
+		content: attr(data-label);
+		position: absolute;
+		top: 0.75em;
+		right: 1em;
+		width: 35%;
+		font-weight: 600;
+	}
+}

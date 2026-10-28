@@ -1,0 +1,33 @@
+v1.0.9 - 17th August 2026
+- New: Added Sigmize action item to the Finish Setup checklist.
+- Improvement: Setup steps can now complete directly from the checklist instead of sending you to another screen.
+
+v1.0.8 - 16th July 2026
+- Improvement: Show the Website Pages action item in the Finish Setup checklist when the standalone Spectra Blocks plugin is active.
+
+v1.0.7 - 29th May 2026
+- New: Added SureContact action item to the Finish Setup checklist.
+
+v1.0.6 - 20th May 2026
+- Improvements: Added improvements in finish setup.
+
+v1.0.5 - 31st March 2026
+- New: Added Connect Domain section for AI-generated sites.
+
+v1.0.4 - 29th October 2025
+- New: Added SureRank SEO and Modern Cart Course Checklist.
+
+v1.0.3 - 8th September 2025
+- Improvement: Added safe existence checks for action item steps to prevent PHP warnings.
+- Improvement: Added a `source` parameter to the banner CTA for better tracking.
+
+v1.0.2 - 13th August 2025
+- Improvement: Added banner that redirects to finish setup.
+- Improvement: Improved "Dismiss Setup" Button UI.
+
+v1.0.1 - 5th August 2025
+- Improvement: Added `getting_started_wizard_option_name` filter to modify the option name for the setup wizard showing status.
+- Misc: Added video for LatePoint action.
+
+v1.0.0
+- Initial release

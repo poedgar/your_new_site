@@ -1,0 +1,607 @@
+{
+    "packages": [
+        {
+            "name": "brainstormforce/astra-notices",
+            "version": "1.2.3",
+            "version_normalized": "1.2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brainstormforce/astra-notices.git",
+                "reference": "ac1564a44cf39dbc2bf824bf8ecb6d4c7ff4650f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brainstormforce/astra-notices/zipball/ac1564a44cf39dbc2bf824bf8ecb6d4c7ff4650f",
+                "reference": "ac1564a44cf39dbc2bf824bf8ecb6d4c7ff4650f",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^2.0"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+                "phpcompatibility/phpcompatibility-wp": "2.1.4",
+                "phpunit/phpunit": "^9.0",
+                "roots/wordpress": "^6.0",
+                "wp-cli/dist-archive-command": "^2.0",
+                "wp-coding-standards/wpcs": "^3.0",
+                "wp-phpunit/wp-phpunit": "^6.0",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "time": "2026-05-20T07:50:48+00:00",
+            "type": "wordpress-plugin",
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Brainstorm Force",
+                    "email": "hello@bsf.io"
+                }
+            ],
+            "description": "Easily create admin notices",
+            "support": {
+                "issues": "https://github.com/brainstormforce/astra-notices/issues",
+                "source": "https://github.com/brainstormforce/astra-notices/tree/1.2.3"
+            },
+            "install-path": "../../lib/astra-notices"
+        },
+        {
+            "name": "brainstormforce/bsf-analytics",
+            "version": "1.1.29",
+            "version_normalized": "1.1.29.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:brainstormforce/bsf-analytics.git",
+                "reference": "d219f81987f6ab2703ac76b1443a67d3f5be8be2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brainstormforce/bsf-analytics/zipball/d219f81987f6ab2703ac76b1443a67d3f5be8be2",
+                "reference": "d219f81987f6ab2703ac76b1443a67d3f5be8be2",
+                "shasum": ""
+            },
+            "require-dev": {
+                "10up/wp_mock": "^1.0",
+                "brainmaestro/composer-git-hooks": "^2.6",
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "phpcompatibility/phpcompatibility-wp": "2.1.0",
+                "phpunit/phpunit": "^9.6",
+                "wp-coding-standards/wpcs": "2.2.1"
+            },
+            "time": "2026-06-29T13:29:46+00:00",
+            "type": "wordpress-plugin",
+            "extra": {
+                "hooks": {
+                    "pre-commit": [
+                        "echo committing as $(git config user.name)",
+                        "sh bin/block-commits-with-merge-conflict.sh"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "scripts": {
+                "format": [
+                    "phpcbf --standard=phpcs.xml.dist --report-summary --report-source"
+                ],
+                "lint": [
+                    "phpcs --standard=phpcs.xml.dist --report-summary --report-source"
+                ],
+                "test": [
+                    "phpunit"
+                ],
+                "post-install-cmd": [
+                    "vendor/bin/cghooks add --ignore-lock"
+                ],
+                "post-update-cmd": [
+                    "vendor/bin/cghooks update"
+                ]
+            },
+            "description": "Library to gather non sensitive analytics data to enhance bsf products.",
+            "support": {
+                "source": "https://github.com/brainstormforce/bsf-analytics/tree/1.1.29",
+                "issues": "https://github.com/brainstormforce/bsf-analytics/issues"
+            },
+            "install-path": "../../lib/bsf-analytics"
+        },
+        {
+            "name": "brainstormforce/gutenberg-templates",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:brainstormforce/gutenberg-templates.git",
+                "reference": "8bcf81d3cc8c59bde2bfea5b53b06c284506c623"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brainstormforce/gutenberg-templates/zipball/8bcf81d3cc8c59bde2bfea5b53b06c284506c623",
+                "reference": "8bcf81d3cc8c59bde2bfea5b53b06c284506c623",
+                "shasum": ""
+            },
+            "require": {
+                "automattic/vipwpcs": "^2.3",
+                "composer/installers": "^2"
+            },
+            "require-dev": {
+                "automattic/vipwpcs": "^2.3",
+                "brainstormforce/bsf-phpcs-rules": "^1.0",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+                "php-stubs/generator": "^0.8.2",
+                "php-stubs/wordpress-stubs": "^6.1",
+                "php-stubs/wp-cli-stubs": "^2.9",
+                "phpcompatibility/phpcompatibility-wp": "*",
+                "phpstan/phpstan": "^1.9",
+                "squizlabs/php_codesniffer": "^3.5",
+                "szepeviktor/phpstan-wordpress": "^1.1",
+                "wp-coding-standards/wpcs": "^2.3"
+            },
+            "time": "2026-10-19T13:17:22+00:00",
+            "default-branch": true,
+            "type": "wordpress-plugin",
+            "installation-source": "dist",
+            "scripts": {
+                "format": [
+                    "vendor/bin/phpcbf"
+                ],
+                "lint": [
+                    "vendor/bin/phpcs"
+                ],
+                "lint:fix": [
+                    "vendor/bin/phpcbf"
+                ],
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "phpstan": [
+                    "vendor/bin/phpstan --memory-limit=2048M analyse"
+                ],
+                "gen-stubs": [
+                    "vendor/bin/generate-stubs artifact/phpstan/gutenberg-templates/ --out=tests/php/stubs/ast-block-templates-stubs.php && rm -rf artifact/phpstan"
+                ],
+                "update-stubs": [
+                    "rm -f tests/php/stubs/ast-block-templates-stubs.php && bash bin/build-folder-phpstan.sh && composer gen-stubs"
+                ]
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Brainstorm Force",
+                    "email": "hello@bsf.io"
+                }
+            ],
+            "description": "Gutenberg single page templates, and blocks library to imported your website easily.",
+            "support": {
+                "source": "https://github.com/brainstormforce/gutenberg-templates/tree/master",
+                "issues": "https://github.com/brainstormforce/gutenberg-templates/issues"
+            },
+            "install-path": "../../lib/gutenberg-templates"
+        },
+        {
+            "name": "brainstormforce/nps-survey",
+            "version": "1.0.24",
+            "version_normalized": "1.0.24.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:brainstormforce/nps-survey.git",
+                "reference": "2862ec62d90dca787581a4e6f546fcd299aabf45"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brainstormforce/nps-survey/zipball/2862ec62d90dca787581a4e6f546fcd299aabf45",
+                "reference": "2862ec62d90dca787581a4e6f546fcd299aabf45",
+                "shasum": ""
+            },
+            "require-dev": {
+                "automattic/vipwpcs": "^2.3",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+                "nunomaduro/phpinsights": "^2.10",
+                "php-stubs/generator": "^0.8.2",
+                "php-stubs/wordpress-stubs": "^6.1",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "phpstan/phpstan": "^1.9",
+                "squizlabs/php_codesniffer": "^3.5",
+                "szepeviktor/phpstan-wordpress": "^1.1",
+                "wp-coding-standards/wpcs": "^2.2"
+            },
+            "time": "2026-05-20T07:48:30+00:00",
+            "type": "wordpress-plugin",
+            "installation-source": "dist",
+            "scripts": {
+                "format": [
+                    "vendor/bin/phpcbf"
+                ],
+                "lint": [
+                    "vendor/bin/phpcs"
+                ],
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "phpstan": [
+                    "vendor/bin/phpstan --memory-limit=2048M analyse"
+                ],
+                "insights": [
+                    "./vendor/bin/phpinsights analyse -v --no-interaction"
+                ],
+                "insights:fix": [
+                    "./vendor/bin/phpinsights analyse --fix --no-interaction"
+                ],
+                "gen-stubs": [
+                    "vendor/bin/generate-stubs artifact/phpstan/nps-survey/ --out=tests/php/stubs/nps-survey-stubs.php && rm -rf artifact/phpstan"
+                ],
+                "update-stubs": [
+                    "rm -f tests/php/stubs/nps-survey-stubs.php && bash bin/build-folder-phpstan.sh && composer gen-stubs"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "NPS Survey Plugin",
+            "support": {
+                "source": "https://github.com/brainstormforce/nps-survey/tree/1.0.24",
+                "issues": "https://github.com/brainstormforce/nps-survey/issues"
+            },
+            "install-path": "../../lib/nps-survey"
+        },
+        {
+            "name": "brainstormforce/one-onboarding",
+            "version": "v1.0.7",
+            "version_normalized": "1.0.7.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:brainstormforce/one-onboarding.git",
+                "reference": "be28daa9182f93481ef066a4e2cdc159ae815a48"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brainstormforce/one-onboarding/zipball/be28daa9182f93481ef066a4e2cdc159ae815a48",
+                "reference": "be28daa9182f93481ef066a4e2cdc159ae815a48",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "automattic/vipwpcs": "^2.3",
+                "brainstormforce/bsf-phpcs-rules": "^1.0",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+                "nunomaduro/phpinsights": "^2.10",
+                "php-stubs/generator": "^0.8.2",
+                "php-stubs/wordpress-stubs": "^6.1",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "phpstan/phpstan": "^1.9",
+                "squizlabs/php_codesniffer": "^3.5",
+                "szepeviktor/phpstan-wordpress": "^1.1",
+                "wp-coding-standards/wpcs": "^2.2"
+            },
+            "time": "2026-08-13T09:36:53+00:00",
+            "type": "wordpress-plugin",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "One_Onboarding\\": "includes/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "phpcs": [
+                    "vendor/bin/phpcs"
+                ],
+                "phpcbf": [
+                    "vendor/bin/phpcbf"
+                ],
+                "phpstan": [
+                    "vendor/bin/phpstan --memory-limit=2048M analyse"
+                ],
+                "insights": [
+                    "./vendor/bin/phpinsights analyse -v --no-interaction"
+                ],
+                "insights:fix": [
+                    "./vendor/bin/phpinsights analyse --fix --no-interaction"
+                ],
+                "gen-stubs": [
+                    "vendor/bin/generate-stubs artifacts/phpstan/one-onboarding/ --out=tests/php/stubs/one-onboarding-stubs.php && rm -rf artifacts/phpstan"
+                ],
+                "update-stubs": [
+                    "rm -f tests/php/stubs/one-onboarding-stubs.php && bash bin/build-folder-phpstan.sh && composer gen-stubs"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Brainstorm Force",
+                    "homepage": "https://brainstormforce.com"
+                }
+            ],
+            "description": "One Onboarding is a comprehensive library designed to create seamless onboarding experiences for Brainstorm Force (BSF) products including Astra theme, Spectra plugin, and other WordPress products.",
+            "support": {
+                "source": "https://github.com/brainstormforce/one-onboarding/tree/v1.0.7",
+                "issues": "https://github.com/brainstormforce/one-onboarding/issues"
+            },
+            "install-path": "../../lib/one-onboarding"
+        },
+        {
+            "name": "brainstormforce/zipwp-images",
+            "version": "1.0.30",
+            "version_normalized": "1.0.30.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:brainstormforce/zipwp-images.git",
+                "reference": "6e694fe0f9230299ea270476aff77f2b474ae017"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brainstormforce/zipwp-images/zipball/6e694fe0f9230299ea270476aff77f2b474ae017",
+                "reference": "6e694fe0f9230299ea270476aff77f2b474ae017",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^2"
+            },
+            "require-dev": {
+                "automattic/vipwpcs": "^2.3",
+                "brainstormforce/bsf-phpcs-rules": "^1.0",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+                "nunomaduro/phpinsights": "^2.12",
+                "php-stubs/generator": "^0.8.2",
+                "php-stubs/wordpress-stubs": "^6.1",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "phpstan/phpstan": "^1.9",
+                "squizlabs/php_codesniffer": "^3.5",
+                "szepeviktor/phpstan-wordpress": "^1.1",
+                "wp-coding-standards/wpcs": "^2.2"
+            },
+            "time": "2026-05-20T07:49:27+00:00",
+            "type": "wordpress-plugin",
+            "installation-source": "dist",
+            "scripts": {
+                "format": [
+                    "vendor/bin/phpcbf"
+                ],
+                "lint": [
+                    "vendor/bin/phpcs"
+                ],
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "phpstan": [
+                    "vendor/bin/phpstan --memory-limit=2048M analyse"
+                ],
+                "insights": [
+                    "./vendor/bin/phpinsights analyse -v --no-interaction"
+                ],
+                "insights:fix": [
+                    "./vendor/bin/phpinsights analyse --fix --no-interaction"
+                ],
+                "gen-stubs": [
+                    "vendor/bin/generate-stubs artifact/phpstan/zipwp-images/ --out=tests/php/stubs/zipwp-images-stubs.php && rm -rf artifact/phpstan"
+                ],
+                "update-stubs": [
+                    "rm -f tests/php/stubs/zipwp-images-stubs.php && bash bin/build-folder-phpstan.sh && composer gen-stubs"
+                ]
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Brainstorm Force",
+                    "email": "hello@bsf.io"
+                }
+            ],
+            "description": "Free images library from ZipWP",
+            "support": {
+                "source": "https://github.com/brainstormforce/zipwp-images/tree/1.0.30",
+                "issues": "https://github.com/brainstormforce/zipwp-images/issues"
+            },
+            "install-path": "../../lib/zipwp-images"
+        },
+        {
+            "name": "composer/installers",
+            "version": "v2.3.0",
+            "version_normalized": "2.3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "12fb2dfe5e16183de69e784a7b84046c43d97e8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/12fb2dfe5e16183de69e784a7b84046c43d97e8e",
+                "reference": "12fb2dfe5e16183de69e784a7b84046c43d97e8e",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.10.27 || ^2.7",
+                "composer/semver": "^1.7.2 || ^3.4.0",
+                "phpstan/phpstan": "^1.11",
+                "phpstan/phpstan-phpunit": "^1",
+                "symfony/phpunit-bridge": "^7.1.1",
+                "symfony/process": "^5 || ^6 || ^7"
+            },
+            "time": "2024-06-24T20:46:46+00:00",
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Composer\\Installers\\Plugin",
+                "branch-alias": {
+                    "dev-main": "2.x-dev"
+                },
+                "plugin-modifies-install-path": true
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "https://composer.github.io/installers/",
+            "keywords": [
+                "Dolibarr",
+                "Eliasis",
+                "Hurad",
+                "ImageCMS",
+                "Kanboard",
+                "Lan Management System",
+                "MODX Evo",
+                "MantisBT",
+                "Mautic",
+                "Maya",
+                "OXID",
+                "Plentymarkets",
+                "Porto",
+                "RadPHP",
+                "SMF",
+                "Starbug",
+                "Thelia",
+                "Whmcs",
+                "WolfCMS",
+                "agl",
+                "annotatecms",
+                "attogram",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "cockpit",
+                "codeigniter",
+                "concrete5",
+                "concreteCMS",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "eZ Platform",
+                "elgg",
+                "expressionengine",
+                "fuelphp",
+                "grav",
+                "installer",
+                "itop",
+                "known",
+                "kohana",
+                "laravel",
+                "lavalite",
+                "lithium",
+                "magento",
+                "majima",
+                "mako",
+                "matomo",
+                "mediawiki",
+                "miaoxing",
+                "modulework",
+                "modx",
+                "moodle",
+                "osclass",
+                "pantheon",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "processwire",
+                "puppet",
+                "pxcms",
+                "reindex",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "sydes",
+                "sylius",
+                "tastyigniter",
+                "wordpress",
+                "yawik",
+                "zend",
+                "zikula"
+            ],
+            "support": {
+                "issues": "https://github.com/composer/installers/issues",
+                "source": "https://github.com/composer/installers/tree/v2.3.0"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "install-path": "./installers"
+        },
+        {
+            "name": "enshrined/svg-sanitize",
+            "version": "0.22.0",
+            "version_normalized": "0.22.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/darylldoyle/svg-sanitizer.git",
+                "reference": "0afa95ea74be155a7bcd6c6fb60c276c39984500"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/darylldoyle/svg-sanitizer/zipball/0afa95ea74be155a7bcd6c6fb60c276c39984500",
+                "reference": "0afa95ea74be155a7bcd6c6fb60c276c39984500",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5 || ^8.5"
+            },
+            "time": "2025-08-12T10:13:48+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "enshrined\\svgSanitize\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Daryll Doyle",
+                    "email": "daryll@enshrined.co.uk"
+                }
+            ],
+            "description": "An SVG sanitizer for PHP",
+            "support": {
+                "issues": "https://github.com/darylldoyle/svg-sanitizer/issues",
+                "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.22.0"
+            },
+            "install-path": "../enshrined/svg-sanitize"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}
