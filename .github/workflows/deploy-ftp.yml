@@ -1,0 +1,36 @@
+name: Deploy Astra child theme via FTP
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy theme to FTP server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftp
+          local-dir: ./app/public/wp-content/themes/astra-child/
+          server-dir: /your-brand-new-site.page.gd/htdocs/wp-content/themes/astra-child/
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/.DS_Store
+            **/node_modules/**
+            **/.idea/**
+            **/.vscode/**
+            **/wp-content/uploads/**
+            **/wp-content/cache/**
